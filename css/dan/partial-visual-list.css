@@ -1,0 +1,183 @@
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* BASE STYLES */
+
+/* Flexible List */
+
+.repeating-list {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr;
+    text-align: left;
+}
+
+.repeating-list h2 {
+    text-align: left;
+    font-size: 1.375rem;
+    padding: 0;
+    margin-top: 0;
+}
+
+.repeating-list p {
+    text-align: left;
+    font-size: 1rem;
+}
+
+.repeating-list .list-item {
+    display: grid;
+    align-content: start;    
+    grid-template-columns: 2fr 3fr;
+    position: relative;
+}
+
+.repeating-list.double {
+    grid-template-columns: 1fr 1fr;
+}
+
+.repeating-list-image {
+    aspect-ratio: 1;
+/*  background: url("../images/sq-crop.png");
+    background-size: cover; */
+}
+
+.repeating-list .repeating-list-body {
+    padding: 0 20px;
+}
+
+
+/* ------ Grid Variant ------ */
+
+.repeating-list.grid {
+    grid-template-columns: 1fr;
+}
+
+.repeating-list.grid .list-item {
+    grid-template-columns: 1fr;
+}
+
+.repeating-list.grid.two-col {
+    grid-template-columns: 1fr 1fr;
+}
+
+.repeating-list.grid.three-col {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.repeating-list.grid.four-col {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+
+.repeating-list.grid .repeating-list-body {
+    padding: 20px 0;
+}
+
+.repeating-list.grid.cards .repeating-list-body {
+    padding: 20px;
+}
+
+/* ------ Profile Variant ------ */
+
+/* TO DO: Alternate version with gray images that turn color on hover */
+/* TO DO: Image darkening on hover is currently applied to the img element. Explore other options that are more global scope. */
+
+
+.profiles.repeating-list {
+    grid-gap: 5px;
+    margin: auto;
+}
+
+.profiles.repeating-list.grid .list-item {
+    position: relative;
+    overflow: hidden;
+    max-height: 400px; /* allows grid to stretch in ultra-wide viewports without increasing vertical space */
+}
+
+.profiles.repeating-list.grid .list-item:hover img {
+    filter: brightness(40%) grayscale(1);
+}
+
+.profiles.repeating-list.grid .list-item .repeating-list-image {
+    position: relative;
+}
+
+.profiles.repeating-list.grid .list-item .repeating-list-body {
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    padding: 10px 20px;
+    line-height: 1.375rem;
+}
+
+.profiles.repeating-list.grid .list-item:hover .repeating-list-body {
+    opacity: 1;
+}
+
+.profiles.repeating-list.grid .list-item:hover .repeating-list-body h2 {
+    color: var(--white);
+    font-weight: 700;
+}
+
+.profiles.repeating-list.grid .list-item:hover .repeating-list-body p {
+    color: var(--white);
+}
+
+@media only screen and (max-width: 1080px) {
+    .profiles.repeating-list.grid.four-col {
+        grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .profiles.repeating-list.grid.four-col {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ----- MQs ----- */
+
+@media only screen and (max-width: 720px) {
+    .repeating-list.grid.three-col, .repeating-list.grid.four-col {
+        grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+    }
+}
+
+/* @media only screen and (max-width: 480px) {
+        .repeating-list.grid.two-col, .repeating-list.grid.three-col, .repeating-list.grid.four-col {
+        grid-template-columns: 1fr;
+    }
+} /*
+
+/* ------ No-image Variant ------ */
+
+.repeating-list.no-image .list-item {  
+    grid-template-columns: 1fr; 
+}
+
+.repeating-list.no-image .repeating-list-image {  
+    display: none;
+}
+
+.repeating-list.no-image .repeating-list-body {
+    padding: 0px;
+}
+
+/* ----- Container Query Test ----- */
+
+
+.profiles.repeating-list.grid .list-item {
+    container-type: inline-size;
+    container-name: profile-content;    
+}
+
+@container profile-content (max-width: 300px) {
+    .repeating-list-body p {
+        font-size: .9rem;
+        line-height: 1.25rem;
+    }
+}

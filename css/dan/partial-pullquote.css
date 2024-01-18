@@ -1,0 +1,50 @@
+/* This patten still has modifiers in base.css. Not exactly sutre how to resolve yet... */
+
+/*  Basic Pull Quotes  */
+
+blockquote.pull-quote {
+    border-top: 2px solid var(--mid-gray);
+    border-bottom: 2px solid var(--mid-gray);
+    margin: 0 15px;
+    padding: 5px 15px;
+    color: var(--mid-gray);
+}
+
+blockquote.pull-quote p {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 1.375rem;
+    line-height: 2rem; 
+}
+
+blockquote.pull-quote.left {
+    margin: 10px 40px 10px -100px;
+    max-width: 50%;
+    float: left;
+}
+
+blockquote.pull-quote.right {
+    margin: 10px -100px 10px 30px;
+    max-width: 50%;
+    float: right;
+}
+
+/* Pull Quote with Attribution */
+
+blockquote.pull-quote.quote p.attrib {
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.25rem; 
+    margin-left: 20%;
+    position: relative;
+}
+
+blockquote.pull-quote.quote p.attrib:before {
+    content: '';
+    height: 10px;
+    width: 10px;
+    top: 4px;
+    left: -18px;
+    position: absolute;
+    background-color: var(--mid-gray)
+}

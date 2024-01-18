@@ -1,0 +1,141 @@
+#menuToggle {
+  display: block;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a {
+  text-decoration: none;
+  color: #232323;
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+  color: tomato;
+}
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #555;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked~span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #ccc;
+}
+
+#menuToggle input:checked~span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked~span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+  position: fixed;
+  width: 400px;
+  height: 110vh;
+  margin: -100px 0 0 -50px;
+  padding: 125px 150px 50px 50px;
+  right: -100px;
+  background: #3c3c3c;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menu li {
+  padding: 30px 0 10px;
+  font-size: 24px;
+  text-align: right;
+  color: #ddd;
+  transform: translatex(30%);
+  transition: transform .4s ease-in;
+}
+
+#menu a li {
+color: #a1a1a1;
+text-decoration: none;
+background-image: linear-gradient(#a1a1a1, #a1a1a1);
+background-size: 0% 0.1em;
+background-position-y: 100%;
+background-position-x: 100%;
+background-repeat: no-repeat;
+transition: background-size 0.2s ease-in-out;
+}
+
+#menu a li:hover,
+#menu a li:focus,
+#menu a li:active {
+background-size: 100% 0.1em;
+}
+
+/*
+#menu li.one {
+  transition-delay: 0.05s;
+}
+
+#menu li.two {
+  transition-delay: 0.15s;
+}
+
+#menu li.three {
+  transition-delay: 0.25s;
+}
+
+#menu li.four {
+  transition-delay: 0.35s;
+}
+
+#menu li.five {
+  transition-delay: 0.45s;
+}
+*/
+
+#menuToggle input:checked~ul {
+  transform: translatex(0);
+}
+
+#menuToggle input:checked~#menu a li {
+  transform: translatex(0);
+}

@@ -1,0 +1,150 @@
+/* ===== HERO =================================== */
+
+/* Variant - Default Style for Feature */
+
+.hero {
+    width: 100%;
+    min-height: 650px;
+    background-color: var(--wireframe-placeholder);
+    display: grid;
+}
+
+/* this declaration needs cleanup */
+
+.hero-image {
+    background: var(--tiger-placeholder-xl);
+    background-position-y: center;
+}
+
+.hero-image:not(.hero.alt .hero-image, .hero.simple .hero-image) {
+    background-size: cover;
+    width: 100%;
+    height: 650px;
+    position: absolute;
+}
+
+.hero-content {
+    max-width: 700px;
+    margin-left: calc(50% - 400px);
+    padding: 100px 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+.hero-content h1 span {
+    background-color: var(--light-gray-80);
+    outline: 10px solid var(--light-gray-80);   
+}
+
+.hero-content h1 strong {
+   font-weight: 700;
+}
+
+.hero-content p.subhead {
+    font-size: 1.5rem;
+    margin-top: 30px;
+    line-height: 2rem; 
+    font-weight: 300;
+}
+
+.hero-content p.byline-item {
+    margin-top: 20px;
+    margin-right: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+    max-width: 350px;
+    color: var(--dark-gray);
+    display: inline-block;
+}
+
+.hero-content p.byline-item .icon {
+    margin-right: 10px;
+    font-size: 1.25em;
+    color: #000;
+}
+
+/* Variant - No Image */
+
+.hero.simple {
+    background-color: var(--light-gray-80);
+    min-height: unset;
+}
+
+.hero.simple .hero-content {
+    margin-left: calc(50% - 450px);
+    padding: 50px 0;
+    max-width: 900px;
+}
+
+.hero.simple .hero-content h1 span {
+    background-color: unset;
+    outline: unset;  
+}
+
+/* Variant - SQ Image */
+
+.hero.alt {
+    grid-gap: 20px;
+    grid-template-columns: 3fr 4fr;
+    background: none;
+    max-width: 1100px;
+    min-height: unset;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.hero.alt .hero-image {
+    background: var(--tiger-placeholder-xl);
+    background-size: cover;
+    aspect-ratio: 1;
+    }
+
+.hero.alt .hero-content {
+    margin-left: -50px;
+    padding: 0;
+    max-width: calc( 100% + 50px);    
+}
+
+/* ===== MEDIA QUERIES  =================================== */
+
+@media only screen and (max-width: 960px) {
+    .hero-content {
+        max-width: 100%;
+        margin: 0 20px;
+        padding-top: 100px;
+    }
+    .hero.simple .hero-content {
+        margin: 0 20px;
+        max-width: 700px;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .hero.alt {
+        grid-template-columns: 4fr 3fr;
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .hero-content p.subhead {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+   .hero.alt {
+      grid-template-columns: 1fr;
+   } 
+
+  .hero.alt .hero-content {
+        margin-top: -80px;
+        margin-left: 20px;
+  }
+}
