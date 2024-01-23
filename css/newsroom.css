@@ -2,7 +2,7 @@
 	Mission Page Build
    ==================================================== */
 
-html {
+/* html {
 	overflow-x: hidden;
 	-webkit-text-size-adjust: 100%;
 }
@@ -25,7 +25,7 @@ body, html {
 
 body {
    margin: 0;
-}
+} */
 
 .accent{
    pointer-events: none;
