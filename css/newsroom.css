@@ -6777,6 +6777,6 @@ p.tag-primary + h3 {
 }
 
 .hero-content h1 span {
-    background-color: none;
+    background-color: unset;
     outline: none;
 }
