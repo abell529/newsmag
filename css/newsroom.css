@@ -6791,6 +6791,11 @@ p.tag-primary + h3 {
     background: linear-gradient(80deg,rgba(0,0,0,.9) 57%,rgba(0,0,0,0) 100%);
 }
 
+.hero .hero-image.white .gradient {
+    background: -webkit-linear-gradient(10deg, rgba(255, 255, 255, 0.9) 37%, rgba(0,0,0,0) 100%);
+    background: linear-gradient(80deg,rgba(255, 255, 255, 0.9) 57%,rgba(0,0,0,0) 100%);
+}
+
 .hero .gradient {
     position: absolute;
     top: 0;
