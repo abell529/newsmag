@@ -6763,3 +6763,20 @@ p.tag-primary + h3 {
     color: white;
 	z-index: 100;
 }
+
+.fa-camera-alt:before, .fa-camera:before {
+    color: white;
+}
+
+.fa-pencil-alt:before, .fa-pencil:before {
+    color: white;
+}
+
+.hero-content p.byline-item {
+    color: #ffffff;
+}
+
+.hero-content h1 span {
+    background-color: none;
+    outline: none;
+}
