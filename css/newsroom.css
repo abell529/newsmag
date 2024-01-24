@@ -6733,31 +6733,58 @@ p.tag-primary + h3 {
    ====================================================
    ==================================================== */
 
-.byline-container {
+.byline-container .white {
     color: white;
 	z-index: 100;
 }
 
-.hero-content h1 {
+.hero-content.white h1 {
 	color: white;
 	z-index: 100;
 }
 
-.hero-content p.subhead {
+.hero-content p.subhead.white {
     color: white;
 	z-index: 100;
 }
 
-.fa-camera-alt:before, .fa-camera:before {
+.fa-camera-alt.white:before, .fa-camera.white:before {
     color: white;
 }
 
-.fa-pencil-alt:before, .fa-pencil:before {
+.fa-pencil-alt.white:before, .fa-pencil.white:before {
     color: white;
 }
 
-.hero-content p.byline-item {
+.hero-content p.byline-item.white {
     color: #ffffff;
+}
+
+.byline-container .black {
+    color: rgb(0, 0, 0);
+	z-index: 100;
+}
+
+.hero-content.black h1 {
+	color: rgb(0, 0, 0);
+	z-index: 100;
+}
+
+.hero-content p.subhead.black {
+    color: rgb(0, 0, 0);
+	z-index: 100;
+}
+
+.fa-camera-alt.white:before, .fa-camera.black:before {
+    color: rgb(0, 0, 0);
+}
+
+.fa-pencil-alt.white:before, .fa-pencil.black:before {
+    color: rgb(0, 0, 0);
+}
+
+.hero-content p.byline-item.black {
+    color: rgb(0, 0, 0);
 }
 
 .hero-content h1 span {
