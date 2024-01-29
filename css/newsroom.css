@@ -6430,7 +6430,7 @@ UPDATE THIS CLASS FOR THE PAGE
 
 /* Layout and Grid Control */
 
-.grid-row {
+.grid-snippet {
     display: grid;
     min-height: 400px;
     gap: 30px;
@@ -6438,31 +6438,31 @@ UPDATE THIS CLASS FOR THE PAGE
     margin: 40px auto;
 }
 
-.grid-row .item {
+.grid-snippet .item {
     background-color: #eee;
 }
 
-.grid-row.one {
+.grid-snippet.one {
     grid-template-columns: 1fr;
 }
 
-.grid-row.two {
+.grid-snippet.two {
     grid-template-columns: 1fr 1fr;
 }
 
-.grid-row.two.sixty-forty {
+.grid-snippet.two.sixty-forty {
     grid-template-columns: 3fr 2fr;
 }
 
-.grid-row.three {
+.grid-snippet.three {
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-.grid-row.four {
+.grid-snippet.four {
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-.grid-row.five {
+.grid-snippet.five {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
@@ -6585,7 +6585,7 @@ UPDATE THIS CLASS FOR THE PAGE
 /* MQs */
 
 @media only screen and (max-width: 720px) {
-    .grid-row, .grid-row.one, .grid-row.two, .grid-row.three, .grid-row.four {
+    .grid-snippet, .grid-snippet.one, .grid-snippet.two, .grid-snippet.three, .grid-snippet.four {
         grid-template-columns: 1fr;
     }
 }
@@ -6597,15 +6597,15 @@ UPDATE THIS CLASS FOR THE PAGE
 
    ================================================= */
 
-   .grid-row {
+   .grid-snippet {
 	min-height: unset;
 }
 
-.grid-row .item {
+.grid-snippet .item {
 	background: none;
 }
 
-.grid-row.lead {
+.grid-snippet.lead {
 	height: unset;
 	background: unset;
 }
@@ -6704,20 +6704,20 @@ p.tag-primary + h3 {
 
 /* Still a work in progress. Would like to get the grid areas working with pseudoclasses.*/
 
-.grid-row.matrix {
+.grid-snippet.matrix {
 	grid-template-columns: 2fr 1fr;
 	grid-template-rows: repeat(2, 1fr);
 }
 
-.grid-row.matrix .one {
+.grid-snippet.matrix .one {
 	grid-area: 1 / 1 / 3 / 2;
 }
 
-.grid-row.matrix .two {
+.grid-snippet.matrix .two {
 	grid-area: 1 / 2 / 2 / 3;
 }
 
-.grid-row.matrix .three {
+.grid-snippet.matrix .three {
 	grid-area: 2 / 2 / 3 / 3;
 }
 
