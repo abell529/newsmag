@@ -543,25 +543,25 @@ main#content.no-margin {
  .navigation .hamburger.active {
 	 top: 9px;
 }
- .navigation.campaign .main {
+ .navigation.temphead .main {
 	 padding: 14px 0px;
 }
- .navigation.campaign .main img.accent {
+ .navigation.temphead .main img.accent {
 	 top: -44px;
 	 left: -463px;
 	 z-index: 2;
 }
- .navigation.campaign .main ul {
+ .navigation.temphead .main ul {
 	 float: right;
 }
- .navigation.campaign .main ul .btn {
+ .navigation.temphead .main ul .btn {
 	 margin: 0px;
 	 font-weight: 700;
 }
- .navigation.campaign .main .images {
+ .navigation.temphead .main .images {
 	 margin-top: 10px;
 }
- .navigation.campaign a.banner {
+ .navigation.temphead a.banner {
 	 margin: 0px;
 	 position: absolute;
 	 bottom: -50px;
@@ -569,27 +569,27 @@ main#content.no-margin {
 	 text-align: center;
 	 display: none;
 }
- .navigation.campaign a.banner i {
+ .navigation.temphead a.banner i {
 	 position: relative;
 	 top: 3px;
 	 left: 2px;
 }
- .navigation.microsite .main {
+ .navigation.temphead .main {
 	 padding: 14px 0px;
 }
- .navigation.microsite .main img.accent {
+ .navigation.temphead .main img.accent {
 	 top: -65px;
 	 left: -463px;
 	 z-index: 2;
 }
- .navigation.microsite .main ul {
+ .navigation.temphead .main ul {
 	 float: right;
 }
-.navigation.microsite .main ul a.btn-micro{
+.navigation.temphead .main ul a.btn-micro{
 	background: #fec00f;
     padding: 10px 20px;
 }
-.navigation.microsite .main ul a.btn-micro:hover{
+.navigation.temphead .main ul a.btn-micro:hover{
 	background: #000000;
     color:#ffffff;
 }
@@ -600,7 +600,7 @@ main#content.no-margin {
 .navigation.black .search-section input{
 	background: #3c3c3c;
 }
-.navigation.microsite.black .main{
+.navigation.temphead.black .main{
 	background:#000000;
 	border: none;
 }
@@ -624,7 +624,7 @@ main#content.no-margin {
 .navigation.gray .utility{
 	border:none;
 }
-.navigation.microsite.gray .main{
+.navigation.temphead.gray .main{
 	background:#3C3C3C;
 	border: none;
 }
