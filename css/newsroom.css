@@ -63,6 +63,7 @@ main#content.no-margin {
 
 
 
+
 /* ===================
 	Header Navigation
    =================== */
@@ -87,6 +88,10 @@ main#content.no-margin {
 	 width: 100%;
 	 top: 0px;
 	 z-index: 9;
+}
+
+.navigation ol, .navigation ul {
+    padding: 5px 0 5px 0;
 }
  .navigation a {
 	 text-decoration: none;
