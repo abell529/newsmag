@@ -54,6 +54,12 @@ main#content.no-margin {
 	margin-top: 0px;
 }
 
+@media only screen and (max-width: 1200px) {
+	.container-nav {
+		max-width: 960px;
+	}
+}
+
 
 
 
@@ -952,6 +958,11 @@ main#content.no-margin {
  .footer-callout.split a:first-of-type {
 	 border-right: 1px solid black;
 }
+
+.clearfix {
+    clear: both;
+}
+
 
 /* =========================================================================
    ========================================================================= 
