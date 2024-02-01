@@ -1031,6 +1031,19 @@ main#content.no-margin {
 }
 
 
+@media only screen and (min-width: 961px) {
+	.navigation .utility {
+		display: block;
+	}
+}
+
+@media only screen and (max-width: 960px) {
+	.navigation .utility {
+		display: none;
+	}
+}
+
+
 /* ===================
 	Footer
    =================== */
