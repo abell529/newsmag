@@ -90,6 +90,45 @@ main#content.no-margin {
     font-size: 0;
 }
 
+.navigation input[type=search] {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+}
+.navigation input[type=search] {
+    -webkit-appearance: textfield;
+    box-sizing: content-box;
+}
+.navigation input {
+    background-color: #f3f3f3;
+}
+.navigation button, .navigation input {
+    outline: 0;
+}
+.navigation input, .navigation textarea {
+    font-family: proxima-nova,sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    background-color: #e6e6e6;
+    border: 1px solid #e6e6e6;
+    border-radius: 0;
+    color: #000;
+    margin-bottom: 20px;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+}
+.navigation input {
+    line-height: normal;
+}
+.navigation button, .navigation input, .navigation optgroup, .navigation select, .navigation textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+
 
 
 /* ===================
