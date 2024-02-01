@@ -118,6 +118,15 @@ main#content.no-margin {
 	 z-index: 9;
 }
 
+.navigation .main-nav p {
+	font-family: proxima-nova,sans-serif;
+    font-weight: 900;
+    font-style: normal;
+	font-size: 4rem;
+	line-height: 4.75rem;
+}
+
+
 .navigation ol, .navigation ul {
     padding: 5px 0 5px 0;
 }
@@ -604,9 +613,9 @@ main#content.no-margin {
 	 margin: 0px;
 	 font-weight: 700;
 }
- .navigation.temphead .main-nav .images {
+ /* .navigation.temphead .main-nav .images {
 	 margin-top: 10px;
-}
+} */
  .navigation.temphead a.banner {
 	 margin: 0px;
 	 position: absolute;
