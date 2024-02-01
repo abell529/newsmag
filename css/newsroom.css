@@ -35,7 +35,7 @@ body {
 .accent{
    pointer-events: none;
 }
-.container {
+.container-nav {
 	position: relative;
 	max-width: 1200px;
 	margin: 0 auto;
@@ -43,13 +43,13 @@ body {
 	padding: 0 10px;
 	box-sizing: border-box;
 }
-.container.large {
+.container-nav.large {
 	max-width: 1363px;
 }
 
-main#content {
+/* main#content {
 	margin-top: 175px;
-}
+} */
 main#content.no-margin {
 	margin-top: 0px;
 }
