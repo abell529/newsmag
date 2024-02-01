@@ -1006,6 +1006,30 @@ main#content.no-margin {
 	 background-color: #272727;
 }
 
+@media only screen and (min-width: 961px) {
+	.navigation .main-nav {
+		display: block;
+	}
+}
+
+@media only screen and (max-width: 960px) {
+	.navigation .main-nav {
+		display: none;
+	}
+}
+
+@media only screen and (min-width: 961px) {
+	.navigation .mobile {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 960px) {
+	.navigation .mobile {
+		display: block;
+	}
+}
+
 
 /* ===================
 	Footer
