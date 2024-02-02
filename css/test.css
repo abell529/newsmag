@@ -19,14 +19,15 @@ body, h1, p {
     height: 300px; /* Adjust based on your image's aspect ratio */
   }
   
-  .article-headline {
+  /* Update to the CSS for the headline animation */
+.article-headline {
     position: absolute;
     top: 20%; /* Adjust based on your preference */
-    right: -100%; /* Start off-screen */
+    left: 100%; /* Start off-screen, adjusted to ensure it comes from the right */
     background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
     padding: 10px;
     z-index: 2;
-    animation: slideInRight 2s forwards;
+    animation: slideInFromRight 2s forwards;
   }
   
   .lead-image {
@@ -43,11 +44,13 @@ body, h1, p {
     padding: 20px;
   }
   
-  /* Animations */
-  @keyframes slideInRight {
-    to {
-      right: 0;
-      left: 30%; /* Moves the headline to 30% from the left */
+  /* Updated keyframes for sliding in from the right */
+@keyframes slideInFromRight {
+    0% {
+      left: 100%;
+    }
+    100% {
+      left: 30%;
     }
   }
   
