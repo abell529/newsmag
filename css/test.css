@@ -33,7 +33,7 @@ body, h1, p {
     position: absolute;
     top: 0;
     left: -100%; /* Start off-screen */
-    width: 100%; /* Adjust based on your preference */
+    width: 100%; /* Ensures full-bleed */
     height: 100%; /* Adjust to maintain aspect ratio */
     object-fit: cover;
     animation: slideInLeft 2s forwards;
@@ -47,6 +47,7 @@ body, h1, p {
   @keyframes slideInRight {
     to {
       right: 0;
+      left: 30%; /* Moves the headline to 30% from the left */
     }
   }
   
