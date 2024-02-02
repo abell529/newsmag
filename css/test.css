@@ -1,0 +1,58 @@
+/* style.css */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .site-header, .site-footer {
+    background-color: black;
+    height: 50px;
+  }
+  
+  .news-article {
+    position: relative;
+    overflow: hidden; /* Ensures animations stay within the section */
+  }
+  
+  .headline-container {
+    position: relative;
+    height: 300px; /* Adjust based on your image's aspect ratio */
+  }
+  
+  .article-headline {
+    position: absolute;
+    top: 20%; /* Adjust based on your preference */
+    right: -100%; /* Start off-screen */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    padding: 10px;
+    z-index: 2;
+    animation: slideInRight 2s forwards;
+  }
+  
+  .lead-image {
+    position: absolute;
+    top: 0;
+    left: -100%; /* Start off-screen */
+    width: 100%; /* Adjust based on your preference */
+    height: 100%; /* Adjust to maintain aspect ratio */
+    object-fit: cover;
+    animation: slideInLeft 2s forwards;
+  }
+  
+  .article-content {
+    padding: 20px;
+  }
+  
+  /* Animations */
+  @keyframes slideInRight {
+    to {
+      right: 0;
+    }
+  }
+  
+  @keyframes slideInLeft {
+    to {
+      left: 0;
+    }
+  }
+  
