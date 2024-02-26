@@ -1370,12 +1370,18 @@ main#content.no-margin {
     --gold-50: #ffbb0050;
     --white: #fff;
     --white-80: #ffffff80;
-    --glen-mist: #3c3c3c;   
-    --glen-mist-80: #3c3c3c80;
-    --glen-mist-50: #3c3c3c50;
-    --accent-torquise: #5abbc3;
-    --accent-torquise-80: #5abbc380;
-    --accent-torquise-50: #5abbc350;
+    --graphite: #3c3c3c;   
+    --graphite-80: #3c3c3c80;
+    --graphite-50: #3c3c3c50;
+    --glen-mist: #ddd;   
+    --glen-mist-80: #dddddd80;
+    --glen-mist-50: #dddddd50;
+    --accent-torquoise: #5abbc3;
+    --accent-torquoise-80: #5abbc380;
+    --accent-torquoise-50: #5abbc350;
+    --accent-red: #eb5f33;
+    --accent-red-80: #eb5f3380;
+    --accent-red-50: #eb5f3350;        
 /* wireframe colors */
     --lightest-gray: #f7f7f7;
     --light-gray-40: #cccccc40;
@@ -1388,6 +1394,12 @@ main#content.no-margin {
     --tiger-placeholder-xl: url(https://www.towson.edu/homepage/2022-homepage/fall-tiger-admissions-deadlines-jumbo.jpg);
     --tiger-placeholder-xl: #5abbc350;
 } 
+
+/* ===== WIREFRAME PROPS =================================== */
+
+img {
+    filter: grayscale(1) contrast(.55) brightness(1.25);
+}
 
 /* =======================================
 
