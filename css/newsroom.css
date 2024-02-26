@@ -7114,6 +7114,506 @@ p.tag-primary + h3 {
 	grid-area: 2 / 2 / 3 / 3;
 }
 
+/* ====================================================
+   ====================================================
+
+   Header Footer
+
+   ====================================================
+   ==================================================== */
+
+.st0 {
+	fill: #FFFFFF;
+}
+
+.st1 {
+	fill: #D4D4D4;
+}
+
+/* Region Container */
+
+.global-header {
+    width: 100%;
+    height: 120px;
+    background-color: var(--light-gray-40);
+    position: relative;
+}
+
+/* Dogear accent */
+
+.global-header:after {
+    content: '';
+    background: #000;
+    position: absolute;
+    right: -21px;
+    top: 0;
+    background-color: white;
+    clip-path: polygon(100% 100%, 0 0, 100% 0);
+    width: 80px;
+    height: 54px;
+}
+
+/* ===== PRE-HEADER / UTILITY NAV ==================== */
+
+.utility-nav {
+    height: 40px;
+    padding-top:10px;
+    text-transform: uppercase;
+    letter-spacing: .025rem;
+    display: flex;
+    font-size: .925rem;
+    justify-content: space-between;
+}
+
+.utility-nav p, .utility-nav ul, .utility-nav ul li {
+    display: inline;
+}
+
+.utility-nav .publications-label {
+    color: var(--dark-gray);
+}
+
+.utility-nav .tu-home-link {
+    font-weight: 700;
+    text-transform: capitalize;
+    padding-right: 20px;
+}
+
+ .utility-nav ul li {
+    padding: 0 20px;
+    border-right: 1px solid var(--gold-solid);
+}
+
+ .utility-nav ul li:last-of-type {
+    border: none;
+    padding-right: 0;
+}
+
+/* ===== MASTHEAD ==================== */
+
+.heading-constrain {
+    max-width: 1200px;
+    margin: auto;
+    width: calc(100% - 30px);
+}
+
+.masthead-logo-container svg {
+    padding: 30px 20px 20px;
+    display: flex;
+    max-width: 100%;
+}
+
+.masthead-container {
+}
+
+.masthead-logo-container {
+    width: 160px;
+    background-color: #000;
+    height: 120px;
+    background: linear-gradient(213.4deg,transparent 25px,#000 25px);
+    z-index: 100;
+    position: relative;
+}
+
+/* Vertical Identifier */
+
+.vertical-id {
+    display: flex;
+}
+
+.vertical-id p {
+    font-weight: 700;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: .125rem;
+    padding: 5px 10px;
+    text-align: center;
+    border-top: 5px solid var(--gold-solid);
+    width: 160px;    
+}
+
+.vertical-issue {
+    background: var(--gold-solid);
+    top: -5px;
+    position: relative;
+    left: -5px;
+}
+
+.vertical-issue p {
+    font-size: 1rem;
+    letter-spacing: .025rem;
+    padding: 6px 10px;
+    position: relative;
+    font-weight: 600;
+}
+
+/* Main Nav */
+
+.heading-constrain.nav-flex-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: column;
+    /* padding: 5px 0; */
+    flex-wrap: wrap-reverse;
+    align-self: normal;
+    height: 120px;
+    justify-content: space-between;    
+}
+
+ul.nav-items li {
+    position: relative;
+    bottom:15px;
+}
+
+ul.nav-items li {
+    display: inline;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    padding: 10px 20px;
+}
+
+ul.nav-items li:hover {
+    background: #fff;
+    border-bottom: 5px solid var(--gold-solid);
+}
+
+/* Search Button */
+
+button.search {
+    /* border-bottom: 1px solid var(--gold-solid); */
+    display: inline-flex;
+    margin: 20px;
+    width: min-content;
+    font-family: 'kandal';
+    padding-bottom: 3px;
+    font-style: italic;
+    font-size: 1.125rem;
+}
+
+button.search i {
+    padding-left: 8px;
+    font-size: .925rem;
+    top: 4px;
+    position: relative;    
+
+}
+/* Stripe Background: https://stripesgenerator.com */
+
+.stripe.glen-mist {
+    background-image: linear-gradient(34deg, #eeeeee 10%, var(--glen-mist) 10%, var(--glen-mist) 50%, #eeeeee 50%, #eeeeee 60%, var(--glen-mist) 60%, var(--glen-mist) 100%);
+    background-size: 8.94px 6.03px;
+    }
+
+.stripe.graphite {
+    background-image: linear-gradient(34deg, #222222 10%, var(--graphite) 10%, var(--graphite) 50%, #222222 50%, #222222 60%, var(--graphite) 60%, var(--graphite) 100%);
+    background-size: 8.94px 6.03px;
+    }
+
+.stripe.white {
+    background-image: linear-gradient(35deg, #ededed 10%, #fbfbfb 10%, #fbfbfb 50%, #ededed 50%, #ededed 60%, #fbfbfb 60%, #fbfbfb 100%);
+    background-size: 8.72px 6.10px;
+}
+
+ .stripe.graphite ul.nav-items li {
+    color: #eee;
+}
+
+ .stripe.graphite ul.nav-items li:hover{
+    color: #000;
+}
+
+/* ===== ALTERNATIVE HEADING STYLES ==================== */
+
+.alt .masthead-logo-container {
+    background: unset;
+}
+
+.alt .vertical-id {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.alt p.vertical-name {
+    border: none;
+    font-size: 2.5rem;
+    color: #fff;
+    position: relative;
+    top: 10px;
+    width: min-content;    
+    padding: 0 0 0 20px;
+    letter-spacing: .25rem;
+}
+
+.alt .vertical-issue {
+    height: min-content;
+    align-self: flex-end;
+    top: 15px;
+}
+
+.alt .masthead-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.alt .vertical-id:before { 
+  content: '';
+  height: 75%;
+  width: 1px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #fff;
+}
+
+.alt ul.nav-items li {
+    color: #eee;
+}
+
+.alt ul.nav-items li:hover {
+    color: #000;
+}
+
+.alt .stripe {
+background-image: linear-gradient(34deg, #222222 10%, var(--graphite) 10%, var(--graphite) 50%, #222222 50%, #222222 60%, var(--graphite) 60%, var(--graphite) 100%);
+background-size: 8.94px 6.03px;
+    }
+
+.alt button.search {
+    color: var(--gold-solid);
+}
+
+
+/* MOCKUP PROPERTIES FOR SMALL SCREENS
+// These styles are a rough representation of how we want things to LOOK on mobile.
+// A lot this CSS is for demo only and will need to be redone to fit neatly into the codebase. */
+
+@media only screen and (max-width: 960px) {
+    .nav-container, ul.publication-items {
+        display: none;
+    }
+    .global-header {
+        height: 80px;
+    }
+    .masthead-logo-container {
+        width: 120px;
+        height: 80px;
+        background: linear-gradient(213.4deg,transparent 20px,#000 20px); 
+    }
+    .vertical-id p {
+        width: 120px;
+    }
+    .masthead-logo-container svg {
+        padding: 16px 20px 20px 12px;
+    }
+    .vertical-id p {
+        font-size: 1.125rem !important; /* only used here to override the inline CSS on this demo page. */
+        letter-spacing: .0625rem !important;/* only used here to override the inline CSS on this demo page. */
+        padding: 0 5px;
+    }
+    .global-header:after {
+        right: -38px;;
+    }
+}
+
+@media only screen and (min-width: 961px) {
+    .mobile-menu-icon-container {
+        display: none;
+    }
+}
+
+.mobile-menu-icon-container {
+        margin: -20px 10px 0 0;
+}
+
+.mobile-menu-icon-container .icon {
+        font-size: 1.5rem;
+        margin-right: 15px;
+    }
+
+
+@media only screen and (max-width: 500px) {
+    .nav-container, ul.publication-items {
+        display: none;
+    }
+    .global-header {
+        height: 60px;
+    }
+    .masthead-logo-container {
+        width: 90px;
+        height: 60px;
+        background: linear-gradient(213.4deg,transparent 15px,#000 15px);    
+    }
+    .vertical-id p {
+        width: 90px;
+    }
+    .masthead-logo-container svg {
+        padding: 12px 15px 15px 8px;
+    }
+    .vertical-id p {
+        font-size: .85rem !important; /* only used here to override the inline CSS on this demo page. */
+        letter-spacing: .025rem !important;/* only used here to override the inline CSS on this demo page. */
+        padding: 0 5px;
+    }
+    .global-header:after {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 961px) {
+    .mobile-menu-icon-container {
+        display: none;
+    }
+}
+
+#menuToggle {
+	display: block;
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	z-index: 1;
+	-webkit-user-select: none;
+	user-select: none;
+  }
+  
+  #menuToggle a {
+	text-decoration: none;
+	color: #232323;
+	transition: color 0.3s ease;
+  }
+  
+  #menuToggle a:hover {
+	color: tomato;
+  }
+  
+  #menuToggle input {
+	display: block;
+	width: 40px;
+	height: 32px;
+	position: absolute;
+	top: -7px;
+	left: -5px;
+	cursor: pointer;
+	opacity: 0;
+	z-index: 2;
+	-webkit-touch-callout: none;
+  }
+  
+  #menuToggle span {
+	display: block;
+	width: 33px;
+	height: 4px;
+	margin-bottom: 5px;
+	position: relative;
+	background: #555;
+	border-radius: 3px;
+	z-index: 1;
+	transform-origin: 4px 0px;
+	transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+	  background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+	  opacity 0.55s ease;
+  }
+  
+  #menuToggle span:first-child {
+	transform-origin: 0% 0%;
+  }
+  
+  #menuToggle span:nth-last-child(2) {
+	transform-origin: 0% 100%;
+  }
+  
+  #menuToggle input:checked~span {
+	opacity: 1;
+	transform: rotate(45deg) translate(-2px, -1px);
+	background: #ccc;
+  }
+  
+  #menuToggle input:checked~span:nth-last-child(3) {
+	opacity: 0;
+	transform: rotate(0deg) scale(0.2, 0.2);
+  }
+  
+  #menuToggle input:checked~span:nth-last-child(2) {
+	transform: rotate(-45deg) translate(0, -1px);
+  }
+  
+  #menu {
+	position: fixed;
+	width: 400px;
+	height: 110vh;
+	margin: -100px 0 0 -50px;
+	padding: 125px 150px 50px 50px;
+	right: -100px;
+	background: #3c3c3c;
+	list-style-type: none;
+	-webkit-font-smoothing: antialiased;
+	transform-origin: 0% 0%;
+	transform: translate(100%, 0);
+	transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+  }
+  
+  #menu li {
+	padding: 30px 0 10px;
+	font-size: 24px;
+	text-align: right;
+	color: #ddd;
+	transform: translatex(30%);
+	transition: transform .4s ease-in;
+  }
+  
+  #menu a li {
+  color: #a1a1a1;
+  text-decoration: none;
+  background-image: linear-gradient(#a1a1a1, #a1a1a1);
+  background-size: 0% 0.1em;
+  background-position-y: 100%;
+  background-position-x: 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.2s ease-in-out;
+  }
+  
+  #menu a li:hover,
+  #menu a li:focus,
+  #menu a li:active {
+  background-size: 100% 0.1em;
+  }
+  
+  /*
+  #menu li.one {
+	transition-delay: 0.05s;
+  }
+  
+  #menu li.two {
+	transition-delay: 0.15s;
+  }
+  
+  #menu li.three {
+	transition-delay: 0.25s;
+  }
+  
+  #menu li.four {
+	transition-delay: 0.35s;
+  }
+  
+  #menu li.five {
+	transition-delay: 0.45s;
+  }
+  */
+  
+  #menuToggle input:checked~ul {
+	transform: translatex(0);
+  }
+  
+  #menuToggle input:checked~#menu a li {
+	transform: translatex(0);
+  }
+  
 
 
 
