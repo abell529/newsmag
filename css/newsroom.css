@@ -7635,6 +7635,124 @@ background-size: 8.94px 6.03px;
    ====================================================
    ==================================================== */
 
+
+   .navigation-top.temphead-top.gray-top .main-nav {
+	background:#3C3C3C;
+	border: none;
+}
+.navigation-top.gray-top .main-nav ul li a{
+	color: #ffffff;
+}
+.navigation-top.gray-top .main-nav ul li a:hover{
+	color: #FEC00F;
+}
+.navigation-top.gray-top .mobile{
+	background:#3C3C3C;
+	border-bottom:2px solid #3C3C3C;
+}
+.navigation.gray-top .mobile-nav{
+	color: #ffffff;
+}
+.navigation.gray-top .hamburger i{
+	background:#ffffff;
+}
+
+
+
+.navigation-top .mobile .search-section {
+	position: absolute;
+	right: 100px;
+	top: 7px;
+}
+.navigation-top .mobile .search-section input {
+	width: 115px;
+	padding-right: 100px;
+	border-radius: 30px;
+	background: white;
+	color: black;
+	border: 2px solid black;
+}
+.navigation-top .mobile .search-section i {
+	color: black;
+	right: 15px;
+	top: 9px;
+}
+.navigation-top .mobile .search-section label {
+	color: black;
+}
+.navigation-top .mobile .search button {
+	border-radius: 0 30px 30px 0px;
+}
+.navigation-top .mobile .search-section.secondary {
+	display: none;
+	width: 100%;
+	left: 0;
+	right: 0;
+	background: #3C3C3C;
+	top: 74px;
+}
+.navigation-top .mobile .search-section.secondary input {
+	width: 96%;
+	padding: 10px 2%;
+	margin: 11px 0px;
+	border-radius: 0px;
+	border: 2px solid white;
+	background: #3C3C3C;
+	color: #CCCCCC;
+	height: 16px;
+}
+.navigation-top .mobile .search-section.secondary label {
+	color: #CCCCCC;
+	top: 22px;
+	left: 34px;
+}
+.navigation-top .mobile .search-section.secondary i {
+	color: white;
+	top: 22px;
+	right: 29px;
+}
+
+
+
+
+.navigation-top .mobile-nav {
+	position: absolute;
+	right: 0px;
+	top: 7px;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 0.9375rem;
+	margin-right: 10px;
+}
+.navigation-top .hamburger {
+	float: none;
+	right: auto;
+	left: auto;
+	top: 11px;
+	margin-left: 9px;
+}
+.navigation-top .hamburger:hover i {
+	background: #FEC00F;
+}
+.navigation-top .hamburger.active {
+	top: 9px;
+}
+.navigation-top.temphead .main-nav {
+	padding: 58px 0px;
+}
+
+
+
+.navigation-top.temphead-top .main-nav ul .btn {
+	margin: 0px;
+	font-weight: 700;
+}
+
+
+
+
+
+   
 .byline-container {
     z-index: 100;
 }
