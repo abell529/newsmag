@@ -1395,11 +1395,6 @@ main#content.no-margin {
     --tiger-placeholder-xl: #5abbc350;
 } 
 
-/* ===== WIREFRAME PROPS =================================== */
-
-img {
-    filter: grayscale(1) contrast(.55) brightness(1.25);
-}
 
 /* =======================================
 
