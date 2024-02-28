@@ -7662,6 +7662,10 @@ background-size: 8.94px 6.03px;
 	position: relative;
 	right: 38px;
 	top: 9px;
+	display:none;
+}
+.navigation-top .search-section.active {
+	display: block;
 }
 .navigation-top .search-section.form {
 	position: relative;
