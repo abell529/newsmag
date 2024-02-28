@@ -7703,9 +7703,9 @@ background-size: 8.94px 6.03px;
 	transition: 0.3s ease all;
 }
 .navigation-top .search-section button {
-	position: absolute;
+	position: relative;
 	right: 2px;
-	top: 2px;
+	top: 0px;
 	pointer-events: none;
 	opacity: 0;
 	color: black;
@@ -7714,14 +7714,14 @@ background-size: 8.94px 6.03px;
 	font-size: 0.9375rem;
 	font-style: normal;
 	background: #fec00f;
-	padding: 7.5px 15px;
+	padding: 3px 15px;
 	transition: 0.3s ease all;
 }
 .navigation-top .search-section button:hover {
 	background: black;
 }
 .navigation-top .search-section.active input {
-	width: 400px;
+	width: 300px;
 	text-indent: 0em;
 	padding-right: 100px;
 }
