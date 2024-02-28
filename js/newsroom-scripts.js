@@ -24,7 +24,6 @@ $(document).ready(function() {
     //mobile navigation
     $('.mobile-nav').on("click touch keypress", function () {
 		$(".mobile-nav .hamburger").toggleClass('active');
-		$(".mobile-nav .hamburger-nav").toggleClass('active');
 		$(".mobile-links").toggleClass('active');
 		$('.mobile-links ul.util li.top').attr('tabindex', '0');
 		$('.mobile-links ul.util li.top a').attr('tabindex', '0');
@@ -87,33 +86,82 @@ $(document).ready(function() {
 			$('.mobile-links > .container').css('padding-bottom','450px').css('margin-top','-70px');
 		}
 
-
-		$('.mobile-links-nav > .container-nav').css('padding-bottom','950px').css('margin-top','-70px');
-		
-		if($(this).hasClass('students')) {
-			$('.mobile-links-nav > .container-nav').css('padding-bottom','850px').css('margin-top','-70px');
-		}
-		
-		if($(this).hasClass('parents')) {
-			$('.mobile-links-nav > .container-nav').css('padding-bottom','450px').css('margin-top','-70px');
-		}
-		
-		if($(this).hasClass('alumni')) {
-			$('.mobile-links-nav > .container-nav').css('padding-bottom','450px').css('margin-top','-70px');
-		}
-		
-		if($(this).hasClass('facultystaff')) {
-			$('.mobile-links-nav > .container-nav').css('padding-bottom','450px').css('margin-top','-70px');
-		}
-		
-		if($(this).hasClass('business')) {
-			$('.mobile-links-nav > .container-nav').css('padding-bottom','450px').css('margin-top','-70px');
-		}
-		
 	    $('.mobile-links .back p').css('display','block');
-		$('.mobile-links-nav .back p').css('display','block');
 	    
 	});
+
+//mobile navigation NEW
+$('.mobile-nav').on("click touch keypress", function () {
+	$(".mobile-nav .hamburger-nav").toggleClass('active');
+	$(".mobile-links-nav").toggleClass('active');
+	$('.mobile-links-nav ul.util li.top').attr('tabindex', '0');
+	$('.mobile-links-nav ul.util li.top a').attr('tabindex', '0');
+	if($('.mobile-links-nav.active').length > 0) {
+		$('.mobile-links-nav a').attr('tabindex', '0');
+		$('.mobile-links-nav ul.util li ul li a').attr('tabindex', '-1');
+		// $('.mobile-links').attr('aria-hidden', 'false');
+		// $('#content').css('display','none');
+		$('.footer').css('display','none');
+		$('.footer-callout').css('display','none');
+		$('.mobile-nav').attr('aria-label', 'Mobile navigation close');
+	}
+	else{
+		$('.mobile-links-nav a').attr('tabindex', '-1');
+		// $('.mobile-links').attr('aria-hidden', 'true');
+		$('#content').css('display','block');
+		$('.footer').css('display','block');
+		$('.footer-callout').css('display','block');
+		$('.mobile-nav').attr('aria-label', 'Mobile navigation button');
+	}
+});
+//mobile navigation nested ul NEW
+$('.mobile-links-nav ul.util li').on("click touch keypress", function () {
+	$(this).children('ul').addClass('active');
+	
+	
+	$(".mobile-links-nav ul li a").attr('tabindex', '-1');
+	$(".mobile-links-nav ul.util li").attr('tabindex', '-1');
+	
+	$(this).find("ul li a").attr('tabindex', '0');
+	$('.mobile-links-nav .back').addClass('active').attr('tabindex', '0');
+	
+	$('.mobile-links-nav ul.util li ul.active li:first-of-type').focus();
+	
+	$('.mobile-links-nav ul li').css('display','none');
+	$('.mobile-links-nav .btn').css('display','none');
+	$('.mobile-links-nav p').css('display','none');
+	$(this).css('display','block').css("visibility","hidden");
+	$('.mobile-links-nav ul.util li ul.active li').css('display','block').css("visibility","visible");
+	
+	$('.mobile-links-nav > .container-nav').css('padding-bottom','950px').css('margin-top','-70px');
+	
+	if($(this).hasClass('students')) {
+		$('.mobile-links-nav > .container-nav').css('padding-bottom','850px').css('margin-top','-70px');
+	}
+	
+	if($(this).hasClass('parents')) {
+		$('.mobile-links-nav > .container-nav').css('padding-bottom','450px').css('margin-top','-70px');
+	}
+	
+	if($(this).hasClass('alumni')) {
+		$('.mobile-links-nav > .container-nav').css('padding-bottom','450px').css('margin-top','-70px');
+	}
+	
+	if($(this).hasClass('facultystaff')) {
+		$('.mobile-links-nav > .container-nav').css('padding-bottom','450px').css('margin-top','-70px');
+	}
+	
+	if($(this).hasClass('business')) {
+		$('.mobile-links-nav > .container-nav').css('padding-bottom','450px').css('margin-top','-70px');
+	}
+
+	$('.mobile-links-nav .back p').css('display','block');
+	
+});
+
+
+
+
     $('.mobile-links .back').on("click touch keypress", function () {
 	    $('.mobile-links ul.util li ul').removeClass('active');
 	    
