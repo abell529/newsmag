@@ -11,6 +11,14 @@ $(document).ready(function() {
 		$('.navigation .search-section').removeClass('active');
 	});
 
+	//detect focus of navigation search bar
+	$('.navigation-top .search-section input.search_input').focus( function() {
+		$('.navigation-top .search-section').addClass('active');
+	});
+	$('.navigation-top .search-section input.search_input').blur( function() {
+		$('.navigation-top .search-section').removeClass('active');
+	});
+
 	
     
     //mobile navigation
@@ -77,6 +85,29 @@ $(document).ready(function() {
 		if($(this).hasClass('business')) {
 			$('.mobile-links > .container').css('padding-bottom','450px').css('margin-top','-70px');
 		}
+
+
+		$('.mobile-links > .container-nav').css('padding-bottom','950px').css('margin-top','-70px');
+		
+		if($(this).hasClass('students')) {
+			$('.mobile-links > .container-nav').css('padding-bottom','850px').css('margin-top','-70px');
+		}
+		
+		if($(this).hasClass('parents')) {
+			$('.mobile-links > .container-nav').css('padding-bottom','450px').css('margin-top','-70px');
+		}
+		
+		if($(this).hasClass('alumni')) {
+			$('.mobile-links > .container-nav').css('padding-bottom','450px').css('margin-top','-70px');
+		}
+		
+		if($(this).hasClass('facultystaff')) {
+			$('.mobile-links > .container-nav').css('padding-bottom','450px').css('margin-top','-70px');
+		}
+		
+		if($(this).hasClass('business')) {
+			$('.mobile-links > .container-nav').css('padding-bottom','450px').css('margin-top','-70px');
+		}
 		
 	    $('.mobile-links .back p').css('display','block');
 	    
@@ -95,6 +126,7 @@ $(document).ready(function() {
 	    $('.mobile-links ul li').css('display','block').css("visibility","visible");;
 	    $('.mobile-links p').css('display','block');
 		$('.mobile-links > .container').css('padding-bottom','0').css('margin-top','0');
+		$('.mobile-links > .container-nav').css('padding-bottom','0').css('margin-top','0');
 		
 	    $('.mobile-links ul:first-of-type li:first-of-type a').focus();
 	});

@@ -7659,17 +7659,17 @@ background-size: 8.94px 6.03px;
 
 
 .navigation-top .search-section {
-	position: absolute;
-	right: 10px;
-	top: 2px;
+	position: relative;
+	right: 0;
+	top: 0;
 }
 .navigation-top .search-section i {
-	position: absolute;
-	color: white;
-	right: 9px;
+	position: relative;
+	color: black;
+	right: 0;
 	font-size: 1.125rem;
 	font-weight: 700;
-	top: 9px;
+	top: 0;
 }
 .navigation-top .search-section input {
 	font-family: proxima-nova, sans-serif;
@@ -7713,7 +7713,7 @@ background-size: 8.94px 6.03px;
 	transition: 0.3s ease all;
 }
 .navigation-top .search-section button:hover {
-	background: white;
+	background: black;
 }
 .navigation-top .search-section.active input {
 	width: 400px;
