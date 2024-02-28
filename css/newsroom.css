@@ -7662,7 +7662,10 @@ background-size: 8.94px 6.03px;
 	position: relative;
 	right: 38px;
 	top: 9px;
-	display:none;
+}
+.navigation-top .search-section.form {
+	height:0;
+	width:0;
 }
 .navigation-top .search-section.icon-only {
 	display:block;
