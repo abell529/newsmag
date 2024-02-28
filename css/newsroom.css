@@ -7787,23 +7787,23 @@ background-size: 8.94px 6.03px;
 
 
 .navigation-top .mobile-nav {
-	position: absolute;
+	position: relative;
 	right: 0px;
-	top: 7px;
+	top: 0;
 	text-transform: uppercase;
 	font-weight: 700;
 	font-size: 0.9375rem;
-	margin-right: 10px;
+	margin-right: 0;
 }
 .navigation-top .hamburger {
 	float: none;
 	right: auto;
 	left: auto;
-	top: 11px;
-	margin-left: 9px;
+	top: 0;
+	margin-left: 0;
 }
 .navigation-top .hamburger:hover i {
-	background: #FEC00F;
+	background: black;
 }
 .navigation-top .hamburger.active {
 	top: 9px;
