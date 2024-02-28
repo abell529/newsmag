@@ -7664,13 +7664,12 @@ background-size: 8.94px 6.03px;
 	top: 9px;
 }
 .navigation-top .search-section.form {
-	height:0;
-	width:0;
+	display:none;
 }
 .navigation-top .search-section.icon-only {
 	display:block;
 }
-.navigation-top .search-section.active {
+.navigation-top .search-section.form.active {
 	display: block;
 }
 .navigation-top .search-section.form {
