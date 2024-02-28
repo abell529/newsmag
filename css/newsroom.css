@@ -7663,6 +7663,11 @@ background-size: 8.94px 6.03px;
 	right: 38px;
 	top: 9px;
 }
+.navigation-top .search-section.form {
+	position: relative;
+	right: 18px;
+	top: -12px;
+}
 .navigation-top .search-section i {
 	position: relative;
 	color: black;
