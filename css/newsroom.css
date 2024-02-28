@@ -7646,15 +7646,86 @@ background-size: 8.94px 6.03px;
 .navigation-top.gray-top .main-nav ul li a:hover{
 	color: #FEC00F;
 }
-.navigation-top.gray-top .mobile{
+/* .navigation-top.gray-top .mobile{
 	background:#3C3C3C;
-	border-bottom:2px solid #3C3C3C;
+	border-bottom:2px solid #3C3C3C; 
 }
-.navigation.gray-top .mobile-nav{
+.navigation-top.gray-top .mobile-nav{
 	color: #ffffff;
 }
-.navigation.gray-top .hamburger i{
+.navigation-top.gray-top .hamburger i{
 	background:#ffffff;
+}*/
+
+
+.navigation-top .search-section {
+	position: absolute;
+	right: 10px;
+	top: 2px;
+}
+.navigation-top .search-section i {
+	position: absolute;
+	color: white;
+	right: 9px;
+	font-size: 1.125rem;
+	font-weight: 700;
+	top: 9px;
+}
+.navigation-top .search-section input {
+	font-family: proxima-nova, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	background: black;
+	border: 2px solid white;
+	color: white;
+	height: 13px;
+	padding: 10px 16px;
+	width: 60px;
+	text-indent: -99em;
+	transition: 0.3s ease all;
+}
+.navigation-top .search-section label {
+	font-family: proxima-nova, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	position: absolute;
+	left: 17px;
+	top: 9px;
+	pointer-events: none;
+	color: white;
+	font-size: 0.9375rem;
+	opacity: 1;
+	transition: 0.3s ease all;
+}
+.navigation-top .search-section button {
+	position: absolute;
+	right: 2px;
+	top: 2px;
+	pointer-events: none;
+	opacity: 0;
+	color: black;
+	font-family: proxima-nova, sans-serif;
+	font-weight: 700;
+	font-size: 0.9375rem;
+	font-style: normal;
+	background: #fec00f;
+	padding: 7.5px 15px;
+	transition: 0.3s ease all;
+}
+.navigation-top .search-section button:hover {
+	background: white;
+}
+.navigation-top .search-section.active input {
+	width: 400px;
+	text-indent: 0em;
+	padding-right: 100px;
+}
+.navigation-top .search-section.active label {
+	opacity: 0;
+}
+.navigation-top .search-section.active button {
+	opacity: 1;
+	pointer-events: all;
 }
 
 
