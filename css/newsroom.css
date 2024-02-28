@@ -7660,8 +7660,8 @@ background-size: 8.94px 6.03px;
 
 .navigation-top .search-section {
 	position: relative;
-	right: 0;
-	top: 0;
+	right: 22px;
+	top: 19px;
 }
 .navigation-top .search-section i {
 	position: relative;
@@ -8025,12 +8025,12 @@ background-size: 8.94px 6.03px;
 	height: 25px;
 	margin: auto;
 	position: absolute;
-	right: 16px;
+	right: -14px;
 	top: 8px;
 	bottom: 0;
 	transition: 0.3s ease all;
 	position: relative;
-	top: -8px;
+	top: -27px;
 	display: inline-block;
 	float: left;
 }
