@@ -88,29 +88,30 @@ $(document).ready(function() {
 		}
 
 
-		$('.mobile-links > .container-nav').css('padding-bottom','950px').css('margin-top','-70px');
+		$('.mobile-links-nav > .container-nav').css('padding-bottom','950px').css('margin-top','-70px');
 		
 		if($(this).hasClass('students')) {
-			$('.mobile-links > .container-nav').css('padding-bottom','850px').css('margin-top','-70px');
+			$('.mobile-links-nav > .container-nav').css('padding-bottom','850px').css('margin-top','-70px');
 		}
 		
 		if($(this).hasClass('parents')) {
-			$('.mobile-links > .container-nav').css('padding-bottom','450px').css('margin-top','-70px');
+			$('.mobile-links-nav > .container-nav').css('padding-bottom','450px').css('margin-top','-70px');
 		}
 		
 		if($(this).hasClass('alumni')) {
-			$('.mobile-links > .container-nav').css('padding-bottom','450px').css('margin-top','-70px');
+			$('.mobile-links-nav > .container-nav').css('padding-bottom','450px').css('margin-top','-70px');
 		}
 		
 		if($(this).hasClass('facultystaff')) {
-			$('.mobile-links > .container-nav').css('padding-bottom','450px').css('margin-top','-70px');
+			$('.mobile-links-nav > .container-nav').css('padding-bottom','450px').css('margin-top','-70px');
 		}
 		
 		if($(this).hasClass('business')) {
-			$('.mobile-links > .container-nav').css('padding-bottom','450px').css('margin-top','-70px');
+			$('.mobile-links-nav > .container-nav').css('padding-bottom','450px').css('margin-top','-70px');
 		}
 		
 	    $('.mobile-links .back p').css('display','block');
+		$('.mobile-links-nav .back p').css('display','block');
 	    
 	});
     $('.mobile-links .back').on("click touch keypress", function () {
@@ -130,6 +131,25 @@ $(document).ready(function() {
 		$('.mobile-links > .container-nav').css('padding-bottom','0').css('margin-top','0');
 		
 	    $('.mobile-links ul:first-of-type li:first-of-type a').focus();
+	});
+
+	$('.mobile-links-nav .back').on("click touch keypress", function () {
+	    $('.mobile-links-nav ul.util li ul').removeClass('active');
+	    
+	    $(".mobile-links-nav ul li a").attr('tabindex', '0');
+	    $(".mobile-links-nav ul.util li").attr('tabindex', '0');
+		$(".mobile-links-nav ul.util li ul li").attr('tabindex', '-1');
+		
+	    $(".mobile-links-nav ul.util li ul li a").attr('tabindex', '-1');
+	    $(this).removeClass('active').attr('tabindex', '-1');
+	    
+	    $('.mobile-links-nav .btn').css('display','block');
+	    $('.mobile-links-nav ul li').css('display','block').css("visibility","visible");;
+	    $('.mobile-links-nav p').css('display','block');
+		$('.mobile-links-nav > .container').css('padding-bottom','0').css('margin-top','0');
+		$('.mobile-links-nav > .container-nav').css('padding-bottom','0').css('margin-top','0');
+		
+	    $('.mobile-links-nav ul:first-of-type li:first-of-type a').focus();
 	});
 	
 	/*
