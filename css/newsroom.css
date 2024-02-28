@@ -7636,7 +7636,7 @@ background-size: 8.94px 6.03px;
    ==================================================== */
 
 
-   .navigation-top.temphead-top.gray-top .main-nav {
+.navigation-top.temphead-top.gray-top .main-nav {
 	background:#3C3C3C;
 	border: none;
 }
@@ -7747,6 +7747,313 @@ background-size: 8.94px 6.03px;
 	margin: 0px;
 	font-weight: 700;
 }
+
+
+
+.mobile-links-nav {
+	opacity: 0;
+	pointer-events: none;
+	position: fixed;
+	background: black;
+	width: 100%;
+	top: 89px;
+	height: 100%;
+	padding: 50px 0px 200px 0px;
+	overflow-x: hidden;
+	transition: 0.3s ease all;
+	display: none;
+}
+.mobile-links-nav ul {
+	margin: 0px;
+}
+.mobile-links-nav ul li {
+	margin: 0px;
+	padding: 10px 0px;
+	color: white;
+	transition: 0.3s ease all;
+	text-decoration-color: black;
+	font-size: 1.25rem;
+	font-weight: 400;
+	width: 100%;
+	display: block;
+}
+.mobile-links-nav ul li:before {
+	display: none;
+}
+.mobile-links-nav ul li span {
+	position: relative;
+}
+.mobile-links-nav ul li span i {
+	position: absolute;
+	right: -27px;
+	top: -1px;
+}
+.mobile-links-nav ul li a {
+	color: white;
+	text-decoration-color: black;
+	font-size: 1.25rem;
+	font-weight: 400;
+	width: 100%;
+	display: block;
+	position: relative;
+}
+.mobile-links-nav ul li a:hover {
+	color: #FEC00F;
+}
+.mobile-links-nav ul li i {
+	color: #FEC00F;
+	top: 11px;
+	position: absolute;
+	right: 0px;
+}
+.mobile-links-nav ul:last-of-type {
+	margin-top: 25px;
+}
+.mobile-links-nav ul:last-of-type li a i {
+	top: 4px;
+	position: relative;
+	margin-right: 5px;
+}
+.mobile-links-nav ul.util {
+	padding-top: 0px;
+	margin-bottom: 38px;
+}
+.mobile-links-nav ul.util li {
+	border-bottom: 1px solid #3C3C3C;
+}
+.mobile-links-nav ul.util li:first-of-type {
+	border-top: 1px solid #3C3C3C;
+}
+.mobile-links-nav ul.util li ul {
+	position: absolute;
+	top: 20px;
+	background: black;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	margin-top: 0px;
+	transition: 0.3s ease all;
+	right: -1000px;
+	padding: 0 10px;
+	display: none;
+}
+.mobile-links-nav ul.util li ul li {
+	border: none;
+}
+.mobile-links-nav ul.util li ul li:first-of-type {
+	border-top: none;
+}
+.mobile-links-nav ul.util li ul li.title {
+	margin-bottom: 0px;
+	margin-top: 0px;
+	color: white;
+	font-size: 0.9375rem;
+	text-transform: uppercase;
+	font-weight: 700;
+	border-top: none;
+	border-bottom: 1px solid #3C3C3C;
+}
+.mobile-links-nav ul.util li ul li.title:hover {
+	cursor: default;
+}
+.mobile-links-nav ul.util li ul li.title.margin {
+	margin-top: 20px;
+}
+.mobile-links-nav ul.util li ul.active {
+	right: 0px;
+	display: block;
+}
+.mobile-links-nav ul.util li:hover {
+	color: #fec00f;
+	cursor: pointer;
+}
+.mobile-links-nav .back {
+	background: #f4b810;
+	position: absolute;
+	width: 100%;
+	top: 0px;
+	z-index: 3;
+	opacity: 0;
+	transition: 0.3s ease all;
+	pointer-events: none;
+	display: none;
+}
+.mobile-links-nav .back p {
+	margin-bottom: 0px;
+	z-index: 3;
+	color: black;
+	background: #f4b810;
+	width: 100%;
+	padding: 15px 0px;
+	transition: 0.3s ease all;
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: 0.05em;
+	margin-top:0px;
+}
+.mobile-links-nav .back p i {
+	position: relative;
+	top: 3px;
+}
+.mobile-links-nav .back .container {
+	padding: 0 5px;
+}
+.mobile-links-nav .back:hover {
+	background: white;
+}
+.mobile-links-nav .back:hover p {
+	background: white;
+	cursor: pointer;
+}
+.mobile-links-nav .back.active {
+	opacity: 1;
+	pointer-events: all;
+	display: block;
+}
+.mobile-links-nav h5 {
+	margin-bottom: 0px;
+	margin-top: 30px;
+	color: white;
+	font-size: 0.9375rem;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+.mobile-links-nav p{
+   margin-bottom: 0;
+   margin-top: 30px;
+   color: #fff;
+   font-size: .9375rem;
+   text-transform: uppercase;
+   font-weight: 700;
+   line-height: 2.25rem;
+   letter-spacing: .2px;
+   font-family: proxima-nova,sans-serif;
+}
+.mobile-links-nav a.btn {
+	display: table;
+	width: 208px;
+	text-align: center;
+	margin-bottom: 17px;
+}
+.mobile-links-nav a.btn:hover {
+	background: white;
+	border: 2px solid white;
+	color: black;
+}
+.mobile-links-nav.active {
+	opacity: 1;
+	pointer-events: all;
+	display: block;
+}
+
+
+
+.hamburger-nav {
+	cursor: pointer;
+	width: 20px;
+	height: 25px;
+	margin: auto;
+	position: absolute;
+	right: 0px;
+	top: 8px;
+	bottom: 0;
+	transition: 0.3s ease all;
+	position: relative;
+	top: 9px;
+	display: inline-block;
+	float: left;
+}
+.hamburger-nav i {
+	background-color: #ffffff;
+	border-radius: 2px;
+	content: '';
+	display: block;
+	width: 100%;
+	height: 2px;
+	transition: 0.3s ease all;
+	background-color: black;
+}
+.hamburger-nav i:nth-child(1) {
+	-webkit-animation: outT 0.3s backwards;
+	animation: outT 0.3s backwards;
+	-webkit-animation-direction: reverse;
+	animation-direction: reverse;
+}
+.hamburger-nav i:nth-child(2) {
+	margin: 5px 0;
+	-webkit-animation: outM 0.3s backwards;
+	animation: outM 0.3s backwards;
+	-webkit-animation-direction: reverse;
+	animation-direction: reverse;
+}
+.hamburger-nav i:nth-child(3) {
+	-webkit-animation: outBtm 0.3s backwards;
+	animation: outBtm 0.3s backwards;
+	-webkit-animation-direction: reverse;
+	animation-direction: reverse;
+}
+.hamburger-nav:hover i {
+	background: white;
+}
+.hamburger.active {
+	top: 4px;
+	top: 7px;
+}
+.hamburger-nav.active i:nth-child(2) {
+	margin: 7px 0;
+	-webkit-animation: inM 0.3s forwards;
+	animation: inM 0.3s forwards;
+}
+.hamburger-nav.active i:nth-child(1) {
+	-webkit-animation: inT 0.3s forwards;
+	animation: inT 0.3s forwards;
+}
+.hamburger-nav.active i:nth-child(3) {
+	-webkit-animation: inBtm 0.3s forwards;
+	animation: inBtm 0.3s forwards;
+	opacity: 0;
+}
+.hamburger-nav.touched:hover i {
+	background-color: #272727;
+}
+
+@media only screen and (min-width: 961px) {
+   .navigation-top .main-nav {
+	   display: block;
+   }
+}
+
+@media only screen and (max-width: 960px) {
+   .navigation-top .main-nav {
+	   display: none;
+   }
+}
+
+@media only screen and (min-width: 961px) {
+   .navigation-top .mobile {
+	   display: none;
+   }
+}
+
+@media only screen and (max-width: 960px) {
+   .navigation-top .mobile {
+	   display: block;
+   }
+}
+
+
+@media only screen and (min-width: 961px) {
+   .navigation-top .utility {
+	   display: block;
+   }
+}
+
+@media only screen and (max-width: 960px) {
+   .navigation-top .utility {
+	   display: none;
+   }
+}
+
 
 
 
