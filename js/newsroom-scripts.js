@@ -12,7 +12,7 @@ $(document).ready(function() {
 	});
 
 	//detect focus of navigation search bar
-	$('.navigation-top .search-section input.search_input').focus( function() {
+	$('.navigation-top .search-section .fa-magnifying-glass').click( function() {
 		$('.navigation-top .search-section').addClass('active');
 	});
 	$('.navigation-top .search-section input.search_input').blur( function() {
