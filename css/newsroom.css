@@ -8064,7 +8064,7 @@ background-size: 8.94px 6.03px;
 	animation-direction: reverse;
 }
 .hamburger-nav:hover i {
-	background: white;
+	background: black;
 }
 .hamburger.active {
 	top: 4px;

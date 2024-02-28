@@ -24,6 +24,7 @@ $(document).ready(function() {
     //mobile navigation
     $('.mobile-nav').on("click touch keypress", function () {
 		$(".mobile-nav .hamburger").toggleClass('active');
+		$(".mobile-nav .hamburger-nav").toggleClass('active');
 		$(".mobile-links").toggleClass('active');
 		$('.mobile-links ul.util li.top').attr('tabindex', '0');
 		$('.mobile-links ul.util li.top a').attr('tabindex', '0');
