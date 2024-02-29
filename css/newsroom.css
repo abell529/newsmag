@@ -8053,12 +8053,10 @@ background-size: 8.94px 6.03px;
 	height: 25px;
 	margin: auto;
 	position: absolute;
-	right: 7px;
-	top: 8px;
-	bottom: 0;
 	transition: 0.3s ease all;
 	position: relative;
-	top: -14px;
+	right: 7px;
+	top: 0;
 	display: inline-block;
 	float: left;
 }
