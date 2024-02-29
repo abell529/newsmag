@@ -7840,7 +7840,7 @@ background-size: 8.94px 6.03px;
 	pointer-events: none;
 	position: fixed;
 	background: black;
-	width: 100%;
+	width: 320px;
 	top: 50px;
     right: 0;
     height: 100%;
@@ -7855,6 +7855,10 @@ background-size: 8.94px 6.03px;
     background-color: white;
     z-index: 100001;
     position: relative;
+}
+
+.hamburger-nav.active:hover i {
+    background: #ffffff;
 }
 
 .mobile-links-nav ul {
