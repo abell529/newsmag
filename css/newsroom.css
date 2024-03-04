@@ -8234,65 +8234,69 @@ background-size: 8.94px 6.03px;
 /* ====================================================
    ====================================================
 
-   Further Adjustments
+   Footer
 
    ====================================================
    ==================================================== */
 
 
 
-.site-footer {
-    background-color: #333; /* Adjust the color to match the footer background */
+   .site-footer {
+    background-color: #1a1a1a; /* Adjust the color to match the footer background */
     color: #fff; /* Adjust if needed */
     padding: 20px 0;
     font-family: Arial, sans-serif; /* Use the actual font from the design */
-    font-size: 14px; /* Adjust if needed */
+    text-align: center;
 }
 
-.footer-content {
+.footer-top,
+.footer-bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px; /* Adjust based on the design */
-    margin: 0 auto;
-    padding: 0 20px;
+    flex-direction: column;
 }
 
-.footer-address {
-    margin: 0;
-}
-
-.footer-links {
-    display: flex;
-    gap: 20px; /* Adjust the space between the links */
+.footer-nav {
+    margin-bottom: 15px; /* Adjust as per design */
 }
 
 .footer-link {
-    color: #fff; /* Adjust if different colors are used for links */
+    color: #d4af37; /* Gold color for the links */
     text-decoration: none;
-    transition: color 0.3s;
+    margin: 0 10px; /* Adjust the spacing between links as needed */
+    font-size: 16px; /* Adjust as per design */
 }
 
 .footer-link:hover,
 .footer-link:focus {
-    color: #aaa; /* Hover and focus color */
+    text-decoration: underline; /* Optional: if you want to have underline on hover */
+}
+
+.footer-address {
+    margin: 0;
+    font-size: 16px; /* Adjust as per design */
 }
 
 .footer-copy {
-    margin: 0;
+    margin: 10px 0 0; /* Adjust as needed */
+    font-size: 14px; /* Adjust as per design */
 }
 
 @media (max-width: 768px) {
-    .footer-content {
+    .footer-top,
+    .footer-bottom {
         flex-direction: column;
-        text-align: center;
     }
 
-    .footer-links {
-        margin-top: 10px;
-        margin-bottom: 10px;
+    .footer-nav {
         flex-direction: column;
-        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .footer-link {
+        margin: 5px 0; /* Adjust the spacing for mobile as needed */
     }
 }
+
 
