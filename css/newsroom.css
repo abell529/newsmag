@@ -8240,63 +8240,88 @@ background-size: 8.94px 6.03px;
    ==================================================== */
 
 
-
    .site-footer {
-    background-color: #1a1a1a; /* Adjust the color to match the footer background */
-    color: #fff; /* Adjust if needed */
-    padding: 20px 0;
-    font-family: Arial, sans-serif; /* Use the actual font from the design */
-    text-align: center;
+    background-color: #1a1a1a; /* or any other preferred color */
+    color: #fff;
+    padding: 20px 40px;
+    font-family: 'Arial', sans-serif; /* Change to the font used on the site */
+    font-size: 14px; /* Adjust as needed */
 }
 
-.footer-top,
-.footer-bottom {
+.footer-row {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    display: flex;
     flex-direction: column;
 }
 
-.footer-nav {
-    margin-bottom: 15px; /* Adjust as per design */
+.footer-column-left {
+    text-align: left;
 }
 
-.footer-link {
-    color: #d4af37; /* Gold color for the links */
-    text-decoration: none;
-    margin: 0 10px; /* Adjust the spacing between links as needed */
-    font-size: 16px; /* Adjust as per design */
+.footer-column-right {
+    text-align: right;
 }
 
-.footer-link:hover,
-.footer-link:focus {
-    text-decoration: underline; /* Optional: if you want to have underline on hover */
+.footer-title {
+    color: #fff;
+    margin-bottom: 0; /* Adjust spacing as needed */
 }
 
 .footer-address {
-    margin: 0;
-    font-size: 16px; /* Adjust as per design */
+    margin-top: 5px; /* Adjust spacing as needed */
+}
+
+.footer-nav {
+    margin-bottom: 10px; /* Adjust spacing as needed */
+}
+
+.footer-link {
+    color: #d4af37; /* Gold color */
+    text-decoration: none;
+    margin-right: 20px; /* Adjust space between links as needed */
+}
+
+.footer-link:last-child {
+    margin-right: 0;
+}
+
+.footer-link:hover {
+    text-decoration: underline; /* or any other hover effect */
 }
 
 .footer-copy {
-    margin: 10px 0 0; /* Adjust as needed */
-    font-size: 14px; /* Adjust as per design */
+    color: #fff;
+    margin-top: 5px; /* Adjust spacing as needed */
+    text-align: right;
 }
 
+/* Responsive layout for mobile */
 @media (max-width: 768px) {
-    .footer-top,
-    .footer-bottom {
+    .footer-row {
         flex-direction: column;
+    }
+
+    .footer-column-right {
+        text-align: left;
     }
 
     .footer-nav {
-        flex-direction: column;
-        margin-bottom: 10px;
+        margin-bottom: 0;
+        text-align: left;
     }
 
     .footer-link {
-        margin: 5px 0; /* Adjust the spacing for mobile as needed */
+        margin: 5px 0; /* Stack the links vertically with spacing */
+    }
+
+    .footer-copy {
+        text-align: left;
+        margin-top: 10px;
     }
 }
-
-
