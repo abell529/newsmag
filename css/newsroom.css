@@ -8241,11 +8241,10 @@ background-size: 8.94px 6.03px;
 
 
    .site-footer {
-    background-color: #1a1a1a; /* or any other preferred color */
+    background-color: #ffbb00; 
     color: #fff;
     padding: 20px 40px;
-    font-family: 'Arial', sans-serif; /* Change to the font used on the site */
-    font-size: 14px; /* Adjust as needed */
+    font-size: 1.025rem;
 }
 
 .footer-row {
@@ -8270,21 +8269,21 @@ background-size: 8.94px 6.03px;
 
 .footer-title {
     color: #fff;
-    margin-bottom: 0; /* Adjust spacing as needed */
+    margin-bottom: 0;
 }
 
 .footer-address {
-    margin-top: 5px; /* Adjust spacing as needed */
+    margin-top: 5px;
 }
 
 .footer-nav {
-    margin-bottom: 10px; /* Adjust spacing as needed */
+    margin-bottom: 10px;
 }
 
 .footer-link {
-    color: #d4af37; /* Gold color */
+    color: #ffbb00; 
     text-decoration: none;
-    margin-right: 20px; /* Adjust space between links as needed */
+    margin-right: 20px;
 }
 
 .footer-link:last-child {
@@ -8292,12 +8291,12 @@ background-size: 8.94px 6.03px;
 }
 
 .footer-link:hover {
-    text-decoration: underline; /* or any other hover effect */
+    text-decoration: underline; 
 }
 
 .footer-copy {
     color: #fff;
-    margin-top: 5px; /* Adjust spacing as needed */
+    margin-top: 5px; 
     text-align: right;
 }
 
@@ -8317,7 +8316,7 @@ background-size: 8.94px 6.03px;
     }
 
     .footer-link {
-        margin: 5px 0; /* Stack the links vertically with spacing */
+        margin: 5px 0;
     }
 
     .footer-copy {
