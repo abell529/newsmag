@@ -7380,6 +7380,7 @@ p.tag-primary + h3 {
     top: -5px;
     position: relative;
     left: -5px;
+	z-index:10;
 }
 
 .vertical-issue p {
@@ -7389,6 +7390,15 @@ p.tag-primary + h3 {
     position: relative;
     font-weight: 600;
 }
+
+.newsroom-vertical .issue-date {
+	display: none;
+}
+
+.magazine-vertical .issue-date {
+	display: block;
+}
+
 
 /* Main Nav */
 
