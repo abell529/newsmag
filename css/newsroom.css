@@ -7694,10 +7694,10 @@ background-size: 8.94px 6.03px;
 	right: 0;
 	font-size: .925rem;
 	font-weight: 400;
-	top: 30px;
+	top: 33px;
 	float: right;
 }
-.alt .navigation-top .search-section i {
+.navigation-top .header-container.alt .search-section i {
 	color: #ffbb00;
 }
 .navigation-top .search-section input {
@@ -7723,12 +7723,15 @@ background-size: 8.94px 6.03px;
 	font-style: normal;
 	position: relative;
 	pointer-events: none;
-	color: white;
+	color: #ffbb00;
 	font-size: 0.9375rem;
 	opacity: 1;
 	transition: 0.3s ease all;
 	right: 76px;
     top: 32px;
+	font-family: 'kandal';
+    font-style: italic;
+    font-size: 1.125rem;
 }
 .navigation-top .search-section button {
 	position: absolute;
