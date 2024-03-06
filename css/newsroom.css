@@ -7732,10 +7732,10 @@ background-size: 8.94px 6.03px;
 }
 
 .search-section .search_input {
-	display: none;
+	visibility: hidden;
 }
 .search-section.active .search_input {
-	display: block;
+	visibility: visible;
 }
 
 .navigation-top .search-section button {
