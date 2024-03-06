@@ -7717,14 +7717,11 @@ background-size: 8.94px 6.03px;
     position: relative;
     right: 60px;
 }
-.navigation-top .search-section label {
-	font-family: proxima-nova, sans-serif;
+.navigation-top .header-container.alt .search-section label {
 	font-weight: 400;
-	font-style: normal;
-	position: relative;
+	position: absolute;
 	pointer-events: none;
 	color: #ffbb00;
-	font-size: 0.9375rem;
 	opacity: 1;
 	transition: 0.3s ease all;
 	right: 76px;
