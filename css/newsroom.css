@@ -8263,6 +8263,9 @@ background-size: 8.94px 6.03px;
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
+	max-width: 1200px;
+    margin: auto;
+    width: calc(100% - 30px);
 }
 
 .footer-column {
