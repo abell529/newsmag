@@ -7692,9 +7692,13 @@ background-size: 8.94px 6.03px;
 	position: relative;
 	color: black;
 	right: 0;
-	font-size: 1.5rem;
+	font-size: .925rem;
 	font-weight: 400;
-	top: 0;
+	top: 30px;
+	float: right;
+}
+.alt .navigation-top .search-section i {
+	color: #ffbb00;
 }
 .navigation-top .search-section input {
 	font-family: proxima-nova, sans-serif;
@@ -7708,24 +7712,26 @@ background-size: 8.94px 6.03px;
 	width: 60px;
 	text-indent: -99em;
 	transition: 0.3s ease all;
+	float: right;
+    top: 30px;
+    position: relative;
+    right: 60px;
 }
 .navigation-top .search-section label {
 	font-family: proxima-nova, sans-serif;
 	font-weight: 400;
 	font-style: normal;
-	position: absolute;
-	left: 17px;
-	top: 9px;
+	position: relative;
 	pointer-events: none;
 	color: white;
 	font-size: 0.9375rem;
 	opacity: 1;
 	transition: 0.3s ease all;
+	right: 76px;
+    top: 32px;
 }
 .navigation-top .search-section button {
-	position: relative;
-	right: 2px;
-	top: 0px;
+	position: absolute;
 	pointer-events: none;
 	opacity: 0;
 	color: black;
@@ -7736,6 +7742,9 @@ background-size: 8.94px 6.03px;
 	background: #fec00f;
 	padding: 3px 15px;
 	transition: 0.3s ease all;
+	float: right;
+    right: 85px;
+	top: 30px;
 }
 .navigation-top .search-section button:hover {
 	background: black;
