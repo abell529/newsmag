@@ -7731,10 +7731,10 @@ background-size: 8.94px 6.03px;
     font-size: 1.125rem;
 }
 
-.search-section {
+.search-section .search_input {
 	display: none;
 }
-.search-section.active {
+.search-section.active .search_input {
 	display: block;
 }
 
