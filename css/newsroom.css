@@ -8084,12 +8084,11 @@ background-size: 8.94px 6.03px;
 	transition: 0.3s ease all;
 	position: relative;
 	right: 7px;
-	top: 0;
+	top: 10px;
 	display: inline-block;
 	float: left;
 }
 .hamburger-nav i {
-	background-color: #ffffff;
 	border-radius: 2px;
 	content: '';
 	display: block;
@@ -8098,6 +8097,11 @@ background-size: 8.94px 6.03px;
 	transition: 0.3s ease all;
 	background-color: black;
 }
+
+.header-container.alt .hamburger-nav i {
+	background-color: #ffffff;
+}
+
 .hamburger-nav i:nth-child(1) {
 	-webkit-animation: outT 0.3s backwards;
 	animation: outT 0.3s backwards;
