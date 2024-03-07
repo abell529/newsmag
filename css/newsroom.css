@@ -7727,7 +7727,7 @@ background-size: 8.94px 6.03px;
 
 .mobile .search-section {
 	display: flex;
-	align-items: right;
+	align-items: center;
 	justify-content: flex-start;
 	gap: 3px;
 }
@@ -7803,7 +7803,7 @@ background-size: 8.94px 6.03px;
 }
 
 .mobile .search-section.secondary input {
-	width: 96%;
+	width: 40%;
 	padding: 10px 2%;
 	margin: 11px 0px;
 	border-radius: 0px;
