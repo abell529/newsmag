@@ -7704,7 +7704,7 @@ background-size: 8.94px 6.03px;
 .navigation-top .header-container.alt .search-section i {
 	color: #ffbb00;
 }
-.navigation-top .search-section input {
+.nav-container .search-section input {
 	font-family: proxima-nova, sans-serif;
 	font-weight: 400;
 	font-style: normal;
@@ -7721,6 +7721,24 @@ background-size: 8.94px 6.03px;
     position: relative;
     right: 77px;
 }
+
+.mobile .search-section input {
+	font-family: proxima-nova, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	background: black;
+	border: 2px solid white;
+	color: white;
+	height: 13px;
+	padding: 10px 16px;
+	width: 60px;
+	text-indent: -99em;
+	transition: 0.3s ease all;
+	top: 0px;
+    position: relative;
+    right: 0px;
+}
+
 .navigation-top .header-container.alt .search-section label {
 	font-weight: 400;
 	position: absolute;
@@ -7746,7 +7764,14 @@ background-size: 8.94px 6.03px;
 	visibility: visible;
 }
 
-.navigation-top .search-section button {
+.mobile .search-section {
+	display: flex;
+	align-items: right;
+	justify-content: flex-start;
+	gap: 3px;
+}
+
+.nav-container .search-section button {
 	position: absolute;
 	pointer-events: none;
 	opacity: 0;
@@ -7759,12 +7784,12 @@ background-size: 8.94px 6.03px;
 	padding: 3px 15px;
 	transition: 0.3s ease all;
 	float: right;
-    right: 25px;
-	top: 30px;
+    right: 0px;
+	top: 0px;
 }
 
-.navigation-top .mobile .search-section button {
-	position: absolute;
+.mobile .search-section button {
+	flex-grow: 1;
 	pointer-events: all;
 	opacity: 1;
 	color: black;
@@ -7775,9 +7800,6 @@ background-size: 8.94px 6.03px;
 	background: #ffbb00;
 	padding: 3px 15px;
 	transition: 0.3s ease all;
-	float: right;
-    right: 25px;
-	top: 30px;
 }
 
 .navigation-top .search-section button:hover {
@@ -7841,9 +7863,17 @@ background-size: 8.94px 6.03px;
 	height: 16px;
 }
 .navigation-top .mobile .search-section.secondary label {
-	color: #CCCCCC;
-	top: 22px;
-	left: 34px;
+	font-weight: 400;
+    position: absolute;
+    pointer-events: none;
+    color: #ffbb00;
+    opacity: 1;
+    transition: 0.3s ease all;
+    right: 25px;
+    top: 32px;
+    font-family: 'kandal';
+    font-style: italic;
+    font-size: 1.125rem;
 }
 .navigation-top .mobile .search-section.secondary i {
 	color: white;
