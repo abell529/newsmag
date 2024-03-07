@@ -7730,6 +7730,8 @@ background-size: 8.94px 6.03px;
 	align-items: center;
 	justify-content: flex-start;
 	gap: 3px;
+	right: 36px;
+    position: relative;
 }
 
 .nav-container .search-section button {
@@ -7745,12 +7747,11 @@ background-size: 8.94px 6.03px;
 	padding: 3px 15px;
 	transition: 0.3s ease all;
 	float: right;
-    right: 0px;
-	top: 0px;
+    right: 25px;
+    top: 31px;
 }
 
 .mobile .search-section button {
-	flex-grow: 1;
 	pointer-events: all;
 	opacity: 1;
 	color: black;
@@ -7803,7 +7804,8 @@ background-size: 8.94px 6.03px;
 }
 
 .mobile .search-section.secondary input {
-	width: 40%;
+	flex-grow: 1;
+	width: 50%;
 	padding: 10px 2%;
 	margin: 11px 0px;
 	border-radius: 0px;
