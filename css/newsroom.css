@@ -7700,7 +7700,7 @@ background-size: 8.94px 6.03px;
     right: 0px;
 }
 
-.navigation-top .header-container.alt .search-section label {
+.nav-container .search-section label {
 	font-weight: 400;
 	position: absolute;
 	pointer-events: none;
@@ -7814,16 +7814,14 @@ background-size: 8.94px 6.03px;
 }
 .mobile .search-section.secondary label {
 	font-weight: 400;
-    position: absolute;
     pointer-events: none;
     color: #ffbb00;
     opacity: 1;
     transition: 0.3s ease all;
-    right: 25px;
-    top: 32px;
     font-family: 'kandal';
     font-style: italic;
     font-size: 1.125rem;
+	opacity: 0;
 }
 .mobile .search-section.secondary i {
 	color: white;
