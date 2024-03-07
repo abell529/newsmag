@@ -8088,7 +8088,7 @@ background-size: 8.94px 6.03px;
 	opacity: 1;
 	pointer-events: all;
 	display: block;
-	animation: slideInFromRight 2s forwards;
+	animation: slideInFromRight 500ms forwards;
 }
 
 
