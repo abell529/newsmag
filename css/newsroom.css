@@ -7751,7 +7751,7 @@ background-size: 8.94px 6.03px;
 	pointer-events: none;
 	opacity: 0;
 	color: black;
-	font-family: proxima-nova, sans-serif;
+	font-family: 'kandal';
 	font-weight: 700;
 	font-size: 0.9375rem;
 	font-style: normal;
@@ -7762,6 +7762,24 @@ background-size: 8.94px 6.03px;
     right: 25px;
 	top: 30px;
 }
+
+.navigation-top .mobile .search-section button {
+	position: absolute;
+	pointer-events: all;
+	opacity: 1;
+	color: black;
+	font-family: 'kandal';
+	font-weight: 700;
+	font-size: 0.9375rem;
+	font-style: normal;
+	background: #ffbb00;
+	padding: 3px 15px;
+	transition: 0.3s ease all;
+	float: right;
+    right: 25px;
+	top: 30px;
+}
+
 .navigation-top .search-section button:hover {
 	background: black;
 }
