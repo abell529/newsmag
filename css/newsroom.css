@@ -8216,10 +8216,10 @@ background-size: 8.94px 6.03px;
 /* Updated keyframes for sliding in from the right */
 @keyframes slideInFromRight {
     0% {
-      left: 100%;
+      right: -100%;
     }
     100% {
-      left: 30%;
+      right: 0%;
     }
   }
   
