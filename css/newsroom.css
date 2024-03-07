@@ -7673,26 +7673,26 @@ background-size: 8.94px 6.03px;
 }*/
 
 
-.navigation-top .search-section {
+.nav-container .search-section {
 	position: relative;
 	right: 38px;
 	top: 9px;
 }
-.navigation-top .search-section.form {
+.nav-container .search-section.form {
 	display:block;
 }
-.navigation-top .search-section.icon-only {
+.nav-container .search-section.icon-only {
 	display:block;
 }
-.navigation-top .search-section.form.active {
+.nav-container .search-section.form.active {
 	display: block;
 }
-.navigation-top .search-section.form {
+.nav-container .search-section.form {
 	position: relative;
 	right: 18px;
 	top: -12px;
 }
-.navigation-top .search-section i {
+.nav-container .search-section i {
 	position: relative;
 	color: black;
 	right: -8px;
@@ -7701,7 +7701,7 @@ background-size: 8.94px 6.03px;
 	top: 36px;
 	float: right;
 }
-.navigation-top .header-container.alt .search-section i {
+.nav-container .header-container.alt .search-section i {
 	color: #ffbb00;
 }
 .nav-container .search-section input {
@@ -7802,30 +7802,30 @@ background-size: 8.94px 6.03px;
 	transition: 0.3s ease all;
 }
 
-.navigation-top .search-section button:hover {
+.nav-container .search-section button:hover {
 	background: black;
 }
-.navigation-top .search-section.active input {
+.nav-container .search-section.active input {
 	width: 300px;
 	text-indent: 0em;
 	padding-right: 100px;
 }
-.navigation-top .search-section.active label {
+.nav-container .search-section.active label {
 	opacity: 0;
 }
-.navigation-top .search-section.active button {
+.nav-container .search-section.active button {
 	opacity: 1;
 	pointer-events: all;
 }
 
 
 
-.navigation-top .mobile .search-section {
+.mobile .search-section {
 	position: absolute;
 	right: 100px;
 	top: 7px;
 }
-.navigation-top .mobile .search-section input {
+.mobile .search-section input {
 	width: 115px;
 	padding-right: 100px;
 	border-radius: 30px;
@@ -7833,18 +7833,18 @@ background-size: 8.94px 6.03px;
 	color: black;
 	border: 2px solid black;
 }
-.navigation-top .mobile .search-section i {
+.mobile .search-section i {
 	color: black;
 	right: 15px;
 	top: 9px;
 }
-.navigation-top .mobile .search-section label {
+.mobile .search-section label {
 	color: black;
 }
-.navigation-top .mobile .search button {
+.mobile .search button {
 	border-radius: 0 30px 30px 0px;
 }
-.navigation-top .mobile .search-section.secondary {
+.mobile .search-section.secondary {
 	display: block;
 	width: 100%;
 	left: 0;
@@ -7852,7 +7852,7 @@ background-size: 8.94px 6.03px;
 	top: 0px;
 	position: relative;
 }
-.navigation-top .mobile .search-section.secondary input {
+.mobile .search-section.secondary input {
 	width: 96%;
 	padding: 10px 2%;
 	margin: 11px 0px;
@@ -7862,7 +7862,7 @@ background-size: 8.94px 6.03px;
 	color: #CCCCCC;
 	height: 16px;
 }
-.navigation-top .mobile .search-section.secondary label {
+.mobile .search-section.secondary label {
 	font-weight: 400;
     position: absolute;
     pointer-events: none;
@@ -7875,7 +7875,7 @@ background-size: 8.94px 6.03px;
     font-style: italic;
     font-size: 1.125rem;
 }
-.navigation-top .mobile .search-section.secondary i {
+.mobile .search-section.secondary i {
 	color: white;
 	top: 22px;
 	right: 29px;
@@ -7884,7 +7884,7 @@ background-size: 8.94px 6.03px;
 
 
 
-.navigation-top .mobile-nav {
+.mobile-nav {
 	position: relative;
 	right: 0px;
 	top: 0;
@@ -7893,17 +7893,17 @@ background-size: 8.94px 6.03px;
 	font-size: 0.9375rem;
 	margin-right: 0;
 }
-.navigation-top .hamburger {
+.hamburger {
 	float: none;
 	right: auto;
 	left: auto;
 	top: 0;
 	margin-left: 0;
 }
-.navigation-top .hamburger:hover i {
+.hamburger:hover i {
 	background: black;
 }
-.navigation-top .hamburger.active {
+.hamburger.active {
 	top: 9px;
 }
 .navigation-top.temphead .main-nav {
