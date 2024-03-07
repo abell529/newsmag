@@ -7511,6 +7511,10 @@ button.search i {
     top: 15px;
 }
 
+.vertical-issue {
+	left:8px;
+}
+
 .alt .masthead-container {
     display: flex;
     flex-direction: row;
