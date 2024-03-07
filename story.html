@@ -66,7 +66,7 @@
                         </div> <!-- /.masthead-logo-container -->
 
                         <!-- Identify the vertical here -->
-                        <div class="vertical-id newsroom-vertical">
+                        <div class="vertical-id magazine-vertical">
                             <p class="vertical-name">Newsroom</p>
                             <div class="vertical-issue">
                                 <p class="issue-date">Spring 2024</p>
@@ -74,37 +74,11 @@
                         </div> <!-- /.vertical-id -->
                     </div> <!-- /.masthead-container -->
 
-                    <div class="search-bar-container">
-                        <div class="search-section form secondary">
-                            <div class="container-nav">
-                                <form action="/search/index.html" class="search_form_desktop">
-                                    <label for="site-search-desktop" aria-hidden="true">Search</label>
-                                    <input type="search" id="site-search-desktop" name="q" class="search_input" aria-label="Search the Towson University website" onfocus="if(this.value==this.defaultValue)this.value=''" onblur="if(this.value=='')this.value=this.defaultValue" value="Search">
-                                    <button type="submit" class="search_submit_word">Search</button>
-                                </form>
-                            </div> <!-- /.container-nav -->
-                        </div> <!-- /.search-section form secondary -->
-
-                        <div class="mobile">
-                            <div class="search-section form secondary">
-                                <div class="container-nav">
-                                    <form action="/search/index.html" class="search_form_mobile">
-                                        <label for="site-search-mobile" aria-hidden="true">Search</label>
-                                        <input type="search" id="site-search-mobile" name="q" class="search_input" aria-label="Search the Towson University website" placeholder="Search">
-                                        <button type="submit" class="search_submit_word">Search</button>
-                                    </form>
-                                </div> <!-- /.container-nav -->
-                            </div> <!-- /.search-section form secondary -->
-                        </div> <!-- /.mobile -->
-                    </div> <!-- /.search-bar-container -->
+                    
 
                     <div class="mobile-menu-icon-container">
                         <div class="mobile">
-                            <div class="search-section secondary">
-                                <div class="container-nav">
-                                    <i class="fa-regular fa-magnifying-glass icon" aria-label='Search icon' aria-hidden="true"></i>
-                                </div> <!-- /.container-nav -->
-                            </div> <!-- /.search-section secondary -->
+                            
 
                             <div class="container-nav">
                                 <a href="#" class="mobile-nav">
@@ -125,13 +99,40 @@
                                         <li><a class="top" href="feature-2.html">Feature-2-col</a></li>
                                         <li><a class="top" href="all.html">All</a></li>
                                     </ul>
+
+                                    <form action="/search/index.html" class="search_form_mobile">
+                                        <div class="search-section form secondary">
+                                            <label for="site-search-mobile" aria-hidden="true">Search</label>
+                                            <input type="search" id="site-search-mobile" name="q" class="search_input" aria-label="Search the Towson University website" placeholder="Search">
+                                            <button type="submit" class="search_submit_word">Search</button>
+                                        </div> <!-- /.search-section form secondary -->
+                                    </form>
+                               
+
                                 </div> <!-- /.container-nav -->
                             </div> <!-- /.mobile-links-nav -->
                         </div> <!-- /.mobile -->
                     </div> <!-- /.mobile-menu-icon-container -->
 
                     <div class="nav-container">
-                        <button class="search">Search <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></button>
+
+
+                        <div class="search-bar-container">
+                            <div class="search-section form secondary">
+                                <div class="container-nav">
+                                    <form action="/search/index.html" class="search_form_desktop">
+                                        <label for="site-search-desktop" aria-hidden="true">Search</label> <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                                        <input type="search" id="site-search-desktop" name="q" class="search_input" aria-label="Search the Towson University website" onfocus="if(this.value==this.defaultValue)this.value=''" onblur="if(this.value=='')this.value=this.defaultValue" value="Search">
+                                        <button type="submit" class="search_submit_word">Search</button>
+                                    </form>
+                                </div> <!-- /.container-nav -->
+                            </div> <!-- /.search-section form secondary -->
+    
+                            
+                        </div> <!-- /.search-bar-container -->
+
+
+                        
                         <div class="nav">
                             <ul class="nav-items">
                                 <li>Latest News</li>
