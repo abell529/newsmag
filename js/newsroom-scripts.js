@@ -11,6 +11,13 @@ $(document).ready(function() {
 		$('.navigation .search-section').removeClass('active');
 	});
 
+	$('.mobile-links-nav.active .search-section input.search_input').focus( function() {
+		$('.navigation .search-section').addClass('active');
+	});
+	$('.mobile-links-nav.active .search-section input.search_input').blur( function() {
+		$('.navigation .search-section').removeClass('active');
+	});
+
 	//detect focus of navigation search bar
 	$('.navigation-top .search-section .fa-magnifying-glass').click( function() {
 		$('.navigation-top .search-section.form').toggleClass('active');

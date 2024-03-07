@@ -7742,6 +7742,10 @@ background-size: 8.94px 6.03px;
 	visibility: visible;
 }
 
+.mobile-links-nav.active .search_input {
+	visibility: visible;
+}
+
 .navigation-top .search-section button {
 	position: absolute;
 	pointer-events: none;
@@ -7801,12 +7805,12 @@ background-size: 8.94px 6.03px;
 	border-radius: 0 30px 30px 0px;
 }
 .navigation-top .mobile .search-section.secondary {
-	display: none;
+	display: block;
 	width: 100%;
 	left: 0;
 	right: 0;
-	background: #3C3C3C;
-	top: 74px;
+	top: 0px;
+	position: relative;
 }
 .navigation-top .mobile .search-section.secondary input {
 	width: 96%;
