@@ -7741,14 +7741,15 @@ background-size: 8.94px 6.03px;
 	color: black;
 	font-family: 'kandal';
 	font-weight: 400;
-	font-size: 0.9375rem;
-	font-style: italic;
-	background: #ffbb00;
-	padding: 3px 15px;
-	transition: 0.3s ease all;
-	float: right;
-    right: 25px;
-    top: 31px;
+	font-size: 1.025rem;
+    font-style: italic;
+    background: transparent;
+    padding: 6px 26px;
+    transition: 0.3s ease all;
+    float: right;
+    right: -1px;
+    top: 27px;
+    border: #000000 solid 1px;
 }
 
 .mobile .search-section button {
