@@ -40,11 +40,15 @@ $(document).ready(function() {
 
 
 	$(document).click(function(e) {
-		if (!$(e.target).is('.navigation-top .search-section input.search_input')) {
+		if (!$(e.target).is('.navigation-top .search-section .fa-magnifying-glass') && !$(e.target).is('.navigation-top .search-section input.search_input')) {
 			$('.navigation-top .search-section').removeClass('active');
 			console.log("click anywhere");
 		}
-	})
+	});
+
+	$('.navigation-top .search-section input.search_input').click(function(e) {
+        e.stopPropagation();
+    });
 
 
 	/* $('.navigation-top .search-section input.search_input').blur( function() {
