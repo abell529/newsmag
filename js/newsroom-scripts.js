@@ -41,7 +41,8 @@ $(document).ready(function() {
 
 	$(document).click(function(e) {
 		if (!$(e.target).is('.navigation-top .search-section input.search_input')) {
-			$('#searchBox').removeClass('active');
+			$('.navigation-top .search-section').removeClass('active');
+			console.log("click anywhere");
 		}
 	})
 
