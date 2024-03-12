@@ -50,6 +50,10 @@ $(document).ready(function() {
         e.stopPropagation();
     });
 
+	$('.menu-trigger').click(function() {
+        $('.pub-list-slide').slideToggle('fast');
+    });
+
 
 	/* $('.navigation-top .search-section input.search_input').blur( function() {
 		$('.navigation-top .search-section').removeClass('active');

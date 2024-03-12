@@ -7232,6 +7232,7 @@ p.tag-primary + h3 {
     height: 120px;
     background-color: var(--light-gray-40);
     position: relative;
+	z-index: 2;
 }
 
 /* Dogear accent */
@@ -7282,6 +7283,15 @@ p.tag-primary + h3 {
  .utility-nav ul li:last-of-type {
     border: none;
     padding-right: 0;
+}
+
+.pub-list-slide {
+    display: none;
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+    position: relative;
+    top: 0px; /* Adjust this value if there's a gap or overlap */
+    z-index: 1;
 }
 
 /* ===== MASTHEAD ==================== */
