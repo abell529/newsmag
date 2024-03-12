@@ -37,6 +37,15 @@ $(document).ready(function() {
 		$('.navigation-top .search-section').removeClass('active');
 		console.log("remove class from search");
 	});
+
+
+	$(document).click(function(e) {
+		if (!$(e.target).is('.navigation-top .search-section input.search_input')) {
+			$('#searchBox').removeClass('active');
+		}
+	})
+
+
 	/* $('.navigation-top .search-section input.search_input').blur( function() {
 		$('.navigation-top .search-section').removeClass('active');
 	}); */
