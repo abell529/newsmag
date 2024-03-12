@@ -19,7 +19,7 @@ $(document).ready(function() {
 	});
 
 	//detect focus of navigation search bar
-	$('.navigation-top .search-section .fa-magnifying-glass').focus( function() {
+	$('.navigation-top .search-section .fa-magnifying-glass').click( function() {
 		$('.navigation-top .search-section.form').addClass('active');
 	});
 
