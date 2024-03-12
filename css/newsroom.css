@@ -7287,10 +7287,10 @@ p.tag-primary + h3 {
 
 .pub-list-slide {
     display: none;
-    background-color: #f0f0f0;
-    padding: 10px 20px;
+    padding: 10px 0px;
     position: relative;
-    top: 0px; /* Adjust this value if there's a gap or overlap */
+    top: -28px;
+    left: 166px;
     z-index: 1;
 }
 
