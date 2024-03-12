@@ -7303,6 +7303,7 @@ p.tag-primary + h3 {
     animation: slideInFromRight 500ms forwards;
 }
 
+
 /* .pub-list-slide {
     display: block;
     padding: 10px 0px;
@@ -7312,6 +7313,7 @@ p.tag-primary + h3 {
     z-index: 1;
 	overflow: hidden;
 } */
+
 
 
 /* ===== MASTHEAD ==================== */
