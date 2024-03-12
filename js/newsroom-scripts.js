@@ -50,8 +50,19 @@ $(document).ready(function() {
         e.stopPropagation();
     });
 
-	$('.menu-trigger').click(function() {
+	/* $('.menu-trigger').click(function() {
         $('.pub-list-slide').slideToggle('fast');
+    }); */
+
+	$('.menu-trigger').click(function() {
+        var content = $('.pub-list-slide');
+        var isVisible = content.data('visible');
+
+        if (isVisible) {
+            content.animate({ top: '-50px' }, 'fast').data('visible', false);
+        } else {
+            content.animate({ top: '40px' }, 'fast').data('visible', true); /* 40px is the height of the header */
+        }
     });
 
 

@@ -7286,12 +7286,13 @@ p.tag-primary + h3 {
 }
 
 .pub-list-slide {
-    display: none;
+    display: block;
     padding: 10px 0px;
-    position: relative;
+    position: absolute;
     top: -28px;
     left: 166px;
     z-index: 1;
+	overflow: hidden;
 }
 
 
