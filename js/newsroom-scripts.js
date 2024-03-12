@@ -33,7 +33,7 @@ $(document).ready(function() {
 		console.log("Focus on search input");
 	});
 
-	$('.navigation-top .search-section.active input.search_input').blur( function() {
+	$('.navigation-top .search-section input.search_input').blur( function() {
 		$('.navigation-top .search-section').removeClass('active');
 		console.log("remove class from search");
 	});
