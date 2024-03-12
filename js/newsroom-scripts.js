@@ -20,22 +20,21 @@ $(document).ready(function() {
 
 	//detect focus of navigation search bar
 	$('.navigation-top .search-section .fa-magnifying-glass').click( function() {
-		$('.navigation-top .search-section.form').addClass('active');
+		$('.navigation-top .search-section').addClass('active');
 		console.log("add class from click");
 	});
 
 	$('.navigation-top .search-section .fa-magnifying-glass').blur( function() {
-		$('.navigation-top .search-section.form').removeClass('active');
+		$('.navigation-top .search-section').removeClass('active');
 		console.log("remove class on blur magnifying");
 	});
 
-	$('.search-section.active input.search_input').focus( function() {
-		$('.navigation-top .search-section.form').addClass('active');
-		console.log("add class from search");
+	$('.navigation-top .search-section input.search_input').focus( function() {
+		console.log("Focus on search input");
 	});
 
-	$('.search-section.active input.search_input').blur( function() {
-		$('.navigation-top .search-section.form').removeClass('active');
+	$('.navigation-top .search-section.active input.search_input').blur( function() {
+		$('.navigation-top .search-section').removeClass('active');
 		console.log("remove class from search");
 	});
 	/* $('.navigation-top .search-section input.search_input').blur( function() {
