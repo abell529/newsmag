@@ -20,7 +20,7 @@ body, html {
 
 /* Other styles remain the same */
 .slide-content {
-  display: none; /* Changed from none to block */
+  display: block; /* Changed from none to block */
   background-color: #f0f0f0;
   padding: 10px 20px;
   position: absolute; /* Changed from relative to absolute */
