@@ -7795,9 +7795,10 @@ background-size: 8.94px 6.03px;
 .mobile .search-section button i {
     padding-left: 8px;
     font-size: .925rem;
-    top: 4px;
+    top: 2px;
+	right: 2px;
     position: relative;    
-
+	color:#000000
 }
 
 .mobile .search-section button {
@@ -7809,8 +7810,8 @@ background-size: 8.94px 6.03px;
 	font-size: 1.125rem;
 	font-style: italic;
 	background: #eaeaea;
-	margin: 20px;
-	padding: 3px 15px;
+	margin: 20px 5px;
+	padding: 3px 6px;
 	transition: 0.3s ease all;
 }
 
@@ -7841,11 +7842,13 @@ background-size: 8.94px 6.03px;
 	color: black;
 	border: 2px solid black;
 }
-.mobile .search-section i {
+
+/*.mobile .search-section i {
 	color: black;
 	right: 15px;
 	top: 9px;
-}
+} */
+
 .mobile .search-section label {
 	color: black;
 }
@@ -7855,14 +7858,14 @@ background-size: 8.94px 6.03px;
 
 .mobile .search-section.secondary input {
 	flex-grow: 1;
-	width: 50%;
-	padding: 10px 2%;
-	margin: 11px 0px;
-	border-radius: 0px;
-	border: 2px solid white;
-	background: #3C3C3C;
-	color: #CCCCCC;
-	height: 16px;
+    width: 155px;
+    padding: 12px 5px;
+    margin: 180px 0px;
+    border-radius: 0px;
+    border: 1px solid white;
+    background: #eaeaea;
+    color: #000000;
+    height: 16px;
 }
 .mobile .search-section.secondary label {
 	font-weight: 400;
