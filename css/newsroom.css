@@ -7285,7 +7285,7 @@ p.tag-primary + h3 {
     padding-right: 0;
 }
 
-.pub-list-slide {
+/* .pub-list-slide {
     display: none;
     padding: 10px 0px;
     position: relative;
@@ -7302,18 +7302,18 @@ p.tag-primary + h3 {
     display: block;
     animation: slideInFromRight 500ms forwards;
 	animation-name: ;
-}
+} */
 
 
-/* .pub-list-slide {
+ .pub-list-slide {
     display: block;
     padding: 10px 0px;
-    position: absolute;
-    top: -28px;
+    position: relative;
+    top: 0px;
     left: 166px;
     z-index: 1;
 	overflow: hidden;
-} */
+}
 
 
 
