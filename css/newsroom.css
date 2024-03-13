@@ -7276,6 +7276,7 @@ p.tag-primary + h3 {
 
 .utility-nav .publications-label {
     color: var(--dark-gray);
+	cursor: pointer;
 }
 
 .utility-nav .tu-home-link {
