@@ -49,6 +49,9 @@ $(document).ready(function() {
 	$('.navigation-top .search-section input.search_input').click(function(e) {
         e.stopPropagation();
     });
+	$('.menu-trigger').click(function(e) {
+        e.stopPropagation();
+    });
 
 
 	$('.menu-trigger').on("click touch keypress", function () {
