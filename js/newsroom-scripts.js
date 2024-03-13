@@ -307,18 +307,19 @@ $('.mobile-links-nav ul.util li').on("click touch keypress", function () {
 		
 	});
 	
-	$('.menu-triggers').click(function() {
-        // Check if the slide content is currently visible
-        var isContentVisible = $('.slide-content').is(':visible');
-        
-        if (isContentVisible) {
-            // If visible, slide up behind the header
-            $('.slide-content').slideUp('fast');
-        } else {
-            // If not visible, slide down from behind the header
-            $('.slide-content').slideDown('fast');
-        }
-    });
+	
+		$('.menu-triggers').click(function() {
+			var content = $('.slide-content');
+			var isVisible = content.data('visible');
+	
+			if (isVisible) {
+				content.animate({ top: '-50px' }, 'fast').data('visible', false);
+			} else {
+				content.animate({ top: '40px' }, 'fast').data('visible', true); /* 40px is the height of the header */
+			}
+		});
+	
+	
 	
 	
 });//(document).ready

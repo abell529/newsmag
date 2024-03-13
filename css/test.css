@@ -82,6 +82,7 @@ body, h1, p {
 
 
 
+/* Other styles remain the same */
 .slide-content {
   display: block; /* Changed from none to block */
   background-color: #f0f0f0;
@@ -93,5 +94,4 @@ body, h1, p {
   z-index: 1;
   overflow: hidden;
 }
-
   
