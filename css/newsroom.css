@@ -7251,6 +7251,12 @@ p.tag-primary + h3 {
 
 /* ===== PRE-HEADER / UTILITY NAV ==================== */
 
+@media only screen and (max-width: 960px) {
+	.publications-group {
+		display: none;
+	}
+}
+
 .utility-nav {
     height: 40px;
     padding-top:10px;
@@ -7937,10 +7943,10 @@ background-size: 8.94px 6.03px;
 	position: fixed;
 	background: black;
 	width: 320px;
-	top: 50px;
+	top: 0;
     right: 0;
     height: 100%;
-    padding: 50px 0px 200px 0px;
+    padding: 120px 0px 200px 0px;
     overflow-x: hidden;
     transition: 0.3s ease all;
     display: none;
