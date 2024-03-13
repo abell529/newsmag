@@ -7309,7 +7309,7 @@ p.tag-primary + h3 {
     display: block;
     padding: 10px 0px;
     position: relative;
-    top: 0px;
+    top: -28px;
     left: 166px;
     z-index: 1;
 	overflow: hidden;
