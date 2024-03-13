@@ -7295,7 +7295,6 @@ p.tag-primary + h3 {
 	overflow: hidden;
 	opacity: 0;
 }
-
 .pub-list-slide.active {
     opacity: 1;
     pointer-events: all;
