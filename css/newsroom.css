@@ -7304,7 +7304,13 @@ p.tag-primary + h3 {
 	animation-name: ;
 } */
 
-
+.slide-outer {
+	overflow-x:hidden;
+	top: -28px;
+    left: 166px;
+	position: relative;
+	width:550px;
+}
  .pub-list-slide {
     display: block;
     padding: 10px 0px;
