@@ -7802,6 +7802,7 @@ background-size: 8.94px 6.03px;
 }
 
 .mobile .search-section button {
+	display: inline-flex;
 	pointer-events: all;
 	opacity: 1;
 	color: black;
@@ -7878,11 +7879,12 @@ background-size: 8.94px 6.03px;
     font-size: 1.125rem;
 	opacity: 0;
 }
-.mobile .search-section.secondary i {
+
+/* .mobile .search-section.secondary i {
 	color: white;
 	top: 22px;
 	right: 29px;
-}
+} */
 
 
 
