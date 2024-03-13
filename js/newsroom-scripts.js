@@ -50,6 +50,10 @@ $(document).ready(function() {
         e.stopPropagation();
     });
 
+	$('.menu-triggers').click(function(e) {
+        e.stopPropagation();
+    });
+
 	$('.menu-trigger').on("click touch keypress", function () {
 		$(".menu-trigger").toggleClass('active');
 		$(".pub-list-slide").toggleClass('active');
