@@ -4,9 +4,9 @@ $(document).ready(function() {
         var isVisible = content.data('visible');
 
         if (isVisible) {
-            content.animate({ top: '-50px' }, 'fast').data('visible', false);
+            content.animate({ top: '70px' }, 'fast').data('visible', false);
         } else {
-            content.animate({ top: '40px' }, 'fast').data('visible', true); /* 40px is the height of the header */
+            content.animate({ top: '50px' }, 'fast').data('visible', true); /* 40px is the height of the header */
         }
     });
 });

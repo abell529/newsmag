@@ -20,11 +20,11 @@ body, html {
 
 /* Other styles remain the same */
 .slide-content {
-  display: block; /* Changed from none to block */
+  display: none; /* Changed from none to block */
   background-color: #f0f0f0;
   padding: 10px 20px;
   position: absolute; /* Changed from relative to absolute */
-  top: -50px; /* Set to the negative height of the slide-content */
+  top: 70px; /* Set to the negative height of the slide-content */
   left: 0;
   right: 0;
   z-index: 1;
