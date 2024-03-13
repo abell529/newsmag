@@ -7701,7 +7701,7 @@ background-size: 8.94px 6.03px;
 	float: right;
 }
 .header-container.alt .nav-container .search-section i {
-	color: #ffbb00;
+	color: #eeeeee;
 }
 .nav-container .search-section input {
 	font-family: proxima-nova, sans-serif;
@@ -7752,6 +7752,10 @@ background-size: 8.94px 6.03px;
     font-size: 1.125rem;
 }
 
+.header-container.alt .nav-container .search-section label {
+	color:#eeeeee;
+}
+
 .search-section .search_input {
 	visibility: hidden;
 }
@@ -7790,7 +7794,9 @@ background-size: 8.94px 6.03px;
     border: #000000 solid 1px;
 }
 
-
+.header-container.alt .nav-container .search-section button {
+	border: #eeeeee solid 1px;
+}
 
 .mobile .search-section button i {
     padding-left: 8px;
