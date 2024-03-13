@@ -77,7 +77,7 @@ $(document).ready(function() {
 
 	
     
-    //mobile navigation
+    //mobile navigation DELETE
     $('.mobile-nav').on("click touch keypress", function () {
 		$(".mobile-nav .hamburger").toggleClass('active');
 		$(".mobile-links").toggleClass('active');
@@ -101,7 +101,7 @@ $(document).ready(function() {
 			$('.mobile-nav').attr('aria-label', 'Mobile navigation button');
 		}
     });
-    //mobile navigation nested ul
+    //mobile navigation nested ul DELETE
     $('.mobile-links ul.util li').on("click touch keypress", function () {
 	    $(this).children('ul').addClass('active');
 		
@@ -307,7 +307,18 @@ $('.mobile-links-nav ul.util li').on("click touch keypress", function () {
 		
 	});
 	
-	
+	$('.menu-triggers').click(function() {
+        // Check if the slide content is currently visible
+        var isContentVisible = $('.slide-content').is(':visible');
+        
+        if (isContentVisible) {
+            // If visible, slide up behind the header
+            $('.slide-content').slideUp('fast');
+        } else {
+            // If not visible, slide down from behind the header
+            $('.slide-content').slideDown('fast');
+        }
+    });
 	
 	
 });//(document).ready

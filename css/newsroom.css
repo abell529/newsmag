@@ -7286,7 +7286,7 @@ p.tag-primary + h3 {
 }
 
 .pub-list-slide {
-    display: block;
+    display: none;
     padding: 10px 0px;
     position: relative;
     top: -28px;
@@ -7301,6 +7301,7 @@ p.tag-primary + h3 {
     pointer-events: all;
     display: block;
     animation: slideInFromRight 500ms forwards;
+	animation-name: ;
 }
 
 
