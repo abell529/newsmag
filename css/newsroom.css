@@ -2127,7 +2127,8 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
 .hero {
     width: 100%;
     min-height: 650px;
-    background-color: var(--wireframe-placeholder);
+    /* background-color: var(--wireframe-placeholder); */
+	background-color: #000000;
     display: grid;
 }
 
@@ -7494,6 +7495,11 @@ button.search i {
     position: relative;
 }
 
+/*must define the original color */
+p.vertical-name {
+	color:#000000
+}
+
 .alt p.vertical-name {
     border: none;
     font-size: 2.5rem;
@@ -8472,3 +8478,14 @@ background-size: 8.94px 6.03px;
         margin-top: 10px;
     }
 }
+
+
+/* ====================================================
+   ====================================================
+
+   Accessibility Fixes
+
+   ====================================================
+   ==================================================== */
+
+   
