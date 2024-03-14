@@ -7715,13 +7715,13 @@ background-size: 8.94px 6.03px;
 }
 .nav-container .search-section input {
 	font-family: proxima-nova, sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     font-style: normal;
     background: #eaeaea;
     border: 1px solid black;
     color: #000000;
     height: 32px;
-    padding: 10px 16px;
+    padding: 16px 5px;
     width: 60px;
     text-indent: -99em;
     transition: 0.3s ease all;
