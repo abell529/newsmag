@@ -7374,13 +7374,17 @@ p.tag-primary + h3 {
 	width:550px;
 }
  .pub-list-slide {
-    display: block;
+    display: none;
     padding: 10px 0px;
     position: relative;
     top: 0px;
     left: -550px;
     z-index: 1;
 	overflow: hidden;
+}
+
+.pub-list-slide {
+	display: block;
 }
 
 

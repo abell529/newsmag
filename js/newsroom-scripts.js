@@ -88,7 +88,7 @@ $(document).ready(function() {
         if (isVisible) {
             content.animate({ left: '-550px' }, 'fast').data('visible', false);
         } else {
-            content.animate({ left: '0px' }, 'fast').data('visible', true); /* 40px is the height of the header */
+            content.animate({ left: '0px' }, 'fast').data('visible', true);
         }
     });
 
