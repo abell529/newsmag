@@ -8488,4 +8488,64 @@ background-size: 8.94px 6.03px;
    ====================================================
    ==================================================== */
 
-   
+.navigation .search-section {
+	position: absolute;
+	right: 10px;
+	top: 2px;
+}
+
+.navigation .search-section i {
+    position: absolute;
+    color: #fff;
+    right: 9px;
+    font-size: 1.125rem;
+    font-weight: 700;
+    top: 9px;
+}
+.navigation .search-section label {
+    font-family: proxima-nova,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    position: absolute;
+    left: 17px;
+    top: 9px;
+    pointer-events: none;
+    color: #fff;
+    font-size: .9375rem;
+    opacity: 1;
+    -webkit-transition: .3s ease all;
+    transition: .3s ease all;
+}
+.navigation .search-section input {
+    font-family: proxima-nova,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background: #000;
+    border: 2px solid #fff;
+    color: #fff;
+    height: 13px;
+    padding: 10px 16px;
+    width: 60px;
+    text-indent: -99em;
+    -webkit-transition: .3s ease all;
+    transition: .3s ease all;
+}
+.navigation .search-section button {
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    pointer-events: none;
+    opacity: 0;
+    color: #000;
+    font-family: proxima-nova,sans-serif;
+    font-weight: 700;
+    font-size: .9375rem;
+    font-style: normal;
+    background: #fb0;
+    padding: 7.5px 15px;
+    -webkit-transition: .3s ease all;
+    transition: .3s ease all;
+}
+.ri-search-line:before {
+    content: "\f0d1";
+}
