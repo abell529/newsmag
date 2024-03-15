@@ -81,7 +81,7 @@ $(document).ready(function() {
 		$(".pub-list-slide").toggleClass('active');
 	});
 
-	$('.menu-trigger').click(function() {
+	$('.menu-trigger').on("click touch keypress", function () {
         var content = $('.pub-list-slide');
         var isVisible = content.data('visible');
 
