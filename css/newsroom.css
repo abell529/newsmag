@@ -1309,10 +1309,10 @@ main#content.no-margin {
 	Reset
    =================================== */
 
-/* :where(:not(iframe,canvas,img,svg,video):not(svg *,symbol *)) {
-	all:unset;
+:where(:not(iframe,canvas,img,svg,video):not(svg *,symbol *)) {
+	all:revert;
 	display:revert;
-} */
+}
 
 *,::after,::before {
 	box-sizing:border-box;
