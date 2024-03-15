@@ -1,7 +1,24 @@
 $(document).ready(function() {
 
     
+	//////////////////////////////////////////////////////////////////////
+    // Search bar detect .navigation .search-section
+    //////////////////////////////////////////////////////////////////////
 
+    
+    //detect focus of navigation search bar
+    $('.navigation-top .search-section input.search_input').focus( function() {
+        $('.navigation-top .search-section').addClass('active');
+    });
+    $('.navigation-top .search-section input.search_input').blur( function() {
+        $('.navigation-top .search-section').removeClass('active');
+    });
+    $('.navigation-top .search-section button.search_submit_word').focus( function() {
+        $('.navigation-top .search-section').addClass('active');
+    });
+    $('.navigation-top .search-section button.search_submit_word').blur( function() {
+        $('.navigation-top .search-section').removeClass('active');
+    });
 
 	//detect focus of navigation search bar - THESE ARE OLD
 	/* $('.navigation .search-section input.search_input').focus( function() {
@@ -18,21 +35,25 @@ $(document).ready(function() {
 		$('.navigation .search-section').removeClass('active');
 	}); */
 
+
+	/* ========================================
+		This kind of worked - kkeping it here
+	   ======================================== */
 	//detect focus of navigation search bar
-	$('.navigation-top .search-section .fa-magnifying-glass').click( function() {
+	/* $('.navigation-top .search-section .fa-magnifying-glass').click( function() {
 		$('.navigation-top .search-section').addClass('active');
 		$('.navigation-top .search-section input.search_input').focus();
 		console.log("add class from click");
-	});
+	}); */
 
 	/* $('.navigation-top .search-section .fa-magnifying-glass').blur( function() {
 		$('.navigation-top .search-section').removeClass('active');
 		console.log("remove class on blur magnifying");
 	}); */
 
-	$('.navigation-top .search-section input.search_input').focus( function() {
+	/* $('.navigation-top .search-section input.search_input').focus( function() {
 		console.log("Focus on search input");
-	});
+	}); */
 
 	/* $('.navigation-top .search-section input.search_input').blur( function() {
 		$('.navigation-top .search-section').removeClass('active');
@@ -40,7 +61,7 @@ $(document).ready(function() {
 	}); */
 
 
-	$(document).click(function(e) {
+	/* $(document).click(function(e) {
 		if (!$(e.target).is('.navigation-top .search-section .fa-magnifying-glass') && !$(e.target).is('.navigation-top .search-section input.search_input')) {
 			$('.navigation-top .search-section').removeClass('active');
 			console.log("click anywhere");
@@ -52,7 +73,7 @@ $(document).ready(function() {
     });
 	$('.menu-trigger').click(function(e) {
         e.stopPropagation();
-    });
+    }); */
 
 
 	$('.menu-trigger').on("click touch keypress", function () {
