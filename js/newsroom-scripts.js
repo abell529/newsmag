@@ -3,40 +3,41 @@ $(document).ready(function() {
     
 
 
-	//detect focus of navigation search bar
-	$('.navigation .search-section input.search_input').focus( function() {
+	//detect focus of navigation search bar - THESE ARE OLD
+	/* $('.navigation .search-section input.search_input').focus( function() {
 		$('.navigation .search-section').addClass('active');
 	});
 	$('.navigation .search-section input.search_input').blur( function() {
 		$('.navigation .search-section').removeClass('active');
-	});
+	}); */
 
-	$('.mobile-links-nav.active .search-section input.search_input').focus( function() {
+	/* $('.mobile-links-nav.active .search-section input.search_input').focus( function() {
 		$('.navigation .search-section').addClass('active');
 	});
 	$('.mobile-links-nav.active .search-section input.search_input').blur( function() {
 		$('.navigation .search-section').removeClass('active');
-	});
+	}); */
 
 	//detect focus of navigation search bar
 	$('.navigation-top .search-section .fa-magnifying-glass').click( function() {
 		$('.navigation-top .search-section').addClass('active');
+		$('.navigation-top .search-section input.search_input').focus();
 		console.log("add class from click");
 	});
 
-	$('.navigation-top .search-section .fa-magnifying-glass').blur( function() {
+	/* $('.navigation-top .search-section .fa-magnifying-glass').blur( function() {
 		$('.navigation-top .search-section').removeClass('active');
 		console.log("remove class on blur magnifying");
-	});
+	}); */
 
 	$('.navigation-top .search-section input.search_input').focus( function() {
 		console.log("Focus on search input");
 	});
 
-	$('.navigation-top .search-section input.search_input').blur( function() {
+	/* $('.navigation-top .search-section input.search_input').blur( function() {
 		$('.navigation-top .search-section').removeClass('active');
 		console.log("remove class from search");
-	});
+	}); */
 
 
 	$(document).click(function(e) {
