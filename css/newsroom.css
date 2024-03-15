@@ -1310,9 +1310,13 @@ main#content.no-margin {
    =================================== */
 
 :where(:not(iframe,canvas,img,svg,video):not(svg *,symbol *)) {
-	all:revert;
+	all:unset;
 	display:revert;
 }
+
+:where(:not(iframe,canvas,img,svg,video):not(svg *,symbol *)):focus {
+	outline: auto;
+  }
 
 *,::after,::before {
 	box-sizing:border-box;
