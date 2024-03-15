@@ -8492,11 +8492,13 @@ background-size: 8.94px 6.03px;
 	pointer-events: all;
 }
 
+/*
 .nav-container .search-section {
 	position: absolute;
 	right: 10px;
 	top: 2px;
 }
+
 
 .nav-container .search-section i {
     position: absolute;
@@ -8552,4 +8554,4 @@ background-size: 8.94px 6.03px;
 }
 .nav-container .ri-search-line:before {
     content: "\f0d1";
-}
+} */
