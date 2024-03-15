@@ -7795,7 +7795,7 @@ background-size: 8.94px 6.03px;
 .nav-container .search-section button {
 	position: absolute;
 	pointer-events: none;
-	display: none;
+	opacity: 0;
 	color: black;
 	font-family: 'kandal';
 	font-weight: 400;
@@ -7848,10 +7848,10 @@ background-size: 8.94px 6.03px;
 	padding-right: 100px;
 }
 .nav-container .search-section.active label {
-	display: none;
+	opacity: 0;
 }
 .nav-container .search-section.active button {
-	display: block;
+	opacity: 1;
 	pointer-events: all;
 }
 
