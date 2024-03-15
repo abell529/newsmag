@@ -37,7 +37,7 @@ $(document).ready(function() {
 
 
 	/* ========================================
-		This kind of worked - kkeping it here
+		This kind of worked - keeping it here
 	   ======================================== */
 	//detect focus of navigation search bar
 	/* $('.navigation-top .search-section .fa-magnifying-glass').click( function() {
