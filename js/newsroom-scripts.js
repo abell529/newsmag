@@ -76,13 +76,17 @@ $(document).ready(function() {
     }); */
 
 
-	$('.menu-trigger').click(function(e) {
+	/* $('.menu-trigger').on("click touch keypress", function () {
 		$(".menu-trigger").toggleClass('active');
 		$(".pub-list-slide").toggleClass('active');
-	});
+	}); */
 
 	$('.menu-trigger').on("click touch keypress", function () {
-        var content = $('.pub-list-slide');
+        
+		$(".menu-trigger").toggleClass('active');
+		$(".pub-list-slide").toggleClass('active');
+		
+		var content = $('.pub-list-slide');
         var isVisible = content.data('visible');
 
         if (isVisible) {
