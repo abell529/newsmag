@@ -1314,7 +1314,7 @@ main#content.no-margin {
 	display:revert;
 }
 
-:where(:not(iframe,canvas,img,svg,video):not(svg *,symbol *)):focus {
+:where(:not(iframe,canvas,img,svg,video):not(svg *,symbol *)):focus-visible {
 	outline: auto;
   }
 
