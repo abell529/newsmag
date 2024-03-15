@@ -76,7 +76,7 @@ $(document).ready(function() {
     }); */
 
 
-	$('.menu-trigger').on("click touch keypress", function () {
+	$('.menu-trigger').click(function(e) {
 		$(".menu-trigger").toggleClass('active');
 		$(".pub-list-slide").toggleClass('active');
 	});
