@@ -7797,6 +7797,8 @@ background-size: 8.94px 6.03px;
 .nav-container .search-section.active input {
 	border: 1px solid black;
 	right: -28px;
+	width: 100px;
+	padding-right:100px;
 }
 
 .mobile .search-section input {
@@ -7870,7 +7872,7 @@ background-size: 8.94px 6.03px;
     float: right;
     right: -14px;
     top: 25px;
-    border: #000000 solid 1px;
+    border-left: #000000 solid 1px;
 }
 
 .header-container.alt .nav-container .search-section button {
