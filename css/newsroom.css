@@ -1309,7 +1309,58 @@ main#content.no-margin {
 	Reset
    =================================== */
 
-:where(:not(iframe,canvas,img,svg,video):not(svg *,symbol *)){all:unset;display:revert}*,::after,::before{box-sizing:border-box}a,button{cursor:revert}menu,ol,ul{list-style:none}img{max-width:100%}table{border-collapse:collapse}textarea{white-space:revert}meter{-webkit-appearance:revert;appearance:revert}::placeholder{color:unset}:where([hidden]){display:none}:where([contenteditable]){-moz-user-modify:read-write;-webkit-user-modify:read-write;overflow-wrap:break-word;-webkit-line-break:after-white-space}:where([draggable=true]){-webkit-user-drag:element}
+:where(:not(iframe,canvas,img,svg,video):not(svg *,symbol *)) {
+	all:unset;
+	display:revert;
+}
+
+:where(:not(iframe,canvas,img,svg,video):not(svg *,symbol *)):focus-visible {
+	outline: auto;
+  }
+
+*,::after,::before {
+	box-sizing:border-box;
+}
+
+a,button {
+	cursor:revert;
+}
+
+menu,ol,ul {
+	list-style:none;
+}
+
+img {
+	max-width:100%;
+}
+
+table {
+	border-collapse:collapse;
+}
+
+textarea {
+	white-space:revert;
+}
+
+meter {
+	-webkit-appearance:revert;
+	appearance:revert;
+}
+
+::placeholder {
+	color:unset;
+}
+
+:where([hidden]){display:none}:where([contenteditable]) {
+	-moz-user-modify:read-write;
+	-webkit-user-modify:read-write;
+	overflow-wrap:break-word;
+	-webkit-line-break:after-white-space;
+}
+
+:where([draggable=true]) {
+	-webkit-user-drag:element
+}
 
 
 /* ===================================
@@ -2127,7 +2178,8 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
 .hero {
     width: 100%;
     min-height: 650px;
-    background-color: var(--wireframe-placeholder);
+    /* background-color: var(--wireframe-placeholder); */
+	background-color: #000000;
     display: grid;
 }
 
@@ -7321,14 +7373,18 @@ p.tag-primary + h3 {
 	position: relative;
 	width:550px;
 }
- .pub-list-slide {
-    display: block;
+.pub-list-slide {
+    display: none;
     padding: 10px 0px;
     position: relative;
     top: 0px;
     left: -550px;
     z-index: 1;
 	overflow: hidden;
+}
+
+.pub-list-slide.active {
+	display: block;
 }
 
 
@@ -7492,6 +7548,11 @@ button.search i {
     flex-direction: column;
     justify-content: flex-end;
     position: relative;
+}
+
+/*must define the original color */
+p.vertical-name {
+	color:#000000
 }
 
 .alt p.vertical-name {
@@ -7684,10 +7745,10 @@ background-size: 8.94px 6.03px;
 
 .nav-container .search-section {
 	position: relative;
-	right: 38px;
-	top: 9px;
+	right: 28px;
+	top: -12px;
 }
-.nav-container .search-section.form {
+/* .nav-container .search-section.form {
 	display:block;
 }
 .nav-container .search-section.icon-only {
@@ -7696,6 +7757,7 @@ background-size: 8.94px 6.03px;
 .nav-container .search-section.form.active {
 	display: block;
 }
+*/
 .nav-container .search-section.form {
 	position: relative;
 	right: 18px;
@@ -7717,18 +7779,23 @@ background-size: 8.94px 6.03px;
 	font-family: proxima-nova, sans-serif;
     font-weight: 300;
     font-style: normal;
-    background: #eaeaea;
-    border: 1px solid black;
+    background: transparent;
+    border: none;
     color: #000000;
     height: 32px;
     padding: 16px 5px;
-    width: 60px;
+    width: 85px;
     text-indent: -99em;
     transition: 0.3s ease all;
     float: right;
     top: 26px;
     position: relative;
-    right: 67px;
+    right: -28px;
+}
+
+.nav-container .search-section.active input {
+	border: 1px solid black;
+	right: 67px;
 }
 
 .mobile .search-section input {
@@ -7755,7 +7822,7 @@ background-size: 8.94px 6.03px;
 	color: #000000;
 	opacity: 1;
 	transition: 0.3s ease all;
-	right: 25px;
+	right: 15px;
     top: 32px;
 	font-family: 'kandal';
     font-style: italic;
@@ -7766,12 +7833,13 @@ background-size: 8.94px 6.03px;
 	color:#eeeeee;
 }
 
-.search-section .search_input {
+/* .search-section .search_input {
 	visibility: hidden;
 }
 .search-section.active .search_input {
 	visibility: visible;
 }
+*/
 
 .mobile-links-nav.active .search_input {
 	visibility: visible;
@@ -7799,7 +7867,7 @@ background-size: 8.94px 6.03px;
     padding: 6px 28px 6px 6px;
     transition: 0.3s ease all;
     float: right;
-    right: -4px;
+    right: -14px;
     top: 25px;
     border: #000000 solid 1px;
 }
@@ -7832,22 +7900,11 @@ background-size: 8.94px 6.03px;
 	padding: 3px 6px;
 	transition: 0.3s ease all;
 }
-
+/* 
 .nav-container .search-section button:hover {
-	/* background: black; */
-}
-.nav-container .search-section.active input {
-	width: 300px;
-	text-indent: 0em;
-	padding-right: 100px;
-}
-.nav-container .search-section.active label {
-	opacity: 0;
-}
-.nav-container .search-section.active button {
-	opacity: 1;
-	pointer-events: all;
-}
+	background: black; 
+} */
+
 
 
 
@@ -8472,3 +8529,89 @@ background-size: 8.94px 6.03px;
         margin-top: 10px;
     }
 }
+
+
+/* ====================================================
+   ====================================================
+
+   Accessibility Fixes
+
+   ====================================================
+   ==================================================== */
+
+.nav-container .search-section.active input {
+	width: 300px;
+	text-indent: 0em;
+	padding-right: 100px;
+}
+.nav-container .search-section.active label {
+	opacity: 0;
+}
+.nav-container .search-section.active button {
+	opacity: 1;
+	pointer-events: all;
+}
+
+/*
+.nav-container .search-section {
+	position: absolute;
+	right: 10px;
+	top: 2px;
+}
+
+
+.nav-container .search-section i {
+    position: absolute;
+    color: #fff;
+    right: 9px;
+    font-size: 1.125rem;
+    font-weight: 700;
+    top: 9px;
+}
+.nav-container .search-section label {
+    font-family: proxima-nova,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    position: absolute;
+    left: 17px;
+    top: 9px;
+    pointer-events: none;
+    color: #fff;
+    font-size: .9375rem;
+    opacity: 1;
+    -webkit-transition: .3s ease all;
+    transition: .3s ease all;
+}
+.nav-container .search-section input {
+    font-family: proxima-nova,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background: #000;
+    border: 2px solid #fff;
+    color: #fff;
+    height: 13px;
+    padding: 10px 16px;
+    width: 60px;
+    text-indent: -99em;
+    -webkit-transition: .3s ease all;
+    transition: .3s ease all;
+}
+.nav-container .search-section button {
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    pointer-events: none;
+    opacity: 0;
+    color: #000;
+    font-family: proxima-nova,sans-serif;
+    font-weight: 700;
+    font-size: .9375rem;
+    font-style: normal;
+    background: #fb0;
+    padding: 7.5px 15px;
+    -webkit-transition: .3s ease all;
+    transition: .3s ease all;
+}
+.nav-container .ri-search-line:before {
+    content: "\f0d1";
+} */

@@ -2,10 +2,43 @@
 <html lang="en">
 	
 <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
 	<title>Towson University - Landing Page Template</title>
-	<meta name="Description" content="" />
+	<meta name="description" content="One of America’s leading public universities, Towson University creates opportunities for academic excellence, scholarly research and career success. ">
+	<meta name="keywords" content="Towson, University, System, Maryland, state, TU, md, apply, college, campus, ">
+	<meta property="og:title" content="Towson University | Maryland’s University of Opportunities">
+	<meta property="og:url" content="https://www.towson.edu/index.html">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="https://www.towson.edu/_resources/images/tu-logo-og-image.png">
+	<meta property="og:description" content="One of America’s leading public universities, Towson University creates opportunities for academic excellence, scholarly research and career success. ">
+	<meta property="og:site_name" content="Towson University">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="Towson University">
+	<meta name="twitter:creator" content="@TowsonU">
+	<meta name="twitter:url" content="https://www.towson.edu/index.html">
+	<meta property="twitter:title" content="Towson University | Maryland’s University of Opportunities">
+	<meta name="twitter:description" content="One of America’s leading public universities, Towson University creates opportunities for academic excellence, scholarly research and career success. ">
+	<meta name="twitter:image" content="https://www.towson.edu/_resources/images/twitter-meta.png">
+	
+	<!-- Favions / Touch Icons -->
+	<link rel="apple-touch-icon" sizes="57x57" href="/_resources/images/favicons/apple-touch-icon-57x57.png"/>
+	<link rel="apple-touch-icon" sizes="114x114" href="/_resources/images/favicons/apple-touch-icon-114x114.png"/>
+	<link rel="apple-touch-icon" sizes="72x72" href="/_resources/images/favicons/apple-touch-icon-72x72.png"/>
+	<link rel="apple-touch-icon" sizes="144x144" href="/_resources/images/favicons/apple-touch-icon-144x144.png"/>
+	<link rel="apple-touch-icon" sizes="60x60" href="/_resources/images/favicons/apple-touch-icon-60x60.png"/>
+	<link rel="apple-touch-icon" sizes="120x120" href="/_resources/images/favicons/apple-touch-icon-120x120.png"/>
+	<link rel="apple-touch-icon" sizes="76x76" href="/_resources/images/favicons/apple-touch-icon-76x76.png"/>
+	<link rel="apple-touch-icon" sizes="152x152" href="/_resources/images/favicons/apple-touch-icon-152x152.png"/>
+	<link rel="icon" type="image/png" href="/_resources/images/favicons/favicon-196x196.png" sizes="196x196"/>
+	<link rel="icon" type="image/png" href="/_resources/images/favicons/favicon-96x96.png" sizes="96x96"/>
+	<link rel="icon" type="image/png" href="/_resources/images/favicons/favicon-16x16.png" sizes="16x16"/>
+	<link rel="icon" type="image/png" href="/_resources/images/favicons/favicon-32x32.png" sizes="32x32"/>
+	<meta name="msapplication-TileColor" content="#D0021B"/>
+	<meta name="msapplication-TileImage" content="/_resources/images/favicons/mstile-144x144.png"/>
 
 	<link rel="stylesheet" href="css/newsroom.css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
@@ -44,14 +77,14 @@
             <div class="utility-nav heading-constrain">
                 <div class="publications-group">
 					<div class="menu-trigger">
-                    	<p class="publications-label">More publications <i class="fa-solid fa-caret-right" aria-hidden="true"></i></p>
+                    	<button class="publications-label">More publications <i class="fa-solid fa-caret-right" aria-hidden="true"></i></button>
 					</div>
 					<div class="slide-outer">
 						<div class="pub-list-slide">
 							<ul class="publication-items">
-								<li>Newsroom</li>
-								<li>TU Magazine</li>
-								<li>Presidential Communications</li>
+								<li><a href="#">Newsroom</a></li>
+								<li><a href="#">TU Magazine</a></li>
+								<li><a href="#">Presidential Communications</a></li>
 							</ul>
 						</div>
 					</div>
@@ -98,14 +131,14 @@
                             <div class="mobile-links-nav">
                                 <div class="container-nav">
                                     <ul>
-										<li><a class="top" href="index.html">Latest News</a></li>
-                                		<li><a class="top" href="story.html">By Topic</a></li>
-                                		<li><a class="top" href="feature.html">For the Media</a></li>
+										<li><a class="top" href="#">Latest News</a></li>
+                                		<li><a class="top" href="#">By Topic</a></li>
+                                		<li><a class="top" href="#">For the Media</a></li>
                                     </ul>
 									<ul class="mobile-publication-items">
-										<li>Newsroom</li>
-										<li>TU Magazine</li>
-										<li>Presidential Communications</li>
+										<li><a href="#">Newsroom</a></li>
+										<li><a href="#">TU Magazine</a></li>
+										<li><a href="#">Presidential Communications</a></li>
 									</ul>
 
 
@@ -125,7 +158,15 @@
 
                     <div class="nav-container">
 
+						<div class="search-section">
+							<i class="fa-solid fa-magnifying-glass" aria-label="Search icon" aria-hidden="true"></i>
+							<form action="/search/index.html" class="search_form_desktop">
+								<label for="site-search-desktop" aria-hidden="true">Search</label>
+								<input type="search" id="site-search-desktop" name="q" class="search_input" aria-label="Search the Towson University website" onfocus="if(this.value==this.defaultValue)this.value=''" onblur="if(this.value=='')this.value=this.defaultValue" value="Enter a search term">
+								<button type="submit" class="search_submit_word">Search</button></form>
+						</div>
 
+						<!--
                         <div class="search-bar-container">
                             <div class="search-section form secondary">
                                 <div class="container-nav">
@@ -134,19 +175,19 @@
                                         <input type="search" id="site-search-desktop" name="q" class="search_input" aria-label="Search the Towson University website" onfocus="if(this.value==this.defaultValue)this.value=''" onblur="if(this.value=='')this.value=this.defaultValue" value="Enter a search term">
                                         <button type="submit" class="search_submit_word">Search</button>
                                     </form>
-                                </div> <!-- /.container-nav -->
-                            </div> <!-- /.search-section form secondary -->
+                                </div> 
+                            </div> 
     
                             
-                        </div> <!-- /.search-bar-container -->
+                        </div> -->
 
 
                         
                         <div class="nav">
                             <ul class="nav-items">
-                                <li>Latest News</li>
-                                <li>By Topic</li>
-                                <li>For the Media</li>
+                                <li><a href="#">Latest News</a></li>
+                                <li><a href="#">By Topic</a></li>
+                                <li><a href="#">For the Media</a></li>
                             </ul>
                         </div> <!-- /.nav -->
                     </div> <!-- /.nav-container -->
@@ -163,7 +204,7 @@
 						<div class="grid-snippet lead">
 							<div class="item news">
 								<figure>
-									<img src="https://www.towson.edu/homepage/2022-homepage/fall-tiger-admissions-deadlines-jumbo.jpg">
+									<img src="https://www.towson.edu/homepage/2022-homepage/fall-tiger-admissions-deadlines-jumbo.jpg" alt="tiger">
 								</figure>
 								<div class="copy">
 									<p class="tag-primary">Feature</p>    
@@ -179,7 +220,7 @@
 							<div class="grid-snippet two">
 								<div class="item news">
 									<figure>
-										<img src="https://www.towson.edu/homepage/2022-homepage/fall-tiger-admissions-deadlines-jumbo.jpg">
+										<img src="https://www.towson.edu/homepage/2022-homepage/fall-tiger-admissions-deadlines-jumbo.jpg" alt="tiger">
 									</figure>
 									<div class="copy">                
 										<p class="tag-primary">Repeating List Snippet</p>
@@ -189,7 +230,7 @@
 								</div> <!-- /.item news -->
 								<div class="item news">
 									<figure>
-										<img src="https://www.towson.edu/homepage/2022-homepage/fall-tiger-admissions-deadlines-jumbo.jpg">
+										<img src="https://www.towson.edu/homepage/2022-homepage/fall-tiger-admissions-deadlines-jumbo.jpg" alt="tiger">
 									</figure>
 									<div class="copy">
 										<p class="tag-primary">Feature Template</p>
@@ -204,7 +245,7 @@
 								</div> <!-- /.item text-block top-border -->
 								<div class="item news sq">
 									<figure>
-										<img src="https://www.towson.edu/homepage/2022-homepage/fall-tiger-admissions-deadlines-jumbo.jpg">
+										<img src="https://www.towson.edu/homepage/2022-homepage/fall-tiger-admissions-deadlines-jumbo.jpg" alt="tiger">
 									</figure>
 									<div class="copy">
 										<h3 class="article-headline">Scelerisque mauris ut pulvinar pellentesque habitant morbi tristique senectus</h3>
@@ -212,7 +253,7 @@
 								</div> <!-- /.item news sq -->
 								<div class="item news sq">
 									<figure>
-										<img src="https://www.towson.edu/homepage/2022-homepage/fall-tiger-admissions-deadlines-jumbo.jpg">
+										<img src="https://www.towson.edu/homepage/2022-homepage/fall-tiger-admissions-deadlines-jumbo.jpg" alt="tiger">
 									</figure>
 									<div class="copy">
 										<h3 class="article-headline">Proin sagittis nisl rhoncus mattis rhoncus urna neque</h3>
@@ -246,7 +287,7 @@
 									</div> <!-- /.item text-block top-border -->
 									<div class="item news grid-col-span three">
 										<figure>
-											<img src="https://www.towson.edu/homepage/2022-homepage/fall-tiger-admissions-deadlines-jumbo.jpg">
+											<img src="https://www.towson.edu/homepage/2022-homepage/fall-tiger-admissions-deadlines-jumbo.jpg" alt="tiger">
 										</figure>
 									</div> <!-- /.item news grid-col-span three -->
 								</div> <!-- /.grid-snippet four -->
@@ -254,7 +295,7 @@
 							<div class="grid-snippet one split">
 								<div class="item news">
 									<figure>
-										<img src="https://www.towson.edu/homepage/2022-homepage/fall-tiger-admissions-deadlines-jumbo.jpg">
+										<img src="https://www.towson.edu/homepage/2022-homepage/fall-tiger-admissions-deadlines-jumbo.jpg" alt="tiger">
 									</figure>
 									<div class="copy">
 										<p class="tag-primary">Research</p>
@@ -298,7 +339,7 @@
 							<div class="grid-snippet cards three">
 								<div class="item news">
 									<figure>
-										<img src="https://www.towson.edu/homepage/2022-homepage/fall-tiger-admissions-deadlines-jumbo.jpg">
+										<img src="https://www.towson.edu/homepage/2022-homepage/fall-tiger-admissions-deadlines-jumbo.jpg" alt="tiger">
 									</figure>
 									<div class="copy">
 										<h3 class="article-headline">Scelerisque mauris ut pulvinar pellentesque habitant morbi tristique senectus</h3>
@@ -306,7 +347,7 @@
 								</div> <!-- /.item news -->
 								<div class="item news">
 									<figure>
-										<img src="https://www.towson.edu/homepage/2022-homepage/fall-tiger-admissions-deadlines-jumbo.jpg">
+										<img src="https://www.towson.edu/homepage/2022-homepage/fall-tiger-admissions-deadlines-jumbo.jpg" alt="tiger">
 									</figure>
 									<div class="copy">
 										<h3 class="article-headline">Proin sagittis nisl rhoncus mattis rhoncus urna neque</h3>
@@ -314,7 +355,7 @@
 								</div> <!-- /.item news -->
 								<div class="item news ">
 									<figure>
-										<img src="https://www.towson.edu/homepage/2022-homepage/fall-tiger-admissions-deadlines-jumbo.jpg">
+										<img src="https://www.towson.edu/homepage/2022-homepage/fall-tiger-admissions-deadlines-jumbo.jpg" alt="tiger">
 									</figure>
 									<div class="copy">
 										<h3 class="article-headline">Proin sagittis nisl rhoncus mattis rhoncus urna neque</h3>

@@ -1,45 +1,67 @@
 $(document).ready(function() {
 
     
+	//////////////////////////////////////////////////////////////////////
+    // Search bar detect .navigation .search-section
+    //////////////////////////////////////////////////////////////////////
 
+    
+    //detect focus of navigation search bar
+    $('.navigation-top .search-section input.search_input').focus( function() {
+        $('.navigation-top .search-section').addClass('active');
+    });
+    $('.navigation-top .search-section input.search_input').blur( function() {
+        $('.navigation-top .search-section').removeClass('active');
+    });
+    $('.navigation-top .search-section button.search_submit_word').focus( function() {
+        $('.navigation-top .search-section').addClass('active');
+    });
+    $('.navigation-top .search-section button.search_submit_word').blur( function() {
+        $('.navigation-top .search-section').removeClass('active');
+    });
 
-	//detect focus of navigation search bar
-	$('.navigation .search-section input.search_input').focus( function() {
+	//detect focus of navigation search bar - THESE ARE OLD
+	/* $('.navigation .search-section input.search_input').focus( function() {
 		$('.navigation .search-section').addClass('active');
 	});
 	$('.navigation .search-section input.search_input').blur( function() {
 		$('.navigation .search-section').removeClass('active');
-	});
+	}); */
 
-	$('.mobile-links-nav.active .search-section input.search_input').focus( function() {
+	/* $('.mobile-links-nav.active .search-section input.search_input').focus( function() {
 		$('.navigation .search-section').addClass('active');
 	});
 	$('.mobile-links-nav.active .search-section input.search_input').blur( function() {
 		$('.navigation .search-section').removeClass('active');
-	});
+	}); */
 
+
+	/* ========================================
+		This kind of worked - keeping it here
+	   ======================================== */
 	//detect focus of navigation search bar
-	$('.navigation-top .search-section .fa-magnifying-glass').click( function() {
+	/* $('.navigation-top .search-section .fa-magnifying-glass').click( function() {
 		$('.navigation-top .search-section').addClass('active');
+		$('.navigation-top .search-section input.search_input').focus();
 		console.log("add class from click");
-	});
+	}); */
 
-	$('.navigation-top .search-section .fa-magnifying-glass').blur( function() {
+	/* $('.navigation-top .search-section .fa-magnifying-glass').blur( function() {
 		$('.navigation-top .search-section').removeClass('active');
 		console.log("remove class on blur magnifying");
-	});
+	}); */
 
-	$('.navigation-top .search-section input.search_input').focus( function() {
+	/* $('.navigation-top .search-section input.search_input').focus( function() {
 		console.log("Focus on search input");
-	});
+	}); */
 
-	$('.navigation-top .search-section input.search_input').blur( function() {
+	/* $('.navigation-top .search-section input.search_input').blur( function() {
 		$('.navigation-top .search-section').removeClass('active');
 		console.log("remove class from search");
-	});
+	}); */
 
 
-	$(document).click(function(e) {
+	/* $(document).click(function(e) {
 		if (!$(e.target).is('.navigation-top .search-section .fa-magnifying-glass') && !$(e.target).is('.navigation-top .search-section input.search_input')) {
 			$('.navigation-top .search-section').removeClass('active');
 			console.log("click anywhere");
@@ -51,22 +73,26 @@ $(document).ready(function() {
     });
 	$('.menu-trigger').click(function(e) {
         e.stopPropagation();
-    });
+    }); */
 
 
-	$('.menu-trigger').on("click touch keypress", function () {
+	/* $('.menu-trigger').on("click touch keypress", function () {
 		$(".menu-trigger").toggleClass('active');
 		$(".pub-list-slide").toggleClass('active');
-	});
+	}); */
 
-	$('.menu-trigger').click(function() {
-        var content = $('.pub-list-slide');
+	$('.menu-trigger').click(function(e) {
+        
+		$(".menu-trigger").toggleClass('active');
+		$(".pub-list-slide").toggleClass('active');
+		
+		var content = $('.pub-list-slide');
         var isVisible = content.data('visible');
 
         if (isVisible) {
             content.animate({ left: '-550px' }, 'fast').data('visible', false);
         } else {
-            content.animate({ left: '0px' }, 'fast').data('visible', true); /* 40px is the height of the header */
+            content.animate({ left: '0px' }, 'fast').data('visible', true);
         }
     });
 
