@@ -20,6 +20,14 @@ $(document).ready(function() {
         $('.navigation-top .search-section').removeClass('active');
     });
 
+	$('.fa-magnifying-glass').on("click touch keypress", function () {
+		$(".navigation-top .search-section").toggleClass('active');
+	});
+
+	$('.fa-magnifying-glass').on("click touch keypress", function () {
+		$(".navigation-top .search-section").toggleClass('active');
+	});
+
 	//detect focus of navigation search bar - THESE ARE OLD
 	/* $('.navigation .search-section input.search_input').focus( function() {
 		$('.navigation .search-section').addClass('active');
