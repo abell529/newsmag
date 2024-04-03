@@ -7796,7 +7796,7 @@ background-size: 8.94px 6.03px;
 
 .nav-container .search-section.active input {
 	border: 1px solid black;
-	right: 67px;
+	right: -28px;
 }
 
 .mobile .search-section input {
