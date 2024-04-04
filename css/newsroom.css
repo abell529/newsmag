@@ -7783,7 +7783,7 @@ background-size: 8.94px 6.03px;
     border: none;
     color: #000000;
     height: 32px;
-    padding: 16px 5px;
+    padding: 15px 5px 16px 5px;
     width: 85px;
     text-indent: -99em;
     transition: 0.3s ease all;
@@ -7870,8 +7870,8 @@ background-size: 8.94px 6.03px;
     padding: 6px 28px 6px 6px;
     transition: 0.3s ease all;
     float: right;
-    right: -14px;
-    top: 25px;
+    right: -13px;
+    top: 26px;
     border-left: #000000 solid 1px;
 }
 
@@ -8553,6 +8553,10 @@ background-size: 8.94px 6.03px;
 .nav-container .search-section.active button {
 	opacity: 1;
 	pointer-events: all;
+}
+
+.headline-area {
+	z-index: 1;
 }
 
 /*
