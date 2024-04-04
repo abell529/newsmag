@@ -8558,6 +8558,7 @@ background-size: 8.94px 6.03px;
 
 .headline-area {
 	z-index: 1;
+	position: relative;
 }
 
 /*
