@@ -2279,8 +2279,9 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
     aspect-ratio: 1;
     }
 
+	/* AB change from -50 to -10 for Accessibility */
 .hero.alt .hero-content {
-    margin-left: -50px;
+    margin-left: -10px;
     padding: 0;
     max-width: calc( 100% + 50px);    
 }
