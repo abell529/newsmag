@@ -8624,3 +8624,19 @@ background-size: 8.94px 6.03px;
 .nav-container .ri-search-line:before {
     content: "\f0d1";
 } */
+
+
+
+/* =========================================
+   =========================================
+
+	New Changes After Posting
+
+   =========================================
+   ========================================= */
+
+
+.item.news h3 {
+	text-align: left;
+	padding:0;
+}
