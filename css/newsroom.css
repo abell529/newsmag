@@ -8653,8 +8653,8 @@ background-size: 8.94px 6.03px;
 	display: none;
 }
 
-.grid-snippet.image-title-only .news-item-tag,
-.grid-snippet.image-title-only .news-item-desc {
+.grid-snippet.image-headline-only .news-item-tag,
+.grid-snippet.image-headline-only .news-item-desc {
 	display: none;
 }
 
