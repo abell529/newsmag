@@ -8640,3 +8640,7 @@ background-size: 8.94px 6.03px;
 	text-align: left;
 	padding:0;
 }
+
+.grid-snippet.headline-only .news-item-tag, .grid-snippet.headline-only .news-item-desc, .grid-snippet.headline-only figure {
+	display: none;
+}
