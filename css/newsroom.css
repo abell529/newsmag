@@ -8644,3 +8644,8 @@ background-size: 8.94px 6.03px;
 .grid-snippet.headline-only .news-item-tag, .grid-snippet.headline-only .news-item-desc, .grid-snippet.headline-only figure {
 	display: none;
 }
+
+.grid-snippet h2 {
+	text-align: left;
+	padding:0;
+}
