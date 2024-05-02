@@ -8672,7 +8672,7 @@ background-size: 8.94px 6.03px;
 .grid-snippet.media-all-info .grid-col-list .news-item-tag,
 .grid-snippet.media-all-info .grid-col-list .news-item-desc,
 .grid-snippet.media-all-info .grid-col-list figure {
-	display: all;
+	display: block;
 }
 
 .grid-snippet h2 {
