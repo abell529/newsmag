@@ -1623,7 +1623,8 @@ blockquote.pull-quote.quote p.attrib:before {
 }
 
 .color-block.dark {
-    background-color: var(--glen-mist);
+    background-color: var(--graphite);
+	/* updated 6-26-24 ^ */
     color: var(--gold-solid);
 }
 
