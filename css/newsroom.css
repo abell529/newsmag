@@ -6971,6 +6971,11 @@ UPDATE THIS CLASS FOR THE PAGE
     aspect-ratio: 1;
 }
 
+.wide figure img {
+    object-fit: cover;
+    aspect-ratio: 1.77;
+}
+
 .split .item.news{
     display: grid;
     grid-template-columns: 1fr 1fr;
