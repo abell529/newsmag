@@ -6953,12 +6953,12 @@ UPDATE THIS CLASS FOR THE PAGE
 
 .grid-snippet h2, .item.news h3 {
     text-align: left;
-    padding:0;
+    padding: 0;
 }
 
 .item.news h3 {
     font-size: 1.5rem;
-    font-weight: 700
+    font-weight: 700;
 }
 
 .lead .item.news h3 {
