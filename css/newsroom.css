@@ -6951,9 +6951,14 @@ UPDATE THIS CLASS FOR THE PAGE
 	line-height: 2.25rem;
 }
 
+.grid-snippet h2, .item.news h3 {
+    text-align: left;
+    padding:0;
+}
+
 .item.news h3 {
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 700
 }
 
 .lead .item.news h3 {
@@ -8642,10 +8647,6 @@ background-size: 8.94px 6.03px;
    ========================================= */
 
 
-.item.news h3 {
-	text-align: left;
-	padding:0;
-}
 
 .grid-snippet.all-info .news-item-tag,
 .grid-snippet.all-info .news-item-desc,
@@ -8679,9 +8680,4 @@ background-size: 8.94px 6.03px;
 .grid-snippet.media-all-info .grid-col-list .news-item-desc,
 .grid-snippet.media-all-info .grid-col-list figure {
 	display: block;
-}
-
-.grid-snippet h2 {
-	text-align: left;
-	padding:0;
 }
