@@ -1,1 +1,7 @@
+/* ===== CASCADE OVERRIDES for style inheritance  ===== */
+/* This section may be integrated with base CSS in the future */
+/* Kills underlined links in nav and news objects */
 
+.header-container a, .grid-snippet a {
+  text-decoration: none;
+}
