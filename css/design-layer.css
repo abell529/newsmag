@@ -5,3 +5,41 @@
 .header-container a, .grid-snippet a {
   text-decoration: none;
 }
+
+/* ===== VISUAL DESIGN AND INTERACTION ===== */
+
+/* These changes will not work until the XSL changes are in place to wrap all media objects in an <a> element */
+
+/* Full Hover State for News Items */
+
+
+a .news.item {
+  cursor: default;
+}
+
+a .news.item figure, a .news.item h3 {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover h3 {
+  text-decoration: underline;
+}
+
+.news.item figure img {
+    transform: scale(1);
+    transition: all .3s ease-in;
+}
+  
+a:hover .news.item figure:hover img {
+    transform: scale(1.05);
+    transition: all .3s linear;
+}
+
+.news.item figure {
+    width: 100%;
+    overflow: hidden;
+}
