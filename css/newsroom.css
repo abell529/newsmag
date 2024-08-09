@@ -1,6 +1,3 @@
-@import url("animate-custom.css")
-
-
 /* ====================================================
 	Mission Page Build
    ==================================================== */
@@ -2769,6 +2766,46 @@ UPDATE THIS CLASS FOR THE PAGE
     grid-column: span 3;
 }
 
+.grid-snippet .grid-snippet {
+     margin: 0;
+}
+
+/* These styles supress various elements of the parent object */
+
+.grid-snippet.all-info .news-item-tag,
+.grid-snippet.all-info .news-item-desc,
+.grid-snippet.all-info figure {
+	display: block;
+}
+
+.grid-snippet.headline-only .news-item-tag,
+.grid-snippet.headline-only .news-item-desc,
+.grid-snippet.headline-only figure {
+	display: none;
+}
+
+.grid-snippet.image-headline-only .news-item-tag,
+.grid-snippet.image-headline-only .news-item-desc {
+	display: none;
+}
+
+.grid-snippet.media-headline-only .grid-col-list .news-item-tag,
+.grid-snippet.media-headline-only .grid-col-list .news-item-desc,
+.grid-snippet.media-headline-only .grid-col-list figure {
+	display: none;
+}
+
+.grid-snippet.media-image-headline-only .grid-col-list .news-item-tag,
+.grid-snippet.media-image-headline-only .grid-col-list .news-item-desc {
+	display: none;
+}
+
+.grid-snippet.media-all-info .grid-col-list .news-item-tag,
+.grid-snippet.media-all-info .grid-col-list .news-item-desc,
+.grid-snippet.media-all-info .grid-col-list figure {
+	display: block;
+}
+
 /* Typography and Design */
 
 .lead {
@@ -4508,49 +4545,3 @@ background-size: 8.94px 6.03px;
 .nav-container .ri-search-line:before {
     content: "\f0d1";
 } */
-
-
-
-/* =========================================
-   =========================================
-
-	New Changes After Posting
-
-   =========================================
-   ========================================= */
-
-
-
-.grid-snippet.all-info .news-item-tag,
-.grid-snippet.all-info .news-item-desc,
-.grid-snippet.all-info figure {
-	display: block;
-}
-
-.grid-snippet.headline-only .news-item-tag,
-.grid-snippet.headline-only .news-item-desc,
-.grid-snippet.headline-only figure {
-	display: none;
-}
-
-.grid-snippet.image-headline-only .news-item-tag,
-.grid-snippet.image-headline-only .news-item-desc {
-	display: none;
-}
-
-.grid-snippet.media-headline-only .grid-col-list .news-item-tag,
-.grid-snippet.media-headline-only .grid-col-list .news-item-desc,
-.grid-snippet.media-headline-only .grid-col-list figure {
-	display: none;
-}
-
-.grid-snippet.media-image-headline-only .grid-col-list .news-item-tag,
-.grid-snippet.media-image-headline-only .grid-col-list .news-item-desc {
-	display: none;
-}
-
-.grid-snippet.media-all-info .grid-col-list .news-item-tag,
-.grid-snippet.media-all-info .grid-col-list .news-item-desc,
-.grid-snippet.media-all-info .grid-col-list figure {
-	display: block;
-}
