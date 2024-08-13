@@ -1427,6 +1427,11 @@ a {
     text-underline-position: under;    
 }
 
+h1 {
+    font-size: 3rem;	
+    font-weight: 700;
+}
+
 h2, h3 {
     font-weight: 400;
 }
