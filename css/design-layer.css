@@ -39,6 +39,11 @@ a:hover .news.item figure img {
     transition: all .3s linear;
 }
 
+.news.item figure {
+    width: 100%;
+    overflow: hidden;
+}
+
 /* Pull quote designs to override base styles */
 
 blockquote.pull-quote {    /* this declaration should eventually be merged with base styles */
@@ -57,23 +62,24 @@ blockquote.pull-quote.quote-marks {
   margin-bottom: 40px;
 }
 
-blockquote.pull-quote.quote-marks:after {
-  content: url(https://www.towson.edu/_dev/_news-mag-redesign/_images/_deco/right-quo.svg);
-  position: absolute;
-  bottom: -28px;
-  width: 48px;
-  right: 10px;
-}
-
 blockquote.pull-quote.quote-marks:before {
-  content: url(https://www.towson.edu/_dev/_news-mag-redesign/_images/_deco/left-quo.svg);
-  position: absolute;
-  top: -28px;
-  width: 48px;
-  left: 10px;
+    content: "\201C";
+    position: absolute;
+    top: 11px;
+    left: 10px;
+    font-size: 7rem;
+    font-weight: 900;
+    line-height: 0;
+    color: var(--gold-solid);
 }
 
-.news.item figure {
-    width: 100%;
-    overflow: hidden;
+blockquote.pull-quote.quote-marks:after {
+    content: "\201D";
+    position: absolute;
+    bottom: -30px;
+    right: 20px;
+    font-size: 7rem;
+    font-weight: 900;
+    line-height: 0;
+    color: var(--gold-solid);
 }
