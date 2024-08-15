@@ -12,7 +12,6 @@
 
 /* Full Hover State for News Items */
 
-
 a .news.item {
   cursor: default;
 }
@@ -40,6 +39,21 @@ a:hover .news.item figure img {
     overflow: hidden;
 }
 
+/* Gold link hover state for news items */
+
+.news.item h3 {
+  display: inline;
+  text-decoration: none;
+  background: linear-gradient(0deg, #FFBB00, #FFBB00) no-repeat right bottom / 0 100%;
+  transition: background-size .35s;
+}
+
+a:hover .news.item h3 {
+  background-size: 113% 100%;
+  background-position-x: left;
+}  
+
+/* ===== PULL QUOTES ===== */
 /* Pull quote designs to override base styles */
 
 blockquote.pull-quote {    /* this declaration should eventually be merged with base styles */
