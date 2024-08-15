@@ -1423,7 +1423,7 @@ img {
 /* Base Typography */
 
 a {
-    text-decoration: underline 2px var(--light-gray-80);
+    text-decoration: underline 2px var(--gold-solid);
     text-underline-position: under;    
 }
 
@@ -1495,10 +1495,12 @@ strong {
 }
 
 .body-container p a {
-    background-image: linear-gradient(var(--light-gray-80) 0 0);
+    background-image: linear-gradient(var(--gold-solid) 0 0);
     background-size: 200% 0px;
     background-position: 200% 100%;
     background-repeat: no-repeat;
+    padding: 3px;
+    margin: -3px;
     transition: background-size .3s, background-position .3s .3s;
 }
 

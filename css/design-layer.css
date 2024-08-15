@@ -21,10 +21,6 @@ a .news.item figure, a .news.item h3 {
   cursor: pointer;
 }
 
-a {
-  text-decoration: none;
-}
-
 a:hover h3 {
   text-decoration: underline;
 }
