@@ -2181,28 +2181,18 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
 
    ======================================== */
 
-/* Variant - Default Style for Feature */
+/* Default Style for Feature */
 
 .hero {
     width: 100%;
     min-height: 650px;
-    /* background-color: var(--wireframe-placeholder); */
-	background-color: #000000;
+    background-color: #000000;
     display: grid;
 }
-
-/* this declaration needs cleanup */
 
 .hero-image {
     background: var(--tiger-placeholder-xl);
     background-position-y: center;
-}
-
-.hero-image:not(.hero.alt .hero-image, .hero.simple .hero-image) {
-    background-size: cover;
-    width: 100%;
-    height: 650px;
-    position: absolute;
 }
 
 .hero-content {
@@ -2269,6 +2259,48 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
     outline: unset;  
 }
 
+/* Variant - Full-Bleed Image */
+
+.hero.primary .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-self: end;	
+    max-width: 600px;
+    margin-left: calc(50% - 40vw);
+    justify-content: end;
+    position: relative;
+    height: min-content;
+    padding: 25px;
+    margin-bottom: 50px;
+    color: var(--white);
+  }
+
+.hero.primary .hero-image {
+    background-position-x: center;
+    height: 650px;
+    background-size: cover;
+    width: 100%;
+    position: absolute;
+}
+
+ .hero.primary .hero-image .gradient {
+    background: linear-gradient(80deg, rgba(0, 0, 0, 0.5) 35%, rgba(0, 0, 0, 0) 65%);
+}
+
+ .hero.primary .hero-content h1 {
+    border-left: 2px solid var(--gold-solid);
+    padding-left: 20px;
+}
+
+ .hero.primary .hero-content p.byline-item {
+  color: var(--white);
+}
+
+ .hero.primary .hero-content p.byline-item .icon {
+  font-size: inherit;
+  color: inherit;
+}
+
 /* Variant - SQ Image */
 
 .hero.alt {
@@ -2309,6 +2341,9 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
 }
 
 @media only screen and (max-width: 720px) {
+    .hero.primary .hero-image  {
+        height: 575px;
+    }
     .hero.alt {
         grid-template-columns: 4fr 3fr;
     }
@@ -2322,13 +2357,28 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
 }
 
 @media only screen and (max-width: 500px) {
-   .hero.alt {
-      grid-template-columns: 1fr;
+ .hero.primary .hero-image  {
+    height: 400px;
+  }	
+ .hero.primary .hero-image .gradient  {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 1) 100%);    
+  }
+ .hero.primary .hero-content {
+    padding: 0;
+    margin: 20px;
+  } 
+  .hero.primary .hero-content h1 {
+    font-size: 1.75rem;
+  }
+  .hero.alt {
+     grid-template-columns: 1fr;
    } 
-
   .hero.alt .hero-content {
         margin-top: -80px;
         margin-left: 20px;
+  }
+   .hero.primary .hero-content p.byline-item {
+  font-size: .925rem;
   }
 }
 
