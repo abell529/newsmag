@@ -371,8 +371,6 @@ main#content.no-margin {
     margin: 0;
 }
 
-
-
 /* ===================
 	Header Navigation
    =================== */
@@ -2246,7 +2244,7 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
 /* Variant - No Image */
 
 .hero.simple {
-    background-color: var(--light-gray-80);
+    background-color: unset;
     min-height: unset;
 }
 
