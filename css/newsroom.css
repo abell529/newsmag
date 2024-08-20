@@ -371,8 +371,6 @@ main#content.no-margin {
     margin: 0;
 }
 
-
-
 /* ===================
 	Header Navigation
    =================== */
@@ -1824,8 +1822,13 @@ a.content-button.secondary:hover {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-gap: 60px;
+    width: calc(100% - 30px);
     max-width: 1200px;
     margin: auto;
+}
+
+.body-container.two-col .body-section {
+    max-width: unset;
 }
 
  .body-container.two-col .full-width {
@@ -2243,14 +2246,16 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
 /* Variant - No Image */
 
 .hero.simple {
-    background-color: var(--light-gray-80);
+    background-color: unset;
     min-height: unset;
 }
 
 .hero.simple .hero-content {
-    margin-left: calc(50% - 450px);
-    padding: 50px 0;
-    max-width: 900px;
+    max-width: 1230px;
+    width: 100%;
+    padding-left: 15px;	
+    padding-right: 15px;
+    margin: auto;
 }
 
 .hero.simple .hero-content h1 span {
