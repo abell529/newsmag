@@ -371,8 +371,6 @@ main#content.no-margin {
     margin: 0;
 }
 
-
-
 /* ===================
 	Header Navigation
    =================== */
@@ -1766,7 +1764,7 @@ a.content-button.secondary:hover {
     font-weight: 300;
     font-size: .925rem;
     color: #3c3c3c;
-    margin-top: 0;
+    margin-top: 10px;
     line-height: 1.25rem;
 }
 
@@ -1824,8 +1822,13 @@ a.content-button.secondary:hover {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-gap: 60px;
+    width: calc(100% - 30px);
     max-width: 1200px;
     margin: auto;
+}
+
+.body-container.two-col .body-section {
+    max-width: unset;
 }
 
  .body-container.two-col .full-width {
@@ -1889,8 +1892,7 @@ a.content-button.secondary:hover {
 /* In-content Image */
 
 .in-content-image {
-    max-width: 300px;
-    background-color: var(--wireframe-placeholder);
+    max-width: 50%;
 }
 .in-content-image img {
     vertical-align: top;
@@ -1900,12 +1902,12 @@ a.content-button.secondary:hover {
 }
 
 .in-content-image.left {
-    float:left;
+    float: left;
     margin: 20px 30px 20px -100px;
 }
 
 .in-content-image.right {
-    float:right;
+    float: right;
     margin: 20px -100px 20px 20px;
 }
 
@@ -1960,12 +1962,10 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
 
     .in-content-image.left {
         margin: 20px 30px 20px 0;
-        max-width: 50%;
     }
 
     .in-content-image.right {
         margin: 20px 0 20px 20px;
-        max-width: 50%;   
     }
 }
 
@@ -2246,14 +2246,16 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
 /* Variant - No Image */
 
 .hero.simple {
-    background-color: var(--light-gray-80);
+    background-color: unset;
     min-height: unset;
 }
 
 .hero.simple .hero-content {
-    margin-left: calc(50% - 450px);
-    padding: 50px 0;
-    max-width: 900px;
+    max-width: 1230px;
+    width: 100%;
+    padding-left: 15px;	
+    padding-right: 15px;
+    margin: auto;
 }
 
 .hero.simple .hero-content h1 span {
@@ -3445,6 +3447,10 @@ p.tag-primary + h3 {
 
 .newsroom-vertical .issue-date {
 	display: none;
+}
+
+.newsroom-vertical .vertical-name {
+	background: rgba(255, 255, 255, .85); /* using rgba instead of hex for better transparency performance */
 }
 
 .magazine-vertical .issue-date {
