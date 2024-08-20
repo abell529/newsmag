@@ -1396,6 +1396,8 @@ meter {
 /* placeholder photo */
     --tiger-placeholder-xl: url(https://www.towson.edu/homepage/2022-homepage/fall-tiger-admissions-deadlines-jumbo.jpg);
     --tiger-placeholder-xl: #5abbc350;
+/* effects */
+    --text-contrast: drop-shadow(0px 0px 30px #000);
 } 
 
 
@@ -2284,16 +2286,22 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
 }
 
  .hero.primary .hero-image .gradient {
-    background: linear-gradient(80deg, rgba(0, 0, 0, 0.5) 35%, rgba(0, 0, 0, 0) 65%);
+    background: linear-gradient(40deg, rgba(0, 0, 0, 0.5) 35%, rgba(0, 0, 0, 0) 65%);
 }
 
  .hero.primary .hero-content h1 {
     border-left: 2px solid var(--gold-solid);
     padding-left: 20px;
+    filter: var(--text-contrast); 	 
+}
+
+ .hero.primary .hero-content p.subhead {
+    filter: var(--text-contrast); 	 
 }
 
  .hero.primary .hero-content p.byline-item {
   color: var(--white);
+  filter: var(--text-contrast); 
 }
 
  .hero.primary .hero-content p.byline-item .icon {
@@ -2334,6 +2342,9 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
         margin: 0 20px;
         padding-top: 100px;
     }
+    .hero.primary .hero-content {
+	margin: 0 20px;
+    }
     .hero.simple .hero-content {
         margin: 0 20px;
         max-width: 700px;
@@ -2341,8 +2352,12 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
 }
 
 @media only screen and (max-width: 720px) {
+    .hero.primary {
+        min-height: unset;
+    }
     .hero.primary .hero-image  {
-        height: 575px;
+        position: relative;
+        height: 450px;
     }
     .hero.alt {
         grid-template-columns: 4fr 3fr;
@@ -2354,16 +2369,17 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
         font-size: 1.25rem;
         line-height: 1.75rem;
     }
+    .hero.primary .hero-image .gradient  {
+        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, .85) 100%);
+	opacity: unset; /* can be removed if opacity is eliminated at a higher specificity later */
+    }	
 }
 
 @media only screen and (max-width: 500px) {
  .hero.primary .hero-image  {
-    height: 400px;
-  }	
- .hero.primary .hero-image .gradient  {
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 1) 100%);    
-  }
- .hero.primary .hero-content {
+    height: 350px;
+   }	
+  .hero.primary .hero-content {
     padding: 0;
     margin: 20px;
   } 
