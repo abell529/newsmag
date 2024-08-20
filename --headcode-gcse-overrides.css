@@ -1,0 +1,113 @@
+.gs-result .gs-title *, .gsc-cursor-page, .gs-spelling a {
+    font-size: 1.25rem !important;
+    color: #000 !important;
+}
+
+ .gs-webResult.gs-result a.gs-title:link,  .gs-webResult.gs-result a.gs-title:visited, .gs-webResult.gs-result a.gs-title:link b,  .gs-webResult.gs-result a.gs-title:visited b, .gs-imageResult a.gs-title:link, .gs-imageResult a.gs-title:link b, .gs-promotion a.gs-title:link, .gs-promotion a.gs-title:link *, .gs-promotion .gs-snippet a:link {
+    color: #3c3c3c !important;
+    font-size: 1.25rem !important;
+    border-bottom: none;
+    font-weight: 600;
+ }
+
+.gs-webResult.gs-result a.gs-title:hover, .gs-webResult.gs-result a.gs-title:hover b {
+    color: #3c3c3c !important;
+    font-size: 1.25rem !important;
+    transition: none;
+    border-bottom: 2px solid #FB0;    
+ } 
+
+.gs-fileFormat {
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    font-family: 'proxima-nova';
+}
+
+ .gs-webResult div.gs-visibleUrl, .gs-promotion .gs-visibleUrl, .gs-promotion .gs-visibleUrl-short {
+    color: #3c3c3c !important; 
+ }
+
+.gsc-resultsbox-visible {
+    font-family: 'proxima-nova';
+    font-weight: 400;
+}
+
+.gsc-webResult .gsc-result {
+    border-bottom: 1px solid #fB0 !important;
+    padding: 15px 0 !important;
+    margin: 10px 0 !important;
+}
+
+.gsc-webResult.gsc-result > * > * {
+    padding-bottom: 7px !important;
+}
+
+.gs-bidi-start-align.gs-snippet {
+    font-family: 'proxima-nova';
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.gs-bidi-start-align.gs-visibleUrl.gs-visibleUrl-breadcrumb {
+    font-size: .925rem;
+    font-weight: 400;
+    color: #6F6F6F !important;
+    /* font-style: italic; */
+}
+
+div.gsc-table-result, div.gs-promotion-table {
+    padding: 0;
+}
+
+div.gs-promotion-text-cell {
+    margin: 0;
+}
+
+.gsc-webResult.gsc-result.gsc-promotion {
+    border-bottom: 1px solid #FB0 !important;
+}
+
+a.gsst_a {
+    border: none;
+}
+
+.gsc-above-wrapper-area {
+    border-bottom: 1px solid #FB0 !important;
+    padding: 15px 0 !important;
+}
+
+.gcsc-find-more-on-google {
+    display: none !important;
+}
+
+td.gsc-result-info-container {
+    padding-left: 0 !important;
+}
+
+table.gsc-search-box td.gsc-input {
+    padding-left: 0 !important;
+}
+
+table.gsc-search-box td {
+    padding: 4px 8px !important;
+ }
+
+.gsc-orderby-label.gsc-inline-block {
+    font-size: .925rem !important;
+}
+
+.gs-title {
+	transition: none !important;
+}
+
+a.gs-title:hover {
+	border-bottom: 2px solid #FB0 !important;
+}
+
+a.gs-title:visited {
+    color: #3c3c3c !important;
+}
+
+.gsc-result .gs-title {
+    overflow: unset !important;
+}
