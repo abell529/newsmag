@@ -3444,6 +3444,10 @@ p.tag-primary + h3 {
 	display: none;
 }
 
+.newsroom-vertical .vertical-name {
+	background: rgba(255, 255, 255, .85); /* using rgba instead of hex for better transparency performance */
+}
+
 .magazine-vertical .issue-date {
 	display: block;
 }
