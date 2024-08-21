@@ -2782,10 +2782,11 @@ UPDATE THIS CLASS FOR THE PAGE
 
 .grid-snippet {
     display: grid;
+    position: relative;	
     min-height: 400px;
     gap: 30px;
     max-width: 1200px;
-    margin: 40px auto;
+    margin: 40px auto;;
 }
 
 .grid-snippet .item {
