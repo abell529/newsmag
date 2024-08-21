@@ -2845,6 +2845,24 @@ UPDATE THIS CLASS FOR THE PAGE
      margin: 0;
 }
 
+/* Granular Grid Control Ratios for 2-Column News Hub Layout */
+
+.grid-snippet.two.grid-ratio-1-2 {
+  grid-template-columns: 1fr 2fr;
+}
+
+.grid-snippet.two.grid-ratio-2-1 {
+  grid-template-columns: 2fr 1fr;
+}
+
+.grid-snippet.two.grid-ratio-1-3 {
+  grid-template-columns: 1fr 3fr;
+}
+
+.grid-snippet.two.grid-ratio-3-1 {
+  grid-template-columns: 3fr 1fr;
+}
+
 /* These styles supress various elements of the parent object */
 
 .grid-snippet.all-info .news-item-tag,
