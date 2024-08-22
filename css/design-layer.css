@@ -6,7 +6,7 @@
   text-decoration: none;
 }
 
-/* ===== VISUAL DESIGN AND INTERACTION ===== */
+/* ===== INTERACTION ===== */
 
 /* These changes will not work until the XSL changes are in place to wrap all media objects in an <a> element */
 
@@ -39,7 +39,7 @@ a:hover .news.item figure img {
     overflow: hidden;
 }
 
-/* Gold link hover state for news items */
+/* Gold link hover state for news items
 
 .news.item h3 {
   display: inline;
@@ -52,6 +52,53 @@ a:hover .news.item h3 {
   background-size: 113% 100%;
   background-position-x: left;
 }  
+*/
+
+/* ===== TIGERTOOTH DECO PATTERNS ===== */
+
+/* Lead Article Deco Wrapper */
+
+.tigertooth-enabled .lead .item.news .copy:before {
+    content: url(https://www.towson.edu/_dev/_news-mag-redesign/_images/_deco/tt-1.svg);
+    width: 130px;
+    position: absolute;
+    top:-33px;
+    left: -59px;
+}
+
+.tigertooth-enabled .lead .item.news .copy:after {
+    content: url(https://www.towson.edu/_dev/_news-mag-redesign/_images/_deco/tt-2.svg);
+    width: 110px;
+    position: absolute;
+    top: -66px;
+    right: -80px;
+}
+
+.tigertooth-enabled .lead .item.news .copy {
+    padding: 20px 40px 10px 90px !important;
+}
+
+/* Background Deco Pattern - Left */
+
+.tigertooth-enabled.background-left .grid-snippet:before {
+    content: url(https://www.towson.edu/_dev/_news-mag-redesign/_images/_deco/tt-pattern-1.svg);
+    position: absolute;
+    top: -100px;
+    left: -1000px;
+    width: 350px;
+    z-index: -1000;    
+}
+
+/* Background Deco Pattern - Right */
+
+.tigertooth-enabled.background-right .grid-snippet:after {
+    content: url(https://www.towson.edu/_dev/_news-mag-redesign/_images/_deco/tt-pattern-2.svg);
+    position: absolute;
+    top: 100px;
+    right: -600px;
+    width: 500px;
+    z-index: -1000;
+}
 
 /* ===== PULL QUOTES ===== */
 /* Pull quote designs to override base styles */
