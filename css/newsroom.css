@@ -2293,16 +2293,19 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
  .hero.primary .hero-content h1 {
     border-left: 2px solid var(--gold-solid);
     padding-left: 20px;
-    filter: var(--text-contrast); 	 
+    filter: var(--text-contrast);
+    text-shadow: 1px 1px 1px #000;	 
 }
 
  .hero.primary .hero-content p.subhead {
-    filter: var(--text-contrast); 	 
-}
+    filter: var(--text-contrast);
+    text-shadow: 1px 1px 1px #000;
+ }
 
  .hero.primary .hero-content p.byline-item {
-  color: var(--white);
-  filter: var(--text-contrast); 
+    color: var(--white);
+    filter: var(--text-contrast);
+    text-shadow: 1px 1px 1px #000; 
 }
 
  .hero.primary .hero-content p.byline-item .icon {
