@@ -12,15 +12,15 @@
 
 /* Full Hover State for News Items */
 
-a .news.item {
+.news.item a {
   cursor: default;
 }
 
-a .news.item figure, a .news.item h3 {
+.news.item a figure, .news.item a h3 {
   cursor: pointer;
 }
 
-a:hover h3 {
+.news.item a:hover h3 {
   text-decoration: underline;
 }
 
@@ -29,7 +29,7 @@ a:hover h3 {
     transition: all .3s ease-in;
 }
   
-a:hover .news.item figure img {
+ .news.item a:hover figure img {
     transform: scale(1.05);
     transition: all .3s linear;
 }
