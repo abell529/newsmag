@@ -140,3 +140,19 @@ blockquote.pull-quote.quote-marks:after {
     line-height: 0;
     color: var(--gold-solid);
 }
+
+/* Repeating List Profiles - Instagram Icon */
+
+.repeating-list.profiles span.icon-link {
+    color: #FB0;
+    font-size: 6rem;
+    text-decoration: none;
+}
+
+/* ===== CONDITIONAL STYLES -- These may need to be merged with others later. ===== */
+
+/* Allows grid snippet to render at its intended size when placed in a color block container.
+
+.full-bleed-section .content-constrain:has(.grid-snippet) {
+    max-width: inherit;
+}
