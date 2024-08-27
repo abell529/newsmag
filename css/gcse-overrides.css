@@ -105,9 +105,42 @@ a.gs-title:hover {
 }
 
 a.gs-title:visited {
-    color: #3c3c3c !important;
+	color: #3c3c3c !important;
 }
 
 .gsc-result .gs-title {
-    overflow: unset !important;
+	overflow: unset !important;
+}
+
+.gsc-search-button-v2 {
+	padding: 11px 16px !important;
+	cursor: pointer !important;
+}
+
+.gsc-search-button-v2 svg {
+	fill: #3c3c3c !important;
+	cursor: pointer !important;
+}
+
+.gsst_a .gscb_a, .gsst_a .gscb_a, .gsst_a:hover .gscb_a, .gsst_a:focus .gscb_a {
+	color: #3c3c3c !important;
+}
+
+.gsc-search-button-v2, .gsc-search-button-v2:hover, .gsc-search-button-v2:focus {
+	background-color: unset !important;
+}
+
+.gsc-selected-option-container {
+ 	background-color: unset !important;
+	border-radius: unset !important;
+	box-shadow: unset !important;
+	font-weight: unset !important;
+	font-size: 1rem !important;
+	height: unset !important;
+	line-height: unset !important;
+	padding: 5px 28px 5px 6px !important;
+}
+
+.gsc-search-button-v2, .gsc-search-button-v2:hover, .gsc-search-button-v2:focus {
+	background-color: unset;
 }

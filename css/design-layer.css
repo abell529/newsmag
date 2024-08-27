@@ -12,15 +12,15 @@
 
 /* Full Hover State for News Items */
 
-a .news.item {
+.news.item a {
   cursor: default;
 }
 
-a .news.item figure, a .news.item h3 {
+.news.item a figure, .news.item a h3 {
   cursor: pointer;
 }
 
-a:hover h3 {
+.news.item a:hover h3 {
   text-decoration: underline;
 }
 
@@ -29,7 +29,7 @@ a:hover h3 {
     transition: all .3s ease-in;
 }
   
-a:hover .news.item figure img {
+ .news.item a:hover figure img {
     transform: scale(1.05);
     transition: all .3s linear;
 }
@@ -84,7 +84,7 @@ a:hover .news.item h3 {
     content: url(https://www.towson.edu/_dev/_news-mag-redesign/_images/_deco/tt-pattern-1.svg);
     position: absolute;
     top: -100px;
-    left: -1000px;
+    left: -450px;
     width: 350px;
     z-index: -1000;    
 }
@@ -140,3 +140,69 @@ blockquote.pull-quote.quote-marks:after {
     line-height: 0;
     color: var(--gold-solid);
 }
+
+/* Repeating List Profiles - Instagram Icon */
+
+.repeating-list.profiles span.icon-link {
+    color: #FB0;
+    font-size: 6rem;
+    text-decoration: none;
+}
+
+/* ===== CONDITIONAL STYLES -- These may need to be merged with others later. ===== */
+
+/* Allows grid snippet to render at its intended size when placed in a color block container.
+
+.full-bleed-section .content-constrain:has(.grid-snippet) {
+    max-width: inherit;
+}
+=======
+/* -- NOTE: THIS SECTION OF STYLES OVERRIDES THOSE ABOVE BASED ON A NEW PROPOSED DESIGN.
+WHEN THE STYLE BELOW ARE APPROVED, THIS SECTION MUST BE REFACTOR WITH THAT ABOVE*/
+
+blockquote.pull-quote {
+    border: none;
+  }
+
+blockquote.pull-quote p:not(.attrib) {
+    border-left: 2px solid var(--gold-solid);
+    padding-left: 20px;
+    font-family: PoynterOSDisp, 'Kandal';
+    text-transform: none;
+    font-weight: 400;
+  }
+
+blockquote.pull-quote.quote p.attrib {
+    text-align: right;
+    padding-right: 20px;
+  }
+
+blockquote.pull-quote.quote-marks:before {
+    content: "\201C";
+    position: absolute;
+    top: 70px;
+    left: -12px;
+    font-size: 16rem;
+    font-weight: 900;
+    line-height: 0;
+    color: var(--light-gray-40);
+    z-index: -1;
+  }
+
+blockquote.pull-quote.quote-marks:after {
+    content: "\201D";
+    position: absolute;
+    bottom: 10px;
+    right: 22px;
+    font-size: 7rem;
+    font-weight: 900;
+    line-height: 0;
+    color: var(--light-gray-40);
+    z-index: -1;
+}
+
+/* This entire selector should be removed from newsroom.css */
+blockquote.pull-quote.quote p.attrib:before {
+    content: none;
+}
+
