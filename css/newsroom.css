@@ -2795,19 +2795,19 @@ UPDATE THIS CLASS FOR THE PAGE
 
 /* Granular Grid Control Ratios for 2-Column News Hub Layout */
 
-.grid-snippet.two.grid-ratio-1-2 {
+.grid-snippet.two.col-ratio-33-66 {
   grid-template-columns: 1fr 2fr;
 }
 
-.grid-snippet.two.grid-ratio-2-1 {
+.grid-snippet.two.col-ratio-66-33 {
   grid-template-columns: 2fr 1fr;
 }
 
-.grid-snippet.two.grid-ratio-1-3 {
+.grid-snippet.two.grid-ratio-25-75 {
   grid-template-columns: 1fr 3fr;
 }
 
-.grid-snippet.two.grid-ratio-3-1 {
+.grid-snippet.two.grid-ratio-75-25 {
   grid-template-columns: 3fr 1fr;
 }
 

@@ -151,12 +151,16 @@ blockquote.pull-quote.quote-marks:after {
 
 /* ===== CONDITIONAL STYLES -- These may need to be merged with others later. ===== */
 
-/* Allows grid snippet to render at its intended size when placed in a color block container.
+/* Allows grid snippet to render at its intended size when placed in a color block container.  */
 
 .full-bleed-section .content-constrain:has(.grid-snippet) {
     max-width: inherit;
 }
-=======
+
+.full-bleed-section .content-constrain figure {
+    height: unset
+}
+
 /* -- NOTE: THIS SECTION OF STYLES OVERRIDES THOSE ABOVE BASED ON A NEW PROPOSED DESIGN.
 WHEN THE STYLE BELOW ARE APPROVED, THIS SECTION MUST BE REFACTOR WITH THAT ABOVE*/
 
