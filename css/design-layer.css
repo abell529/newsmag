@@ -157,6 +157,10 @@ blockquote.pull-quote.quote-marks:after {
     max-width: inherit;
 }
 
+.full-bleed-section .content-constrain figure {
+    height: unset
+}
+
 /* -- NOTE: THIS SECTION OF STYLES OVERRIDES THOSE ABOVE BASED ON A NEW PROPOSED DESIGN.
 WHEN THE STYLE BELOW ARE APPROVED, THIS SECTION MUST BE REFACTOR WITH THAT ABOVE*/
 
