@@ -2811,6 +2811,36 @@ UPDATE THIS CLASS FOR THE PAGE
   grid-template-columns: 3fr 1fr;
 }
 
+/* Side-by-Side Grid Layout Variant */
+
+.grid-snippet.side-by .news.item a {
+    grid-template-columns: 2fr 3fr; /* Two columns: one for the first child and one for the rest */
+    display: grid;
+    grid-column-gap: 20px;
+    grid-template-rows: repeat(4, min-content);
+}
+
+/* Target the first child of each .object */
+.grid-snippet.side-by  .news.item figure {
+    grid-column: 1; /* Place the figure in the first column */
+    grid-row: 1 / 4;
+    width: auto;
+}
+
+/* Target the first of the other children and kill its top margin */
+    .grid-snippet.side-by .news.item :not(figure) {
+    margin-top: 0;
+}
+
+.grid-snippet.side-by .news.item figure {
+    grid-column: 1;
+    grid-row: 1 / 4;
+    width: auto;
+}
+
+
+
+
 /* These styles supress various elements of the parent object */
 
 .grid-snippet.all-info .news-item-tag,
