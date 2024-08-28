@@ -210,3 +210,28 @@ blockquote.pull-quote.quote p.attrib:before {
     content: none;
 }
 
+
+/* CARD LAYOUT HOVER STATES */
+/* Overrides hover states for news items and adds specificity for cards. */
+
+.cards .news.item * {
+    transform: none;
+    transition: none;
+}
+  
+.cards .news.item figure:hover img, .cards .news.item :hover img {
+    transform: none;
+    transition: none;
+}
+
+.cards .news.item  {
+    transform: scale(1);
+    transition: all .4s ease-out;
+}
+  
+.cards .news.item:hover {
+    transform: scale(1.02);
+    box-shadow: 4px 4px 10px #dadada;
+    transition: all .1s ease-in;
+}
+
