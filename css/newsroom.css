@@ -2821,7 +2821,7 @@ UPDATE THIS CLASS FOR THE PAGE
 }
 
 /* Target the first child of each .object */
-.grid-snippet.side-by  .news.item figure {
+.grid-snippet.side-by .news.item figure {
     grid-column: 1; /* Place the figure in the first column */
     grid-row: 1 / 4;
     width: auto;
