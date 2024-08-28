@@ -1510,16 +1510,27 @@ strong {
     background-position: 100% 100%;
 }
 
+/* Decorative Section Breaks */
+
+hr {
+    height: 8px;
+    width: 80px;
+    border: 1px solid #000;
+    background: var(--gold-solid);
+    margin: 20px auto;
+    transform: skewX(33deg);
+}
+
 .fancy:before {
     content: '';
     position: relative;
     display: block;
-    height: 10px;
+    height: 8px;
     width: 80px;
     border: 1px solid #000;
-    background: var(--light-gray-80);
-    margin: 15px auto;
-    transform: skewX(30deg);
+    background: var(--gold-solid);
+    margin: 20px auto;
+    transform: skewX(33deg);
 }
 
 /*  Pull Quotes  */
