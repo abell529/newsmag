@@ -2877,7 +2877,7 @@ UPDATE THIS CLASS FOR THE PAGE
 
 .lead figure img {
     width: 1200px;
-    max-height: 600px;
+    aspect-ratio: 1.77;
     object-fit: cover;
 }
 
