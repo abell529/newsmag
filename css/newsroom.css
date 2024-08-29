@@ -2911,6 +2911,16 @@ UPDATE THIS CLASS FOR THE PAGE
     object-fit: cover;
 }
 
+/* Lead Story Hub Styles -- Includes Layout Tweaks Specific to Headline Area  */
+
+.headline-area .grid-snippet.lead {
+  margin-top: -40px;
+}
+
+.grid-snippet.lead {
+  display: block;
+}
+
 .item.text-block {
     background: none;
 }
@@ -2936,17 +2946,6 @@ UPDATE THIS CLASS FOR THE PAGE
 
 .item.news p {
     font-size: 1.25rem;
-}
-
-.lead .item.news h1 {
-    font-family: proxima-nova, sans-serif;
-	font-weight: 700;
-	margin-bottom: 0;
-	padding: 0;
-	text-align: left;
-	margin: 20px 0;
-	font-size: 2rem;
-	line-height: 2.25rem;
 }
 
 .grid-snippet h2, .item.news h3 {
@@ -2998,9 +2997,37 @@ UPDATE THIS CLASS FOR THE PAGE
 
 /* MQs */
 
+@media only screen and (max-width: 960px) {
+    .grid-snippet.four {
+        grid-template-columns: 1fr 1fr;
+    }
+
 @media only screen and (max-width: 720px) {
     .grid-snippet, .grid-snippet.one, .grid-snippet.two, .grid-snippet.three, .grid-snippet.four {
         grid-template-columns: 1fr;
+    }
+
+  .lead .news.item .copy :first-child {
+    margin-top: 0;
+    }
+
+  .lead .news.item .copy :last-child {
+    margin-bottom: 0;
+    }
+
+  .lead .news.item .copy {
+    width: 100%;
+    margin: auto;
+    }
+
+  .lead figure img {
+    aspect-ratio: 1.25;
+    }
+
+  .headline-area .grid-snippet.lead figure {
+    width: 100vw;
+    margin-left: -20px;
+    position: relative;
     }
 }
 
