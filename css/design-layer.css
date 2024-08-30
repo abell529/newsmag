@@ -39,20 +39,38 @@
     overflow: hidden;
 }
 
-/* Gold link hover state for news items
+/* Gold link hover state for news items */
 
-.news.item h3 {
-  display: inline;
-  text-decoration: none;
-  background: linear-gradient(0deg, #FFBB00, #FFBB00) no-repeat right bottom / 0 100%;
-  transition: background-size .35s;
+.news.item a:hover h3 {
+    text-decoration: none;
 }
 
-a:hover .news.item h3 {
-  background-size: 113% 100%;
-  background-position-x: left;
-}  
-*/
+.news.item h3, .cards .news.item h3 {
+    background: linear-gradient(#fb0, #fb0);
+    background-size: 0 3px;
+    background-repeat: no-repeat;
+    background-position-y: 95%;
+    background-position-x: 100%;
+    transition: background-size .4s ease-in-out;
+    display: inline;
+}
+
+.news.item:hover h3 {
+    background-size: 100% 3px;
+    background-position-x: 0;
+    text-decoration: none;
+}
+
+/* these two classes required to overcome lack of padding due to h3 change to display:inline */
+
+.news.item .news-item-head {
+    margin-top: 20px;
+}
+
+.lead .news.item .copy p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 
 /* ===== TIGERTOOTH DECO PATTERNS ===== */
 
@@ -162,7 +180,7 @@ blockquote.pull-quote.quote-marks:after {
 }
 
 /* -- NOTE: THIS SECTION OF STYLES OVERRIDES THOSE ABOVE BASED ON A NEW PROPOSED DESIGN.
-WHEN THE STYLE BELOW ARE APPROVED, THIS SECTION MUST BE REFACTOR WITH THAT ABOVE*/
+WHEN THE STYLE BELOW ARE APPROVED, THIS SECTION MUST BE REFACTORED WITH THAT ABOVE*/
 
 blockquote.pull-quote {
     border: none;
