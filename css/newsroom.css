@@ -1703,7 +1703,7 @@ a.content-button.secondary:hover {
 .body-section {
     width: 100%;
     max-width: 700px;
-    margin: 0 auto;
+    margin: 40px auto 0;
     position: relative;
 }
 
@@ -2855,9 +2855,6 @@ UPDATE THIS CLASS FOR THE PAGE
     width: auto;
 }
 
-
-
-
 /* These styles supress various elements of the parent object */
 
 .grid-snippet.all-info .news-item-tag,
@@ -2945,7 +2942,7 @@ UPDATE THIS CLASS FOR THE PAGE
 }
 
 .item.news p {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
 }
 
 .grid-snippet h2, .item.news h3 {
@@ -2958,8 +2955,13 @@ UPDATE THIS CLASS FOR THE PAGE
     font-weight: 700;
 }
 
-.lead .item.news h3 {
+.lead .item.news h3, .split .item.news h3 {
     font-size: 2rem;
+}
+
+.lead .item.news p, .split .item.news p {
+    font-size: 1.5rem;
+    line-height: 2rem;
 }
 
 .text-only .item.news h3 {
