@@ -3001,6 +3001,7 @@ UPDATE THIS CLASS FOR THE PAGE
     .grid-snippet.four {
         grid-template-columns: 1fr 1fr;
     }
+}
 
 @media only screen and (max-width: 720px) {
     .grid-snippet, .grid-snippet.one, .grid-snippet.two, .grid-snippet.three, .grid-snippet.four {
