@@ -2842,17 +2842,31 @@ UPDATE THIS CLASS FOR THE PAGE
     grid-column: 1; /* Place the figure in the first column */
     grid-row: 1 / 4;
     width: auto;
+    height: fit-content;	
 }
 
 /* Target the first of the other children and kill its top margin */
     .grid-snippet.side-by .news.item :not(figure) {
     margin-top: 0;
+} */
+
+/* This is all a but clunky but it works -- need to refine later as time allows */
+
+.grid-snippet.side-by .news.item p.tag-primary {
+    margin-bottom: 0;
 }
 
-.grid-snippet.side-by .news.item figure {
-    grid-column: 1;
-    grid-row: 1 / 4;
-    width: auto;
+.grid-snippet.side-by .news.item a {
+    grid-template-rows: repeat(4, fit-content(1%));
+    min-height: fit-content;
+  }
+
+.grid-snippet.side-by .news.item * {
+    margin-bottom: 10px;
+}
+
+.grid-snippet.side-by .news-item {
+    height: fit-content;
 }
 
 /* These styles supress various elements of the parent object */
