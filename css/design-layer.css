@@ -39,20 +39,38 @@
     overflow: hidden;
 }
 
-/* Gold link hover state for news items
+/* Gold link hover state for news items */
 
-.news.item h3 {
-  display: inline;
-  text-decoration: none;
-  background: linear-gradient(0deg, #FFBB00, #FFBB00) no-repeat right bottom / 0 100%;
-  transition: background-size .35s;
+.news.item a:hover h3 {
+    text-decoration: none;
 }
 
-a:hover .news.item h3 {
-  background-size: 113% 100%;
-  background-position-x: left;
-}  
-*/
+.news.item h3, .cards .news.item h3 {
+    background: linear-gradient(#fb0, #fb0);
+    background-size: 0 3px;
+    background-repeat: no-repeat;
+    background-position-y: 95%;
+    background-position-x: 100%;
+    transition: background-size .4s ease-in-out;
+    display: inline;
+}
+
+.news.item:hover h3 {
+    background-size: 100% 3px;
+    background-position-x: 0;
+    text-decoration: none;
+}
+
+/* these two classes required to overcome lack of padding due to h3 change to display:inline */
+
+.news.item .news-item-head {
+    margin-top: 20px;
+}
+
+.lead .news.item .copy p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 
 /* ===== TIGERTOOTH DECO PATTERNS ===== */
 
@@ -162,7 +180,7 @@ blockquote.pull-quote.quote-marks:after {
 }
 
 /* -- NOTE: THIS SECTION OF STYLES OVERRIDES THOSE ABOVE BASED ON A NEW PROPOSED DESIGN.
-WHEN THE STYLE BELOW ARE APPROVED, THIS SECTION MUST BE REFACTOR WITH THAT ABOVE*/
+WHEN THE STYLE BELOW ARE APPROVED, THIS SECTION MUST BE REFACTORED WITH THAT ABOVE*/
 
 blockquote.pull-quote {
     border: none;
@@ -238,72 +256,72 @@ blockquote.pull-quote.quote p.attrib:before {
 
  /* ==== CALLOUTS ==== */
 
+.callout.left {
+  position: relative;
+  background: white;
+  grid-template-columns: 2fr 3fr;
+  border-top: 5px solid black;
+}
+
 .callout-content h2 {
-    text-align: revert;
-    font-family: 'Kandal';
-    font-size: 1.5rem;
-    padding: unset;
-    font-weight: 400;
-    line-height: 1.25;
-  }
+  text-align: revert;
+  font-family: 'Kandal';
+  font-size: 1.5rem;
+  padding: unset;
+  font-weight: 400;
+  line-height: 1.25;
+}
 
-  .callout.left.shadow:before {
-    content: url(https://www.towson.edu/_dev/_news-mag-redesign/_images/_deco/tt-1.svg);
-    width: 130px;
-    position: absolute;
-    top: -54px;
-    left: -130px;
-  }
+.callout.left:before {
+  content: url(https://www.towson.edu/_dev/_news-mag-redesign/_images/_deco/tt-1.svg);
+  width: 130px;
+  position: absolute;
+  top: -54px;
+  left: -130px;
+}
 
-a.content-button {
-    border: 1px solid var(--dark-gray);
-    padding: 15px;
-    margin: 0 10px 20px 0;
-    display: inline-block;
-    text-decoration: none;
-    font-weight: 500;
-    margin: 20px 0 0 0;
-    color: var(--dark-gray);
-    text-transform: uppercase;
-    font-size: 1rem;
-    letter-spacing: .025rem;
-  }
-
-  .callout {
-    display: grid;
-    position: relative;
-    background: white;
-    grid-template-columns: 1fr 2fr;
-    margin: 10px 0 30px;
-    border-top: 5px solid black;
-  }
+.callout a.content-button {
+  border: 2px solid var(--dark-gray);
+  padding: 15px;
+  margin: 0 10px 20px 0;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 20px 0 0 0;
+  color: var(--dark-gray);
+  background: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: .025rem;
+}
 
 .callout p.tag {
-    font-size: 1.0625rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-top: 0;
-    color: var(--accent-torquoise);
-    background: white;
-    margin-left: -90px;
-    padding: 10px;
+  font-size: 1.0625rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 0;
+  color: var(--accent-torquoise);
+  background: black;
+  margin-left: -90px;
+  padding: 10px;
+  display: inline-block;
 }
 
 span.thing {
-    font-weight: 800;
-    text-transform: none;
-    color: black;
-    font-size: 1.5rem;
+  font-weight: 800;
+  text-transform: none;
+  color: white;
+  font-size: 1.5rem;
 }
 
-.callout .icon {
+i.fa-solid.fa-user {
   padding-right: 10px;
   padding-left: 5px;
 }
 
 span.vert-pipe {
-    padding: 0 10px;
+  padding: 0 10px;
 }
 
 .callout {
@@ -311,22 +329,23 @@ span.vert-pipe {
 }
 
 @media only screen and (max-width: 720px) {
-.callout {
-  grid-template-columns: 1fr;
-  max-width: 90%;
-  margin: auto;
+  .callout.left {
+    grid-template-columns: 1fr;
+    max-width: 90%;
+    margin: auto;
+  }
 }
-}
-
 
 @media only screen and (max-width: 960px) {
   .callout-content p.tag {
     margin-left: 0;
   }
+
   .callout.callout-content p.tag span {
     display: block;
   }
+
   .callout.callout-content p.tag span.vert-pipe {
     display: none;
-  }  
+  }
 }

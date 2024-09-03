@@ -1703,7 +1703,7 @@ a.content-button.secondary:hover {
 .body-section {
     width: 100%;
     max-width: 700px;
-    margin: 0 auto;
+    margin: 40px auto 0;
     position: relative;
 }
 
@@ -2842,21 +2842,32 @@ UPDATE THIS CLASS FOR THE PAGE
     grid-column: 1; /* Place the figure in the first column */
     grid-row: 1 / 4;
     width: auto;
+    height: fit-content;	
 }
 
 /* Target the first of the other children and kill its top margin */
     .grid-snippet.side-by .news.item :not(figure) {
     margin-top: 0;
+} */
+
+/* This is all a but clunky but it works -- need to refine later as time allows */
+
+.grid-snippet.side-by .news.item p.tag-primary {
+    margin-bottom: 0;
 }
 
-.grid-snippet.side-by .news.item figure {
-    grid-column: 1;
-    grid-row: 1 / 4;
-    width: auto;
+.grid-snippet.side-by .news.item a {
+    grid-template-rows: repeat(4, fit-content(1%));
+    min-height: fit-content;
+  }
+
+.grid-snippet.side-by .news.item * {
+    margin-bottom: 10px;
 }
 
-
-
+.grid-snippet.side-by .news-item {
+    height: fit-content;
+}
 
 /* These styles supress various elements of the parent object */
 
@@ -2945,7 +2956,7 @@ UPDATE THIS CLASS FOR THE PAGE
 }
 
 .item.news p {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
 }
 
 .grid-snippet h2, .item.news h3 {
@@ -2958,8 +2969,13 @@ UPDATE THIS CLASS FOR THE PAGE
     font-weight: 700;
 }
 
-.lead .item.news h3 {
+.lead .item.news h3, .split .item.news h3 {
     font-size: 2rem;
+}
+
+.lead .item.news p, .split .item.news p {
+    font-size: 1.5rem;
+    line-height: 2rem;
 }
 
 .text-only .item.news h3 {
@@ -3027,7 +3043,6 @@ UPDATE THIS CLASS FOR THE PAGE
 
   .headline-area .grid-snippet.lead figure {
     width: 100vw;
-    margin-left: -20px;
     position: relative;
     }
 }
