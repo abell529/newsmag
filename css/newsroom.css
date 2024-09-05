@@ -1682,6 +1682,10 @@ a.content-button {
     text-decoration: none;
 }
 
+a.content-button:not(:last-of-type) {
+    margin-right: 10px;
+  }
+
 a.content-button.secondary {
     background: none;
 }
