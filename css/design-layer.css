@@ -159,7 +159,16 @@ blockquote.pull-quote.quote-marks:after {
     color: var(--gold-solid);
 }
 
-/* Repeating List Profiles - Instagram Icon */
+.pull-quote p.attrib span:before {
+    content: '\25A0';
+    color: var(--gold-solid);
+    font-size: 1.5rem;  
+    position: relative;  
+    top: 2px;
+    padding-right: 5px;
+}
+
+/* === REPEATING LIST PROFILES - Instagram Icon */
 
 .repeating-list.profiles span.icon-link {
     color: #FB0;
@@ -228,8 +237,7 @@ blockquote.pull-quote.quote p.attrib:before {
     content: none;
 }
 
-
-/* CARD LAYOUT HOVER STATES */
+/* === CARD LAYOUT HOVER STATES === */
 /* Overrides hover states for news items and adds specificity for cards. */
 
 .cards .news.item * {
@@ -253,21 +261,41 @@ blockquote.pull-quote.quote p.attrib:before {
     transition: all .1s ease-in;
 }
 
-
- /* ==== CALLOUTS ==== */
+/* ==== CALLOUTS ==== */
 
 .callout.left {
   position: relative;
   background: white;
   grid-template-columns: 2fr 3fr;
-  border-top: 5px solid black;
+  border-top: 5px solid #000;
+}
+
+.callout-content .heading-wrapper {
+  background: #000;
+  padding: 5px 15px;
+  margin-left: -90px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.callout-content .heading-wrapper > * {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  line-height: 1.25;
 }
 
 .callout-content h2 {
-  text-align: revert;
+  display: inline;
+  color: #FFF;
+  font-family: 'Proxima-Nova';
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.callout-content .callout-content-body {
   font-family: 'Kandal';
   font-size: 1.5rem;
-  padding: unset;
   font-weight: 400;
   line-height: 1.25;
 }
@@ -278,12 +306,21 @@ blockquote.pull-quote.quote p.attrib:before {
   position: absolute;
   top: -54px;
   left: -130px;
+  z-index: -10;  
+}
+
+.callout.left:after {
+  content: url(https://www.towson.edu/_dev/_news-mag-redesign/_images/_deco/tt-2.svg);
+  width: 90px;
+  position: absolute;
+  bottom: -170px;
+  right: -80px;
+  z-index: -10;
 }
 
 .callout a.content-button {
   border: 2px solid var(--dark-gray);
   padding: 15px;
-  margin: 0 10px 20px 0;
   display: inline-block;
   text-decoration: none;
   font-weight: 500;
@@ -295,37 +332,25 @@ blockquote.pull-quote.quote p.attrib:before {
   letter-spacing: .025rem;
 }
 
-.callout p.tag {
+.callout p.callout-content-label {
   font-size: 1.0625rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-top: 0;
   color: var(--accent-torquoise);
-  background: black;
-  margin-left: -90px;
-  padding: 10px;
   display: inline-block;
 }
 
-span.thing {
-  font-weight: 800;
-  text-transform: none;
-  color: white;
-  font-size: 1.5rem;
-}
-
-i.fa-solid.fa-user {
-  padding-right: 10px;
-  padding-left: 5px;
-}
-
-span.vert-pipe {
+.callout p.callout-content-label:after{
+  content:'|';
   padding: 0 10px;
 }
 
-.callout {
-  grid-template-columns: 2fr 3fr;
+@media only screen and (max-width: 960px) {
+  .callout-content .heading-wrapper {
+    margin-left: 0;
+  }
 }
 
 @media only screen and (max-width: 720px) {
@@ -336,16 +361,47 @@ span.vert-pipe {
   }
 }
 
-@media only screen and (max-width: 960px) {
-  .callout-content p.tag {
-    margin-left: 0;
+/* === LINKS LIST === */
+
+ul.links-list {
+    margin: 0;
+    border: 1px solid #ccc;
+    border-top: 6px solid #ccc;
+    background: #f7f7f7;
+    padding: 20px;  
+    height: max-content;
   }
 
-  .callout.callout-content p.tag span {
+.links-list li {
+    font-family: 'Kandal';
+    font-style: italic;
+    font-size: 1.25rem;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
     display: block;
   }
 
-  .callout.callout-content p.tag span.vert-pipe {
-    display: none;
-  }
+.links-list li a:after {
+    position: relative;
+    content: '\f061';
+    color: #FB0;
+    font-weight: 400;
+    padding-left: 10px;
+    top: 1px;
+    font-style: normal;
+    font-size: 1.375rem;
+    font-family: "Font Awesome 6 Pro";
+    transition: padding-left 0.1s ease-in-out 0s, color 0.2s ease-in-out 0s;
+}
+
+.links-list li:last-of-type {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 10px;
+}
+
+.links-list li a:hover:after {
+  color: black;
+  padding-left: 15px;
+  transition: padding-left 0.2s ease-in-out 0s, color 0.3s ease-in-out 0.1s;
 }
