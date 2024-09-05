@@ -159,7 +159,16 @@ blockquote.pull-quote.quote-marks:after {
     color: var(--gold-solid);
 }
 
-/* Repeating List Profiles - Instagram Icon */
+.pull-quote p.attrib span:before {
+    content: '\25A0';
+    color: var(--gold-solid);
+    font-size: 1.5rem;  
+    position: relative;  
+    top: 2px;
+    padding-right: 5px;
+}
+
+/* === REPEATING LIST PROFILES - Instagram Icon */
 
 .repeating-list.profiles span.icon-link {
     color: #FB0;
@@ -228,8 +237,7 @@ blockquote.pull-quote.quote p.attrib:before {
     content: none;
 }
 
-
-/* CARD LAYOUT HOVER STATES */
+/* === CARD LAYOUT HOVER STATES === */
 /* Overrides hover states for news items and adds specificity for cards. */
 
 .cards .news.item * {
@@ -253,8 +261,7 @@ blockquote.pull-quote.quote p.attrib:before {
     transition: all .1s ease-in;
 }
 
-
- /* ==== CALLOUTS ==== */
+/* ==== CALLOUTS ==== */
 
 .callout.left {
   position: relative;
@@ -354,7 +361,7 @@ blockquote.pull-quote.quote p.attrib:before {
   }
 }
 
-/* Links List */
+/* === LINKS LIST === */
 
 ul.links-list {
     margin: 0;
