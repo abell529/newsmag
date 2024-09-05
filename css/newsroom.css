@@ -2999,6 +2999,10 @@ UPDATE THIS CLASS FOR THE PAGE
     grid-template-columns: 1fr 1fr;
 }
 
+.split .item.news a {
+    display: contents;
+}
+
 .split .item.news .copy {
     padding: 20px;
     display: flex;
