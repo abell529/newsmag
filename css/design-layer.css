@@ -119,44 +119,19 @@
 }
 
 /* ===== PULL QUOTES ===== */
-/* Pull quote designs to override base styles */
+/* Pull quote designs to override base styles. Some of these declarations should be merged with base styles.*/
 
 blockquote.pull-quote {    /* this declaration should eventually be merged with base styles */
-  border-top: 5px solid var(--light-gray);
-  border-bottom: 5px solid var(--light-gray);
   position: relative;
 }
 
 blockquote.pull-quote p {     /* this declaration should eventually be merged with base styles */
-  font-weight: 600;
   color: var(--graphite);
 }
 
 blockquote.pull-quote.quote-marks {
   margin-top: 40px;
   margin-bottom: 40px;
-}
-
-blockquote.pull-quote.quote-marks:before {
-    content: "\201C";
-    position: absolute;
-    top: 11px;
-    left: 10px;
-    font-size: 7rem;
-    font-weight: 900;
-    line-height: 0;
-    color: var(--gold-solid);
-}
-
-blockquote.pull-quote.quote-marks:after {
-    content: "\201D";
-    position: absolute;
-    bottom: -30px;
-    right: 20px;
-    font-size: 7rem;
-    font-weight: 900;
-    line-height: 0;
-    color: var(--gold-solid);
 }
 
 .pull-quote p.attrib span:before {
@@ -167,33 +142,6 @@ blockquote.pull-quote.quote-marks:after {
     top: 2px;
     padding-right: 5px;
 }
-
-/* === REPEATING LIST PROFILES - Instagram Icon */
-
-.repeating-list.profiles span.icon-link {
-    color: #FB0;
-    font-size: 6rem;
-    text-decoration: none;
-}
-
-/* ===== CONDITIONAL STYLES -- These may need to be merged with others later. ===== */
-
-/* Allows grid snippet to render at its intended size when placed in a color block container.  */
-
-.full-bleed-section .content-constrain:has(.grid-snippet) {
-    max-width: inherit;
-}
-
-.full-bleed-section .content-constrain figure {
-    height: unset
-}
-
-/* -- NOTE: THIS SECTION OF STYLES OVERRIDES THOSE ABOVE BASED ON A NEW PROPOSED DESIGN.
-WHEN THE STYLE BELOW ARE APPROVED, THIS SECTION MUST BE REFACTORED WITH THAT ABOVE*/
-
-blockquote.pull-quote {
-    border: none;
-  }
 
 blockquote.pull-quote p:not(.attrib) {
     border-left: 2px solid var(--gold-solid);
@@ -220,21 +168,46 @@ blockquote.pull-quote.quote-marks:before {
     z-index: -1;
   }
 
-blockquote.pull-quote.quote-marks:after {
+blockquote.pull-quote.quote-marks p:not(.attrib):after {
     content: "\201D";
-    position: absolute;
-    bottom: 10px;
-    right: 22px;
-    font-size: 7rem;
-    font-weight: 900;
+    position: relative;
+    bottom: -1px;
+    font-family: 'Proxima-Nova';
+    font-size: 1.75rem;
+    font-weight: 600;
     line-height: 0;
-    color: var(--light-gray-40);
     z-index: -1;
 }
 
-/* This entire selector should be removed from newsroom.css */
+/* These selectors should be removed from newsroom.css */
+
+blockquote.pull-quote {
+    border: none;
+  }
+
 blockquote.pull-quote.quote p.attrib:before {
     content: none;
+}
+
+
+/* === REPEATING LIST PROFILES - Instagram Icon */
+
+.repeating-list.profiles span.icon-link {
+    color: #FB0;
+    font-size: 6rem;
+    text-decoration: none;
+}
+
+/* ===== CONDITIONAL STYLES -- These may need to be merged with others later. ===== */
+
+/* Allows grid snippet to render at its intended size when placed in a color block container.  */
+
+.full-bleed-section .content-constrain:has(.grid-snippet) {
+    max-width: inherit;
+}
+
+.full-bleed-section .content-constrain figure {
+    height: unset
 }
 
 /* === CARD LAYOUT HOVER STATES === */

@@ -1433,14 +1433,12 @@ h1 {
 }
 
 h2, h3 {
-    font-weight: 400;
+    font-weight: 600;
+    margin: 20px 0;	
 }
 
 h3 {
     font-size: 1.625rem;
-    font-weight: 500;
-    margin: 20px 0;
-    text-align: center; 
 }
 
 h5, h6 {
@@ -1644,12 +1642,12 @@ blockquote.pull-quote.quote p.attrib:before {
 
 .color-block.gold {
     background-color: var(--gold-solid);
+    color: #000;
 }
 
 .color-block.dark {
     background-color: var(--graphite);
-	/* updated 6-26-24 ^ */
-    color: var(--gold-solid);
+    color: var(--lightest-gray);
 }
 
 /* ===== HEADER =================================== */
@@ -1682,6 +1680,10 @@ a.content-button {
     text-decoration: none;
 }
 
+a.content-button:not(:last-of-type) {
+    margin-right: 10px;
+  }
+
 a.content-button.secondary {
     background: none;
 }
@@ -1709,10 +1711,8 @@ a.content-button.secondary:hover {
 
 .body-container h2, .body-container h3 {
     font-size: 2rem;
-    text-align: center;
     margin: 20px 0;
-    padding: 0 10px;
-    font-weight: 300;
+    font-weight: 600;
 }
 
 .body-container h3 {
