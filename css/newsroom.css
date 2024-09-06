@@ -3832,7 +3832,6 @@ background-size: 8.94px 6.03px;
 	font-weight: 600;
 	top: 36px;
 	float: right;
-    z-index: 10;
 }
 .header-container.alt .nav-container .search-section i {
 	color: #eeeeee;
@@ -3852,13 +3851,13 @@ background-size: 8.94px 6.03px;
     float: right;
     top: 26px;
     position: relative;
-    right: 0;
+    right: -28px;
 	outline: none;
 }
 
 .nav-container .search-section.active input {
 	border: 1px solid black;
-	right: -37px;
+	right: -28px;
 	width: 100px;
 	padding-right:100px;
 }
@@ -3934,7 +3933,6 @@ background-size: 8.94px 6.03px;
     float: right;
     right: -13px;
     top: 26px;
-    height: 32px;
     border-left: #000000 solid 1px;
 }
 
