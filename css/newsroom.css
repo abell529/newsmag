@@ -3857,7 +3857,7 @@ background-size: 8.94px 6.03px;
 
 .nav-container .search-section.active input {
 	border: 1px solid black;
-	right: -28px;
+	right: -37px;
 	width: 100px;
 	padding-right:100px;
 }
@@ -3933,7 +3933,7 @@ background-size: 8.94px 6.03px;
     float: right;
     right: -13px;
     top: 26px;
-    height: 22px;
+    height: 32px;
     border-left: #000000 solid 1px;
 }
 
