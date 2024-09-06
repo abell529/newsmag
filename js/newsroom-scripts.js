@@ -7,25 +7,25 @@ $(document).ready(function() {
 
     
     //detect focus of navigation search bar
-    $('.navigation-top .search-section input.search_input').focus( function() {
-        $('.navigation-top .search-section').addClass('active');
+    $('.header-container .search-section input.search_input').focus( function() {
+        $('.header-container .search-section').addClass('active');
     });
-    $('.navigation-top .search-section input.search_input').blur( function() {
-        $('.navigation-top .search-section').removeClass('active');
+    $('.header-container .search-section input.search_input').blur( function() {
+        $('.header-container .search-section').removeClass('active');
     });
-    $('.navigation-top .search-section button.search_submit_word').focus( function() {
-        $('.navigation-top .search-section').addClass('active');
+    $('.header-container .search-section button.search_submit_word').focus( function() {
+        $('.header-container .search-section').addClass('active');
     });
-    $('.navigation-top .search-section button.search_submit_word').blur( function() {
-        $('.navigation-top .search-section').removeClass('active');
+    $('.header-container .search-section button.search_submit_word').blur( function() {
+        $('.header-container .search-section').removeClass('active');
     });
 
 	/* $('.fa-magnifying-glass').on("click touch keypress", function () {
-		$(".navigation-top .search-section").toggleClass('active');
+		$(".header-container .search-section").toggleClass('active');
 	});
 
 	$('.fa-magnifying-glass').on("click touch keypress", function () {
-		$(".navigation-top .search-section").toggleClass('active');
+		$(".header-container .search-section").toggleClass('active');
 	});
 	*/
 
@@ -51,35 +51,35 @@ $(document).ready(function() {
 		This kind of worked - keeping it here
 	   ======================================== */
 	//detect focus of navigation search bar
-	/* $('.navigation-top .search-section .fa-magnifying-glass').click( function() {
-		$('.navigation-top .search-section').addClass('active');
-		$('.navigation-top .search-section input.search_input').focus();
+	/* $('.header-container .search-section .fa-magnifying-glass').click( function() {
+		$('.header-container .search-section').addClass('active');
+		$('.header-container .search-section input.search_input').focus();
 		console.log("add class from click");
 	}); */
 
-	/* $('.navigation-top .search-section .fa-magnifying-glass').blur( function() {
-		$('.navigation-top .search-section').removeClass('active');
+	/* $('.header-container .search-section .fa-magnifying-glass').blur( function() {
+		$('.header-container .search-section').removeClass('active');
 		console.log("remove class on blur magnifying");
 	}); */
 
-	/* $('.navigation-top .search-section input.search_input').focus( function() {
+	/* $('.header-container .search-section input.search_input').focus( function() {
 		console.log("Focus on search input");
 	}); */
 
-	/* $('.navigation-top .search-section input.search_input').blur( function() {
-		$('.navigation-top .search-section').removeClass('active');
+	/* $('.header-container .search-section input.search_input').blur( function() {
+		$('.header-container .search-section').removeClass('active');
 		console.log("remove class from search");
 	}); */
 
 
 	/* $(document).click(function(e) {
-		if (!$(e.target).is('.navigation-top .search-section .fa-magnifying-glass') && !$(e.target).is('.navigation-top .search-section input.search_input')) {
-			$('.navigation-top .search-section').removeClass('active');
+		if (!$(e.target).is('.header-container .search-section .fa-magnifying-glass') && !$(e.target).is('.header-container .search-section input.search_input')) {
+			$('.header-container .search-section').removeClass('active');
 			console.log("click anywhere");
 		}
 	});
 
-	$('.navigation-top .search-section input.search_input').click(function(e) {
+	$('.header-container .search-section input.search_input').click(function(e) {
         e.stopPropagation();
     });
 	$('.menu-trigger').click(function(e) {
@@ -125,8 +125,8 @@ $(document).ready(function() {
     }); */
 
 
-	/* $('.navigation-top .search-section input.search_input').blur( function() {
-		$('.navigation-top .search-section').removeClass('active');
+	/* $('.header-container .search-section input.search_input').blur( function() {
+		$('.header-container .search-section').removeClass('active');
 	}); */
 
 	
