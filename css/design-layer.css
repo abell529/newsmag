@@ -193,8 +193,6 @@ blockquote.pull-quote.quote-marks {
     padding-right: 5px;
 }
 
-
-
 blockquote.pull-quote p:not(.attrib) {
     border-left: 2px solid var(--gold-solid);
     padding-left: 20px;
