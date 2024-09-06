@@ -3832,6 +3832,7 @@ background-size: 8.94px 6.03px;
 	font-weight: 600;
 	top: 36px;
 	float: right;
+    z-index: 10;
 }
 .header-container.alt .nav-container .search-section i {
 	color: #eeeeee;
@@ -3851,7 +3852,7 @@ background-size: 8.94px 6.03px;
     float: right;
     top: 26px;
     position: relative;
-    right: -28px;
+    right: 0;
 	outline: none;
 }
 
@@ -3928,7 +3929,7 @@ background-size: 8.94px 6.03px;
 	font-size: 1.125rem;
     font-style: italic;
     background: transparent;
-    padding: 6px 22px 6px 6px;
+    padding: 6px 28px 6px 6px;
     transition: 0.3s ease all;
     float: right;
     right: -13px;
