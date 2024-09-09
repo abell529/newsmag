@@ -3898,6 +3898,30 @@ background-size: 8.94px 6.03px;
 	color:#eeeeee;
 }
 
+
+.header-container.alt .nav-container .search-section label {
+	color:#eeeeee;
+}
+
+.stripe.graphite .nav-container .search-section.active input {
+    border: 1px solid #fff;
+}
+
+.stripe.graphite .nav-container .search-section button {
+    color: #fff;
+    border-left: #fff solid 1px;
+}
+
+.stripe.graphite .nav-container .search-section i {
+    color: #fff;
+}
+
+
+.stripe.graphite .nav-container .search-section label {
+    color: #fff;
+}
+
+
 /* .search-section .search_input {
 	visibility: hidden;
 }
