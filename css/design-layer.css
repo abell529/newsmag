@@ -379,3 +379,97 @@ ul.links-list {
   padding-left: 15px;
   transition: padding-left 0.2s ease-in-out 0s, color 0.3s ease-in-out 0.1s;
 }
+
+/* Image Callout */
+
+.full-bleed-section figure {
+    height: unset;
+    position: relative;
+    z-index: 1;
+  }
+
+.image-callout {
+  grid-template-columns: 1fr;
+  grid-row-gap: 0;
+  display: block;
+}
+
+.grid-snippet.image-callout h2 {
+  font-family: PoynterOSDisp;
+  font-size: 3.5rem;
+  padding: 0;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+  width: fit-content;
+  line-height: 1;
+  display: flex;
+  align-self: end;
+}
+
+.image-callout h2:before {
+    content: '';
+    width: calc(100% + 6px);
+    height: 22px;
+    background-color: #FB0;
+    position: absolute;
+    left: -3px;
+    bottom: 0px;
+    z-index: -1;
+    display: inline-flex;
+}
+
+.image-callout p.tag-primary {
+    background-color: var(--graphite);
+    padding: 5px 10px;
+    color: var(--gold-solid);
+    width: fit-content;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.image-callout .item.text-block p:not(.tag-primary) {
+  flex-wrap: wrap;
+  background:white;
+  margin: 0;
+  border-left: 1px dotted var(--mid-gray);
+  padding: 0 10px;
+  position: relative;
+  z-index: 100;
+  padding-bottom: 10px;
+  display: flex;
+  align-content: end;
+  font-size: 1.25rem;
+  bottom: 10px;
+}
+
+.image-callout .item.text-block p.supporting-copy span {
+    font-size: 1.375rem;
+    vertical-align: bottom;
+    bottom: 0;
+    /* overflow: visible; */
+    margin-top: 0;
+}
+
+.image-callout .item.text-block {
+  display: grid;
+  grid-template-columns: auto minmax(auto, 66%);
+  grid-column-gap: 40px;
+  margin-left: 10px;
+}
+
+.image-callout figure {
+    margin-top: -20px;
+    z-index: 0;
+  position: relative;
+}
+
+.image-callout .item.text-block .tag-primary, .image-callout .item.text-block h2 {
+    grid-column-start: 1;
+}
+
+@media (max-width: 500px) {
+  .grid-snippet.image-callout h2 {
+    font-size: 2.25rem;
+  }
+}
