@@ -1414,11 +1414,11 @@ body {
 }
 
 img {
+    width: 100%;
     vertical-align: top;
 }
 
 /* ===== TYPOGRAPHY =================================== */
-
 
 /* Base Typography */
 
