@@ -473,3 +473,51 @@ ul.links-list {
     font-size: 2.25rem;
   }
 }
+
+/* Publication Source Flag */
+
+.news-item-pub-flag {
+    display: flex;
+    justify-content: start;
+  }
+
+p.pub-flag {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  align-items: baseline;
+  margin-top: 0;  
+  border-top: 1px solid var(--gold-solid);
+  padding: 0 2px;
+}
+
+p.pub-flag span:first-of-type {
+    font-size: .75rem;
+    text-transform: uppercase;
+  }
+
+ p.pub-flag span:last-of-type {
+    text-transform: none;
+    font-weight: 700;
+    font-size: .95rem;
+ }
+
+p.pub-flag.tu-magazine img {
+    height: 11px;
+    width: auto;
+    position: relative;
+    padding: 0 5px;
+  }
+
+.lead .news-item-pub-flag .pub-flag span:first-of-type {
+    font-size: .85rem;
+}
+
+.lead .news-item-pub-flag .pub-flag.tu-magazine span:last-of-type {
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+.lead .news-item-pub-flag .pub-flag.tu-magazine img {
+    height: 13px;
+}
