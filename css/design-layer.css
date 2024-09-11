@@ -98,7 +98,7 @@
 
 /* Background Deco Pattern - Left */
 
-.tigertooth-enabled.background-left .grid-snippet:before {
+.tigertooth-enabled.background-left .grid-snippet:first-of-type:before {
     content: url(https://www.towson.edu/_dev/_news-mag-redesign/_images/_deco/tt-pattern-1.svg);
     position: absolute;
     top: -100px;
@@ -109,7 +109,7 @@
 
 /* Background Deco Pattern - Right */
 
-.tigertooth-enabled.background-right .grid-snippet:after {
+.tigertooth-enabled.background-right .grid-snippet:first-of-type:after {
     content: url(https://www.towson.edu/_dev/_news-mag-redesign/_images/_deco/tt-pattern-2.svg);
     position: absolute;
     top: 100px;
