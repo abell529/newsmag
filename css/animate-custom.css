@@ -4112,3 +4112,9 @@
   -webkit-animation-delay: calc(var(--animate-delay) * 1.5);
   animation-delay: calc(var(--animate-delay) * 1.5);
 }
+
+/* === UTILITY CLASSES TO KILL ANIMATIONS WHEN DESIRED === */
+
+.no-animate.hero :where(div, h1, p) {
+  animation: none;
+}	
