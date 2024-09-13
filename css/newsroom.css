@@ -3885,6 +3885,14 @@ background-size: 8.94px 6.03px;
     font-size: 1.125rem;
 }
 
+@media only screen and (min-width: 961px) {
+    .nav-container .nav {
+        min-width: 315px;
+        padding-left: 40px;
+    }
+}
+
+
 .header-container.alt .nav-container .search-section label {
 	color:#eeeeee;
 }
