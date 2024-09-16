@@ -2748,7 +2748,6 @@ UPDATE THIS CLASS FOR THE PAGE
 .grid-snippet {
     display: grid;
     position: relative;	
-    min-height: 400px;
     gap: 30px;
     max-width: 1200px;
     margin: 40px auto;;
@@ -2927,6 +2926,8 @@ UPDATE THIS CLASS FOR THE PAGE
 
 .grid-snippet.lead {
   display: block;
+  height: unset;
+  background: unset;	
 }
 
 .item.text-block {
@@ -2992,7 +2993,7 @@ UPDATE THIS CLASS FOR THE PAGE
     aspect-ratio: 1.77;
 }
 
-.split .item.news{
+.split .item.news {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -3009,15 +3010,6 @@ UPDATE THIS CLASS FOR THE PAGE
 .split .item.news figure img {
     object-fit: cover;
     aspect-ratio: 1;
-}
-
-.grid-snippet {
-    min-height: unset;
-}
-
-.grid-snippet.lead {
-    height: unset;
-    background: unset;
 }
 
 .split .item.news .copy {
@@ -3055,7 +3047,6 @@ p.tag-primary + h3 {
 }
 
 .card, .cards  > * {
-	/* padding: 0; */
 	background-color: #f5f5f5 !important; /* ugh */ /* lol */
 }
 
@@ -3105,11 +3096,13 @@ p.tag-primary + h3 {
     aspect-ratio: 1.25;
     }
 
-   .split .item.news {       
+  .split .item.news {       
      grid-template-columns: 1fr;
-     left: 0;
+     }
+	
+  .split .item.news .copy {       
+     left: unset;
      width: 100%;
-     z-index: 10; 
      }	
 
   .headline-area .grid-snippet.lead figure {
