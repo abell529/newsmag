@@ -2748,14 +2748,9 @@ UPDATE THIS CLASS FOR THE PAGE
 .grid-snippet {
     display: grid;
     position: relative;	
-    min-height: 400px;
     gap: 30px;
     max-width: 1200px;
     margin: 40px auto;;
-}
-
-.grid-snippet .item {
-    background-color: #eee;
 }
 
 .grid-snippet.one {
@@ -2931,6 +2926,8 @@ UPDATE THIS CLASS FOR THE PAGE
 
 .grid-snippet.lead {
   display: block;
+  height: unset;
+  background: unset;	
 }
 
 .item.text-block {
@@ -2996,7 +2993,7 @@ UPDATE THIS CLASS FOR THE PAGE
     aspect-ratio: 1.77;
 }
 
-.split .item.news{
+.split .item.news {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -3013,62 +3010,6 @@ UPDATE THIS CLASS FOR THE PAGE
 .split .item.news figure img {
     object-fit: cover;
     aspect-ratio: 1;
-}
-
-/* MQs */
-
-@media only screen and (max-width: 960px) {
-    .grid-snippet.four {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media only screen and (max-width: 720px) {
-    .grid-snippet, .grid-snippet.one, .grid-snippet.two, .grid-snippet.three, .grid-snippet.four {
-        grid-template-columns: 1fr;
-    }
-
-  .lead .news.item .copy :first-child {
-    margin-top: 0;
-    }
-
-  .lead .news.item .copy :last-child {
-    margin-bottom: 0;
-    }
-
-  .lead .news.item .copy {
-    width: 100%;
-    margin: auto;
-    }
-
-  .lead figure img {
-    aspect-ratio: 1.25;
-    }
-
-  .headline-area .grid-snippet.lead figure {
-    width: 100vw;
-    position: relative;
-    }
-}
-
-
-/* =================================================
-
-   More Landing Page CSS
-
-   ================================================= */
-
-.grid-snippet {
-    min-height: unset;
-}
-
-.grid-snippet .item {
-    background: none;
-}
-
-.grid-snippet.lead {
-    height: unset;
-    background: unset;
 }
 
 .split .item.news .copy {
@@ -3106,7 +3047,6 @@ p.tag-primary + h3 {
 }
 
 .card, .cards  > * {
-	/* padding: 0; */
 	background-color: #f5f5f5 !important; /* ugh */ /* lol */
 }
 
@@ -3127,32 +3067,49 @@ p.tag-primary + h3 {
 	border-bottom: 1px solid #ccc;
 }
 
+/* MQs */
 
-/* Container Queriess -- still testing these
-
-.item.news {
-    container-type: inline-size;
-    container-name: test-container;
-}
-
-@container test-container (max-width: 600px) {
-    .copy h3 {
-        font-size: 1.5rem !important;
+@media only screen and (max-width: 960px) {
+    .grid-snippet.four {
+        grid-template-columns: 1fr 1fr;
     }
-
-}
-
-@container test-container (max-width: 300px) {
-    .copy h3 {
-        font-size: 1.25rem !important;
-
-    }
-    .copy p {
-        font-size: 1rem !important;
+    .split .item.news {       
+        grid-template-columns: 1.25fr 1fr;
     }
 }
-*/
 
+@media only screen and (max-width: 720px) {
+    .grid-snippet, .grid-snippet.one, .grid-snippet.two, .grid-snippet.three, .grid-snippet.four {
+        grid-template-columns: 1fr;
+    }
+
+  .lead .news.item .copy :last-child {
+    margin-bottom: 0;
+    }
+
+  .lead .news.item .copy {
+    width: 100%;
+    margin: auto;
+    }
+
+  .lead figure img {
+    aspect-ratio: 1.25;
+    }
+
+  .split .item.news {       
+     grid-template-columns: 1fr;
+     }
+	
+  .split .item.news .copy {       
+     left: unset;
+     width: 100%;
+     }	
+
+  .headline-area .grid-snippet.lead figure {
+    width: 100vw;
+    position: relative;
+    }
+}
 
 /* Still a work in progress. Would like to get the grid areas working with pseudoclasses.*/
 
