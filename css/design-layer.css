@@ -78,22 +78,18 @@
 
 .tigertooth-enabled .lead .item.news .copy:before {
     content: url(https://www.towson.edu/_dev/_news-mag-redesign/_images/_deco/tt-1.svg);
-    width: 130px;
+    width: 100px;
     position: absolute;
-    top:-33px;
-    left: -59px;
+    top: -33px;
+    left: -60px;
 }
 
 .tigertooth-enabled .lead .item.news .copy:after {
     content: url(https://www.towson.edu/_dev/_news-mag-redesign/_images/_deco/tt-2.svg);
-    width: 110px;
+    width: 80px;
     position: absolute;
-    top: -66px;
-    right: -80px;
-}
-
-.tigertooth-enabled .lead .item.news .copy {
-    padding: 20px 40px 10px 90px !important;
+    top: -24px;
+    right: -57px;
 }
 
 /* Background Deco Pattern - Left */
