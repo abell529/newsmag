@@ -4091,6 +4091,8 @@ form.search_form_mobile {
 
 
 
+
+
 /* ====================================================
    ====================================================
 
@@ -4575,6 +4577,17 @@ form.search_form_mobile {
     margin-right: 20px;
 }
 
+.footer-copy .footer-link {
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.footer-copy .footer-link:hover {
+    color: #ffbb00;
+    text-decoration: underline;
+}
+
 .footer-link:last-child {
     margin-right: 0;
 }
@@ -4588,6 +4601,7 @@ form.search_form_mobile {
     margin-top: 5px; 
     text-align: right;
 }
+
 
 /* Responsive layout for mobile */
 @media (max-width: 768px) {
@@ -4613,6 +4627,20 @@ form.search_form_mobile {
         margin-top: 10px;
     }
 }
+
+@media (max-width: 768px) and (min-width: 500px) {
+    .footer-link {
+        margin: 5px 20px 0 0;
+    }
+}
+
+@media (max-width: 499px) {
+    .links a {
+      display: block;
+      margin-bottom: 10px; /* Optional: Adds space between the links */
+    }
+  }
+
 
 
 /* ====================================================
