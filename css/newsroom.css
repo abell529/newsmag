@@ -3051,13 +3051,17 @@ p.tag-primary + h3 {
 /* Displays 3-up items horizontally to avoid orphans when the number of items is odd */
 
 @media only screen and (max-width: 720px) and (min-width: 501px) {
+.grid-snippet.three {
+    grid-template-columns: 1fr;
+    }
+	
 .grid-snippet.three .news.item a {
     grid-template-columns: 2fr 3fr;
     display: grid;
     grid-gap: 20px;
     }
 
-.grid-snippet.three .news.item div:first-of-type {
+.grid-snippet.three .news.item .copy div:first-of-type, .grid-snippet.three .news.item .copy div:first-of-type * {
     margin-top: 0;
     }
 }
