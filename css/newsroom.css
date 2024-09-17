@@ -4635,7 +4635,7 @@ form.search_form_mobile {
 }
 
 @media (max-width: 499px) {
-    .links a {
+    .footer-nav a.footer-link {
       display: block;
       margin-bottom: 10px; /* Optional: Adds space between the links */
     }
