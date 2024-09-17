@@ -3053,6 +3053,15 @@ p.tag-primary + h3 {
   .grid-snippet.two.col-ratio-25-75, .grid-snippet.two.col-ratio-75-25 {
      grid-template-columns: 1fr;
    }
+  .split .item.news {       
+     grid-template-columns: 1fr;
+   }
+	
+  .split .item.news .copy {       
+     left: unset;
+     width: calc(100% - 20px);
+     margin-left: 10px;
+   }	
 }
 
 /* Displays 3-up items horizontally to avoid orphans when the number of items is odd */
@@ -4061,15 +4070,26 @@ form.search_form_mobile {
     z-index: 10000;
 }
 
-.hamburger-nav.active i {
+.stripe.graphite .hamburger-nav i {
+    background-color: white;
+}
+
+.stripe.graphite .hamburger-nav.active i {
     background-color: white;
     z-index: 100001;
     position: relative;
 }
 
-.hamburger-nav.active:hover i {
+.stripe.graphite .hamburger-nav.active:hover i {
     background: #ffffff;
 }
+
+form.search_form_mobile {
+    animation: slideInFromRight 500ms forwards;
+    transition: 0.3s ease all;
+}
+
+
 
 
 
@@ -4557,6 +4577,17 @@ form.search_form_mobile {
     margin-right: 20px;
 }
 
+.footer-copy .footer-link {
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.footer-copy .footer-link:hover {
+    color: #ffbb00;
+    text-decoration: underline;
+}
+
 .footer-link:last-child {
     margin-right: 0;
 }
@@ -4570,6 +4601,7 @@ form.search_form_mobile {
     margin-top: 5px; 
     text-align: right;
 }
+
 
 /* Responsive layout for mobile */
 @media (max-width: 768px) {
@@ -4595,6 +4627,20 @@ form.search_form_mobile {
         margin-top: 10px;
     }
 }
+
+@media (max-width: 768px) and (min-width: 500px) {
+    .footer-link {
+        margin: 5px 20px 0 0;
+    }
+}
+
+@media (max-width: 499px) {
+    .links a {
+      display: block;
+      margin-bottom: 10px; /* Optional: Adds space between the links */
+    }
+  }
+
 
 
 /* ====================================================
