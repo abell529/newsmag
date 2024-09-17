@@ -2998,8 +2998,8 @@ UPDATE THIS CLASS FOR THE PAGE
     padding: 30px;
 }
 
-p.tag-primary {
-    font-size: 1rem !important;
+item.news p.tag-primary {
+    font-size: 1rem;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: .15rem;
