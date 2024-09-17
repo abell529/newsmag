@@ -3053,6 +3053,15 @@ p.tag-primary + h3 {
   .grid-snippet.two.col-ratio-25-75, .grid-snippet.two.col-ratio-75-25 {
      grid-template-columns: 1fr;
    }
+  .split .item.news {       
+     grid-template-columns: 1fr;
+   }
+	
+  .split .item.news .copy {       
+     left: unset;
+     width: calc(100% - 20px);
+     margin-left: 10px;
+   }	
 }
 
 /* Displays 3-up items horizontally to avoid orphans when the number of items is odd */
