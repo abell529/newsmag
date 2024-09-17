@@ -2831,7 +2831,7 @@ UPDATE THIS CLASS FOR THE PAGE
     grid-gap: 20px;
 }
 
-.grid-snippet.horizontal .news.item div:first-of-type {
+.grid-snippet.horizontal .news.item .copy div:first-of-type, .grid-snippet.horizontal .news.item .copy div:first-of-type * {
     margin-top: 0;
 }
 
