@@ -4070,14 +4070,23 @@ form.search_form_mobile {
     z-index: 10000;
 }
 
-.hamburger-nav.active i {
+.stripe.graphite .hamburger-nav i {
+    background-color: white;
+}
+
+.stripe.graphite .hamburger-nav.active i {
     background-color: white;
     z-index: 100001;
     position: relative;
 }
 
-.hamburger-nav.active:hover i {
+.stripe.graphite .hamburger-nav.active:hover i {
     background: #ffffff;
+}
+
+form.search_form_mobile {
+    animation: slideInFromRight 500ms forwards;
+    transition: 0.3s ease all;
 }
 
 
