@@ -1705,7 +1705,7 @@ a.content-button.secondary:hover {
 .body-section {
     width: 100%;
     max-width: 700px;
-    margin: 40px auto 0;
+    margin: 0 auto;
     position: relative;
 }
 
@@ -1840,7 +1840,7 @@ a.content-button.secondary:hover {
     grid-gap: 60px;
     width: calc(100% - 30px);
     max-width: 1200px;
-    margin: auto;
+    margin: 40px auto;
 }
 
 .body-container.two-col .body-section {
@@ -1895,7 +1895,7 @@ a.content-button.secondary:hover {
 
 @media only screen and (max-width: 1200px) {
     .body-container.two-col {
-     margin: 0 15px;
+     margin: 40px 15px;
     }
 }  
 
