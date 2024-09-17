@@ -376,6 +376,10 @@ ul.links-list {
   transition: padding-left 0.2s ease-in-out 0s, color 0.3s ease-in-out 0.1s;
 }
 
+ul.links-list li a {
+    text-decoration: none;
+}
+
 /* Image Callout */
 
 .full-bleed-section figure {
