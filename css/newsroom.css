@@ -1825,7 +1825,7 @@ a.content-button.secondary:hover {
 .body-container.two-col {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-gap: 60px;
+    grid-gap: 6.5%;
     width: calc(100% - 30px);
     max-width: 1200px;
     margin: 40px auto;
@@ -2227,7 +2227,6 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
 
 .hero-content p.byline-item .icon {
     margin-right: 10px;
-    font-size: 1.25em;
     color: #000;
 }
 
