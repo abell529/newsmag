@@ -2352,7 +2352,7 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
 	margin: 0 20px;
     }
     .hero.simple .hero-content {
-        margin: 0 20px;
+        margin: 0;
         max-width: 700px;
     }
 }
