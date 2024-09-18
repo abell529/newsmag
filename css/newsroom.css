@@ -2988,7 +2988,7 @@ UPDATE THIS CLASS FOR THE PAGE
     padding: 30px;
 }
 
-item.news p.tag-primary {
+.item p.tag-primary, .split .item p.tag-primary, .lead .item p.tag-primary {
     font-size: 1rem;
     font-weight: 500;
     text-transform: uppercase;
@@ -3027,6 +3027,11 @@ p.tag-primary + h3 {
     .grid-snippet.four {
         grid-template-columns: 1fr 1fr;
     }
+
+    .lead .news.item .copy  {
+       top: -35px;
+    }		
+	
     .split .item.news {       
         grid-template-columns: 1.25fr 1fr;
     }
@@ -3037,7 +3042,7 @@ p.tag-primary + h3 {
   .grid-snippet.two.col-ratio-25-75, .grid-snippet.two.col-ratio-75-25 {
      grid-template-columns: 1fr;
    }
-	
+
   .split .item.news {       
      grid-template-columns: 1fr;
    }
@@ -3072,6 +3077,10 @@ p.tag-primary + h3 {
         grid-template-columns: 1fr;
     }
 
+  .lead .news.item .copy  {
+    top: -25px;
+    }
+	
   .lead .news.item .copy :last-child {
     margin-bottom: 0;
     }
