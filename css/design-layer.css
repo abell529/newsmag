@@ -206,6 +206,12 @@ blockquote.pull-quote.quote p.attrib:before {
     height: unset
 }
 
+/* Normalizes the top alignment of main body and sidebar when one or both sections lead with an element with a margin-top value other than 0 */
+
+.body-container.two-col .main-content :first-child, .body-container.two-col .secondary-content :first-child:not(.full-bleed-section *) {
+	margin-top:0;
+}
+
 /* === CARD LAYOUT HOVER STATES === */
 /* Overrides hover states for news items and adds specificity for cards. */
 
