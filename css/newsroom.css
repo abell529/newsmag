@@ -1705,7 +1705,7 @@ a.content-button.secondary:hover {
 .body-section {
     width: 100%;
     max-width: 700px;
-    margin: 40px auto 0;
+    margin: 0 auto;
     position: relative;
 }
 
@@ -1802,7 +1802,6 @@ a.content-button.secondary:hover {
 }
 
 .content-grid figure {
-    background-color: var(--light-gray-40);
     height: 100%;
 }
 
@@ -1840,7 +1839,7 @@ a.content-button.secondary:hover {
     grid-gap: 60px;
     width: calc(100% - 30px);
     max-width: 1200px;
-    margin: auto;
+    margin: 40px auto;
 }
 
 .body-container.two-col .body-section {
@@ -1895,7 +1894,7 @@ a.content-button.secondary:hover {
 
 @media only screen and (max-width: 1200px) {
     .body-container.two-col {
-     margin: 0 15px;
+     margin: 40px 15px;
     }
 }  
 
@@ -2873,11 +2872,6 @@ UPDATE THIS CLASS FOR THE PAGE
 
 /* Typography and Design */
 
-.lead {
-    background-color: #ddd;
-    height: 600px;
-}
-
 .lead figure {
     margin: auto;
 }
@@ -3053,6 +3047,7 @@ p.tag-primary + h3 {
   .grid-snippet.two.col-ratio-25-75, .grid-snippet.two.col-ratio-75-25 {
      grid-template-columns: 1fr;
    }
+	
   .split .item.news {       
      grid-template-columns: 1fr;
    }
@@ -3091,11 +3086,6 @@ p.tag-primary + h3 {
     margin-bottom: 0;
     }
 
-  .lead .news.item .copy {
-    width: 100%;
-    margin: auto;
-    }
-
   .lead figure img {
     aspect-ratio: 1.25;
     }
@@ -3103,35 +3093,11 @@ p.tag-primary + h3 {
   .split .item.news {       
      grid-template-columns: 1fr;
      }
-	
-  .split .item.news .copy {       
-     left: unset;
-     width: 100%;
-     }	
 
   .headline-area .grid-snippet.lead figure {
     width: 100vw;
     position: relative;
     }
-}
-
-/* Still a work in progress. Would like to get the grid areas working with pseudoclasses.*/
-
-.grid-snippet.matrix {
-	grid-template-columns: 2fr 1fr;
-	grid-template-rows: repeat(2, 1fr);
-}
-
-.grid-snippet.matrix .one {
-	grid-area: 1 / 1 / 3 / 2;
-}
-
-.grid-snippet.matrix .two {
-	grid-area: 1 / 2 / 2 / 3;
-}
-
-.grid-snippet.matrix .three {
-	grid-area: 2 / 2 / 3 / 3;
 }
 
 /* ====================================================
