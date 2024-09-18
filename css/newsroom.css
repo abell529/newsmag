@@ -2024,24 +2024,6 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
     }
 }
 
-/* Keep? */
-
-/* demo classes only */
-
-.no-button .content-button {
-    display:none;
-}
-
-.hero.simple h1 {           /* For demo purposes only*/
-    font-weight: 700;
-}
-
-.hero.simple h1 br {          /* For demo purposes only*/
-    display: none;
-}
-
-
-
 
 /* ==================================================
 
@@ -2271,6 +2253,10 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
     padding-left: 15px;	
     padding-right: 15px;
     margin: auto;
+}
+
+.hero.simple .hero-content h1 {
+    font-weight: 700;
 }
 
 .hero.simple .hero-content h1 span {
