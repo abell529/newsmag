@@ -175,17 +175,6 @@ blockquote.pull-quote.quote-marks p:not(.attrib):after {
     z-index: -1;
 }
 
-/* These selectors should be removed from newsroom.css */
-
-blockquote.pull-quote {
-    border: none;
-  }
-
-blockquote.pull-quote.quote p.attrib:before {
-    content: none;
-}
-
-
 /* === REPEATING LIST PROFILES - Instagram Icon */
 
 .repeating-list.profiles span.icon-link {
@@ -204,6 +193,12 @@ blockquote.pull-quote.quote p.attrib:before {
 
 .full-bleed-section .content-constrain figure {
     height: unset
+}
+
+/* Normalizes the top alignment of main body and sidebar when one or both sections lead with an element with a margin-top value other than 0 */
+
+.body-container.two-col .main-content :first-child, .body-container.two-col .secondary-content :first-child:not(.full-bleed-section *) {
+	margin-top:0;
 }
 
 /* === CARD LAYOUT HOVER STATES === */
@@ -421,7 +416,7 @@ ul.links-list li a {
 
 .image-callout p.tag-primary {
     background-color: var(--graphite);
-    padding: 5px 10px;
+    padding: 2px 10px;
     color: var(--gold-solid);
     width: fit-content;
     font-weight: 700;
