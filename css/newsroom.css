@@ -1405,12 +1405,14 @@ meter {
 
    ======================================= */
 
-
-
 body {
     font-family: 'Proxima-Nova', sans-serif;
     font-weight: 300;
-    overflow-x: hidden; /* hack to prevent nav menu from generating a scroll */
+    overflow-x: hidden;
+}
+
+div.outer-wrapper {
+    overflow-x: hidden;
 }
 
 img {
@@ -1866,12 +1868,12 @@ a.content-button.secondary:hover {
 
  .body-container.two-col .in-content-image.left {
     margin: 20px 30px 20px 0;
-    max-width: 55%;
+    max-width: 45%;
 }
 
 .body-container.two-col .in-content-image.right {
     margin: 20px 0 20px 20px;
-    max-width: 55%;   
+    max-width: 45%;   
 }
 
 .sidebar {
@@ -1991,10 +1993,12 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
     }
     .in-content-image.left {
         margin: 10px 20px 10px 0;
+	max-width: 45%;
     }
 
     .in-content-image.right {
-        margin: 10px 0 10px 10px;  
+        margin: 10px 0 10px 10px; 
+	max-width: 45%;
     }
 
   .full-width.forty-sixty.stack, .full-width.sixty-forty.stack { /* Stacks masonry on small screens */
