@@ -2489,7 +2489,6 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
 	   grid-template-columns: 1fr 1fr 1fr 1fr;
    }
    
-   
    .repeating-list.grid .repeating-list-body {
 	   padding: 20px 0;
    }
@@ -2559,16 +2558,16 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
    /* ----- MQs ----- */
    
    @media only screen and (max-width: 720px) {
-	   .repeating-list.grid.three-col, .repeating-list.grid.four-col {
-		   grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+	.repeating-list.grid.three-col, .repeating-list.grid.four-col {
+		grid-template-columns: minmax(0,1fr) minmax(0,1fr);
 	   }
    }
    
-   /* @media only screen and (max-width: 480px) {
-		   .repeating-list.grid.two-col, .repeating-list.grid.three-col, .repeating-list.grid.four-col {
-		   grid-template-columns: 1fr;
+   @media only screen and (max-width: 500px) {
+	.repeating-list.grid.two-col, .repeating-list.grid.three-col, .repeating-list.grid.four-col {
+		grid-template-columns: 1fr;
 	   }
-   } /*
+   }
    
    /* ------ No-image Variant ------ */
    
