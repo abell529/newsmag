@@ -197,7 +197,8 @@ blockquote.pull-quote.quote-marks p:not(.attrib):after {
 
 /* Normalizes the top alignment of main body and sidebar when one or both sections lead with an element with a margin-top value other than 0 */
 
-.body-container.two-col .main-content :first-child, .body-container.two-col .secondary-content :first-child:not(.full-bleed-section *) {
+.body-container.two-col .main-content .body-section > *:first-of-type,
+.body-container.two-col .secondary-content :first-child:not(.full-bleed-section *) {
 	margin-top:0;
 }
 
