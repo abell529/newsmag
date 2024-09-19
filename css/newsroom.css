@@ -1826,7 +1826,8 @@ a.content-button.secondary:hover {
 .body-container.two-col {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-gap: 6.5%;
+    grid-column-gap: 6.5%;
+    grid-row-gap: 40px;
     width: calc(100% - 30px);
     max-width: 1200px;
     margin: 40px auto;
