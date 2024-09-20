@@ -226,6 +226,13 @@ blockquote.pull-quote.quote-marks p:not(.attrib):after {
     transition: all .1s ease-in;
 }
 
+.cards .news.item a {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+
 /* ==== CALLOUTS ==== */
 
 .callout.left {
