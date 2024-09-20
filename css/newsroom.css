@@ -1569,24 +1569,22 @@ blockquote.pull-quote.quote p.attrib {
     position: relative;
 }
 
-/* ===== HEADER =================================== */
+/* ===== STYLE VARIANTS =================================== */
 
 
 .card, .cards > * {					/* use .card for single element; use .cards to style all children */
-    padding: 20px;
     background: var(--lightest-gray);
  /* box-shadow: 5px 5px 7px var(--light-gray); */
     border: 1px solid #ccc;	
 }
 
-.cards .news.item figure {				/* neccessary to make the image extend to the borders of the card and allow text padding to remain unchanged */
-    width: calc(100% + 40px);
-    margin-top: -20px;
-    margin-left: -20px;
-}
-
 .cards.grid > * {					 /* kills additional padding for grid layout */
     padding: 0px;
+}
+
+.cards .news.item figure img {
+    height: 100%;
+    object-fit: cover;
 }
 
 .shadow {
@@ -2988,7 +2986,7 @@ p.tag-primary + h3 {
 }
 
 .card .copy, .cards .copy {
-	padding: 20px;
+	padding: 20px 20px 0 20px;
 }
 
 .bordered {
