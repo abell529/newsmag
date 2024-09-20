@@ -1569,7 +1569,7 @@ blockquote.pull-quote.quote p.attrib {
     position: relative;
 }
 
-/* ===== HEADER =================================== */
+/* ===== STYLE VARIANTS =================================== */
 
 
 .card, .cards > * {					/* use .card for single element; use .cards to style all children */
@@ -1587,6 +1587,11 @@ blockquote.pull-quote.quote p.attrib {
 
 .cards.grid > * {					 /* kills additional padding for grid layout */
     padding: 0px;
+}
+
+.cards .news.item figure img {
+    height: 100%;
+    object-fit: cover;
 }
 
 .shadow {
@@ -2988,7 +2993,7 @@ p.tag-primary + h3 {
 }
 
 .card .copy, .cards .copy {
-	padding: 20px;
+	padding: 20px 20px 0 20px;
 }
 
 .bordered {
