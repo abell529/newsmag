@@ -1515,7 +1515,6 @@ strong {
 hr {
     height: 8px;
     width: 80px;
-    border: 1px solid #000;
     background: var(--gold-solid);
     margin: 20px auto;
     transform: skewX(33deg);
@@ -1527,7 +1526,6 @@ hr {
     display: block;
     height: 8px;
     width: 80px;
-    border: 1px solid #000;
     background: var(--gold-solid);
     margin: 20px auto;
     transform: skewX(33deg);
@@ -1636,6 +1634,10 @@ blockquote.pull-quote.quote p.attrib {
 .color-block.dark {
     background-color: var(--graphite);
     color: var(--lightest-gray);
+}
+
+.color-block.dark hr {
+    background: var(--graphite);
 }
 
 /* ===== HEADER =================================== */
