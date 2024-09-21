@@ -2240,11 +2240,11 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
 }
 
 .hero.simple .hero-content {
-    max-width: 1230px;
+    max-width: 900px;
     width: 100%;
     padding-left: 15px;	
     padding-right: 15px;
-    margin: auto;
+    margin: calc(50% - 610px);
 }
 
 .hero.simple .hero-content h1 {
@@ -2333,6 +2333,12 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
 }
 
 /* ===== MEDIA QUERIES  =================================== */
+
+@media screen and (max-width:1220px){
+    .hero.simple .hero-content {
+	margin:0;
+     }
+}
 
 @media only screen and (max-width: 960px) {
     .hero-content {
