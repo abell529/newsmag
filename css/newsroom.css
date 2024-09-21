@@ -1893,6 +1893,11 @@ a.content-button.secondary:hover {
     .body-container.two-col {
      grid-template-columns: 1fr;
     }
+
+.body-container.two-col .full-bleed-section {
+    width: calc(100% + 30px);
+    margin: 0 0 0 -15px;
+    }	
 }  
 
 /* In-content Image */
