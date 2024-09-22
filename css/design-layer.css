@@ -411,7 +411,7 @@ ul.links-list li a {
     margin-bottom: 10px;
 }
 
-/* Image Callout */
+/* === IMAGE CALLOUT === */
 
 .full-bleed-section figure {
     height: unset;
@@ -505,7 +505,7 @@ ul.links-list li a {
   }
 }
 
-/* Publication Source Flag */
+/* === PUBLICATION SOURCE FLAG === */
 
 .news-item-pub-flag {
     display: flex;
@@ -551,4 +551,61 @@ p.pub-flag.tu-magazine img {
 
 .lead .news-item-pub-flag .pub-flag.tu-magazine img {
     height: 13px;
+}
+
+/* === ICON LIST === */
+
+.icon-list-item {
+  display: grid;
+  grid-column-gap: 15px;
+}
+
+.icon i {
+  color: var(--gold-solid);
+  margin-top: 20px;
+}
+
+.color-block.gold .icon i {
+  color: var(--graphite);
+}
+
+.gridlines .icon-list-item:not(:last-of-type) .content {
+  border-bottom: 2px dotted;
+  margin-right: 10px;
+}
+
+/* Main Content Area */
+
+.main-content .icon-list-grid {
+    margin: 0 20px;
+}
+
+.main-content .icon-list-item {
+    grid-template-columns: 80px auto;
+}
+
+.main-content .icon-list-grid .icon i {
+    font-size: 3.5rem;
+}
+
+/* Sidebar Area */
+
+.secondary-content .icon-list-item {
+  grid-template-columns: 20px auto;
+}
+
+.secondary-content .icon i {
+  font-size: 1.25rem;
+}
+
+/* These add a zig-zag pattern to the container. This rule is specific to this particular usage and should be abstracted for a utility class later. */
+
+.secondary-content .full-bleed-section.color-block:has(.icon-list-grid) {
+  mask: conic-gradient(from 45deg at left, #0000, #000 1deg 89deg, #0000 90deg) 50% / 100% 16.00px;
+}
+
+@media screen and (max-width: 720px) {
+.secondary-content .full-bleed-section.color-block:has(.icon-list-grid) {
+    mask: conic-gradient(from 135deg at top, #0000, #000 1deg 89deg, #0000 90deg) 50% / 16.00px 100%;
+  }
 }
