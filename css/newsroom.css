@@ -2249,7 +2249,7 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
     width: 100%;
     padding-left: 15px;	
     padding-right: 15px;
-    margin: calc(50% - 610px);
+    margin-left: calc(50% - 610px);
 }
 
 .hero.simple .hero-content h1 {
