@@ -1606,13 +1606,13 @@ blockquote.pull-quote.quote p.attrib {
 }
 
 .zig-zag-left {
-  --mask: conic-gradient(from 45deg at left,#0000,#000 1deg 89deg,#0000 90deg) 50%/100% 16.00px;
+  --mask: conic-gradient(from 45deg at left,#0000,#000 1deg 89deg,#0000 90deg) 0%/100% 16.00px;
   -webkit-mask: var(--mask);
           mask: var(--mask);
 }
 
 .zig-zag-right {
-  --mask: conic-gradient(from -135deg at right,#0000,#000 1deg 89deg,#0000 90deg) 50%/100% 16.00px;
+  --mask: conic-gradient(from -135deg at right,#0000,#000 1deg 89deg,#0000 90deg) 0%/100% 16.00px;
   -webkit-mask: var(--mask);
           mask: var(--mask);
 }
