@@ -606,7 +606,7 @@ p.pub-flag.tu-magazine img {
 /* These add a zig-zag pattern to the container. This rule is specific to this particular usage and should be abstracted for a utility class later. */
 
 .secondary-content .full-bleed-section.color-block:has(.icon-list-grid) {
-  mask: conic-gradient(from 45deg at left, #0000, #000 1deg 89deg, #0000 90deg) 50% / 100% 16.00px;
+  mask: conic-gradient(from 45deg at left, #0000, #000 1deg 89deg, #0000 90deg) 0% / 100% 16.00px;
 }
 
 @media screen and (max-width: 720px) {
