@@ -609,3 +609,65 @@ p.pub-flag.tu-magazine img {
     mask: conic-gradient(from 135deg at top, #0000, #000 1deg 89deg, #0000 90deg) 50% / 16.00px 100%;
   }
 }
+
+
+/* === INFOGRAPHIC  === */
+
+.infographic {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 30px;
+}
+
+.infographic-item {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;	
+    align-items: center;
+    text-align: center;
+}
+
+.infographic-item:nth-child(n+4) {
+    border-top: 1px solid var(--gold-solid);
+    padding-top: 10px;
+}
+
+.infographic-item p:first-of-type {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--gold-solid);
+    margin-bottom: 0;
+}
+
+.infographic-item p:nth-of-type(2) {
+    font-weight: 400;
+}
+
+@media screen and (max-width: 720px) {
+  .infographic {
+    grid-template-columns: 1fr 1fr;
+    }
+
+  .infographic-item:nth-child(n+3) {
+    border-top: 1px solid var(--gold-solid);
+    padding-top: 10px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+  .infographic {
+    grid-template-columns: 1fr !important;
+}
+
+.infographic-item:nth-child(n+2) {
+    border-top: none;
+    padding-top: 10px;
+    }  
+
+.infographic-item:nth-child(n+2):before {
+    content:'';
+    width: 40px;
+    border-top: 1px solid var(--gold-solid);
+    padding-top: 10px;
+    }  	
+} 
