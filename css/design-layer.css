@@ -61,10 +61,15 @@
     text-decoration: none;
 }
 
-/* these two classes required to overcome lack of padding due to h3 change to display:inline */
+/* these classes required to overcome lack of padding due to h3 change to display:inline */
 
 .news.item .news-item-head {
     margin-top: 20px;
+}
+
+.grid-snippet.image-headline-only.cards .news.item .news-item-head {
+    margin-top: 0px; 
+    margin-bottom: 20px;
 }
 
 .lead .news.item .copy p {
