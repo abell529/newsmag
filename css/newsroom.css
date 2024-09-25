@@ -3453,6 +3453,10 @@ p.tag-primary + h3 {
     align-items: center;
 }
 
+.heading-constrain.nav-flex-wrap a {
+    display: contents;
+}
+
 .nav-container {
     display: flex;
     flex-direction: column;
