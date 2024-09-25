@@ -1803,17 +1803,14 @@ a.content-button.secondary:hover {
 
 .content-grid.forty-sixty {
      grid-template-columns: 2fr 3fr;
-     aspect-ratio: 5/2;
 }
 
 .content-grid.sixty-forty {
     grid-template-columns: 3fr 2fr;
-    aspect-ratio: 5/2;
 }
 
 .content-grid.fifty-fifty {
     grid-template-columns: 1fr 1fr;
-    aspect-ratio: 1;
 }
 
 .content-grid .text {
