@@ -1811,6 +1811,11 @@ a.content-button.secondary:hover {
     aspect-ratio: 5/2;
 }
 
+.content-grid.fifty-fifty {
+    grid-template-columns: 1fr 1fr;
+    aspect-ratio: 1;
+}
+
 .content-grid .text {
     padding: 20px;
     text-align: left;
