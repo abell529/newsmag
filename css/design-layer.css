@@ -61,10 +61,15 @@
     text-decoration: none;
 }
 
-/* these two classes required to overcome lack of padding due to h3 change to display:inline */
+/* these classes required to overcome lack of padding due to h3 change to display:inline */
 
 .news.item .news-item-head {
     margin-top: 20px;
+}
+
+.grid-snippet.image-headline-only.cards .news.item .news-item-head {
+    margin-top: 0px; 
+    margin-bottom: 20px;
 }
 
 .lead .news.item .copy p {
@@ -601,7 +606,7 @@ p.pub-flag.tu-magazine img {
 /* These add a zig-zag pattern to the container. This rule is specific to this particular usage and should be abstracted for a utility class later. */
 
 .secondary-content .full-bleed-section.color-block:has(.icon-list-grid) {
-  mask: conic-gradient(from 45deg at left, #0000, #000 1deg 89deg, #0000 90deg) 50% / 100% 16.00px;
+  mask: conic-gradient(from 45deg at left, #0000, #000 1deg 89deg, #0000 90deg) 0% / 100% 16.00px;
 }
 
 @media screen and (max-width: 720px) {
@@ -628,6 +633,11 @@ p.pub-flag.tu-magazine img {
 }
 
 .infographic-item:nth-child(n+4) {
+    border-top: 1px solid var(--graphite);
+    padding-top: 10px;
+}
+
+.color-block.dark .infographic-item:nth-child(n+4) {
     border-top: 1px solid var(--gold-solid);
     padding-top: 10px;
 }
@@ -635,8 +645,12 @@ p.pub-flag.tu-magazine img {
 .infographic-item p:first-of-type {
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--gold-solid);
+    color: var(--graphite);
     margin-bottom: 0;
+}
+
+.color-block.dark .infographic-item p:first-of-type {
+    color: var(--gold-solid);
 }
 
 .infographic-item p:nth-of-type(2) {
@@ -649,14 +663,18 @@ p.pub-flag.tu-magazine img {
     }
 
   .infographic-item:nth-child(n+3) {
-    border-top: 1px solid var(--gold-solid);
+    border-top: 1px solid var(--graphite);
     padding-top: 10px;
     }
+
+  .color-block.dark .infographic-item:nth-child(n+3) {
+    border-top-color: var(--gold-solid);
+    }	
 }
 
 @media screen and (max-width: 500px) {
   .infographic {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: 1fr;
 }
 
 .infographic-item:nth-child(n+2) {
@@ -667,7 +685,11 @@ p.pub-flag.tu-magazine img {
 .infographic-item:nth-child(n+2):before {
     content:'';
     width: 40px;
-    border-top: 1px solid var(--gold-solid);
+    border-top: 1px solid var(--graphite);
     padding-top: 10px;
-    }  	
+    }
+
+.color-block.dark .infographic-item:nth-child(n+2):before {
+    border-top-color: var(--gold-solid);
+    }  		
 } 

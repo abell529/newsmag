@@ -1606,13 +1606,13 @@ blockquote.pull-quote.quote p.attrib {
 }
 
 .zig-zag-left {
-  --mask: conic-gradient(from 45deg at left,#0000,#000 1deg 89deg,#0000 90deg) 50%/100% 16.00px;
+  --mask: conic-gradient(from 45deg at left,#0000,#000 1deg 89deg,#0000 90deg) 0%/100% 16.00px;
   -webkit-mask: var(--mask);
           mask: var(--mask);
 }
 
 .zig-zag-right {
-  --mask: conic-gradient(from -135deg at right,#0000,#000 1deg 89deg,#0000 90deg) 50%/100% 16.00px;
+  --mask: conic-gradient(from -135deg at right,#0000,#000 1deg 89deg,#0000 90deg) 0%/100% 16.00px;
   -webkit-mask: var(--mask);
           mask: var(--mask);
 }
@@ -1809,6 +1809,11 @@ a.content-button.secondary:hover {
 .content-grid.sixty-forty {
     grid-template-columns: 3fr 2fr;
     aspect-ratio: 5/2;
+}
+
+.content-grid.fifty-fifty {
+    grid-template-columns: 1fr 1fr;
+    aspect-ratio: 1;
 }
 
 .content-grid .text {
@@ -2938,6 +2943,11 @@ UPDATE THIS CLASS FOR THE PAGE
     font-size: 1.25rem;
     font-weight: 500;
     margin: 0;
+}
+
+
+.image-headline-only .news.item .news-item-head h3 {
+	font-size: 1.75rem;
 }
 
 .sq figure img {
