@@ -1631,15 +1631,19 @@ blockquote.pull-quote.quote p.attrib {
     color: #000;
 }
 
-.color-block.dark {
-    background-color: var(--graphite);
-    color: var(--lightest-gray);
-}
-
 .color-block.gold hr {
     background: var(--graphite);
 }
 
+.color-block.dark {
+    background-color: var(--graphite);
+    color: var(--lightest-gray);
+}
+	
+.color-block.dark .intro-text, .color-block.dark blockquote.pull-quote p {
+    color: inherit;
+}
+		
 /* ===== HEADER =================================== */
 
 .global-header {
@@ -3451,6 +3455,10 @@ p.tag-primary + h3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.heading-constrain.nav-flex-wrap a {
+    display: contents;
 }
 
 .nav-container {

@@ -693,3 +693,39 @@ p.pub-flag.tu-magazine img {
     border-top-color: var(--gold-solid);
     }  		
 } 
+
+/* Horizontal Line with Icon */
+
+.icon-hr-container {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    color: var(--graphite);
+}
+
+.icon-hr-container.gold {
+    color: var(--gold-solid);
+}
+
+.icon-hr-container.torquoise {
+    color: var(--accent-torquoise);
+}
+
+.icon-hr-container.red {
+    color: var(--accent-red);
+}
+
+.icon-hr-container .line {
+    flex-grow: 1;
+    height: 0;
+    border-top: 2px dotted;
+}
+
+.icon-hr-container i {
+    margin: 0 20px;
+    font-size: 1.75rem;
+}
+
+.icon-hr-container.icon-lg i {
+     font-size: 3rem;
+}
