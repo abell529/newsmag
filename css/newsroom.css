@@ -2781,11 +2781,13 @@ UPDATE THIS CLASS FOR THE PAGE
     grid-row-gap: 20px;
 }
 
+/* these rules can be deleted if this class is removed from the component */
+/* 
 .grid-col-list {
     display: flex;
     flex-direction: column;
-    grid-row-gap: 0;
-}
+    grid-row-gap: 0;  
+} */
 
 .item.grid-col {
     background-color: #fff;
