@@ -729,3 +729,53 @@ p.pub-flag.tu-magazine img {
 .icon-hr-container.icon-lg i {
      font-size: 3rem;
 }
+
+
+/* === STAGING TYPOGRAPHY OVERRIDES === */
+
+@media screen and (max-width: 720px) {
+
+.lead .item.news p, .split .item.news p {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+
+.lead .item.news h3, .split .item.news h3 {
+    font-size: 1.75rem;
+  }
+
+.split .news.item p.tag-primary, .lead .news.item p.tag-primary {
+    font-size: .9375rem;
+  }    
+}
+
+@media screen and (max-width: 500px) {
+.lead .item.news p, .split .item.news p {
+    font-size: 1.0625rem;
+    line-height: 1.5rem;
+  }
+
+.lead .item.news h3, .split .item.news h3 {
+    font-size: 1.5rem;
+  }
+
+.item.news h3 {
+   font-size: 1.25rem;
+   }
+
+.news.item .news-item-head {
+    margin-top: 15px;
+   } 
+
+.item.news p {
+   font-size: .9375rem;
+    line-height: 1.375rem;
+    margin-top: 15px;
+    margin-bottom: 15px;
+   }    
+
+.item.news p.tag-primary {
+    font-size: .875rem;
+    line-height: 1rem;
+   }    
+}
