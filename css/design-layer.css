@@ -436,7 +436,7 @@ ul.links-list li a {
     justify-content: flex-end;
 }
 
-.image-callout h2 {
+.image-callout .text-block h2 {
   font-family: PoynterOSDisp;
   font-size: 3.5rem;
   padding: 0;
@@ -445,9 +445,10 @@ ul.links-list li a {
   z-index: 1;
   line-height: 1;
   display: flex;
+  align-self: flex-end;	
 }
 
-.image-callout h2:before {
+.image-callout .text-block h2:before {
     content: '';
     width: calc(100% + 6px);
     height: 22px;
