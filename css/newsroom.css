@@ -1725,13 +1725,18 @@ a.content-button.secondary:hover {
 }
 
 .body-container ul li {
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     list-style: disc;
 }
 
 .body-container ul > ul li {
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     list-style: circle;
+}
+
+.body-container ul.two-col-bullets {
+    column-count: 2;
+    column-gap: 40px;
 }
 
 /* Full-Width Container  */
