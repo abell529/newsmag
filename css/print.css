@@ -7,20 +7,16 @@
     visibility: hidden !important;
   }
 
-  /* Ensure that the body and outer-wrapper are displayed */
-  body, .outer-wrapper {
-    display: block !important;
-    visibility: visible !important;
-  }
-
-  /* Display the main content container */
-  .main-content, .content, .header-container, .body-container, .article-content, .grid-snippet {
+  /* Show necessary structural elements */
+  html, body, .outer-wrapper, .content-constrain, .main-content, .secondary-content, 
+  .header-container, .body-container, .article-container, .article-content, 
+  .grid-snippet, main, section, article, .wrapper, .pull-quote {
     display: block !important;
     visibility: visible !important;
   }
 
   /* Display the logo */
-  .masthead-logo-container svg, .logo, .vertical-id {
+  .masthead-logo-container svg, .logo, .vertical-id, .header-container .masthead-logo-container {
     display: block !important;
     visibility: visible !important;
   }
@@ -34,7 +30,7 @@
   }
 
   /* Ensure the text retains original size, weight, and format */
-  p, span, a, li, blockquote, strong, em {
+  p, span, a, li, blockquote, strong, em, .text {
     display: block !important;
     visibility: visible !important;
     font-size: inherit !important;
@@ -49,35 +45,41 @@
   }
 
   /* Display all images */
-  img {
+  img, figure img {
     display: block !important;
     visibility: visible !important;
     max-width: 100% !important;
     height: auto !important;
   }
 
-  /* Allow lists to be visible */
+  /* Ensure containers like lists are visible */
   ul, ol {
     display: block !important;
     visibility: visible !important;
   }
 
-  /* Make sure containers for content are visible */
-  main, section, article {
-    display: block !important;
-    visibility: visible !important;
-  }
-
-  /* Remove unnecessary decorations or navigation */
-  .utility-nav, .navigation, .menu-trigger, .publications-group, .slide-outer, .footer, .mobile-links, .search-section {
-    display: none !important;
-    visibility: hidden !important;
-  }
-
-  /* Ensure content inside the header and footer is displayed */
+  /* Show headers and footers */
   header, footer {
     display: block !important;
     visibility: visible !important;
   }
 
+  /* Remove navigation, search, or mobile-only elements */
+  .navigation, .utility-nav, .mobile-menu-icon-container, .search-section, 
+  .footer, .slide-outer, .menu-trigger, .mobile-links {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  /* Additional containers in the document */
+  .container, .grid-item, .grid-row, .grid-column {
+    display: block !important;
+    visibility: visible !important;
+  }
+
+  /* Make sure all main sections inside the body are shown */
+  .content-body, .body-content, .content-section {
+    display: block !important;
+    visibility: visible !important;
+  }
 }
