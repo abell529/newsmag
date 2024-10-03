@@ -1,85 +1,30 @@
 /* General settings for print */
 @media print {
 
-  /* Hide everything by default */
+  /* Show everything for debugging */
   * {
-    display: none !important;
-    visibility: hidden !important;
-  }
-
-  /* Show necessary structural elements */
-  html, body, .outer-wrapper, .content-constrain, .main-content, .secondary-content, 
-  .header-container, .body-container, .article-container, .article-content, 
-  .grid-snippet, main, section, article, .wrapper, .pull-quote {
     display: block !important;
     visibility: visible !important;
   }
 
-  /* Display the logo */
-  .masthead-logo-container svg, .logo, .vertical-id, .header-container .masthead-logo-container {
-    display: block !important;
-    visibility: visible !important;
-  }
-
-  /* Display headings H1 to H6 */
-  h1, h2, h3, h4, h5, h6 {
-    display: block !important;
-    visibility: visible !important;
-    font-size: inherit !important;
-    font-weight: inherit !important;
-  }
-
-  /* Ensure the text retains original size, weight, and format */
-  p, span, a, li, blockquote, strong, em, .text {
-    display: block !important;
-    visibility: visible !important;
-    font-size: inherit !important;
-    font-weight: inherit !important;
-    font-style: inherit !important;
-  }
-
-  /* Display pull quotes */
-  blockquote.pull-quote {
-    display: block !important;
-    visibility: visible !important;
-  }
-
-  /* Display all images */
-  img, figure img {
-    display: block !important;
-    visibility: visible !important;
-    max-width: 100% !important;
-    height: auto !important;
-  }
-
-  /* Ensure containers like lists are visible */
-  ul, ol {
-    display: block !important;
-    visibility: visible !important;
-  }
-
-  /* Show headers and footers */
-  header, footer {
-    display: block !important;
-    visibility: visible !important;
-  }
-
-  /* Remove navigation, search, or mobile-only elements */
+  /* Remove unnecessary items: navigation, search, and mobile-specific elements */
   .navigation, .utility-nav, .mobile-menu-icon-container, .search-section, 
   .footer, .slide-outer, .menu-trigger, .mobile-links {
     display: none !important;
     visibility: hidden !important;
   }
 
-  /* Additional containers in the document */
-  .container, .grid-item, .grid-row, .grid-column {
-    display: block !important;
-    visibility: visible !important;
+  /* Remove interactive elements that are not useful in print */
+  button, input, textarea, select {
+    display: none !important;
   }
-
-  /* Make sure all main sections inside the body are shown */
-  .content-body, .body-content, .content-section {
+  
+  /* Ensure logo, headings, text, images, and pull quotes are visible */
+  .masthead-logo-container svg, h1, h2, h3, h4, h5, h6, p, span, a, li, 
+  blockquote.pull-quote, img, figure img, ul, ol {
     display: block !important;
     visibility: visible !important;
+    font-size: inherit !important;
+    font-weight: inherit !important;
   }
 }
