@@ -7,8 +7,20 @@
     visibility: hidden !important;
   }
 
+  /* Ensure that the body and outer-wrapper are displayed */
+  body, .outer-wrapper {
+    display: block !important;
+    visibility: visible !important;
+  }
+
+  /* Display the main content container */
+  .main-content, .content, .header-container, .body-container, .article-content, .grid-snippet {
+    display: block !important;
+    visibility: visible !important;
+  }
+
   /* Display the logo */
-  .masthead-logo-container svg {
+  .masthead-logo-container svg, .logo, .vertical-id {
     display: block !important;
     visibility: visible !important;
   }
@@ -17,6 +29,8 @@
   h1, h2, h3, h4, h5, h6 {
     display: block !important;
     visibility: visible !important;
+    font-size: inherit !important;
+    font-weight: inherit !important;
   }
 
   /* Ensure the text retains original size, weight, and format */
@@ -42,20 +56,14 @@
     height: auto !important;
   }
 
-  /* Ensure that logos and images in the header and footer are visible */
-  header, footer {
-    display: block !important;
-    visibility: visible !important;
-  }
-
   /* Allow lists to be visible */
   ul, ol {
     display: block !important;
     visibility: visible !important;
   }
 
-  /* Display the main content */
-  main {
+  /* Make sure containers for content are visible */
+  main, section, article {
     display: block !important;
     visibility: visible !important;
   }
@@ -65,4 +73,11 @@
     display: none !important;
     visibility: hidden !important;
   }
+
+  /* Ensure content inside the header and footer is displayed */
+  header, footer {
+    display: block !important;
+    visibility: visible !important;
+  }
+
 }
