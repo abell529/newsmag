@@ -1,21 +1,15 @@
 /* General settings for print */
 @media print {
 
-  /* Hide everything by default */
-  * {
-    display: none !important;
-    visibility: hidden !important;
-  }
-
-  /* Display the necessary structural elements */
-  html, body, .outer-wrapper, .content-constrain, .main-content, .secondary-content, 
-  .header-container, .body-container, .article-container, .article-content, 
-  .grid-snippet, main, section, article, .wrapper, .pull-quote {
+  /* Display everything by default */
+  html, body, main, section, article, .outer-wrapper, .content-constrain, 
+  .main-content, .secondary-content, .header-container, .body-container, 
+  .article-container, .article-content, .grid-snippet, .wrapper, .pull-quote {
     display: block !important;
     visibility: visible !important;
   }
 
-  /* Show and resize the logo */
+  /* Display the logo */
   .masthead-logo-container svg, .logo, .vertical-id, .header-container .masthead-logo-container {
     display: block !important;
     visibility: visible !important;
@@ -61,24 +55,19 @@
     visibility: visible !important;
   }
 
-  /* Make sure containers for content are visible */
-  main, section, article {
-    display: block !important;
-    visibility: visible !important;
-  }
-
-  /* Remove unnecessary decorations or navigation */
+  /* Remove navigation, footer, and mobile-specific elements */
   .navigation, .utility-nav, .mobile-menu-icon-container, .search-section, 
   .footer, .slide-outer, .menu-trigger, .mobile-links, 
   link[rel="stylesheet"][href*="fontawesome"], /* Remove fontawesome blocks */
   .fa, /* Hide fontawesome icons */
   .ri, /* Hide remix icons */
-  script, noscript {
+  script, noscript, aside, .sidebar, .mobile-nav, .header-container .publications-group,
+  .site-search, .menu-icon {
     display: none !important;
     visibility: hidden !important;
   }
 
-  /* Ensure content inside the header and footer is displayed */
+  /* Make sure the header and footer sections are displayed */
   header, footer {
     display: block !important;
     visibility: visible !important;
