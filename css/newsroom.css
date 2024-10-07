@@ -1384,7 +1384,7 @@ meter {
     --accent-red-80: #eb5f3380;
     --accent-red-50: #eb5f3350;        
 /* wireframe colors */
-    --lightest-gray: #f7f7f7;
+    --lightest-gray: #f5f5f5;
     --light-gray-40: #cccccc40;
     --light-gray-80: #cccccc80;
     --light-gray: #cccccc;
@@ -1635,6 +1635,10 @@ blockquote.pull-quote.quote p.attrib {
     background: var(--graphite);
 }
 
+.color-block.gold a {
+    text-decoration-color: #000;
+}
+
 .color-block.dark {
     background-color: var(--graphite);
     color: var(--lightest-gray);
@@ -1814,7 +1818,7 @@ a.content-button.secondary:hover {
 /* Full Bleed Container  */
 
 .full-bleed-section {
-    background: var(--wireframe-placeholder);
+    background: var(--lightest-gray);
     width: 100vw;
     margin-left: calc(50% - 50vw);
     overflow: hidden;
