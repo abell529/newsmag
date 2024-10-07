@@ -344,6 +344,7 @@ ul.links-list {
     font-family: 'Kandal';
     font-size: 1.25rem;
     display: block;
+    margin-bottom: 20px;	
   }
 
 .links-list li a:hover:after {
