@@ -2595,7 +2595,6 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
    .profiles.repeating-list.grid .list-item {
 	   position: relative;
 	   overflow: hidden;
-	   max-height: 400px; /* allows grid to stretch in ultra-wide viewports without increasing vertical space */
    }
    
    .profiles.repeating-list.grid .list-item:hover img {
