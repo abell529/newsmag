@@ -275,7 +275,12 @@ blockquote.pull-quote.quote-marks p:not(.attrib):after {
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.25;
+  margin-bottom: 30px;
 }
+
+.callout-content .callout-content-body:last-child {
+  margin-bottom: 0px;
+  }
 
 .callout.left:before {
   content: url(https://www.towson.edu/_dev/_news-mag-redesign/_images/_deco/tt-1.svg);
