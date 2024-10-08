@@ -832,7 +832,7 @@ p.pub-flag.tu-magazine img {
 }
 
 .color-block.gold .q-and-a h3:before, .color-block.gold .q-and-a p:before{
-     color: var(--graphite;)
+     color: var(--graphite);
 }
 
 /* === STYLE GUIDE LAYOUT CLASSES === */
