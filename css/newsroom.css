@@ -1383,8 +1383,9 @@ meter {
     --accent-red: #eb5f33;
     --accent-red-80: #eb5f3380;
     --accent-red-50: #eb5f3350;        
-/* wireframe colors */
-    --lightest-gray: #f5f5f5;
+/* grays */
+    --lightest-gray: #fbfbfb;	   
+    --lighter-gray: #f5f5f5;
     --light-gray-40: #cccccc40;
     --light-gray-80: #cccccc80;
     --light-gray: #cccccc;
@@ -1481,7 +1482,7 @@ strong {
     margin-right: 5px;
     top: 3px;
     position: relative;
-    color: var(--lightest-gray);
+    color: var(--lighter-gray);
     -webkit-text-stroke: 1px black;
     text-shadow: 1px 1px 1px var(--glen-mist);    
 }
@@ -1641,7 +1642,7 @@ blockquote.pull-quote.quote p.attrib {
 
 .color-block.dark {
     background-color: var(--graphite);
-    color: var(--lightest-gray);
+    color: var(--lighter-gray);
 }
 	
 .color-block.dark .intro-text, .color-block.dark blockquote.pull-quote p {
@@ -1697,9 +1698,9 @@ a.content-button:hover {
     background-color: unset;
 }
 
-a.content-button.secondary:hover {
+/* a.content-button.secondary:hover {
     background-color: var(--lightest-gray);
-}
+} */
 
 .content-button::before, .content-button::after {
   border: 0 solid transparent;
@@ -1818,7 +1819,7 @@ a.content-button.secondary:hover {
 /* Full Bleed Container  */
 
 .full-bleed-section {
-    background: var(--lightest-gray);
+    background: var(--lighter-gray);
     width: 100vw;
     margin-left: calc(50% - 50vw);
     overflow: hidden;
@@ -2595,7 +2596,6 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
    .profiles.repeating-list.grid .list-item {
 	   position: relative;
 	   overflow: hidden;
-	   max-height: 400px; /* allows grid to stretch in ultra-wide viewports without increasing vertical space */
    }
    
    .profiles.repeating-list.grid .list-item:hover img {

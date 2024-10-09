@@ -275,7 +275,12 @@ blockquote.pull-quote.quote-marks p:not(.attrib):after {
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.25;
+  margin-bottom: 30px;
 }
+
+.callout-content .callout-content-body:last-child {
+  margin-bottom: 0px;
+  }
 
 .callout.left:before {
   content: url(https://www.towson.edu/_dev/_news-mag-redesign/_images/_deco/tt-1.svg);
@@ -795,6 +800,39 @@ p.pub-flag.tu-magazine img {
     font-size: .875rem;
     line-height: 1rem;
    }    
+}
+
+/* === Q AND A STYLES === */
+
+.q-and-a {
+  position: relative;
+  margin-left: 36px;
+}
+
+.q-and-a h3, .q-and-a p {
+  position: relative;
+}
+
+.q-and-a h3:before, .q-and-a p:before {
+    font-size: 1.75rem;
+    color: var(--light-gray);
+    position: absolute;
+    left: -36px;
+    font-weight: 700;
+}
+
+.q-and-a h3:before{
+    content: 'Q:';
+    top: -3px;
+}
+
+.q-and-a p:before {
+    content: 'A:';
+    top: -1px;
+}
+
+.color-block.gold .q-and-a h3:before, .color-block.gold .q-and-a p:before{
+     color: var(--graphite);
 }
 
 /* === STYLE GUIDE LAYOUT CLASSES === */
