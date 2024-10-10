@@ -399,24 +399,27 @@ ul.links-list li a {
 /* Sidebar Area */
 
 .secondary-content ul.links-list {
-    border: 1px solid #ccc;
-    border-top: 6px solid #ccc;
-    background: #f7f7f7;
+    border: 1px solid var(--light-gray-80);
+    border-top: 6px solid var(--light-gray-80);
+    background: var(--lightest-gray);
     height: max-content;
     padding: 20px;  
 }
 
 .secondary-content .links-list li {
-   border-bottom: 1px solid #ccc;
-   padding-bottom: 20px;   
+   border-bottom: 1px solid var(--light-gray-80);
+   padding: 20px 0;
+   margin-bottom: 0;
+}
+
+.secondary-content .links-list li:first-of-type {
+	padding-top: 0px
 }
 
 .secondary-content .links-list li:last-of-type {
     border-bottom: none;
     padding-bottom: 0;
-    margin-bottom: 10px;
 }
-
 /* === IMAGE CALLOUT === */
 
 .full-bleed-section figure {
