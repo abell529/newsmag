@@ -826,7 +826,7 @@ p.pub-flag.tu-magazine img {
     top: -3px;
 }
 
-.q-and-a p:before {
+.q-and-a h3 + p:before {
     content: 'A:';
     top: -1px;
 }
