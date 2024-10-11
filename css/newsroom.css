@@ -4133,6 +4133,16 @@ form.search_form_mobile {
     background-color: white;
 }
 
+.stripe.glen-mist .hamburger-nav.active i {
+    background-color: white;
+    z-index: 100001;
+    position: relative;
+}
+
+.stripe.glen-mist .hamburger-nav.active:hover i {
+    background: #ffffff;
+}
+
 .stripe.graphite .hamburger-nav.active i {
     background-color: white;
     z-index: 100001;
