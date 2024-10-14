@@ -2318,6 +2318,12 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
     color: #000;
 }
 
+.hero-content p.pub-date {
+    margin-top: 20px;
+    font-size: .9375rem;
+    text-transform: uppercase;
+}
+
 /* Variant - No Image */
 
 .hero.simple {
@@ -2382,13 +2388,13 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
     text-shadow: 1px 1px 1px #000;
  }
 
- .hero.primary .hero-content p.byline-item {
+ .hero.primary .hero-content p.byline-item, .hero.primary .hero-content p.pub-date {
     color: var(--white);
     filter: var(--text-contrast);
     text-shadow: 1px 1px 1px #000; 
 }
 
- .hero.primary .hero-content p.byline-item .icon {
+ .hero.primary .hero-content p.byline-item, .hero.primary .hero-content p.pub-date {
   font-size: inherit;
   color: inherit;
 }
