@@ -838,6 +838,38 @@ p.pub-flag.tu-magazine img {
      color: var(--graphite);
 }
 
+/* === NUMBERED LIST STYLES ===== */
+
+.numbered-list {
+    list-style-type: none;
+    counter-reset: css-counter 0;
+    margin-left: 60px;
+  }
+
+.numbered-list h3 {
+    font-size: 1.375rem;
+    counter-increment: css-counter 1;
+}
+
+.numbered-list h3:before {
+    content: counter(css-counter);
+    position: absolute;
+    margin-left: -60px;
+    font-family: 'poynterosdisp';
+    font-weight: 700;
+    font-size: 1.625rem;
+    color: var(--graphite);
+    background-color: transparent;
+    padding: 0;
+    padding-left: 1px;
+    border-radius: 50%;
+    border: 3px solid var(--gold-solid);
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    line-height: 40px;
+}
+
 /* === STYLE GUIDE LAYOUT CLASSES === */
 
 .sg-section {
