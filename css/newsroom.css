@@ -1821,7 +1821,7 @@ a.content-button:hover {
 .full-bleed-section {
     background: var(--lighter-gray);
     width: 100vw;
-    margin-left: calc(50% - 50vw);
+    margin: 30px calc(50% - 50vw);
     overflow: hidden;
 }
 
@@ -1848,7 +1848,7 @@ a.content-button:hover {
     font-style: italic;
     font-weight: 300;
     font-size: .925rem;
-    color: #3c3c3c;
+    color: var(--graphite);
     margin-top: 10px;
     line-height: 1.25rem;
 }
