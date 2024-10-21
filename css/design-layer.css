@@ -43,7 +43,7 @@
     text-decoration: none;
 }
 
-.news.item h3, .cards .news.item h3 {
+.news.item h3, .item.text-block p a, .cards .news.item h3 {
     background: linear-gradient(#fb0, #fb0);
     background-size: 0 3px;
     background-repeat: no-repeat;
@@ -53,7 +53,7 @@
     display: inline;
 }
 
-.news.item:hover h3 {
+.news.item:hover h3, .item.text-block p a:hover {
     background-size: 100% 3px;
     background-position-x: 0;
     text-decoration: none;
