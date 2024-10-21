@@ -8,8 +8,6 @@
 
 /* ===== INTERACTION ===== */
 
-/* These changes will not work until the XSL changes are in place to wrap all media objects in an <a> element */
-
 /* Full Hover State for News Items */
 
 .news.item a {
