@@ -1498,7 +1498,7 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
     margin: 20px;
   } 
   .hero-content h1 {
-    font-size: 1.75rem;
+    font-size: 2rem;
   }
   .hero.alt {
      grid-template-columns: 1fr;
