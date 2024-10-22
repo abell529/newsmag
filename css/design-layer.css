@@ -135,6 +135,87 @@
     z-index: -1000;
 }
 
+/* === SNIPPETIZED TIGERTOOTH BACKGROUNDS ===== replaces previous version after launch */
+
+.tigertooth-bg {
+  width: 1200px;
+  margin: auto;
+  position: relative;
+  z-index: -1000;
+  --margin-offset: -100px;  
+}
+
+.tigertooth-bg.pattern-1.left:before {
+    content: url(https://www.towson.edu/_resources/images/newsroom-deco/tt-pattern-1.svg);
+    position: absolute;
+    --element-width: 350px;
+    width: var(--element-width);
+    left: calc(var(--margin-offset) - var(--element-width));
+}
+
+.tigertooth-bg.pattern-1.right:after {
+    content: url(https://www.towson.edu/_resources/images/newsroom-deco/tt-pattern-1.svg);
+    position: absolute;
+    --element-width: 350px;
+    width: var(--element-width);
+    right: calc(var(--margin-offset) - var(--element-width));     
+}
+
+.tigertooth-bg.pattern-2.left:before {
+    content: url(https://www.towson.edu/_resources/images/newsroom-deco/tt-pattern-2.svg);
+    position: absolute;
+    --element-width: 540px;
+    width: var(--element-width);   
+    left: calc(var(--margin-offset) - var(--element-width));
+}
+
+.tigertooth-bg.pattern-2.right:after {
+    content: url(https://www.towson.edu/_resources/images/newsroom-deco/tt-pattern-2.svg);
+    position: absolute;
+    --element-width: 540px;
+    width: var(--element-width);
+    right: calc(var(--margin-offset) - var(--element-width));    
+}
+
+.tigertooth-bg.pattern-3.left:before {
+    content: url(https://www.towson.edu/_resources/images/newsroom-deco/tt-pattern-3.svg);
+    position: absolute;
+    --element-width: 260px;
+    width: var(--element-width);
+    left: calc(var(--margin-offset) - var(--element-width));    
+}
+
+.tigertooth-bg.pattern-3.right:after {
+    content: url(https://www.towson.edu/_resources/images/newsroom-deco/tt-pattern-3.svg);
+    position: absolute;
+    --element-width: 260px;
+    width: var(--element-width);    
+    right: calc(var(--margin-offset) - var(--element-width));
+}
+
+.color-block.dark .tigertooth-bg {
+  opacity: .4;
+  z-index: 1;
+}
+
+/* Utilities */
+
+.tigertooth-bg.push {
+    top: 150px;
+  }
+
+.tigertooth-bg .pull {
+  top: -250px;
+  }
+
+.tigertooth-bg.encroach {
+  --margin-offset: 100px;
+}
+
+.tigertooth-bg.mirror:before, .tigertooth-bg.mirror:after {
+    transform: scale(-1, -1);
+}
+
 /* ===== PULL QUOTES ===== */
 /* Pull quote designs to override base styles. Some of these declarations should be merged with base styles.*/
 
