@@ -462,7 +462,7 @@ ul.links-list li a {
 .links-list li a:after {
     position: relative;
     content: '\f061';
-    color: #FB0;
+    color: var(--gold-solid);
     font-weight: 400;
     padding-left: 10px;
     top: 1px;
@@ -498,7 +498,6 @@ ul.links-list li a {
 .secondary-content ul.links-list {
     border: 1px solid var(--light-gray-80);
     border-top: 6px solid var(--light-gray-80);
-    background: var(--lightest-gray);
     height: max-content;
     padding: 20px;  
 }
@@ -553,7 +552,7 @@ ul.links-list li a {
     content: '';
     width: calc(100% + 6px);
     height: 22px;
-    background-color: #FB0;
+    background-color: var(--gold-solid);
     position: absolute;
     left: -3px;
     bottom: 0px;
