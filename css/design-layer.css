@@ -3,7 +3,8 @@
 /* Kills underlined links in nav and news objects */
 
 .header-container a, .grid-snippet a {
-  text-decoration: none;
+    text-decoration: none;
+    border-bottom: 0;
 }
 
 /* ===== INTERACTION ===== */
