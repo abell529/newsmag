@@ -438,8 +438,7 @@ img {
 /* Base Typography */
 
 a {
-    text-decoration: underline 2px var(--gold-solid);
-    text-underline-position: under;    
+    border-bottom: 2px solid var(--gold-solid); 
 }
 
 h1 {
@@ -512,7 +511,7 @@ strong {
     background-size: 200% 0px;
     background-position: 200% 100%;
     background-repeat: no-repeat;
-    padding: 3px;
+    padding: 3px 3px 0 3px;
     margin: -3px;
     transition: background-size .3s, background-position .3s .3s;
 }
@@ -655,6 +654,10 @@ blockquote.pull-quote.quote p.attrib {
 .color-block.dark {
     background-color: var(--graphite);
     color: var(--lighter-gray);
+}
+
+.color-block.dark a:hover {
+    color: var(--graphite);
 }
 	
 .color-block.dark .intro-text, .color-block.dark blockquote.pull-quote p {
@@ -2111,7 +2114,7 @@ UPDATE THIS CLASS FOR THE PAGE
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: .15rem;
-    color: var(-dark-gray);
+    color: var(--dark-gray);
 }
 
 p.tag-primary + h3 {
@@ -3668,15 +3671,17 @@ form.search_form_mobile {
 }
 
 .footer-link {
-    color: #ffbb00; 
+    color: #fb0; 
     text-decoration: none;
     margin-right: 20px;
+    border-bottom: none;	
 }
 
 .footer-copy .footer-link {
     color: var(--white);
     text-decoration: none;
     margin-right: 5px;
+    border-bottom: none;	
 }
 
 .footer-copy .footer-link:hover {
