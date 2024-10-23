@@ -2110,7 +2110,7 @@ UPDATE THIS CLASS FOR THE PAGE
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: .15rem;
-    color: var(--mid-gray);
+    color: var(-dark-gray);
 }
 
 p.tag-primary + h3 {
