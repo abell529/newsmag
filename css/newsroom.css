@@ -655,6 +655,10 @@ blockquote.pull-quote.quote p.attrib {
     background-color: var(--graphite);
     color: var(--lighter-gray);
 }
+
+.color-block.dark a:hover {
+    color: var(--graphite);
+}
 	
 .color-block.dark .intro-text, .color-block.dark blockquote.pull-quote p {
     color: inherit;
