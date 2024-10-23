@@ -139,6 +139,7 @@
 
 .tigertooth-bg {
   width: 1200px;
+  height: 0;	
   margin: auto;
   position: relative;
   z-index: -1000;
@@ -380,7 +381,7 @@ blockquote.pull-quote.quote-marks p:not(.attrib):after {
   }
 
 .callout.left:before {
-  content: url(https:/www.towson.edu/_resources/images/newsroom-deco/tt-accent-1.svg);
+  content: url(https://www.towson.edu/_resources/images/newsroom-deco/tt-accent-1.svg);
   width: 130px;
   position: absolute;
   top: -37px;
@@ -462,7 +463,7 @@ ul.links-list li a {
 .links-list li a:after {
     position: relative;
     content: '\f061';
-    color: #FB0;
+    color: var(--gold-solid);
     font-weight: 400;
     padding-left: 10px;
     top: 1px;
@@ -498,7 +499,6 @@ ul.links-list li a {
 .secondary-content ul.links-list {
     border: 1px solid var(--light-gray-80);
     border-top: 6px solid var(--light-gray-80);
-    background: var(--lightest-gray);
     height: max-content;
     padding: 20px;  
 }
@@ -553,7 +553,7 @@ ul.links-list li a {
     content: '';
     width: calc(100% + 6px);
     height: 22px;
-    background-color: #FB0;
+    background-color: var(--gold-solid);
     position: absolute;
     left: -3px;
     bottom: 0px;
