@@ -380,7 +380,7 @@ blockquote.pull-quote.quote-marks p:not(.attrib):after {
   }
 
 .callout.left:before {
-  content: url(https:/www.towson.edu/_resources/images/newsroom-deco/tt-accent-1.svg);
+  content: url(https://www.towson.edu/_resources/images/newsroom-deco/tt-accent-1.svg);
   width: 130px;
   position: absolute;
   top: -37px;
