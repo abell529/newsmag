@@ -139,6 +139,7 @@
 
 .tigertooth-bg {
   width: 1200px;
+  height: 0;	
   margin: auto;
   position: relative;
   z-index: -1000;
