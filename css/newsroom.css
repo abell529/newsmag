@@ -3795,6 +3795,11 @@ form.search_form_mobile {
       margin-bottom: 15px;
   }
 
+  form select {
+    height: 42px;
+    font-size: 1rem;
+  }
+
 
 
 /* ====================================================
