@@ -698,7 +698,7 @@ svg {
   transition: color 0.25s 0.25s;
   position: relative;
   background: var(--gold-solid);
-  border-bottom: o;
+  border-bottom: 0;
 }
 
 .body-container p:has(a.content-button) {  /* kills double-margin when a button is accidentally wrapped in a p */
