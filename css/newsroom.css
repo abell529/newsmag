@@ -3798,6 +3798,7 @@ form.search_form_mobile {
   form select {
     height: 42px;
     font-size: 1rem;
+    margin-top: 5px;
   }
 
 
