@@ -3671,15 +3671,17 @@ form.search_form_mobile {
 }
 
 .footer-link {
-    color: #ffbb00; 
+    color: #fb0; 
     text-decoration: none;
     margin-right: 20px;
+    border-bottom: none;	
 }
 
 .footer-copy .footer-link {
     color: var(--white);
     text-decoration: none;
     margin-right: 5px;
+    border-bottom: none;	
 }
 
 .footer-copy .footer-link:hover {
