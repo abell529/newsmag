@@ -491,7 +491,7 @@ strong {
     font-weight: 700;
     float: left;
     margin-right: 5px;
-    top: 3px;
+    top: 2px;
     position: relative;
     color: var(--lighter-gray);
     -webkit-text-stroke: 1px black;
