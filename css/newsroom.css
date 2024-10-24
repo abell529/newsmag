@@ -2928,7 +2928,6 @@ background-size: 8.94px 6.03px;
 	height: 13px;
 	padding: 10px 16px;
 	width: 60px;
-	text-indent: -99em;
 	transition: 0.3s ease all;
 	top: 0px;
     position: relative;
@@ -3755,6 +3754,10 @@ form.search_form_mobile {
       margin-bottom: 10px; /* Optional: Adds space between the links */
     }
   }
+
+  a#ou_directedit {
+    border-bottom: 0;
+}
 
 /* ====================================================
    ====================================================
