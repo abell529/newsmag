@@ -2924,7 +2924,7 @@ background-size: 8.94px 6.03px;
 	font-style: normal;
 	background: black;
 	border: 2px solid white;
-	color: white;
+	color: #000000;
 	height: 13px;
 	padding: 10px 16px;
 	width: 60px;
@@ -2968,11 +2968,12 @@ background-size: 8.94px 6.03px;
 
 .stripe.graphite .nav-container .search-section.active input {
     border: 1px solid var(--white);
+    color: #ffffff;
 }
 
 .stripe.graphite .nav-container .search-section button {
     color: var(--white);
-    border-left:var(--white) solid 1px;
+    border: var(--white) solid 1px;
 }
 
 .stripe.graphite .nav-container .search-section i {
