@@ -2551,7 +2551,8 @@ p.tag-primary + h3 {
 }
 
 .heading-constrain.nav-flex-wrap a {
-    display: contents;
+    display: block;
+    z-index: 100001;
 }
 
 .nav-container {
