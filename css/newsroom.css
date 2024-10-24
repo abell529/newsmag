@@ -1347,6 +1347,20 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
     text-transform: uppercase;
 }
 
+.hero-content p.hero-label {
+    font-size: 1.125rem;
+    color: var(--gold-solid);
+    background: var(--graphite);
+    padding: 5px 8px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: .15rem;
+    margin-bottom: 20px;
+    display: inline-block;
+    width: fit-content;    
+  }
+
+
 /* Variant - No Image */
 
 .hero.simple {
@@ -1400,11 +1414,23 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
 }
 
  .hero.primary .hero-content h1 {
-    border-left: 2px solid var(--gold-solid);
     padding-left: 20px;
     filter: var(--text-contrast);
     text-shadow: 1px 1px 1px #000;	 
 }
+
+.hero.primary .hero-content h1:before {
+    border-left: 2px solid #fb0;
+    content: '';
+    height: 100%;
+    left: 0px;
+    position: absolute;
+    bottom: 0;
+  }
+
+.hero.primary .hero-content:has(.hero-label) h1:before {
+    height: calc(100% + 50px);
+  }
 
  .hero.primary .hero-content p.subhead {
     filter: var(--text-contrast);
@@ -1420,6 +1446,12 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
  .hero.primary .hero-content p.byline-item, .hero.primary .hero-content p.pub-date {
   font-size: inherit;
   color: inherit;
+}
+
+.hero.primary p.hero-label {
+    text-shadow: none;
+    background-color: #1a1a1a;
+    margin-left: 20px;  
 }
 
 /* Variant - SQ Image */
@@ -1489,6 +1521,11 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
         font-size: 1.25rem;
         line-height: 1.75rem;
     }
+    .hero-content p.hero-label {
+     font-size: .9375rem;
+     font-weight: 500;
+     padding: 3px 5px;
+   }	
     .hero.primary .hero-image .gradient  {
         background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, .85) 100%);
 	opacity: unset; /* can be removed if opacity is eliminated at a higher specificity later */
@@ -2763,6 +2800,7 @@ background-size: 8.94px 6.03px;
 
 .mobile-menu-icon-container {
         margin-top: 30px;
+	margin-right: 10px;
 }
 
 .mobile-menu-icon-container .icon {
