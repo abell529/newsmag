@@ -2572,9 +2572,13 @@ p.tag-primary + h3 {
 
 @media (max-width: 499px) {
 	.heading-constrain.nav-flex-wrap a {
-		display: block;
+		display: contents;
 		z-index: 100001;
 	}
+}
+
+.mobile-nav {
+    display: block !important;
 }
 
 .nav-container {
