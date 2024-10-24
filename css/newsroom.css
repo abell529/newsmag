@@ -2551,8 +2551,15 @@ p.tag-primary + h3 {
 }
 
 .heading-constrain.nav-flex-wrap a {
-    display: block;
-    z-index: 100001;
+	display: contents;
+	z-index: 100001;
+}
+
+@media (max-width: 499px) {
+	.heading-constrain.nav-flex-wrap a {
+		display: block;
+		z-index: 100001;
+	}
 }
 
 .nav-container {
