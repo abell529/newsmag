@@ -1448,9 +1448,10 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
   color: inherit;
 }
 
-.hero.primary p.hero-label {
+.hero.primary p.hero-label span {
     text-shadow: none;
-    margin-left: 20px;  
+    margin-left: 20px;
+    background-color: #1a1a1a;
 }
 
 /* Variant - SQ Image */
@@ -3768,6 +3769,9 @@ form.search_form_mobile {
     text-align: right;
 }
 
+a#ou_directedit {
+    border-bottom: 0;
+}
 
 /* Responsive layout for mobile */
 @media (max-width: 768px) {
