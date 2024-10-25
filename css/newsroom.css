@@ -1348,7 +1348,7 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
 }
 
 .hero-content p.hero-label span {
-    font-size: 1.125rem;
+    font-size: 1.0625rem;
     color: var(--gold-solid);
     background: var(--graphite);
     padding: 5px 8px;
@@ -1505,11 +1505,13 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
     .hero.primary .hero-content {
 	margin: 0 20px;
     }
+    .hero.primary .hero-content:has(.hero-label) h1:before {
+        height: calc(100% + 46px);	
+    }	
     .hero.simple .hero-content {
         margin: 0;
         max-width: 700px;
-    }	
-}
+    }
 
 @media only screen and (max-width: 720px) {
     .hero.primary {
