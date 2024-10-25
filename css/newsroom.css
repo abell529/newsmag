@@ -2545,6 +2545,9 @@ p.tag-primary + h3 {
     padding: 30px 20px 20px;
     display: flex;
     max-width: 100%;
+    position: relative;
+    top: -2px;
+    left: -2px;
 }
 
 
@@ -2773,7 +2776,7 @@ background-size: 8.94px 6.03px;
         height: 80px;
         background: linear-gradient(213.4deg,transparent 20px,#000 20px); 
     }
-
+	
     p.vertical-name {
         width: 120px;
         font-size: 1.125rem;
@@ -2783,6 +2786,8 @@ background-size: 8.94px 6.03px;
 
     .masthead-logo-container svg {
         padding: 16px 20px 20px 12px;
+	top: 0;
+        left: 2px;
     }
 
     .global-header:after {
@@ -2850,11 +2855,12 @@ background-size: 8.94px 6.03px;
     }    
 
     .masthead-logo-container svg {
-        padding: 12px 15px 15px 8px;
+        padding: 12px;
+	left: -2px
     }
 
     .alt .masthead-logo-container svg {
-        padding: 20px 15px 5px 5px;
+        padding: 15px 11px 0 0;
     }
 
     .mobile-menu-icon-container {
