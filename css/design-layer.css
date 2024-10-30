@@ -279,6 +279,13 @@ blockquote.pull-quote.quote-marks p:not(.attrib):after {
     z-index: -1;
 }
 
+@media screen and (max-width: 500px) {
+.pull-quote p.attrib span:before {
+    font-size: 1.125rem;
+    top: 0;
+    }
+}
+
 /* === REPEATING LIST PROFILES - Instagram Icon */
 
 .repeating-list.profiles span.icon-link {
