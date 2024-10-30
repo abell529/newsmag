@@ -279,6 +279,13 @@ blockquote.pull-quote.quote-marks p:not(.attrib):after {
     z-index: -1;
 }
 
+@media screen and (max-width: 500px) {
+.pull-quote p.attrib span:before {
+    font-size: 1.125rem;
+    top: 0;
+    }
+}
+
 /* === REPEATING LIST PROFILES - Instagram Icon */
 
 .repeating-list.profiles span.icon-link {
@@ -905,39 +912,6 @@ p.pub-flag.tu-magazine img {
 }
 
 /* === Q AND A STYLES === */
-
-.q-and-a {
-  position: relative;
-  margin-left: 36px;
-}
-
-.q-and-a h3, .q-and-a p {
-  position: relative;
-}
-
-.q-and-a h3:before, .q-and-a p:before {
-    font-size: 1.75rem;
-    color: var(--light-gray);
-    position: absolute;
-    left: -36px;
-    font-weight: 700;
-}
-
-.q-and-a h3:before{
-    content: 'Q:';
-    top: -3px;
-}
-
-.q-and-a h3 + p:before {
-    content: 'A:';
-    top: -1px;
-}
-
-.color-block.gold .q-and-a h3:before, .color-block.gold .q-and-a p:before{
-     color: var(--graphite);
-}
-
-/* Rev. 10/29 -- remove after snippet is propogated */
 
 .q-a-group {
   position: relative;
