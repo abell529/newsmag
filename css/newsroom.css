@@ -1042,6 +1042,10 @@ a.content-button:hover {
     aspect-ratio: 1.6;
 }
 
+.in-content-image.round figcaption {
+    text-align: center;
+}
+
 /* === UTILITIES  =================================== */
 
 .in-content-image.reduce-200 {
