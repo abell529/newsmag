@@ -1351,10 +1351,15 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
     max-width: 350px;
     color: var(--dark-gray);
     display: inline-block;
+    margin-left: 26px;
+    position: relative;	
 }
 
 .hero-content p.byline-item .icon {
     margin-right: 10px;
+    position: absolute;
+    left: -26px;
+    top: 1px;	
 }
 
 .hero-content p.pub-date {
