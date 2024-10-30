@@ -465,13 +465,13 @@ strong {
     font-weight: 600;
 }
 
-.body-section p.tag { /* I don't love declaring the body section class here, but I'm trying to overcome specificty issues with other partial style sheets */
+.body-section p.tag {
     font-size: .875rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-top: 0;
-    color: var(--mid-gray);
+    color: var(--dark-gray);
 }
 
 .body-section p.tag.ribbon, .body-section .repeating-list.ribbons p.tag {
@@ -672,6 +672,10 @@ blockquote.pull-quote.quote p.attrib {
 	
 .color-block.dark .intro-text, .color-block.dark blockquote.pull-quote p {
     color: inherit;
+}
+
+.color-block.dark p.tag {
+    color: var(--lighter-gray);
 }
 		
 /* ===== HEADER =================================== */
