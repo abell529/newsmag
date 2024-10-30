@@ -574,10 +574,10 @@ blockquote.pull-quote.right {
 /* Pull Quote with Attribution */
 
 blockquote.pull-quote.quote p.attrib {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 1rem;
     line-height: 1.25rem; 
-    margin-left: 20%;
+    margin-left: 15%;
     position: relative;
 }
 
