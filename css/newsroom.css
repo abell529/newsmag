@@ -581,6 +581,14 @@ blockquote.pull-quote.quote p.attrib {
     position: relative;
 }
 
+@media screen and (max-width: 720px) {
+	blockquote.pull-quote.quote p.attrib {
+	    font-size: .925rem;
+	    line-height: 1.1875rem; 
+	    margin-left: 20px; 
+        }
+}
+
 /* ===== STYLE VARIANTS =================================== */
 
 
