@@ -2991,7 +2991,7 @@ background-size: 8.94px 6.03px;
 	float: right;
     z-index: 10;
 }
-.header-container.alt .nav-container .search-section i {
+.alt .nav-container .search-section i {
 	color: #eeeeee;
 }
 .nav-container .search-section input {
@@ -3057,12 +3057,12 @@ background-size: 8.94px 6.03px;
 }
 
 
-.header-container.alt .nav-container .search-section label {
+.alt .nav-container .search-section label {
 	color:#eeeeee;
 }
 
 
-.header-container.alt .nav-container .search-section label {
+.alt .nav-container .search-section label {
 	color:#eeeeee;
 }
 
@@ -3123,7 +3123,7 @@ background-size: 8.94px 6.03px;
     border: #000000 solid 1px;
 }
 
-.header-container.alt .nav-container .search-section button {
+.alt .nav-container .search-section button {
 	color: #eeeeee;
 	border: #eeeeee solid 1px;
 }
@@ -3533,7 +3533,7 @@ form.search_form_mobile {
 	background-color: black;
 }
 
-.header-container.alt .hamburger-nav i {
+.alt .hamburger-nav i {
 	background-color: var(--white);
 }
 
