@@ -3006,6 +3006,10 @@ background-size: 8.94px 6.03px;
 	outline: none;
 }
 
+.alt .nav-container .search-section input {
+	color: #eeeeee;
+}
+
 .nav-container .search-section.active input {
 	border: 1px solid black;
 	right: -28px;
