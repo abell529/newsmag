@@ -1501,11 +1501,15 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
     overflow: auto;
     }
 
-	/* AB change from -50 to -10 for Accessibility */
 .hero.alt .hero-content {
-    margin-left: -10px;
+    margin-left: 0;
     padding: 0;
     max-width: calc( 100% + 50px);    
+}
+
+.hero.alt .byline-container {
+    display: flex;	
+    justify-content: start;
 }
 
 /* ===== HERO MEDIA QUERIES  =================================== */
