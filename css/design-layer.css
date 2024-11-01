@@ -976,6 +976,60 @@ p.pub-flag.tu-magazine img {
     line-height: 40px;
 }
 
+ /* === TIMELINE ====== */	
+	
+.timeline  {
+    display: grid;
+    position: relative;
+    grid-template-columns: 140px auto;
+   }
+
+  .timeline:before {
+    content: '';
+    border-left: 2px dotted var(--gold-solid);
+    height: 100%;
+    position: absolute;
+    left: 140px;
+    }
+
+.timeline-item {
+    display: contents;
+    }
+
+.date p {
+    padding: 8px;
+    font-family: PoynterOSDisp;
+    font-size: 3rem;
+    font-weight: 700;
+    background: var(--gold-solid);
+    display: inline-block;
+    float: right;
+    margin-right: 30px;
+   }
+
+  .entry {
+    padding-left: 30px;
+   }
+
+@media only screen and (max-width: 500px) {
+    .date p {
+          font-size: 1.75rem;
+          margin-right: 10px;	    
+     }
+    .timeline  {
+          grid-template-columns: 80px auto;
+     }
+     .timeline:before {
+         left: 85px;
+     }
+      .entry {
+         padding-left: 20px;
+     }
+}    
+
+
+
+
 /* === STYLE GUIDE LAYOUT CLASSES === */
 
 .sg-section {
