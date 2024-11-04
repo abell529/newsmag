@@ -493,7 +493,7 @@ strong {
     font-weight: 700;
     float: left;
     margin-right: 5px;
-    top: 3px;
+    top: 1px;
     position: relative;
     color: var(--lighter-gray);
     -webkit-text-stroke: 1px black;
@@ -1146,6 +1146,9 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
         font-size: 1.125rem;
         line-height: 1.75rem;
     }
+    .drop-cap {
+        top: -1px;
+    }	
 }
 
 
