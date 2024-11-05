@@ -1511,7 +1511,8 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
 }
 
 .hero.alt .byline-container {
-    display: flex;	
+    display: flex;
+    flex-direction: column;
     justify-content: start;
 }
 
