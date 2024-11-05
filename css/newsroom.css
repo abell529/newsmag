@@ -3922,6 +3922,19 @@ a#ou_directedit {
     margin-top: 5px;
   }
 
+form input.primaryAction {
+	background: var(--gold-solid);
+    	color: #000000;
+}
+
+form input.primaryAction[type="submit" i]:disabled {
+	background: var(--lighter-gray);
+    	color: var(--dark-gray);
+}
+
+form select {
+	width: 100%;
+}
 
 
 /* ====================================================
