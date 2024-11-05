@@ -482,6 +482,16 @@ ul.links-list li a {
     transition: padding-left 0.1s ease-in-out 0s, color 0.2s ease-in-out 0s;
 }
 
+/* Additional Spacing for Hub Page variant of links list */
+
+.grid-snippet ul.links-list {
+    margin: 20px 0;
+ }
+
+.grid-snippet ul.links-list li {
+    margin-bottom: 20px;
+}		
+
 /* Main Content Area */
 
 .main-content .links-list-container {
