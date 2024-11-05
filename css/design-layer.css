@@ -1027,9 +1027,6 @@ p.pub-flag.tu-magazine img {
      }
 }    
 
-
-
-
 /* === STYLE GUIDE LAYOUT CLASSES === */
 
 .sg-section {
@@ -1061,3 +1058,24 @@ p.pub-flag.tu-magazine img {
   left: -3px;
   position: relative;
 } 
+
+/* TEMP SIDEBAR CLASSES -- REFACTOR AND REMOVE AFTER SNIPPET CHANGES ARE COMPLETE */
+
+.secondary-content .sidebar {
+   background: none;
+}
+
+.secondary-content .sidebar img {
+   margin-bottom: 20px;
+}
+
+.secondary-content .sidebar h2{
+   font-size: 1.625rem;
+}
+	
+@media screen and (min-width: 721px) {
+	.secondary-content .sidebar {
+	   border: none;
+	   border-left: 2px solid #FB0;
+    }
+}
