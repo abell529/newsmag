@@ -872,7 +872,7 @@ a.content-button:hover {
 }
 
 .full-bleed-section > .content-constrain {  /* Allows margin-contrained content in the full-bleed region. This allows a margin-constrained sub-container within full bleed. The primary use case is to set off margin-constrained content in a full-bleed color block. */
-    width: calc(100% - 60px);
+    width: calc(100% - 40px);
     margin: 30px auto;
     max-width: 700px;
 }
@@ -936,11 +936,19 @@ a.content-button:hover {
     text-align: left;
 }
 
+@media screen and (max-width: 720px) {
+   .full-bleed.content-grid {
+      width: calc(100% + 40px);
+      margin-left: -20px;
+      margin-right: -20px;
+      }
+}
+
 @media screen and (max-width: 500px) {
-	.content-grid {
-		gap: 10px;
-		margin: 10px 0;
-	}
+     .content-grid {
+          gap: 10px;
+          margin: 10px 0;
+     }
 }
 
 /* CSS config to change from single column to 2-column -- requires a "main-content" and "secondary-content" wrapper */
