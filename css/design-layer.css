@@ -71,7 +71,7 @@
     margin-bottom: 20px;
 }
 
-.lead .news.item .copy p {
+.lead .news.item .copy p, .split .news.item .copy p {
   margin-top: 20px;
   margin-bottom: 20px;
 }
