@@ -855,7 +855,7 @@ a.content-button:hover {
 .full-bleed-section {
     background: var(--lighter-gray);
     width: 100vw;
-    margin: 30px calc(50% - 50vw);
+    margin: 0 calc(50% - 50vw);
     overflow: hidden;
 }
 
