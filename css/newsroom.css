@@ -797,7 +797,7 @@ a.content-button:hover {
 /* === BODY CONTENT CONTAINERS ======== */
 
 .body-container {
-    margin: 40px 20px;
+    margin: 40px 20px 0;
 }
 
 .body-section {
@@ -997,7 +997,6 @@ a.content-button:hover {
 
 .sidebar {
     background: var(--light-gray-40);
-    min-height: 400px;
     margin: 40px 0;
 }
 
