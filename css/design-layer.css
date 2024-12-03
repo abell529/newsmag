@@ -761,7 +761,6 @@ p.pub-flag.tu-magazine img {
   }
 }
 
-
 /* === INFOGRAPHIC  === */
 
 .infographic {
@@ -1040,6 +1039,28 @@ p.pub-flag.tu-magazine img {
      }
 }    
 
+
+/* === FULL-BLEED BACKGROUND OVERRIDES FOR TWO-COLUMN LAYOUTS === */
+
+.two-col .main-content .full-bleed-section {
+	position: relative;
+	overflow: visible;
+	}
+
+.two-col .main-content .full-bleed-section .content-constrain {
+	overflow: hidden;
+	}
+
+.two-col .main-content .full-bleed-section:before {
+    position: absolute;
+    width: 300vw;
+    height: 100%;
+    content: '';
+    background: inherit;
+    left: -100%;
+    z-index: -100;
+}
+	
 /* === STYLE GUIDE LAYOUT CLASSES === */
 
 .sg-section {
