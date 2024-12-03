@@ -36,6 +36,7 @@
 .news.item figure {
     width: 100%;
     overflow: hidden;
+    margin-bottom: 20px;	
 }
 
 /* Gold link hover state for news items */
@@ -63,17 +64,17 @@
 /* these classes required to overcome lack of padding due to h3 change to display:inline */
 
 .news.item .news-item-head {
-    margin-top: 20px;
+    margin-top: 12px;
 }
 
 .grid-snippet.image-headline-only.cards .news.item .news-item-head {
     margin-top: 0px; 
-    margin-bottom: 20px;
+    margin-bottom: 12px;
 }
 
 .lead .news.item .copy p, .split .news.item .copy p {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 12px;
+  margin-bottom: 12px;
 }
 
 /* ===== TIGERTOOTH DECO PATTERNS ===== */
@@ -906,14 +907,12 @@ p.pub-flag.tu-magazine img {
 
 .news.item .news-item-head {
     margin-top: 15px;
-   } 
+    } 
 
 .item.news p {
-   font-size: 1rem;
+    font-size: 1rem;
     line-height: 1.375rem;
-    margin-top: 15px;
-    margin-bottom: 15px;
-   }    
+    }    
 
 .item.news p.tag-primary {
     font-size: .875rem;
