@@ -2107,6 +2107,7 @@ UPDATE THIS CLASS FOR THE PAGE
 .item.news p {
     font-size: 1.0625rem;
     line-height: 1.625rem;
+    margin: 12px 0;	
 }
 
 .grid-snippet h2, .item.news h3 {
