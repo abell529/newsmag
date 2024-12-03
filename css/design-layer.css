@@ -39,6 +39,10 @@
     margin-bottom: 20px;	
 }
 
+.grid-snippet.split .news.item figure { /* sets margin back to zero for the split layout variant */
+	margin-bottom: 0;
+}
+
 /* Gold link hover state for news items */
 
 .news.item a:hover h3 {
