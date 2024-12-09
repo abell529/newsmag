@@ -2107,6 +2107,7 @@ UPDATE THIS CLASS FOR THE PAGE
 .item.news p {
     font-size: 1.0625rem;
     line-height: 1.625rem;
+    margin: 12px 0;	
 }
 
 .grid-snippet h2, .item.news h3 {
@@ -2505,7 +2506,7 @@ p.tag-primary + h3 {
 
 .utility-nav .tu-home-link {
     font-weight: 700;
-    text-transform: capitalize;
+    text-transform: uppercase;
     padding-right: 20px;
 }
 
@@ -2540,7 +2541,6 @@ p.tag-primary + h3 {
     animation: slideInFromRight 500ms forwards;
 	animation-name: ;
 } */
-
 
 .slide-outer {
 	overflow-x:hidden;
@@ -2587,7 +2587,6 @@ p.tag-primary + h3 {
     top: -2px;
     left: -2px;
 }
-
 
 .masthead-logo-container {
     width: 160px;

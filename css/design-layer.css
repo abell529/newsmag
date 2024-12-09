@@ -36,6 +36,11 @@
 .news.item figure {
     width: 100%;
     overflow: hidden;
+    margin-bottom: 20px;	
+}
+
+.grid-snippet.split .news.item figure { /* sets margin back to zero for the split layout variant */
+	margin-bottom: 0;
 }
 
 /* Gold link hover state for news items */
@@ -63,17 +68,17 @@
 /* these classes required to overcome lack of padding due to h3 change to display:inline */
 
 .news.item .news-item-head {
-    margin-top: 20px;
+    margin-top: 12px;
 }
 
 .grid-snippet.image-headline-only.cards .news.item .news-item-head {
     margin-top: 0px; 
-    margin-bottom: 20px;
+    margin-bottom: 12px;
 }
 
 .lead .news.item .copy p, .split .news.item .copy p {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 12px;
+  margin-bottom: 12px;
 }
 
 /* ===== TIGERTOOTH DECO PATTERNS ===== */
@@ -756,7 +761,6 @@ p.pub-flag.tu-magazine img {
   }
 }
 
-
 /* === INFOGRAPHIC  === */
 
 .infographic {
@@ -906,14 +910,12 @@ p.pub-flag.tu-magazine img {
 
 .news.item .news-item-head {
     margin-top: 15px;
-   } 
+    } 
 
 .item.news p {
-   font-size: 1rem;
+    font-size: 1rem;
     line-height: 1.375rem;
-    margin-top: 15px;
-    margin-bottom: 15px;
-   }    
+    }    
 
 .item.news p.tag-primary {
     font-size: .875rem;
@@ -1037,6 +1039,28 @@ p.pub-flag.tu-magazine img {
      }
 }    
 
+
+/* === FULL-BLEED BACKGROUND OVERRIDES FOR TWO-COLUMN LAYOUTS === */
+
+.two-col .main-content .full-bleed-section {
+	position: relative;
+	overflow: visible;
+	}
+
+.two-col .main-content .full-bleed-section .content-constrain {
+	overflow: hidden;
+	}
+
+.two-col .main-content .full-bleed-section:before {
+    position: absolute;
+    width: 300vw;
+    height: 100%;
+    content: '';
+    background: inherit;
+    left: -100%;
+    z-index: -100;
+}
+	
 /* === STYLE GUIDE LAYOUT CLASSES === */
 
 .sg-section {
