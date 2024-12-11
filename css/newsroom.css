@@ -1775,7 +1775,7 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
 	   display: none;
    }
    
-   .repeating-list.no-image .repeating-list-body {
+   .repeating-list.no-image:not(.cards) .repeating-list-body {
 	   padding: 0px;
    }
    
@@ -2505,7 +2505,7 @@ p.tag-primary + h3 {
 }
 
 .utility-nav .tu-home-link {
-    font-weight: 700;
+    font-weight: 600;
     text-transform: uppercase;
     padding-right: 20px;
 }
