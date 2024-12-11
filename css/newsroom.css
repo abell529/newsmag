@@ -1775,7 +1775,7 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
 	   display: none;
    }
    
-   .repeating-list.no-image .repeating-list-body {
+   .repeating-list.no-image:not(.cards) .repeating-list-body {
 	   padding: 0px;
    }
    
