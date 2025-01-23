@@ -800,6 +800,10 @@ a.content-button:hover {
     margin: 40px 20px 0;
 }
 
+.main-content, .secondary-content {
+    container-type: inline-size;  /* defines body area content columns as queriable containers */
+}
+
 .body-section {
     width: 100%;
     max-width: 700px;
@@ -951,7 +955,7 @@ a.content-button:hover {
      }
 }
 
-/* CSS config to change from single column to 2-column -- requires a "main-content" and "secondary-content" wrapper */
+/* CSS config to change from single column to 2-column */
 
 .body-container.two-col {
     display: grid;
