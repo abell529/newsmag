@@ -1023,22 +1023,22 @@ p.pub-flag.tu-magazine img {
     padding-left: 30px;
    }
 
-@media only screen and (max-width: 500px) {
+/* Container query for containers smaller than 500px wide */
+@container (max-width: 500px) {
     .date p {
-          font-size: 1.75rem;
-          margin-right: 10px;	    
-     }
-    .timeline  {
-          grid-template-columns: 80px auto;
-     }
-     .timeline:before {
-         left: 85px;
-     }
-      .entry {
-         padding-left: 20px;
-     }
-}    
-
+        font-size: 1.75rem;
+        margin-right: 10px;
+    }
+    .timeline {
+        grid-template-columns: 80px auto;
+    }
+    .timeline:before {
+        left: 85px;
+    }
+    .entry {
+        padding-left: 20px;
+    }
+}
 
 /* === FULL-BLEED BACKGROUND OVERRIDES FOR TWO-COLUMN LAYOUTS === */
 
