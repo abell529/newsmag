@@ -1023,7 +1023,7 @@ p.pub-flag.tu-magazine img {
 /* Container query for containers smaller than 500px wide */
 @container (max-width: 500px) {
     .date p {
-        font-size: 1.8275rem;
+        font-size: 1.8125rem;
     }
     .timeline {
         grid-template-columns: 80px auto;
