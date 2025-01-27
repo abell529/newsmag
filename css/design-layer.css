@@ -1017,7 +1017,6 @@ p.pub-flag.tu-magazine img {
     background: var(--gold-solid);
     display: inline-block;
     float: right;
-    margin-right: 0px;
    }
 
 /* Container query for containers smaller than 500px wide */
