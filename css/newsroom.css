@@ -3964,3 +3964,12 @@ form select {
 	z-index: 1;
 	position: relative;
 }
+
+q {
+    quotes: none; /* Removes browser-added quotes */
+}
+
+q::before,
+q::after {
+    content: ''; /* Hides the opening and closing quotation marks */
+}
