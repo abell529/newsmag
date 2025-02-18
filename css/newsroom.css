@@ -524,6 +524,12 @@ strong {
     background-position: 100% 100%;
 }
 
+.related-content .tag-list p a {
+    padding: 0;
+    margin: 0 1px;
+    border-bottom-width: 1px;
+}
+
 /* Decorative Section Breaks */
 
 hr {
