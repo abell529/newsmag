@@ -255,17 +255,19 @@
 
    =========================================== */
    
-.accent{
+.accent {
    pointer-events: none;
 }
-.container-nav {
+
+/* .container-nav {
 	position: relative;
 	max-width: 1200px;
 	margin: 0 auto;
 	display: block;
 	padding: 0 10px;
 	box-sizing: border-box;
-}
+} */
+
 .container-nav.large {
 	max-width: 1363px;
 }
@@ -438,8 +440,7 @@ img {
 /* Base Typography */
 
 a {
-    text-decoration: underline 2px var(--gold-solid);
-    text-underline-position: under;    
+    border-bottom: 2px solid var(--gold-solid); 
 }
 
 h1 {
@@ -464,13 +465,13 @@ strong {
     font-weight: 600;
 }
 
-.body-section p.tag { /* I don't love declaring the body section class here, but I'm trying to overcome specificty issues with other partial style sheets */
+.body-section p.tag {
     font-size: .875rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-top: 0;
-    color: var(--mid-gray);
+    color: var(--dark-gray);
 }
 
 .body-section p.tag.ribbon, .body-section .repeating-list.ribbons p.tag {
@@ -492,7 +493,7 @@ strong {
     font-weight: 700;
     float: left;
     margin-right: 5px;
-    top: 3px;
+    top: 1px;
     position: relative;
     color: var(--lighter-gray);
     -webkit-text-stroke: 1px black;
@@ -512,7 +513,7 @@ strong {
     background-size: 200% 0px;
     background-position: 200% 100%;
     background-repeat: no-repeat;
-    padding: 3px;
+    padding: 3px 3px 0 3px;
     margin: -3px;
     transition: background-size .3s, background-position .3s .3s;
 }
@@ -521,6 +522,12 @@ strong {
     transition: background-size .3s, background-position;
     background-size: 200% 100%;
     background-position: 100% 100%;
+}
+
+.related-content .tag-list p a {
+    padding: 0;
+    margin: 0 1px;
+    border-bottom-width: 1px;
 }
 
 /* Decorative Section Breaks */
@@ -573,11 +580,19 @@ blockquote.pull-quote.right {
 /* Pull Quote with Attribution */
 
 blockquote.pull-quote.quote p.attrib {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 1rem;
     line-height: 1.25rem; 
-    margin-left: 20%;
+    margin-left: 15%;
     position: relative;
+}
+
+@media screen and (max-width: 720px) {
+	blockquote.pull-quote.quote p.attrib {
+	    font-size: .925rem;
+	    line-height: 1.1875rem; 
+	    margin-left: 20px; 
+        }
 }
 
 /* ===== STYLE VARIANTS =================================== */
@@ -648,7 +663,7 @@ blockquote.pull-quote.quote p.attrib {
     background: var(--graphite);
 }
 
-.color-block.gold a {
+.color-block.gold p a {
     text-decoration-color: #000;
 }
 
@@ -656,9 +671,17 @@ blockquote.pull-quote.quote p.attrib {
     background-color: var(--graphite);
     color: var(--lighter-gray);
 }
+
+.color-block.dark p a:hover {
+    color: var(--graphite);
+}
 	
 .color-block.dark .intro-text, .color-block.dark blockquote.pull-quote p {
     color: inherit;
+}
+
+.color-block.dark p.tag {
+    color: var(--lighter-gray);
 }
 		
 /* ===== HEADER =================================== */
@@ -694,7 +717,8 @@ svg {
   box-shadow: inset 0 0 0 2px var(--gold-solid);
   transition: color 0.25s 0.25s;
   position: relative;
-  background: #FB0
+  background: var(--gold-solid);
+  border-bottom: 0;
 }
 
 .body-container p:has(a.content-button) {  /* kills double-margin when a button is accidentally wrapped in a p */
@@ -779,7 +803,11 @@ a.content-button:hover {
 /* === BODY CONTENT CONTAINERS ======== */
 
 .body-container {
-    margin: 40px 20px;
+    margin: 40px 20px 0;
+}
+
+.main-content, .secondary-content {
+    container-type: inline-size;  /* defines body area content columns as queriable containers */
 }
 
 .body-section {
@@ -837,7 +865,7 @@ a.content-button:hover {
 .full-bleed-section {
     background: var(--lighter-gray);
     width: 100vw;
-    margin: 30px calc(50% - 50vw);
+    margin: 0 calc(50% - 50vw);
     overflow: hidden;
 }
 
@@ -854,7 +882,7 @@ a.content-button:hover {
 }
 
 .full-bleed-section > .content-constrain {  /* Allows margin-contrained content in the full-bleed region. This allows a margin-constrained sub-container within full bleed. The primary use case is to set off margin-constrained content in a full-bleed color block. */
-    width: calc(100% - 60px);
+    width: calc(100% - 40px);
     margin: 30px auto;
     max-width: 700px;
 }
@@ -918,7 +946,22 @@ a.content-button:hover {
     text-align: left;
 }
 
-/* CSS config to change from single column to 2-column -- requires a "main-content" and "secondary-content" wrapper */
+@media screen and (max-width: 720px) {
+   .full-width.content-grid {
+      width: calc(100% + 40px);
+      margin-left: -20px;
+      margin-right: -20px;
+      }
+}
+
+@media screen and (max-width: 500px) {
+     .content-grid {
+          gap: 10px;
+          margin: 10px 0;
+     }
+}
+
+/* CSS config to change from single column to 2-column */
 
 .body-container.two-col {
     display: grid;
@@ -964,7 +1007,6 @@ a.content-button:hover {
 
 .sidebar {
     background: var(--light-gray-40);
-    min-height: 400px;
     margin: 40px 0;
 }
 
@@ -1026,6 +1068,10 @@ a.content-button:hover {
 
 .in-content-image.rectangle img {
     aspect-ratio: 1.6;
+}
+
+.in-content-image.round figcaption {
+    text-align: center;
 }
 
 /* === UTILITIES  =================================== */
@@ -1117,6 +1163,9 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
         font-size: 1.125rem;
         line-height: 1.75rem;
     }
+    .drop-cap {
+        top: -1px;
+    }	
 }
 
 
@@ -1329,10 +1378,15 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
     max-width: 350px;
     color: var(--dark-gray);
     display: inline-block;
+    margin-left: 26px;
+    position: relative;	
 }
 
 .hero-content p.byline-item .icon {
     margin-right: 10px;
+    position: absolute;
+    left: -26px;
+    top: 1px;	
 }
 
 .hero-content p.pub-date {
@@ -1340,6 +1394,20 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
     font-size: .9375rem;
     text-transform: uppercase;
 }
+
+.hero-content p.hero-label span {
+    font-size: 1.0625rem;
+    color: var(--gold-solid);
+    background: var(--graphite);
+    padding: 5px 8px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: .15rem;
+    margin-bottom: 20px;
+    display: inline-block;
+    width: fit-content;    
+  }
+
 
 /* Variant - No Image */
 
@@ -1394,11 +1462,23 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
 }
 
  .hero.primary .hero-content h1 {
-    border-left: 2px solid var(--gold-solid);
     padding-left: 20px;
     filter: var(--text-contrast);
     text-shadow: 1px 1px 1px #000;	 
 }
+
+.hero.primary .hero-content h1:before {
+    border-left: 2px solid #fb0;
+    content: '';
+    height: 100%;
+    left: 0px;
+    position: absolute;
+    bottom: 0;
+  }
+
+.hero.primary .hero-content:has(.hero-label) h1:before {
+    height: calc(100% + 50px);
+  }
 
  .hero.primary .hero-content p.subhead {
     filter: var(--text-contrast);
@@ -1414,6 +1494,12 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
  .hero.primary .hero-content p.byline-item, .hero.primary .hero-content p.pub-date {
   font-size: inherit;
   color: inherit;
+}
+
+.hero.primary p.hero-label span {
+    text-shadow: none;
+    margin-left: 20px;
+    background-color: #1a1a1a;
 }
 
 /* Variant - SQ Image */
@@ -1435,11 +1521,16 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
     overflow: auto;
     }
 
-	/* AB change from -50 to -10 for Accessibility */
 .hero.alt .hero-content {
-    margin-left: -10px;
+    margin-left: 0;
     padding: 0;
     max-width: calc( 100% + 50px);    
+}
+
+.hero.alt .byline-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
 }
 
 /* ===== HERO MEDIA QUERIES  =================================== */
@@ -1456,9 +1547,20 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
         margin: 0 20px;
         padding-top: 100px;
     }
+    .hero-content p.hero-label {
+	margin-top: 10px;
+    }
+    .hero-content p.hero-label span {
+        font-size: .9375rem;
+        font-weight: 500;
+        padding: 3px 5px;
+   }		
     .hero.primary .hero-content {
 	margin: 0 20px;
     }
+    .hero.primary .hero-content:has(.hero-label) h1:before {
+        height: calc(100% + 46px);	
+    }	
     .hero.simple .hero-content {
         margin: 0;
         max-width: 700px;
@@ -1485,7 +1587,6 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
     }
     .hero.primary .hero-image .gradient  {
         background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, .85) 100%);
-	opacity: unset; /* can be removed if opacity is eliminated at a higher specificity later */
     }	
 }
 
@@ -1506,7 +1607,7 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
   .hero.alt .hero-content {
         margin: -80px 10px 0;
         padding: 15px 20px;	  
-        background: #fff;
+        background: var(--white);
         z-index: 1;
         border-top: 5px solid #fb0;
     }
@@ -1540,12 +1641,9 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
 	   text-align: left;
    }
    
-   .repeating-list h2 {
-	   text-align: left;
+   .repeating-list h2, .repeating-list h3 {
 	   font-size: 1.375rem;
-	   padding: 0;
-	   margin-top: 0;
-	   line-height: 1.5rem;
+	   line-height: 1.75rem;
    }
    
    .repeating-list p {
@@ -1555,6 +1653,7 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
    
    .repeating-list .list-item {
 	   display: grid;
+	   grid-gap: 20px;
 	   align-content: start;    
 	   grid-template-columns: 2fr 3fr;
 	   position: relative;
@@ -1566,14 +1665,19 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
    
    .repeating-list-image {
 	   aspect-ratio: 1;
-   /*  background: url("../images/sq-crop.png");
-	   background-size: cover; */
    }
-   
-   .repeating-list .repeating-list-body {
-	   padding: 0 20px;
+
+   .repeating-list-body :first-child {
+            margin-top: 0;
    }
-   
+
+.repeating-list.cards .repeating-list-body {
+	   padding: 20px;
+   }
+
+.repeating-list.cards .list-item {
+	   grid-gap: 0;
+   }
    
    /* ------ Grid Variant ------ */
    
@@ -1597,19 +1701,9 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
 	   grid-template-columns: 1fr 1fr 1fr 1fr;
    }
    
-   .repeating-list.grid .repeating-list-body {
-	   padding: 20px 0;
-   }
-   
-   .repeating-list.grid.cards .repeating-list-body {
-	   padding: 20px;
-   }
    
    /* ------ Profile Variant ------ */
-   
-   /* TO DO: Alternate version with gray images that turn color on hover */
-   /* TO DO: Image darkening on hover is currently applied to the img element. Explore other options that are more global scope. */
-   
+ 
    
    .profiles.repeating-list {
 	   grid-gap: 5px;
@@ -1649,6 +1743,11 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
    .profiles.repeating-list.grid .list-item:hover .repeating-list-body p {
 	   color: var(--white);
    }
+
+   .profiles a.content-button.secondary {	
+	   box-shadow: inset 0 0 0 2px var(--white);
+	   color: var(--white);
+}
    
    @media only screen and (max-width: 1080px) {
 	   .profiles.repeating-list.grid.four-col {
@@ -1686,7 +1785,7 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
 	   display: none;
    }
    
-   .repeating-list.no-image .repeating-list-body {
+   .repeating-list.no-image:not(.cards) .repeating-list-body {
 	   padding: 0px;
    }
    
@@ -1887,7 +1986,7 @@ UPDATE THIS CLASS FOR THE PAGE
 } */
 
 .item.grid-col {
-    background-color: #fff;
+    background-color: var(--white);
 }
 
 .grid-col-span.three {
@@ -2018,6 +2117,7 @@ UPDATE THIS CLASS FOR THE PAGE
 .item.news p {
     font-size: 1.0625rem;
     line-height: 1.625rem;
+    margin: 12px 0;	
 }
 
 .grid-snippet h2, .item.news h3 {
@@ -2083,7 +2183,7 @@ UPDATE THIS CLASS FOR THE PAGE
     position: relative;
     left: -50px;
     top: -20px;
-    background: #FFF;
+    background: var(--white);
     border-top: 7px var(--light-gray) solid;
     filter: drop-shadow(2px 4px 6px #00000060);
     width: calc(100% + 50px);
@@ -2093,7 +2193,7 @@ UPDATE THIS CLASS FOR THE PAGE
 .lead .item.news .copy {
     position: relative;
     top: -50px;	
-    background: #FFF;
+    background: var(--white);
     border-top: 7px var(--light-gray) solid;
     filter: drop-shadow(2px 4px 6px #00000060);
     width: 90%;
@@ -2106,7 +2206,7 @@ UPDATE THIS CLASS FOR THE PAGE
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: .15rem;
-    color: var(--mid-gray);
+    color: var(--dark-gray);
 }
 
 p.tag-primary + h3 {
@@ -2415,8 +2515,8 @@ p.tag-primary + h3 {
 }
 
 .utility-nav .tu-home-link {
-    font-weight: 700;
-    text-transform: capitalize;
+    font-weight: 600;
+    text-transform: uppercase;
     padding-right: 20px;
 }
 
@@ -2452,7 +2552,6 @@ p.tag-primary + h3 {
 	animation-name: ;
 } */
 
-
 .slide-outer {
 	overflow-x:hidden;
 	top: -28px;
@@ -2460,6 +2559,7 @@ p.tag-primary + h3 {
 	position: relative;
 	width:550px;
 }
+
 .pub-list-slide {
     display: none;
     padding: 10px 0px;
@@ -2475,6 +2575,12 @@ p.tag-primary + h3 {
 }
 
 
+@media only screen and (max-width: 500px) {
+    .utility-nav .tu-home-link {
+        padding-right: 0;
+    }
+}
+
 /* ===== MASTHEAD ==================== */
 
 .heading-constrain {
@@ -2487,9 +2593,9 @@ p.tag-primary + h3 {
     padding: 30px 20px 20px;
     display: flex;
     max-width: 100%;
-}
-
-.masthead-container {
+    position: relative;
+    top: -2px;
+    left: -2px;
 }
 
 .masthead-logo-container {
@@ -2507,7 +2613,7 @@ p.tag-primary + h3 {
     display: flex;
 }
 
-.vertical-id p {
+p.vertical-name {
     font-weight: 700;
     font-size: 1.3rem;
     text-transform: uppercase;
@@ -2553,7 +2659,8 @@ p.tag-primary + h3 {
 .heading-constrain.nav-flex-wrap {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
+    height: 80px;
 }
 
 .heading-constrain.nav-flex-wrap a {
@@ -2583,7 +2690,7 @@ ul.nav-items li {
 }
 
 ul.nav-items li:hover {
-    background: #fff;
+    background: var(--white);
     border-bottom: 5px solid var(--gold-solid);
 }
 
@@ -2645,15 +2752,14 @@ button.search i {
     position: relative;
 }
 
-/*must define the original color */
 p.vertical-name {
-	color:#000000
+	color:#000000;
 }
 
 .alt p.vertical-name {
     border: none;
     font-size: 2.5rem;
-    color: #fff;
+    color: var(--white);
     position: relative;
     top: 10px;
     width: min-content;    
@@ -2683,7 +2789,7 @@ p.vertical-name {
   position: absolute;
   left: 0;
   bottom: 0;
-  background-color: #fff;
+  background-color: var(--white);
 }
 
 .alt ul.nav-items li {
@@ -2703,36 +2809,41 @@ background-size: 8.94px 6.03px;
     color: var(--gold-solid);
 }
 
-
-/* MOCKUP PROPERTIES FOR SMALL SCREENS
-// These styles are a rough representation of how we want things to LOOK on mobile.
-// A lot this CSS is for demo only and will need to be redone to fit neatly into the codebase. */
-
 @media only screen and (max-width: 960px) {
     .nav-container, ul.publication-items {
         display: none;
     }
+
     .global-header {
         height: 80px;
     }
+
     .masthead-logo-container {
         width: 120px;
         height: 80px;
         background: linear-gradient(213.4deg,transparent 20px,#000 20px); 
     }
-    .vertical-id p {
+	
+    p.vertical-name {
         width: 120px;
+        font-size: 1.125rem;
+        letter-spacing: .0625rem;
+        padding: 0 5px;    
     }
+
     .masthead-logo-container svg {
         padding: 16px 20px 20px 12px;
+	top: 0;
+        left: 2px;
     }
-    .vertical-id p {
-        font-size: 1.125rem !important; /* only used here to override the inline CSS on this demo page. */
-        letter-spacing: .0625rem !important;/* only used here to override the inline CSS on this demo page. */
-        padding: 0 5px;
-    }
+
     .global-header:after {
-        right: -38px;;
+        right: -38px;
+    }
+
+    .alt p.vertical-name {
+        font-size: 2.125rem;
+        letter-spacing: .1875rem;
     }
 }
 
@@ -2743,7 +2854,8 @@ background-size: 8.94px 6.03px;
 }
 
 .mobile-menu-icon-container {
-        margin: -20px 10px 0 0;
+        margin-top: 30px;
+	margin-right: 10px;
 }
 
 .mobile-menu-icon-container .icon {
@@ -2756,25 +2868,53 @@ background-size: 8.94px 6.03px;
     .nav-container, ul.publication-items {
         display: none;
     }
+
     .global-header {
         height: 60px;
     }
+
+    .heading-constrain.nav-flex-wrap {
+	  height: 60px;
+    }
+	
     .masthead-logo-container {
         width: 90px;
         height: 60px;
-        background: linear-gradient(213.4deg,transparent 15px,#000 15px);    
+        background: linear-gradient(213.4deg,transparent 15px,#000 15px);      
     }
-    .vertical-id p {
+
+    .alt .masthead-logo-container {
+        width: 70px; 
+    }
+
+    p.vertical-name {
         width: 90px;
+        font-size: .85rem;
+        letter-spacing: .025rem;
+        padding: 0 5px;       
     }
+
+    .alt p.vertical-name {
+        font-size: 1.375rem;
+        letter-spacing: .125rem;
+        top: 5px;
+        padding-left: 15px;    
+    }    
+
     .masthead-logo-container svg {
-        padding: 12px 15px 15px 8px;
+        padding: 12px;
+	left: -2px
     }
-    .vertical-id p {
-        font-size: .85rem !important; /* only used here to override the inline CSS on this demo page. */
-        letter-spacing: .025rem !important;/* only used here to override the inline CSS on this demo page. */
-        padding: 0 5px;
+
+    .alt .masthead-logo-container svg {
+        padding: 15px 11px 0 0;
     }
+
+    .mobile-menu-icon-container {
+        margin-top: 22px;
+	margin-right: 0;
+}
+	
     .global-header:after {
         display: none;
     }
@@ -2868,7 +3008,7 @@ background-size: 8.94px 6.03px;
 	float: right;
     z-index: 10;
 }
-.header-container.alt .nav-container .search-section i {
+.alt .nav-container .search-section i {
 	color: #eeeeee;
 }
 .nav-container .search-section input {
@@ -2890,6 +3030,10 @@ background-size: 8.94px 6.03px;
 	outline: none;
 }
 
+.alt .nav-container .search-section input {
+	color: #eeeeee;
+}
+
 .nav-container .search-section.active input {
 	border: 1px solid black;
 	right: -28px;
@@ -2903,11 +3047,9 @@ background-size: 8.94px 6.03px;
 	font-style: normal;
 	background: black;
 	border: 2px solid white;
-	color: white;
 	height: 13px;
 	padding: 10px 16px;
 	width: 60px;
-	text-indent: -99em;
 	transition: 0.3s ease all;
 	top: 0px;
     position: relative;
@@ -2936,31 +3078,30 @@ background-size: 8.94px 6.03px;
 }
 
 
-.header-container.alt .nav-container .search-section label {
+.alt .nav-container .search-section label {
 	color:#eeeeee;
 }
 
 
-.header-container.alt .nav-container .search-section label {
+.alt .nav-container .search-section label {
 	color:#eeeeee;
 }
 
 .stripe.graphite .nav-container .search-section.active input {
-    border: 1px solid #fff;
+    border: 1px solid var(--white);
 }
 
 .stripe.graphite .nav-container .search-section button {
-    color: #fff;
-    border-left: #fff solid 1px;
+    color: var(--white);
 }
 
 .stripe.graphite .nav-container .search-section i {
-    color: #fff;
+    color: var(--white);
 }
 
 
 .stripe.graphite .nav-container .search-section label {
-    color: #fff;
+    color: var(--white);
 }
 
 
@@ -3003,7 +3144,7 @@ background-size: 8.94px 6.03px;
     border: #000000 solid 1px;
 }
 
-.header-container.alt .nav-container .search-section button {
+.alt .nav-container .search-section button {
 	color: #eeeeee;
 	border: #eeeeee solid 1px;
 }
@@ -3099,8 +3240,6 @@ form.search_form_mobile {
 } */
 
 
-
-
 .mobile-nav {
 	position: relative;
 	right: 0px;
@@ -3109,7 +3248,10 @@ form.search_form_mobile {
 	font-weight: 700;
 	font-size: 0.9375rem;
 	margin-right: 0;
+        z-index: 100001;
+	display: block !important;
 }
+
 .hamburger {
 	float: none;
 	right: auto;
@@ -3127,14 +3269,10 @@ form.search_form_mobile {
 	padding: 58px 0px;
 }
 
-
-
 .navigation-top.temphead-top .main-nav ul .btn {
 	margin: 0px;
 	font-weight: 700;
 }
-
-
 
 .mobile-links-nav {
 	opacity: 0;
@@ -3163,7 +3301,7 @@ form.search_form_mobile {
 }
 
 .stripe.glen-mist .hamburger-nav.active:hover i {
-    background: #ffffff;
+    background: var(--white);
 }
 
 .stripe.graphite .hamburger-nav.active i {
@@ -3173,17 +3311,13 @@ form.search_form_mobile {
 }
 
 .stripe.graphite .hamburger-nav.active:hover i {
-    background: #ffffff;
+    background: var(--white);
 }
 
 form.search_form_mobile {
     animation: slideInFromRight 500ms forwards;
     transition: 0.3s ease all;
 }
-
-
-
-
 
 /* ====================================================
    ====================================================
@@ -3195,7 +3329,7 @@ form.search_form_mobile {
 
 
 .mobile-links-nav ul {
-	margin: 0 35px 0 10px;
+	margin: 0 25px 0 10px;
 	text-align: right;
 }
 .mobile-links-nav ul li {
@@ -3372,7 +3506,7 @@ form.search_form_mobile {
 .mobile-links-nav p{
    margin-bottom: 0;
    margin-top: 30px;
-   color: #fff;
+   color: var(--white);
    font-size: .9375rem;
    text-transform: uppercase;
    font-weight: 700;
@@ -3398,21 +3532,18 @@ form.search_form_mobile {
 	animation: slideInFromRight 500ms forwards;
 }
 
-
-
 .hamburger-nav {
 	cursor: pointer;
-	width: 20px;
+	width: 25px;
 	height: 25px;
 	margin: auto;
 	position: absolute;
 	transition: 0.3s ease all;
 	position: relative;
 	right: 7px;
-	top: 10px;
 	display: inline-block;
-	float: left;
 }
+
 .hamburger-nav i {
 	border-radius: 2px;
 	content: '';
@@ -3423,8 +3554,8 @@ form.search_form_mobile {
 	background-color: black;
 }
 
-.header-container.alt .hamburger-nav i {
-	background-color: #ffffff;
+.alt .hamburger-nav i {
+	background-color: var(--white);
 }
 
 .hamburger-nav i:nth-child(1) {
@@ -3591,24 +3722,11 @@ form.search_form_mobile {
 }
 
 .hero .gradient {
-    background: -webkit-linear-gradient(10deg, rgba(0,0,0,.9) 37%, rgba(0,0,0,0) 100%);
-    background: linear-gradient(80deg,rgba(0,0,0,.9) 57%,rgba(0,0,0,0) 100%);
-}
-
-.hero .hero-image.white .gradient {
-    background: -webkit-linear-gradient(10deg, rgba(255, 255, 255, 0.9) 37%, rgba(0,0,0,0) 100%);
-    background: linear-gradient(80deg,rgba(255, 255, 255, 0.9) 57%,rgba(0,0,0,0) 100%);
-}
-
-.hero .gradient {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: .7;
-	/* z-index: 2;
-    pointer-events: none; */
 }
 
 /* ====================================================
@@ -3622,7 +3740,7 @@ form.search_form_mobile {
 
    .site-footer {
     background-color: #000000; 
-    color: #fff;
+    color: var(--white);
     padding: 20px 40px;
     font-size: 1.025rem;
 }
@@ -3651,7 +3769,7 @@ form.search_form_mobile {
 }
 
 .footer-title {
-    color: #fff;
+    color: var(--white);
     margin-bottom: 0;
 }
 
@@ -3664,15 +3782,17 @@ form.search_form_mobile {
 }
 
 .footer-link {
-    color: #ffbb00; 
+    color: #fb0; 
     text-decoration: none;
     margin-right: 20px;
+    border-bottom: none;	
 }
 
 .footer-copy .footer-link {
-    color: #ffffff;
+    color: var(--white);
     text-decoration: none;
     margin-right: 5px;
+    border-bottom: none;	
 }
 
 .footer-copy .footer-link:hover {
@@ -3689,11 +3809,14 @@ form.search_form_mobile {
 }
 
 .footer-copy {
-    color: #fff;
+    color: var(--white);
     margin-top: 5px; 
     text-align: right;
 }
 
+a#ou_directedit {
+    border-bottom: 0;
+}
 
 /* Responsive layout for mobile */
 @media (max-width: 768px) {
@@ -3807,6 +3930,19 @@ form.search_form_mobile {
     margin-top: 5px;
   }
 
+form input.primaryAction {
+	background: var(--gold-solid);
+    	color: #000000;
+}
+
+form input.primaryAction[type="submit" i]:disabled {
+	background: var(--lighter-gray);
+    	color: var(--dark-gray);
+}
+
+form select {
+	width: 100%;
+}
 
 
 /* ====================================================
@@ -3833,4 +3969,13 @@ form.search_form_mobile {
 .headline-area {
 	z-index: 1;
 	position: relative;
+}
+
+q {
+    quotes: none; /* Removes browser-added quotes */
+}
+
+q::before,
+q::after {
+    content: ''; /* Hides the opening and closing quotation marks */
 }

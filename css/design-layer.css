@@ -3,7 +3,8 @@
 /* Kills underlined links in nav and news objects */
 
 .header-container a, .grid-snippet a {
-  text-decoration: none;
+    text-decoration: none;
+    border-bottom: 0;
 }
 
 /* ===== INTERACTION ===== */
@@ -35,6 +36,11 @@
 .news.item figure {
     width: 100%;
     overflow: hidden;
+    margin-bottom: 20px;	
+}
+
+.grid-snippet.split .news.item figure { /* sets margin back to zero for the split layout variant */
+	margin-bottom: 0;
 }
 
 /* Gold link hover state for news items */
@@ -62,17 +68,17 @@
 /* these classes required to overcome lack of padding due to h3 change to display:inline */
 
 .news.item .news-item-head {
-    margin-top: 20px;
+    margin-top: 12px;
 }
 
 .grid-snippet.image-headline-only.cards .news.item .news-item-head {
     margin-top: 0px; 
-    margin-bottom: 20px;
+    margin-bottom: 12px;
 }
 
-.lead .news.item .copy p {
-  margin-top: 20px;
-  margin-bottom: 20px;
+.lead .news.item .copy p, .split .news.item .copy p {
+  margin-top: 12px;
+  margin-bottom: 12px;
 }
 
 /* ===== TIGERTOOTH DECO PATTERNS ===== */
@@ -139,6 +145,7 @@
 
 .tigertooth-bg {
   width: 1200px;
+  height: 0;	
   margin: auto;
   position: relative;
   z-index: -1000;
@@ -204,7 +211,7 @@
     top: 150px;
   }
 
-.tigertooth-bg .pull {
+.tigertooth-bg.pull {
   top: -250px;
   }
 
@@ -275,6 +282,13 @@ blockquote.pull-quote.quote-marks p:not(.attrib):after {
     font-weight: 600;
     line-height: 0;
     z-index: -1;
+}
+
+@media screen and (max-width: 500px) {
+.pull-quote p.attrib span:before {
+    font-size: 1.125rem;
+    top: 0;
+    }
 }
 
 /* === REPEATING LIST PROFILES - Instagram Icon */
@@ -380,7 +394,7 @@ blockquote.pull-quote.quote-marks p:not(.attrib):after {
   }
 
 .callout.left:before {
-  content: url(https:/www.towson.edu/_resources/images/newsroom-deco/tt-accent-1.svg);
+  content: url(https://www.towson.edu/_resources/images/newsroom-deco/tt-accent-1.svg);
   width: 130px;
   position: absolute;
   top: -37px;
@@ -457,12 +471,13 @@ ul.links-list {
 
 ul.links-list li a {
     text-decoration: none;
+    border-bottom: 0;	
 }
 
 .links-list li a:after {
     position: relative;
     content: '\f061';
-    color: #FB0;
+    color: var(--gold-solid);
     font-weight: 400;
     padding-left: 10px;
     top: 1px;
@@ -471,6 +486,16 @@ ul.links-list li a {
     font-family: "Font Awesome 6 Pro";
     transition: padding-left 0.1s ease-in-out 0s, color 0.2s ease-in-out 0s;
 }
+
+/* Additional Spacing for Hub Page variant of links list */
+
+.grid-snippet ul.links-list {
+    margin: 20px 0;
+ }
+
+.grid-snippet ul.links-list li {
+    margin-bottom: 20px;
+}		
 
 /* Main Content Area */
 
@@ -498,7 +523,6 @@ ul.links-list li a {
 .secondary-content ul.links-list {
     border: 1px solid var(--light-gray-80);
     border-top: 6px solid var(--light-gray-80);
-    background: var(--lightest-gray);
     height: max-content;
     padding: 20px;  
 }
@@ -553,7 +577,7 @@ ul.links-list li a {
     content: '';
     width: calc(100% + 6px);
     height: 22px;
-    background-color: #FB0;
+    background-color: var(--gold-solid);
     position: absolute;
     left: -3px;
     bottom: 0px;
@@ -737,7 +761,6 @@ p.pub-flag.tu-magazine img {
   }
 }
 
-
 /* === INFOGRAPHIC  === */
 
 .infographic {
@@ -887,14 +910,12 @@ p.pub-flag.tu-magazine img {
 
 .news.item .news-item-head {
     margin-top: 15px;
-   } 
+    } 
 
 .item.news p {
-   font-size: .9375rem;
+    font-size: 1rem;
     line-height: 1.375rem;
-    margin-top: 15px;
-    margin-bottom: 15px;
-   }    
+    }    
 
 .item.news p.tag-primary {
     font-size: .875rem;
@@ -904,16 +925,16 @@ p.pub-flag.tu-magazine img {
 
 /* === Q AND A STYLES === */
 
-.q-and-a {
+.q-a-group {
   position: relative;
   margin-left: 36px;
 }
 
-.q-and-a h3, .q-and-a p {
+.q-a-item h3, .q-a-item p {
   position: relative;
 }
 
-.q-and-a h3:before, .q-and-a p:before {
+.q-a-item h3:before, .q-a-item p:before {
     font-size: 1.75rem;
     color: var(--light-gray);
     position: absolute;
@@ -921,12 +942,12 @@ p.pub-flag.tu-magazine img {
     font-weight: 700;
 }
 
-.q-and-a h3:before{
+.q-a-item .q-a-question h3:first-of-type:before{
     content: 'Q:';
     top: -3px;
 }
 
-.q-and-a h3 + p:before {
+.q-a-item .q-a-answer p:first-of-type:before {
     content: 'A:';
     top: -1px;
 }
@@ -967,6 +988,73 @@ p.pub-flag.tu-magazine img {
     line-height: 40px;
 }
 
+ /* === TIMELINE ====== */	
+	
+.timeline  {
+    display: grid;
+    position: relative;
+    grid-template-columns: 140px auto;
+    grid-column-gap: 40px;
+   }
+
+  .timeline:before {
+    content: '';
+    border-left: 2px dotted var(--gold-solid);
+    height: 100%;
+    position: absolute;
+    left: 160px;
+    }
+
+.timeline-item {
+    display: contents;
+    }
+
+.date p {
+    padding: 8px;
+    font-family: PoynterOSDisp;
+    font-size: 3rem;
+    font-weight: 700;
+    background: var(--gold-solid);
+    display: inline-block;
+    float: right;
+   }
+
+/* Container query for containers smaller than 500px wide */
+@container (max-width: 500px) {
+    .date p {
+        font-size: 1.8125rem;
+    }
+    .timeline {
+        grid-template-columns: 80px auto;
+	grid-column-gap: 30px;
+	margin-left: 10px;
+    }
+    .timeline:before {
+        left: 95px;
+    }
+}
+
+/* === FULL-BLEED BACKGROUND OVERRIDES FOR TWO-COLUMN LAYOUTS === */
+
+.two-col .main-content .full-bleed-section {
+	position: relative;
+	overflow: visible;
+	}
+
+.two-col .main-content .full-bleed-section .content-constrain {
+	overflow: hidden;
+	}
+
+.two-col .main-content .full-bleed-section:before {
+    position: absolute;
+    width: 300vw;
+    height: 100%;
+    content: '';
+    background: inherit;
+    left: -100%;
+    z-index: -100;
+}
+	
 /* === STYLE GUIDE LAYOUT CLASSES === */
 
 .sg-section {
@@ -998,3 +1086,24 @@ p.pub-flag.tu-magazine img {
   left: -3px;
   position: relative;
 } 
+
+/* TEMP SIDEBAR CLASSES -- REFACTOR AND REMOVE AFTER SNIPPET CHANGES ARE COMPLETE */
+
+.secondary-content .sidebar {
+   background: none;
+}
+
+.secondary-content .sidebar img {
+   margin-bottom: 20px;
+}
+
+.secondary-content .sidebar h2{
+   font-size: 1.625rem;
+}
+	
+@media screen and (min-width: 721px) {
+	.secondary-content .sidebar {
+	   border: none;
+	   border-left: 2px solid #FB0;
+    }
+}
