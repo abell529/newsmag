@@ -1671,12 +1671,16 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
             margin-top: 0;
    }
 
-.repeating-list.cards .repeating-list-body {
+   .repeating-list.cards .repeating-list-body {
 	   padding: 20px;
    }
 
-.repeating-list.cards .list-item {
+   .repeating-list.cards .list-item {
 	   grid-gap: 0;
+   }
+
+   .repeating-list.list.rounds .list-item {    /* reduces image size when round images are used */
+           grid-template-columns: 1.5fr 3fr;
    }
    
    /* ------ Grid Variant ------ */
