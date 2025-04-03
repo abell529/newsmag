@@ -942,12 +942,12 @@ p.pub-flag.tu-magazine img {
     font-weight: 700;
 }
 
-.q-a-item .q-a-question h3:first-of-type:before{
+.q-a-item .q-a-question > h3:first-of-type:before{
     content: 'Q:';
     top: -3px;
 }
 
-.q-a-item .q-a-answer p:first-of-type:before {
+.q-a-item .q-a-answer > p:first-of-type:before {
     content: 'A:';
     top: -1px;
 }
