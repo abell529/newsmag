@@ -1375,11 +1375,17 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
     margin-right: 30px;
     font-weight: 500;
     text-transform: uppercase;
-    text-wrap: pretty;
+    text-wrap: balance;
     color: var(--dark-gray);
     display: inline-block;
     margin-left: 26px;
     position: relative;	
+}
+/* Override text-wrap: balance with text-wrap: pretty if supported */
+@supports (text-wrap: pretty) {
+.hero-content p.byline-item {
+    text-wrap: pretty;
+  }
 }
 
 .hero-content p.byline-item .icon {
