@@ -1375,7 +1375,7 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
     margin-right: 30px;
     font-weight: 500;
     text-transform: uppercase;
-    max-width: 350px;
+    text-wrap: pretty;
     color: var(--dark-gray);
     display: inline-block;
     margin-left: 26px;
