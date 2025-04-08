@@ -530,6 +530,13 @@ strong {
     border-bottom-width: 1px;
 }
 
+span.highlight {
+    background: var(--graphite);
+    color: var(--gold-solid);
+    padding-left: .5ch;
+    padding-right: .5ch;
+}
+
 /* Decorative Section Breaks */
 
 hr {
