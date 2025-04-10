@@ -152,6 +152,10 @@
   --margin-offset: -100px;  
 }
 
+.body-container:not(.two-col) .body-section .tigertooth-bg {  /* allows tigertooth to work on 1-col article pages with minimal style overrides */
+	width: 700px;
+}
+
 .tigertooth-bg.pattern-1.left:before {
     content: url(https://www.towson.edu/_resources/images/newsroom-deco/tt-pattern-1.svg);
     position: absolute;
