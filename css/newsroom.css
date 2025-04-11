@@ -530,6 +530,13 @@ strong {
     border-bottom-width: 1px;
 }
 
+span.highlight {
+    background: var(--graphite);
+    color: var(--gold-solid);
+    padding-left: .5ch;
+    padding-right: .5ch;
+}
+
 /* Decorative Section Breaks */
 
 hr {
@@ -883,8 +890,15 @@ a.content-button:hover {
 
 .full-bleed-section > .content-constrain {  /* Allows margin-contrained content in the full-bleed region. This allows a margin-constrained sub-container within full bleed. The primary use case is to set off margin-constrained content in a full-bleed color block. */
     width: calc(100% - 40px);
-    margin: 30px auto;
+    margin: 30px 0;
     max-width: 700px;
+	padding: 10px 0 20px 0;
+}
+
+@media only screen and (max-width: 720px) {
+	.full-bleed-section > .content-constrain {
+	    margin: 30px auto;
+	}
 }
 
 .body-container p.caption, .body-container figcaption.caption {
@@ -1375,11 +1389,17 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
     margin-right: 30px;
     font-weight: 500;
     text-transform: uppercase;
-    max-width: 350px;
+    text-wrap: balance;
     color: var(--dark-gray);
-    display: inline-block;
+    display: inline-flex;
     margin-left: 26px;
     position: relative;	
+}
+/* Override text-wrap: balance with text-wrap: pretty if supported */
+@supports (text-wrap: pretty) {
+.hero-content p.byline-item {
+    text-wrap: pretty;
+  }
 }
 
 .hero-content p.byline-item .icon {
@@ -1671,12 +1691,16 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
             margin-top: 0;
    }
 
-.repeating-list.cards .repeating-list-body {
+   .repeating-list.cards .repeating-list-body {
 	   padding: 20px;
    }
 
-.repeating-list.cards .list-item {
+   .repeating-list.cards .list-item {
 	   grid-gap: 0;
+   }
+
+   .repeating-list.list.rounds .list-item {    /* reduces image size when round images are used */
+           grid-template-columns: 1.5fr 3fr;
    }
    
    /* ------ Grid Variant ------ */
