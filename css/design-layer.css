@@ -315,6 +315,10 @@ blockquote.pull-quote.quote-marks p:not(.attrib):after {
     height: unset
 }
 
+.full-bleed-section .content-constrain .content-grid figure {
+    height: 100%;
+}
+
 /* Normalizes the top alignment of main body and sidebar when one or both sections lead with an element with a margin-top value other than 0 */
 
 .body-container.two-col .main-content .body-section > *:first-of-type,
