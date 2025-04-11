@@ -890,8 +890,15 @@ a.content-button:hover {
 
 .full-bleed-section > .content-constrain {  /* Allows margin-contrained content in the full-bleed region. This allows a margin-constrained sub-container within full bleed. The primary use case is to set off margin-constrained content in a full-bleed color block. */
     width: calc(100% - 40px);
-    margin: 30px auto;
+    margin: 30px 0;
     max-width: 700px;
+	padding: 10px 0 20px 0;
+}
+
+@media only screen and (max-width: 720px) {
+	.full-bleed-section > .content-constrain {
+	    margin: 30px auto;
+	}
 }
 
 .body-container p.caption, .body-container figcaption.caption {
