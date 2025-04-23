@@ -537,6 +537,11 @@ span.highlight {
     padding-right: .5ch;
 }
 
+.color-block.dark span.highlight {
+    background: var(--gold-solid);
+    color: var(--graphite);
+}
+
 /* Decorative Section Breaks */
 
 hr {
@@ -895,6 +900,10 @@ a.content-button:hover {
     padding: 10px 0 20px 0;
 }
 
+.secondary-content .full-bleed-section > .content-constrain {
+    margin: 0 20px;
+}
+
 @media only screen and (max-width: 720px) {
 	.full-bleed-section > .content-constrain {
 	    margin: 30px auto;
@@ -1034,6 +1043,20 @@ a.content-button:hover {
 
 .body-container.two-col .sidebar {
     display: block;
+}
+
+/* the following rules change spacing between sidebar elements when multiple instances are used consecutively */
+
+.secondary-content:has(.sidebar + .sidebar) .sidebar {
+	margin: 0;
+}
+
+.secondary-content:has(.sidebar + .sidebar) .sidebar.shim-padding-40 {
+	padding: 20px 40px;
+}
+
+.secondary-content:has(.sidebar + .sidebar) .sidebar:last-of-type {
+	margin-bottom: 20px;
 }
 
 @media only screen and (max-width: 1200px) {
