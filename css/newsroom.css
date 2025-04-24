@@ -900,12 +900,12 @@ a.content-button:hover {
     padding: 10px 0 20px 0;
 }
 
-.body-container.two-col .full-bleed-section > .content-constrain {
+.body-container.two-col :not(.secondary-content) .full-bleed-section > .content-constrain {
     margin: 0;
 }
 
 @media only screen and (max-width: 720px) {
-	.body-container.two-col .full-bleed-section > .content-constrain {
+	.body-container.two-col :not(.secondary-content) .full-bleed-section > .content-constrain {
 	    margin: 0 auto;
 	}	
 }
