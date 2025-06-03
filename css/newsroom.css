@@ -2186,6 +2186,13 @@ UPDATE THIS CLASS FOR THE PAGE
     margin: 12px 0;	
 }
 
+.news.item .news-item-date p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #777;
+    text-transform: uppercase;
+}
+
 .grid-snippet h2, .item.news h3 {
     text-align: left;
     padding: 0;
