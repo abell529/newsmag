@@ -2188,8 +2188,7 @@ UPDATE THIS CLASS FOR THE PAGE
 
 .news.item .news-item-date p {
     font-size: 1rem;
-    font-weight: 500;
-    color: #777;
+    color: var(--graphite);
     text-transform: uppercase;
 }
 
