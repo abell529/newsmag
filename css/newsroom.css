@@ -812,6 +812,19 @@ a.content-button:hover {
   transition: padding .25s .25s
 } 
 
+.color-block.dark a.content-button {
+  box-shadow: inset 0 0 0 2px transparent;
+  transition: none;
+}
+
+.color-block.dark a.content-button:hover {
+  color: var(--white);
+}
+
+.color-block.dark a.content-button:hover::before, .color-block.dark .content-button:hover::after {
+  border-color: var(--gold-solid);	
+}
+
 /* === BODY CONTENT CONTAINERS ======== */
 
 .body-container {
@@ -2171,6 +2184,12 @@ UPDATE THIS CLASS FOR THE PAGE
     font-size: 1.0625rem;
     line-height: 1.625rem;
     margin: 12px 0;	
+}
+
+.news.item .news-item-date p {
+    font-size: 1rem;
+    color: var(--graphite);
+    text-transform: uppercase;
 }
 
 .grid-snippet h2, .item.news h3 {
