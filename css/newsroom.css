@@ -542,6 +542,39 @@ span.highlight {
     color: var(--graphite);
 }
 
+/* Decorative Body Headings */
+
+.heading-with-label {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+	
+.heading-with-label h2 {
+	margin: 30px 10px 0 0;
+	flex-shrink: 0;
+}
+
+.heading-with-label p:has(span.intro-text) {
+	margin-top: 10px;
+	border-left: 1px solid #bbb;
+	padding-left: 10px;
+	line-height: 1;
+    margin-bottom: 5px;
+    flex: 1 1 0;
+}
+		
+.heading-with-label p span.intro-text a {
+	color: var(--graphite);
+}
+
+@media screen and (max-width: 720px) {
+    .heading-with-label {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
 /* Decorative Section Breaks */
 
 hr {
