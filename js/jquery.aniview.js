@@ -6,7 +6,7 @@
     $.fn.scrolled = function(waitTime, fn) {
         if (typeof waitTime === 'function') {
             fn = waitTime;
-            waitTime = 200;
+            waitTime = 80;
         }
         var tag = 'scrollTimer' + uniqueCntr++;
         this.scroll(function() {
