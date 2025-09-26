@@ -774,78 +774,88 @@ p.pub-flag.tu-magazine img {
 .infographic {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 30px;
+    grid-gap: 20px;
 }
 
 .infographic-item {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;	
+    flex-wrap: wrap;
     align-items: center;
     text-align: center;
+    padding: 20px 5px;
 }
 
-.infographic-item:nth-child(n+4) {
-    border-top: 1px solid var(--graphite);
-    padding-top: 10px;
-}
-
-.color-block.dark .infographic-item:nth-child(n+4) {
-    border-top: 1px solid var(--gold-solid);
-    padding-top: 10px;
-}
-
-.infographic-item p:first-of-type {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--graphite);
-    margin-bottom: 0;
-}
-
-.color-block.dark .infographic-item p:first-of-type {
+.infographic.numbers .infographic-item p:first-of-type {
+    font-size: 4.5rem;
+    font-weight: 800;
     color: var(--gold-solid);
+    margin-bottom: 10px;
+    -webkit-text-stroke: 1px black;
 }
 
-.infographic-item p:nth-of-type(2) {
-    font-weight: 400;
+.infographic.numbers.small .infographic-item p:first-of-type {
+    font-size: 3rem;
+}
+
+
+.infographic.numbers .infographic-item p:first-of-type span {
+	    color: white;
+}
+
+.infographic-item p:not(:first-of-type) {
+		margin: 10px 0;
+		font-weight: 300;
+		font-size: 1rem;
+}
+
+/* color variants */
+
+.infographic.numbers.inverse .infographic-item p:first-of-type span {
+	color: white;
+	-webkit-text-stroke: 1px black;	
+}
+
+.infographic.numbers.inverse .infographic-item p:first-of-type {
+	color: var(--graphite);
+	-webkit-text-stroke: 2px var(--gold-solid);
+}
+
+.color-block.dark .infographic.numbers .infographic-item p:first-of-type {
+    color: var(--gold-solid);
+    -webkit-text-stroke: unset;	
+}
+
+.color-block.dark .infographic.numbers.inverse .infographic-item p:first-of-type {
+    color: var(--graphite);
+	-webkit-text-stroke: 2px var(--gold-solid);
+}
+
+/* end color variants */
+
+
+.infographic-item p:not(:first-of-type) {
+		margin: 10px 0;
+		font-weight: 300;
+		font-size: 1rem;
 }
 
 @media screen and (max-width: 720px) {
   .infographic {
-    grid-template-columns: 1fr 1fr;
-    }
-
-  .infographic-item:nth-child(n+3) {
-    border-top: 1px solid var(--graphite);
-    padding-top: 10px;
-    }
-
-  .color-block.dark .infographic-item:nth-child(n+3) {
-    border-top-color: var(--gold-solid);
-    }	
-}
-
-@media screen and (max-width: 500px) {
-  .infographic {
     grid-template-columns: 1fr;
 }
 
-.infographic-item:nth-child(n+2) {
-    border-top: none;
-    padding-top: 10px;
-    }  
+  .infographic-item {
+    padding: 5px;
+}
 
 .infographic-item:nth-child(n+2):before {
     content:'';
     width: 40px;
-    border-top: 1px solid var(--graphite);
-    padding-top: 10px;
+    border-top: 1px solid var(--gold-solid);
+    padding-top: 30px;
     }
-
-.color-block.dark .infographic-item:nth-child(n+2):before {
-    border-top-color: var(--gold-solid);
-    }  		
-} 
+}
 
 /* Horizontal Line with Icon */
 
