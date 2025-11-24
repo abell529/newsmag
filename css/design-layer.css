@@ -510,8 +510,6 @@ ul.links-list li a {
 .main-content .links-list-container {
    border-top: 1px solid #ccc;
    border-bottom:1px solid #ccc;
-   padding: 20px 20px 15px 20px;
-   margin: 25px 0;
 }
 
 .main-content ul.links-list li {
@@ -526,6 +524,11 @@ ul.links-list li a {
   .main-content ul.links-list:has(li:nth-of-type(6)) {
     column-count: 1;
  }
+}
+
+.template-article .main-content .links-list-container {
+   padding: 20px 20px 15px 20px;
+   margin: 25px 0;
 }
 
 /* Sidebar Area */
