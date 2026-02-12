@@ -481,7 +481,7 @@ strong {
 .body-section p.tag.highlight {
     color: var(--gold-solid);
 	background: var(--graphite);
-	padding: 5px
+	padding: 5px;
 }
 
 .body-section p.tag.ribbon, .body-section .repeating-list.ribbons p.tag {
