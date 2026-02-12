@@ -535,6 +535,8 @@ span.highlight {
     color: var(--gold-solid);
     padding-left: .5ch;
     padding-right: .5ch;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;	
 }
 
 .color-block.dark span.highlight {
