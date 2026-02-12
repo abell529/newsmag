@@ -470,8 +470,18 @@ strong {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
+	display:inline;
     margin-top: 0;
+	line-height: 1.5;
     color: var(--dark-gray);
+	box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
+.body-section p.tag.highlight {
+    color: var(--gold-solid);
+	background: var(--graphite);
+	padding: 5px
 }
 
 .body-section p.tag.ribbon, .body-section .repeating-list.ribbons p.tag {
