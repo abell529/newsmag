@@ -1,0 +1,468 @@
+/* ================================================================
+   TU Audio Playlist Player — Styles
+   Scoped entirely to .tu-audio-player.
+   No external dependencies. No global variable or class conflicts.
+   ================================================================ */
+
+.tu-audio-player {
+  --player-gold-dark:   #D9A000;
+  --player-black:       #1A1A1A;
+  --player-gray-mid:    #828282;
+  --player-focus-ring:  3px solid var(--gold-solid);
+  --player-focus-offset: 2px;
+
+  background: var(--player-black);
+  border-radius: 4px;
+  width: 100%;
+  max-width: 560px;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* ── Inheritance resets ──────────────────────────────────────────
+   box-sizing/margin/padding zeros and list-style:none are omitted
+   here — newsroom.css covers all three globally via its universal
+   selector and :where() reset. The svg and i resets remain because
+   newsroom.css excludes svg * from :where() and has its own
+   .hamburger-nav i rules that could otherwise bleed into FA icons
+   inside the player.
+──────────────────────────────────────────────────────────────── */
+
+.tu-audio-player svg {
+  display: inline-block;
+  overflow: visible;
+  visibility: visible;
+  opacity: 1;
+  align-self: auto;
+  justify-self: auto;
+  padding: 0;
+  max-width: none;
+}
+
+.tu-audio-player .player-icon svg,
+.tu-audio-player .btn-play svg,
+.tu-audio-player .volume-icon svg {
+  display: block;
+  flex-shrink: 0;
+}
+
+.tu-audio-player i {
+  display: inline-block;
+  font-family: inherit;
+  font-style: normal;
+  line-height: 1;
+  visibility: visible;
+  opacity: 1;
+}
+
+.tu-audio-player .player-icon i {
+  font-size: 1.25rem;
+  color: var(--player-black);
+}
+
+.tu-audio-player .btn-play i {
+  font-size: 1rem;
+  color: currentColor;
+}
+
+.tu-audio-player .volume-icon i {
+  font-size: 0.875rem;
+  color: var(--player-gray-mid);
+}
+
+/* ── Player top section ──────────────────────────────────────── */
+.tu-audio-player .player-top {
+  padding: 1.5rem;
+}
+
+.tu-audio-player .player-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.tu-audio-player .player-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background: var(--gold-solid);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tu-audio-player .player-meta {
+  flex: 1;
+  min-width: 0;
+}
+
+.tu-audio-player .player-label {
+  display: block;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold-solid);
+  margin-bottom: 0.25rem;
+}
+
+.tu-audio-player .player-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── Controls ────────────────────────────────────────────────── */
+.tu-audio-player .player-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+}
+
+.tu-audio-player .player-volume {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tu-audio-player .btn-play {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid var(--gold-solid);
+  background: transparent;
+  color: var(--gold-solid);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.tu-audio-player .btn-play:hover {
+  background: var(--gold-solid);
+  color: var(--player-black);
+}
+
+.tu-audio-player .btn-play:focus-visible {
+  outline: var(--player-focus-ring);
+  outline-offset: var(--player-focus-offset);
+}
+
+.tu-audio-player .player-progress {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.tu-audio-player .scrubber-track {
+  position: relative;
+  height: 4px;
+  background: var(--graphite);
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.tu-audio-player .scrubber-track:focus-within {
+  outline: var(--player-focus-ring);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+.tu-audio-player .scrubber-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: var(--gold-solid);
+  border-radius: 2px;
+  pointer-events: none;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+.tu-audio-player .scrubber-input {
+  position: absolute;
+  inset: -8px 0;
+  width: 100%;
+  height: calc(100% + 16px);
+  opacity: 0;
+  cursor: pointer;
+  margin: 0;
+}
+
+.tu-audio-player .time-display {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.6875rem;
+  color: var(--player-gray-mid);
+  font-variant-numeric: tabular-nums;
+}
+
+.tu-audio-player .volume-icon {
+  color: var(--player-gray-mid);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.tu-audio-player .volume-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 72px;
+  height: 4px;
+  background: var(--graphite);
+  border-radius: 2px;
+  cursor: pointer;
+  outline: none;
+}
+
+.tu-audio-player .volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--gold-solid);
+  cursor: pointer;
+  border: none;
+}
+
+.tu-audio-player .volume-slider::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--gold-solid);
+  cursor: pointer;
+  border: none;
+}
+
+.tu-audio-player .volume-slider:focus-visible {
+  outline: var(--player-focus-ring);
+  outline-offset: var(--player-focus-offset);
+  border-radius: 2px;
+}
+
+/* ── Transcript ──────────────────────────────────────────────── */
+.tu-audio-player .transcript-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-top: 1px solid var(--graphite);
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  text-align: left;
+  color: var(--player-gray-mid);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color 0.15s ease;
+}
+
+.tu-audio-player .transcript-toggle:hover {
+  color: var(--white);
+}
+
+.tu-audio-player .transcript-toggle:focus-visible {
+  outline: var(--player-focus-ring);
+  outline-offset: -3px;
+}
+
+.tu-audio-player .transcript-toggle svg {
+  display: block;
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+  flex-shrink: 0;
+  transform-origin: center;
+  transition: transform 0.2s ease;
+}
+
+.tu-audio-player .transcript-toggle[aria-expanded="true"] svg {
+  transform: rotate(180deg);
+}
+
+.tu-audio-player .transcript-toggle[aria-expanded="true"] {
+  color: var(--gold-solid);
+}
+
+.tu-audio-player .transcript-panel {
+  display: none;
+  padding: 1rem 1.5rem 1.25rem;
+  border-top: 1px solid var(--graphite);
+  max-height: 160px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.tu-audio-player .transcript-panel:focus-visible {
+  outline: var(--player-focus-ring);
+  outline-offset: -3px;
+}
+
+.tu-audio-player .transcript-panel.is-open {
+  display: block;
+}
+
+.tu-audio-player .transcript-text {
+  color: var(--player-gray-mid);
+}
+
+.tu-audio-player .transcript-text p {
+  font-size: 1rem;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.tu-audio-player .transcript-text p + p {
+  margin-top: 0.75rem;
+}
+
+/* ── Playlist ────────────────────────────────────────────────── */
+.tu-audio-player .player-playlist {
+  border-top: 1px solid var(--graphite);
+  margin: 10px 0;
+}
+
+.tu-audio-player .tu-playlist-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--graphite);
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s ease;
+}
+
+.tu-audio-player .tu-playlist-item:last-child {
+  border-bottom: none;
+}
+
+.tu-audio-player .tu-playlist-item:hover {
+  background: var(--graphite);
+}
+
+.tu-audio-player .tu-playlist-item:focus-visible {
+  outline: var(--player-focus-ring);
+  outline-offset: -3px;
+}
+
+.tu-audio-player .tu-playlist-item[aria-current="true"] {
+  background: var(--graphite);
+}
+
+.tu-audio-player .track-number {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: var(--player-gray-mid);
+  min-width: 1.25rem;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+}
+
+.tu-audio-player .tu-playlist-item[aria-current="true"] .track-number {
+  color: var(--gold-solid);
+}
+
+.tu-audio-player .track-playing-indicator {
+  display: none;
+  width: 1.25rem;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2px;
+}
+
+.tu-audio-player .tu-playlist-item[aria-current="true"] .track-playing-indicator {
+  display: flex;
+}
+
+.tu-audio-player .tu-playlist-item[aria-current="true"] .track-number-text {
+  display: none;
+}
+
+.tu-audio-player .track-playing-indicator span {
+  display: block;
+  width: 3px;
+  background: var(--gold-solid);
+  border-radius: 1px;
+  animation: tu-bar-bounce 0.8s ease-in-out infinite alternate;
+}
+
+.tu-audio-player .track-playing-indicator span:nth-child(1) { height: 8px;  animation-delay: 0s; }
+.tu-audio-player .track-playing-indicator span:nth-child(2) { height: 12px; animation-delay: 0.2s; }
+.tu-audio-player .track-playing-indicator span:nth-child(3) { height: 6px;  animation-delay: 0.4s; }
+
+@keyframes tu-bar-bounce {
+  from { transform: scaleY(0.4); }
+  to   { transform: scaleY(1); }
+}
+
+.tu-audio-player.is-paused .track-playing-indicator span {
+  animation-play-state: paused;
+}
+
+.tu-audio-player .track-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.tu-audio-player .track-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--white);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tu-audio-player .tu-playlist-item[aria-current="true"] .track-name {
+  color: var(--gold-solid);
+}
+
+.tu-audio-player .track-duration {
+  font-size: 0.6875rem;
+  color: var(--player-gray-mid);
+  flex-shrink: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Mode modifiers ──────────────────────────────────────────────
+   .single hides the playlist only. Transcript remains visible in
+   both modes — required for WCAG 2.1 AA compliance.
+──────────────────────────────────────────────────────────────── */
+.tu-audio-player.single .player-playlist {
+  display: none;
+}
+
+/* ── Screen reader utility ───────────────────────────────────── */
+.tu-audio-player .tu-player-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
