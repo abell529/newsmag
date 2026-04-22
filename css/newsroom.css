@@ -540,7 +540,7 @@ strong {
     border-bottom-width: 1px;
 }
 
-.highlight {
+span.highlight {
     background: var(--graphite);
     color: var(--gold-solid);
     padding-left: .5ch;
@@ -549,9 +549,17 @@ strong {
     -webkit-box-decoration-break: clone;	
 }
 
-.color-block.dark .highlight {
+.color-block.dark span.highlight {
     background: var(--gold-solid);
     color: var(--graphite);
+}
+
+span.highlight.tag {
+    font-size: 1.0625;
+    padding: 5px 8px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: .15rem;
 }
 
 /* Decorative Body Headings */
