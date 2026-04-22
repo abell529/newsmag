@@ -540,7 +540,7 @@ strong {
     border-bottom-width: 1px;
 }
 
-span.highlight {
+.highlight {
     background: var(--graphite);
     color: var(--gold-solid);
     padding-left: .5ch;
@@ -549,7 +549,7 @@ span.highlight {
     -webkit-box-decoration-break: clone;	
 }
 
-.color-block.dark span.highlight {
+.color-block.dark .highlight {
     background: var(--gold-solid);
     color: var(--graphite);
 }
