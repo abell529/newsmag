@@ -1,0 +1,394 @@
+/* --------------------------------------------------------------------------
+   Reset — scoped to widget
+   -------------------------------------------------------------------------- */
+.local-infographic,
+.local-infographic * {
+  box-sizing: border-box;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+}
+.local-infographic ul,
+.local-infographic ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.local-infographic li {
+  margin: 0;
+  padding: 0;
+}
+.local-infographic p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+}
+.local-infographic strong {
+  font-weight: 700;
+}
+.local-infographic a {
+  text-decoration: none;
+  color: inherit;
+}
+.local-infographic img {
+  display: block;
+  max-width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   Outer container
+   Base font: 1.5rem / 300 — everything inherits from here
+   -------------------------------------------------------------------------- */
+.local-infographic {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #3C3C3C;
+}
+
+/* --------------------------------------------------------------------------
+   Callout numbers — standalone/own line
+   -------------------------------------------------------------------------- */
+.local-infographic .num {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* --------------------------------------------------------------------------
+   Modifiers
+   -------------------------------------------------------------------------- */
+
+/* Dark background — add to .item */
+.local-infographic .item.dark {
+  background: #3C3C3C;
+  color: #fff;
+}
+.local-infographic .item.dark .num {
+  color: #FFBB00;
+}
+.local-infographic .item.dark .stat:not(:last-child) {
+  border-right-color: #888;
+}
+
+/* Border — add to .item */
+.local-infographic .item.border {
+  border: 1px solid #888;
+  padding: 2rem;
+}
+
+/* Padded — same spacing as .border but no visible border */
+.local-infographic .item.padded {
+  padding: 2rem;
+}
+
+/* Icon list layout — add to .item */
+.local-infographic .item.icon-list {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+/* Chart stat layout — add to .item */
+.local-infographic .item.chart-stat {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+}
+
+/* Number grid layout — add to .item */
+.local-infographic .item.number-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 1rem;
+}
+
+/* --------------------------------------------------------------------------
+   Icon col
+   -------------------------------------------------------------------------- */
+.local-infographic .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  color: #FFBB00;
+  padding-right: 1rem;
+  border-right: 1px solid #ccc;
+}
+
+/* Hide the nbsp placeholder used to prevent CMS from stripping empty spans */
+.local-infographic .icon .placeholder {
+  display: none;
+}
+
+.local-infographic .text {
+  padding-left: 1rem;
+}
+
+/* --------------------------------------------------------------------------
+   Chart stat internals
+   -------------------------------------------------------------------------- */
+.local-infographic .primary-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-right: 2rem;
+  border-right: 1px solid #888;
+  align-self: stretch;
+  justify-content: center;
+}
+
+.local-infographic .chart-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2rem;
+  padding-left: 2rem;
+}
+
+/* Pie chart — segments defined by cumulative % custom properties
+   --a through --h mark the end of each segment in order
+   Unset segments default to the previous stop, collapsing to zero width
+   Example (3 segments): style="--a: 63.9%; --b: 88.5%;"
+   Example (5 segments): style="--a: 20%; --b: 45%; --c: 60%; --d: 80%;"
+   ========================================================================== */
+.local-infographic .chart {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: conic-gradient(
+    #FFBB00 0%             var(--a),
+    #3C3C3C var(--a)       var(--b, 100%),
+    #888    var(--b, 100%) var(--c, 100%),
+    #fc6    var(--c, 100%) var(--d, 100%),
+    #555    var(--d, 100%) var(--e, 100%),
+    #bbb    var(--e, 100%) var(--f, 100%),
+    #ffeeaa var(--f, 100%) var(--g, 100%),
+    #222    var(--g, 100%) 100%
+  );
+}
+
+/* Segment color classes — apply to .chart-key in legend markup */
+.local-infographic .segment-1 { background: #FFBB00; color: #000; }
+.local-infographic .segment-2 { background: #3C3C3C; color: #fff; }
+.local-infographic .segment-3 { background: #888;    color: #000; }
+.local-infographic .segment-4 { background: #fc6;    color: #000; }
+.local-infographic .segment-5 { background: #555;    color: #fff; }
+.local-infographic .segment-6 { background: #bbb;    color: #000; }
+.local-infographic .segment-7 { background: #ffeeaa; color: #000; }
+.local-infographic .segment-8 { background: #222;    color: #fff; }
+
+/* Donut variant — add to .chart */
+.local-infographic .chart.donut::after {
+  content: '';
+  display: block;
+  width: 65%;
+  height: 65%;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.local-infographic .chart-legend {
+  display: grid;
+  grid-template-columns: max-content auto;
+  gap: 12px;
+  align-items: center;
+}
+
+.local-infographic .chart-legend li {
+  display: contents;
+}
+
+.local-infographic .chart-key {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 10px;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.local-infographic .chart-legend li > .label {
+  font-size: .875rem;
+  font-weight: 400;
+  color: #3C3C3C;
+}
+
+.local-infographic .stat-full {
+  grid-column: 1 / -1;
+  border-top: 1px solid #888;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+.local-infographic .stat-full p {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+/* --------------------------------------------------------------------------
+   Eyebrow / label
+   -------------------------------------------------------------------------- */
+.local-infographic .eyebrow {
+  grid-column: 1 / -1;
+  margin-bottom: 20px;
+}
+
+.local-infographic .eyebrow-label {
+  display: inline-block;
+  background: #FFBB00;
+  color: #000;
+  padding: 5px 10px;
+}
+
+/* Base arrow — shared setup */
+.local-infographic .eyebrow.arrow .eyebrow-label {
+  position: relative;
+}
+.local-infographic .eyebrow.arrow .eyebrow-label::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+/* Down variant */
+.local-infographic .eyebrow.arrow.down {
+  padding-bottom: 12px;
+}
+.local-infographic .eyebrow.arrow.down .eyebrow-label::after {
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #FFBB00;
+}
+
+/* Right variant */
+.local-infographic .eyebrow.arrow.right .eyebrow-label {
+  margin-right: 12px;
+}
+.local-infographic .eyebrow.arrow.right .eyebrow-label::after {
+  right: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 8px solid #FFBB00;
+}
+
+/* --------------------------------------------------------------------------
+   Number grid internals
+   -------------------------------------------------------------------------- */
+.local-infographic .stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0 1rem;
+  border-right: 1px solid #ccc;
+}
+
+.local-infographic .stat:first-child {
+  padding-left: 0;
+}
+
+.local-infographic .stat:last-child {
+  padding-right: 0;
+  border-right: none;
+}
+
+/* --------------------------------------------------------------------------
+   Zigzag separator — SVG data URI
+   Tile: 12x7px. Filled path traces top edge (peak at x=6, y=0) then
+   returns 1px lower along bottom edge — no stroke, no rounding artifacts.
+   Transparent background — works on any color.
+   -------------------------------------------------------------------------- */
+.local-infographic .separator.zigzag {
+  height: 7px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7' viewBox='0 0 12 7'%3E%3Cpath d='M0,6 L6,0 L12,6 L12,7 L6,1 L0,7 Z' fill='%23888'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: left top;
+}
+
+/* --------------------------------------------------------------------------
+   Mobile — stack all columns at 500px
+   -------------------------------------------------------------------------- */
+@media (max-width: 500px) {
+
+  .local-infographic .item.icon-list {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .local-infographic .icon {
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+    padding-right: 0;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .local-infographic .text {
+    padding-left: 0;
+  }
+
+  .local-infographic .item.chart-stat {
+    grid-template-columns: 1fr;
+  }
+
+  .local-infographic .item.border,
+  .local-infographic .item.padded {
+    padding: 1rem;
+  }
+
+  .local-infographic .primary-stat {
+    border-right: none;
+    border-bottom: 1px solid #888;
+    padding-right: 0;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .local-infographic .chart-wrap {
+    grid-template-columns: 1fr;
+    padding-left: 0;
+  }
+
+  .local-infographic .stat-full p {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .local-infographic .item.number-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .local-infographic .stat {
+    padding: 1rem 0;
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .local-infographic .item.dark .stat {
+    border-bottom-color: #555;
+  }
+
+  .local-infographic .stat:last-child {
+    border-bottom: none;
+  }
+
+}
