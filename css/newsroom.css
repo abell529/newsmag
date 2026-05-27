@@ -2314,13 +2314,13 @@ p.tag-primary + h3 {
    .news.item:has(img.player) figure:after {
       font-size: 3rem;
       top: calc(50% - 1.5rem);    
-      left: calc(50vw - 1.5rem);
+      left: calc(50% - 1.5rem);
       }
     
     .lead .news.item:has(img.player) figure:after {
       font-size: 5rem;
       top: calc(50% - 2.5rem);    
-      left: calc(50vw - 2.5rem);
+      left: calc(50% - 2.5rem);
       }	
 }
 
