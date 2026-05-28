@@ -319,11 +319,15 @@ blockquote.pull-quote.quote-marks p:not(.attrib):after {
     height: 100%;
 }
 
-/* Normalizes the top alignment of main body and sidebar when one or both sections lead with an element with a margin-top value other than 0 */
+/* Zero out top margin on the first element in both columns of the two-col template
+   to ensure visual alignment at the top of each column. Targets the first child
+   directly, and one level deep, to account for cases where margin lives on a
+   wrapper's first child rather than the wrapper itself. */
 
-.body-container.two-col .main-content .body-section > :first-of-type,
-.body-container.two-col .secondary-content :first-child:not(.full-bleed-section *) {
-	margin-top:0;
+.body-container.two-col .main-content .body-section > *:first-child,
+.body-container.two-col .secondary-content > :first-child,
+.body-container.two-col .secondary-content > :first-child > *:first-child {
+    margin-top: 0;
 }
 
 /* === CARD LAYOUT HOVER STATES === */
