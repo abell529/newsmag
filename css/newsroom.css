@@ -981,20 +981,35 @@ a.content-button:hover {
 }
 
 .sidebar {
-    background: var(--light-gray-40);
     margin: 40px 0;
+}
+
+.sidebar.separator {
+	   border: none;
+	   border-left: 2px solid #FB0;
 }
 
 .secondary-content:not(.body-container.two-col .secondary-content) {
     display:none;
 }
 
-.sidebar.separator {
-    border-left: 2px solid #ccc;
-}
-
 .body-container.two-col .sidebar {
     display: block;
+}
+
+.secondary-content .sidebar img {
+   margin-bottom: 20px;
+}
+
+.secondary-content .sidebar h2{
+   font-size: 1.625rem;
+}
+	
+@media screen and (max-width: 720px) {
+	.secondary-content .sidebar {
+	   border: none;
+	   border-bottom: 2px solid #FB0;
+    }
 }
 
 /* the following rules change spacing between sidebar elements when multiple instances are used consecutively */
