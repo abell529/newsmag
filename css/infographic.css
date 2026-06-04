@@ -1,38 +1,38 @@
 /* --------------------------------------------------------------------------
    Reset — scoped to widget
    -------------------------------------------------------------------------- */
-.local-infographic,
-.local-infographic * {
+.infographic,
+.infographic * {
   box-sizing: border-box;
   line-height: 1.2;
   margin: 0;
   padding: 0;
 }
-.local-infographic ul,
-.local-infographic ol {
+.infographic ul,
+.infographic ol {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-.local-infographic li {
+.infographic li {
   margin: 0;
   padding: 0;
 }
-.local-infographic p {
+.infographic p {
   font-size: 1.5rem;
   font-weight: 300;
   line-height: 1.2;
   margin: 0;
   padding: 0;
 }
-.local-infographic strong {
+.infographic strong {
   font-weight: 700;
 }
-.local-infographic a {
+.infographic a {
   text-decoration: none;
   color: inherit;
 }
-.local-infographic img {
+.infographic img {
   display: block;
   max-width: 100%;
 }
@@ -41,7 +41,7 @@
    Outer container
    Base font: 1.5rem / 300 — everything inherits from here
    -------------------------------------------------------------------------- */
-.local-infographic {
+.infographic {
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -54,7 +54,7 @@
 /* --------------------------------------------------------------------------
    Callout numbers — standalone/own line
    -------------------------------------------------------------------------- */
-.local-infographic .num {
+.infographic .num {
   font-size: 3rem;
   font-weight: 700;
   line-height: 1;
@@ -65,30 +65,30 @@
    -------------------------------------------------------------------------- */
 
 /* Dark background — add to .item */
-.local-infographic .item.dark {
+.infographic .item.dark {
   background: #3C3C3C;
   color: #fff;
 }
-.local-infographic .item.dark .num {
+.infographic .item.dark .num {
   color: #FFBB00;
 }
-.local-infographic .item.dark .stat:not(:last-child) {
+.infographic .item.dark .stat:not(:last-child) {
   border-right-color: #888;
 }
 
 /* Border — add to .item */
-.local-infographic .item.border {
+.infographic .item.border {
   border: 1px solid #888;
   padding: 2rem;
 }
 
 /* Padded — same spacing as .border but no visible border */
-.local-infographic .item.padded {
+.infographic .item.padded {
   padding: 2rem;
 }
 
 /* Icon list layout — add to .item */
-.local-infographic .item.icon-list {
+.infographic .item.icon-list {
   display: grid;
   grid-template-columns: 140px 1fr;
   align-items: center;
@@ -96,14 +96,14 @@
 }
 
 /* Chart stat layout — add to .item */
-.local-infographic .item.chart-stat {
+.infographic .item.chart-stat {
   display: grid;
   grid-template-columns: 1fr 2fr;
   align-items: center;
 }
 
 /* Number grid layout — add to .item */
-.local-infographic .item.number-grid {
+.infographic .item.number-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   padding: 1rem;
@@ -112,7 +112,7 @@
 /* --------------------------------------------------------------------------
    Icon col
    -------------------------------------------------------------------------- */
-.local-infographic .icon {
+.infographic .icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -123,18 +123,18 @@
 }
 
 /* Hide the nbsp placeholder used to prevent CMS from stripping empty spans */
-.local-infographic .icon .placeholder {
+.infographic .icon .placeholder {
   display: none;
 }
 
-.local-infographic .text {
+.infographic .text {
   padding-left: 1rem;
 }
 
 /* --------------------------------------------------------------------------
    Chart stat internals
    -------------------------------------------------------------------------- */
-.local-infographic .primary-stat {
+.infographic .primary-stat {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -144,7 +144,7 @@
   justify-content: center;
 }
 
-.local-infographic .chart-wrap {
+.infographic .chart-wrap {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
@@ -158,7 +158,7 @@
    Example (3 segments): style="--a: 63.9%; --b: 88.5%;"
    Example (5 segments): style="--a: 20%; --b: 45%; --c: 60%; --d: 80%;"
    ========================================================================== */
-.local-infographic .chart {
+.infographic .chart {
   position: relative;
   width: 100%;
   aspect-ratio: 1;
@@ -176,17 +176,17 @@
 }
 
 /* Segment color classes — apply to .chart-key in legend markup */
-.local-infographic .segment-1 { background: #FFBB00; color: #000; }
-.local-infographic .segment-2 { background: #3C3C3C; color: #fff; }
-.local-infographic .segment-3 { background: #888;    color: #000; }
-.local-infographic .segment-4 { background: #fc6;    color: #000; }
-.local-infographic .segment-5 { background: #555;    color: #fff; }
-.local-infographic .segment-6 { background: #bbb;    color: #000; }
-.local-infographic .segment-7 { background: #ffeeaa; color: #000; }
-.local-infographic .segment-8 { background: #222;    color: #fff; }
+.infographic .segment-1 { background: #FFBB00; color: #000; }
+.infographic .segment-2 { background: #3C3C3C; color: #fff; }
+.infographic .segment-3 { background: #888;    color: #000; }
+.infographic .segment-4 { background: #fc6;    color: #000; }
+.infographic .segment-5 { background: #555;    color: #fff; }
+.infographic .segment-6 { background: #bbb;    color: #000; }
+.infographic .segment-7 { background: #ffeeaa; color: #000; }
+.infographic .segment-8 { background: #222;    color: #fff; }
 
 /* Donut variant — add to .chart */
-.local-infographic .chart.donut::after {
+.infographic .chart.donut::after {
   content: '';
   display: block;
   width: 65%;
@@ -199,18 +199,18 @@
   transform: translate(-50%, -50%);
 }
 
-.local-infographic .chart-legend {
+.infographic .chart-legend {
   display: grid;
   grid-template-columns: max-content auto;
   gap: 12px;
   align-items: center;
 }
 
-.local-infographic .chart-legend li {
+.infographic .chart-legend li {
   display: contents;
 }
 
-.local-infographic .chart-key {
+.infographic .chart-key {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -219,20 +219,20 @@
   font-weight: 400;
 }
 
-.local-infographic .chart-legend li > .label {
+.infographic .chart-legend li > .label {
   font-size: .875rem;
   font-weight: 400;
   color: #3C3C3C;
 }
 
-.local-infographic .stat-full {
+.infographic .stat-full {
   grid-column: 1 / -1;
   border-top: 1px solid #888;
   margin-top: 1.5rem;
   padding-top: 1.5rem;
 }
 
-.local-infographic .stat-full p {
+.infographic .stat-full p {
   display: flex;
   align-items: baseline;
   gap: 8px;
@@ -241,12 +241,12 @@
 /* --------------------------------------------------------------------------
    Eyebrow / label
    -------------------------------------------------------------------------- */
-.local-infographic .eyebrow {
+.infographic .eyebrow {
   grid-column: 1 / -1;
   margin-bottom: 20px;
 }
 
-.local-infographic .eyebrow-label {
+.infographic .eyebrow-label {
   display: inline-block;
   background: #FFBB00;
   color: #000;
@@ -254,10 +254,10 @@
 }
 
 /* Base arrow — shared setup */
-.local-infographic .eyebrow.arrow .eyebrow-label {
+.infographic .eyebrow.arrow .eyebrow-label {
   position: relative;
 }
-.local-infographic .eyebrow.arrow .eyebrow-label::after {
+.infographic .eyebrow.arrow .eyebrow-label::after {
   content: '';
   position: absolute;
   width: 0;
@@ -265,10 +265,10 @@
 }
 
 /* Down variant */
-.local-infographic .eyebrow.arrow.down {
+.infographic .eyebrow.arrow.down {
   padding-bottom: 12px;
 }
-.local-infographic .eyebrow.arrow.down .eyebrow-label::after {
+.infographic .eyebrow.arrow.down .eyebrow-label::after {
   bottom: -8px;
   left: 50%;
   transform: translateX(-50%);
@@ -278,10 +278,10 @@
 }
 
 /* Right variant */
-.local-infographic .eyebrow.arrow.right .eyebrow-label {
+.infographic .eyebrow.arrow.right .eyebrow-label {
   margin-right: 12px;
 }
-.local-infographic .eyebrow.arrow.right .eyebrow-label::after {
+.infographic .eyebrow.arrow.right .eyebrow-label::after {
   right: -8px;
   top: 50%;
   transform: translateY(-50%);
@@ -293,7 +293,7 @@
 /* --------------------------------------------------------------------------
    Number grid internals
    -------------------------------------------------------------------------- */
-.local-infographic .stat {
+.infographic .stat {
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -301,11 +301,11 @@
   border-right: 1px solid #ccc;
 }
 
-.local-infographic .stat:first-child {
+.infographic .stat:first-child {
   padding-left: 0;
 }
 
-.local-infographic .stat:last-child {
+.infographic .stat:last-child {
   padding-right: 0;
   border-right: none;
 }
@@ -316,7 +316,7 @@
    returns 1px lower along bottom edge — no stroke, no rounding artifacts.
    Transparent background — works on any color.
    -------------------------------------------------------------------------- */
-.local-infographic .separator.zigzag {
+.infographic .separator.zigzag {
   height: 7px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7' viewBox='0 0 12 7'%3E%3Cpath d='M0,6 L6,0 L12,6 L12,7 L6,1 L0,7 Z' fill='%23888'/%3E%3C/svg%3E");
   background-repeat: repeat-x;
@@ -328,13 +328,13 @@
    -------------------------------------------------------------------------- */
 @media (max-width: 500px) {
 
-  .local-infographic .item.icon-list {
+  .infographic .item.icon-list {
     grid-template-columns: 1fr;
     text-align: center;
     padding: 1rem;
   }
 
-  .local-infographic .icon {
+  .infographic .icon {
     border-right: none;
     border-bottom: 1px solid #ccc;
     padding-right: 0;
@@ -342,20 +342,20 @@
     margin-bottom: 1rem;
   }
 
-  .local-infographic .text {
+  .infographic .text {
     padding-left: 0;
   }
 
-  .local-infographic .item.chart-stat {
+  .infographic .item.chart-stat {
     grid-template-columns: 1fr;
   }
 
-  .local-infographic .item.border,
-  .local-infographic .item.padded {
+  .infographic .item.border,
+  .infographic .item.padded {
     padding: 1rem;
   }
 
-  .local-infographic .primary-stat {
+  .infographic .primary-stat {
     border-right: none;
     border-bottom: 1px solid #888;
     padding-right: 0;
@@ -363,31 +363,31 @@
     margin-bottom: 1.5rem;
   }
 
-  .local-infographic .chart-wrap {
+  .infographic .chart-wrap {
     grid-template-columns: 1fr;
     padding-left: 0;
   }
 
-  .local-infographic .stat-full p {
+  .infographic .stat-full p {
     flex-direction: column;
     gap: 4px;
   }
 
-  .local-infographic .item.number-grid {
+  .infographic .item.number-grid {
     grid-template-columns: 1fr;
   }
 
-  .local-infographic .stat {
+  .infographic .stat {
     padding: 1rem 0;
     border-right: none;
     border-bottom: 1px solid #ccc;
   }
 
-  .local-infographic .item.dark .stat {
+  .infographic .item.dark .stat {
     border-bottom-color: #555;
   }
 
-  .local-infographic .stat:last-child {
+  .infographic .stat:last-child {
     border-bottom: none;
   }
 
