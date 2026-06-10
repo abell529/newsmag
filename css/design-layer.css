@@ -465,7 +465,7 @@ blockquote.pull-quote.quote-marks p:not(.attrib):after {
 /* === LINKS LIST === */
 
 ul.links-list {
-    margin: 0;
+    margin: 20px 0;
   }
 
 .links-list li {
