@@ -465,7 +465,7 @@ blockquote.pull-quote.quote-marks p:not(.attrib):after {
 /* === LINKS LIST === */
 
 ul.links-list {
-    margin: 0;
+    margin: 20px 0;
   }
 
 .links-list li {
@@ -774,16 +774,17 @@ p.pub-flag.tu-magazine img {
   font-size: 1.25rem;
 }
 
-/* These add a zig-zag pattern to the container. This rule is specific to this particular usage and should be abstracted for a utility class later. */
+/* Zig-zag should be merged with broader rules currently on newsroom.css */
 
-.secondary-content .full-bleed-section.color-block:has(.icon-list-grid) {
+.secondary-content .full-bleed-section.zig-zag-top-bottom {
+  mask: none;
   mask: conic-gradient(from 45deg at left, #0000, #000 1deg 89deg, #0000 90deg) 0% / 100% 16.00px;
 }
 
 @media screen and (max-width: 720px) {
-.secondary-content .full-bleed-section.color-block:has(.icon-list-grid) {
-    mask: conic-gradient(from 135deg at top, #0000, #000 1deg 89deg, #0000 90deg) 50% / 16.00px 100%;
-  }
+.secondary-content .full-bleed-section.zig-zag-top-bottom {
+    mask: conic-gradient(from 135deg at top, #0000, #000 1deg 89deg, #0000 90deg) 50% / 16.00px 100%;  }
+	}
 }
 
 /* === INFOGRAPHIC  === */
