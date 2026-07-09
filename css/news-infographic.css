@@ -324,6 +324,124 @@
 }
 
 /* --------------------------------------------------------------------------
+   Large display number
+   .num is 3rem / 700 (base). .num.xl mirrors legacy "large" treatment.
+   -------------------------------------------------------------------------- */
+.infographic .num.xl {
+  font-size: 5rem;
+  font-weight: 800;
+}
+
+/* --------------------------------------------------------------------------
+   Prefix / suffix span inside .num
+   <p class="num xl stroke"><span>#</span>1</p>
+   -------------------------------------------------------------------------- */
+.infographic .num span {
+  font-size: 85%;
+  padding-right: 3px;
+  font-weight: inherit;
+}
+
+/* --------------------------------------------------------------------------
+   Outlined number treatment
+   .num.stroke         — gold fill, 1px black stroke
+   .num.stroke.inverse — graphite fill, 2px gold stroke
+   .num.stroke span    — stroke only, no fill
+   .item.dark override removes stroke; restores span fill
+   -------------------------------------------------------------------------- */
+.infographic .num.stroke {
+  color: #FFBB00;
+  -webkit-text-stroke: 1px #000;
+}
+.infographic .num.stroke.inverse {
+  color: #3C3C3C;
+  -webkit-text-stroke: 2px #FFBB00;
+}
+.infographic .num.stroke span {
+  color: transparent;
+}
+.infographic .item.dark .num.stroke {
+  -webkit-text-stroke: unset;
+}
+.infographic .item.dark .num.stroke span {
+  color: inherit;
+}
+
+/* Convenience: apply inverse stroke via .stat wrapper */
+.infographic .stat.inverse .num.stroke {
+  color: #3C3C3C;
+  -webkit-text-stroke: 2px #FFBB00;
+}
+
+/* --------------------------------------------------------------------------
+   Wide stat — side-by-side number / label layout
+   Maps to legacy .infographic-item.large.
+   -------------------------------------------------------------------------- */
+.infographic .stat.wide {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 12px;
+  align-items: center;
+  container-type: inline-size;
+}
+
+.infographic .stat.wide p:not(.num) {
+  font-family: 'kandal', serif;
+  font-style: italic;
+  font-size: 1.75rem;
+}
+
+@container (max-width: 340px) {
+  .infographic .stat.wide p:not(.num) {
+    font-size: 1.5rem;
+  }
+}
+@container (max-width: 240px) {
+  .infographic .stat.wide p:not(.num) {
+    font-size: 1.25rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Number grid column variants
+   .number-grid (existing) — 3-up / 33–33–33
+   .number-grid.halves     — 2-up / 50–50
+   -------------------------------------------------------------------------- */
+.infographic .item.number-grid.halves {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* --------------------------------------------------------------------------
+   Number grid — inherited number treatments
+   Classes on .item.number-grid cascade to all child .num elements,
+   so authors can style the container rather than each individual stat.
+   -------------------------------------------------------------------------- */
+.infographic .item.number-grid.xl .num {
+  font-size: 5rem;
+  font-weight: 800;
+}
+
+.infographic .item.number-grid.stroke .num {
+  color: #FFBB00;
+  -webkit-text-stroke: 1px #000;
+}
+.infographic .item.number-grid.stroke .num span {
+  color: transparent;
+}
+
+.infographic .item.number-grid.stroke.inverse .num {
+  color: #3C3C3C;
+  -webkit-text-stroke: 2px #FFBB00;
+}
+
+.infographic .item.number-grid.dark.stroke .num {
+  -webkit-text-stroke: unset;
+}
+.infographic .item.number-grid.dark.stroke .num span {
+  color: inherit;
+}
+
+/* --------------------------------------------------------------------------
    Mobile — stack all columns at 500px
    -------------------------------------------------------------------------- */
 @media (max-width: 500px) {
@@ -377,6 +495,10 @@
     grid-template-columns: 1fr;
   }
 
+  .infographic .item.number-grid.halves {
+    grid-template-columns: 1fr;
+  }
+
   .infographic .stat {
     padding: 1rem 0;
     border-right: none;
@@ -389,6 +511,11 @@
 
   .infographic .stat:last-child {
     border-bottom: none;
+  }
+
+  .infographic .stat.wide {
+    grid-template-columns: 1fr;
+    text-align: center;
   }
 
 }
