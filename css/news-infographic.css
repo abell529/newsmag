@@ -152,26 +152,33 @@
   padding-left: 2rem;
 }
 
-/* Pie chart — segments defined by cumulative % custom properties
-   --a through --h mark the end of each segment in order
-   Unset segments default to the previous stop, collapsing to zero width
-   Example (3 segments): style="--a: 63.9%; --b: 88.5%;"
-   Example (5 segments): style="--a: 20%; --b: 45%; --c: 60%; --d: 80%;"
+/* Pie chart — each variable sets the WIDTH of that slice (not a cumulative
+   endpoint). Private --_ accumulators handle the math internally.
+   Set one variable per slice; values should sum to 100%.
+   If they don't, the 8th color fills any remainder — a visible error signal.
+   Example (2 slices): style="--a: 64%; --b: 36%;"
+   Example (4 slices): style="--a: 40%; --b: 35%; --c: 15%; --d: 10%;"
    ========================================================================== */
 .infographic .chart {
   position: relative;
   width: 100%;
   aspect-ratio: 1;
   border-radius: 50%;
+  --_b: calc(var(--a, 0%) + var(--b, 0%));
+  --_c: calc(var(--_b)    + var(--c, 0%));
+  --_d: calc(var(--_c)    + var(--d, 0%));
+  --_e: calc(var(--_d)    + var(--e, 0%));
+  --_f: calc(var(--_e)    + var(--f, 0%));
+  --_g: calc(var(--_f)    + var(--g, 0%));
   background: conic-gradient(
-    #FFBB00 0%             var(--a),
-    #3C3C3C var(--a)       var(--b, 100%),
-    #888    var(--b, 100%) var(--c, 100%),
-    #fc6    var(--c, 100%) var(--d, 100%),
-    #555    var(--d, 100%) var(--e, 100%),
-    #bbb    var(--e, 100%) var(--f, 100%),
-    #ffeeaa var(--f, 100%) var(--g, 100%),
-    #222    var(--g, 100%) 100%
+    #FFBB00 0%         var(--a, 0%),
+    #3C3C3C var(--a, 0%) var(--_b),
+    #888    var(--_b)  var(--_c),
+    #fc6    var(--_c)  var(--_d),
+    #555    var(--_d)  var(--_e),
+    #bbb    var(--_e)  var(--_f),
+    #ffeeaa var(--_f)  var(--_g),
+    #222    var(--_g)  100%
   );
 }
 
