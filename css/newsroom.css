@@ -398,7 +398,7 @@ strong {
     color: var(--dark-gray);
 }
 
-.body-container p a {
+.body-container p a, .body-container ul a {
     background-image: linear-gradient(var(--gold-solid) 0 0);
     background-size: 200% 0px;
     background-position: 200% 100%;
@@ -408,7 +408,7 @@ strong {
     transition: background-size .3s, background-position .3s .3s;
 }
 
-.body-container p a:hover {
+.body-container p a:hover, .body-container ul a:hover {
     transition: background-size .3s, background-position;
     background-size: 200% 100%;
     background-position: 100% 100%;
