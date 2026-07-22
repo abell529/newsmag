@@ -1656,7 +1656,7 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
 	   line-height: 1.75rem;
    }
    
-   .repeating-list p {
+   .repeating-list p, .repeating-list ul {
 	   text-align: left;
 	   font-size: 1rem;
    }
