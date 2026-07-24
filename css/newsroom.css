@@ -2740,7 +2740,7 @@ p.vertical-name {
 }
 
 .heading-constrain.nav-flex-wrap a {
-    display: contents;
+    display: inline;
 }
 
 .nav-container {
@@ -3676,6 +3676,12 @@ form.search_form_mobile {
 }
 .hamburger-nav.touched:hover i {
 	background-color: #272727;
+}
+
+.navigation .mobile-nav .hamburger:hover i,
+.navigation .hamburger:hover i,
+.hamburger.touched:hover i {
+    background-color: currentColor;
 }
 
 @media only screen and (min-width: 961px) {
