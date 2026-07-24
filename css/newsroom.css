@@ -398,7 +398,7 @@ strong {
     color: var(--dark-gray);
 }
 
-.body-container p a, .body-container ul a {
+.body-container p a, .body-container .body-section ul a {
     background-image: linear-gradient(var(--gold-solid) 0 0);
     background-size: 200% 0px;
     background-position: 200% 100%;
