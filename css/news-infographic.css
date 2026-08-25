@@ -314,6 +314,27 @@
   border-right: none;
 }
 
+/* Two-up grid with full-width spanning last stat */
+.infographic .item.number-grid.two-one {
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 30px;
+}
+.infographic .item.number-grid.two-one .stat:nth-child(2n) {
+  border-right: none;
+}
+.infographic .item.number-grid.two-one .stat:not(:last-child) {
+  align-items: center;
+  text-align: center;
+}
+.infographic .item.number-grid.two-one .stat:last-child {
+  grid-column: 1 / -1;
+  border-right: none;
+  border-top: 1px solid #ccc;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 20px;
+}
+
 /* --------------------------------------------------------------------------
    Zigzag separator — SVG data URI
    Tile: 12x7px. Filled path traces top edge (peak at x=6, y=0) then
@@ -449,7 +470,21 @@
 /* --------------------------------------------------------------------------
    Mobile — stack all columns at 500px
    -------------------------------------------------------------------------- */
+@media (max-width: 720px) {
+
+  .infographic .num.xl,
+  .infographic .item.number-grid.xl .num {
+    font-size: 3rem;
+  }
+
+}
+
 @media (max-width: 500px) {
+
+  .infographic .num.xl,
+  .infographic .item.number-grid.xl .num {
+    font-size: 3.75rem;
+  }
 
   .infographic .item.icon-list {
     grid-template-columns: 1fr;
