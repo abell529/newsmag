@@ -398,7 +398,7 @@ strong {
     color: var(--dark-gray);
 }
 
-.body-container p a {
+.body-container p a, .body-container .body-section ul a {
     background-image: linear-gradient(var(--gold-solid) 0 0);
     background-size: 200% 0px;
     background-position: 200% 100%;
@@ -408,7 +408,7 @@ strong {
     transition: background-size .3s, background-position .3s .3s;
 }
 
-.body-container p a:hover {
+.body-container p a:hover, .body-container ul a:hover {
     transition: background-size .3s, background-position;
     background-size: 200% 100%;
     background-position: 100% 100%;
@@ -1656,7 +1656,7 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
 	   line-height: 1.75rem;
    }
    
-   .repeating-list p {
+   .repeating-list p, .repeating-list ul {
 	   text-align: left;
 	   font-size: 1rem;
    }
@@ -2740,7 +2740,7 @@ p.vertical-name {
 }
 
 .heading-constrain.nav-flex-wrap a {
-    display: contents;
+    display: inline;
 }
 
 .nav-container {
@@ -3676,6 +3676,12 @@ form.search_form_mobile {
 }
 .hamburger-nav.touched:hover i {
 	background-color: #272727;
+}
+
+.navigation .mobile-nav .hamburger:hover i,
+.navigation .hamburger:hover i,
+.hamburger.touched:hover i {
+    background-color: currentColor;
 }
 
 @media only screen and (min-width: 961px) {

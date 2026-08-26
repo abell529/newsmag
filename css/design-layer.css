@@ -976,6 +976,8 @@ p.pub-flag.tu-magazine img {
     position: absolute;
     left: -36px;
     font-weight: 700;
+	-webkit-text-stroke: 1px var(--dark-gray);
+    letter-spacing: 1px;	
 }
 
 .q-a-item .q-a-question > h3:first-of-type:before{
