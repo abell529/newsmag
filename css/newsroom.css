@@ -1830,7 +1830,7 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
     display: grid;
     background: var(--light-gray-80);
     grid-template-columns: 1fr 2fr;    
-    margin: 10px 0 30px;    
+    margin: 40px 0;    
 }
 
 .callout.left {
