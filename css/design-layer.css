@@ -522,6 +522,7 @@ ul.links-list li a {
 
 .main-content ul.links-list li {
    border: none;
+   margin-bottom: 10px;
 }
 
 .main-content ul.links-list:has(li:nth-of-type(6)) {
