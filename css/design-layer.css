@@ -475,6 +475,10 @@ ul.links-list {
     margin-bottom: 20px;	
   }
 
+.links-list li a:hover {
+    background: none;
+}
+
 .links-list li a:hover:after {
   color: black;
   padding-left: 15px;
