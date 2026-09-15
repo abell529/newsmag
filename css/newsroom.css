@@ -562,44 +562,11 @@ blockquote.pull-quote.quote p.attrib {
     box-shadow: 5px 5px 12px var(--light-gray);
 }
 
-/* Zigzag Effect */
-
-.zig-zag-top-bottom {
-  --mask: 
-    conic-gradient(from 135deg at top,#0000,#000 1deg 89deg,#0000 90deg) top/16.00px 51% repeat-x,
-    conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/16.00px 51% repeat-x;
-  -webkit-mask: var(--mask);
-          mask: var(--mask);
-}
-
-.zig-zag-top {
-  --mask: conic-gradient(from 135deg at top,#0000,#000 1deg 89deg,#0000 90deg) 50%/16.00px 100%;
-  -webkit-mask: var(--mask);
-          mask: var(--mask);
-}
-
-.zig-zag-left {
-  --mask: conic-gradient(from 45deg at left,#0000,#000 1deg 89deg,#0000 90deg) 0%/100% 16.00px;
-  -webkit-mask: var(--mask);
-          mask: var(--mask);
-}
-
-.zig-zag-right {
-  --mask: conic-gradient(from -135deg at right,#0000,#000 1deg 89deg,#0000 90deg) 0%/100% 16.00px;
-  -webkit-mask: var(--mask);
-          mask: var(--mask);
-}
-
-.zig-zag-bottom {
-  --mask: conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/16.00px 100%;
-  -webkit-mask: var(--mask);
-          mask: var(--mask);
-}
-
 /* Color Blocks */
 /* Use with masonry grid, full-bleed background containers, callouts, or visual list cards */
 
 .color-block.gold {
+    --full-bleed-section-bg: var(--gold-solid);
     background-color: var(--gold-solid);
     color: #000;
 }
@@ -613,6 +580,7 @@ blockquote.pull-quote.quote p.attrib {
 }
 
 .color-block.dark {
+  --full-bleed-section-bg: var(--graphite);
     background-color: var(--graphite);
     color: var(--lighter-gray);
 }
@@ -821,7 +789,8 @@ a.content-button:hover {
 /* Full Bleed Container  */
 
 .full-bleed-section {
-    background: var(--lighter-gray);
+    --full-bleed-section-bg: var(--lighter-gray);
+    background: var(--full-bleed-section-bg);
     width: 100vw;
     margin: 0 calc(50% - 50vw);
     overflow: hidden;
@@ -1830,7 +1799,7 @@ img.round, figure.round, .round img, .rounds img {        /* use .round for a si
     display: grid;
     background: var(--light-gray-80);
     grid-template-columns: 1fr 2fr;    
-    margin: 10px 0 30px;    
+    margin: 40px 0;    
 }
 
 .callout.left {
