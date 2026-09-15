@@ -600,6 +600,7 @@ blockquote.pull-quote.quote p.attrib {
 /* Use with masonry grid, full-bleed background containers, callouts, or visual list cards */
 
 .color-block.gold {
+    --full-bleed-section-bg: var(--gold-solid);
     background-color: var(--gold-solid);
     color: #000;
 }
@@ -613,6 +614,7 @@ blockquote.pull-quote.quote p.attrib {
 }
 
 .color-block.dark {
+  --full-bleed-section-bg: var(--graphite);
     background-color: var(--graphite);
     color: var(--lighter-gray);
 }
@@ -821,7 +823,8 @@ a.content-button:hover {
 /* Full Bleed Container  */
 
 .full-bleed-section {
-    background: var(--lighter-gray);
+    --full-bleed-section-bg: var(--lighter-gray);
+    background: var(--full-bleed-section-bg);
     width: 100vw;
     margin: 0 calc(50% - 50vw);
     overflow: hidden;

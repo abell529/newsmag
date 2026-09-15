@@ -1097,6 +1097,21 @@ p.pub-flag.tu-magazine img {
     left: -100%;
     z-index: -100;
 }
+
+.two-col .main-content .full-bleed-section.zig-zag-top-bottom {
+    background-color: transparent;
+    mask: none;
+    -webkit-mask: none;
+}
+
+.two-col .main-content .full-bleed-section.zig-zag-top-bottom:before {
+    background: var(--full-bleed-section-bg);
+    --mask:
+        conic-gradient(from 135deg at top,#0000,#000 1deg 89deg,#0000 90deg) top/16.00px 51% repeat-x,
+        conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/16.00px 51% repeat-x;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+}
 	
 /* === STYLE GUIDE LAYOUT CLASSES === */
 
