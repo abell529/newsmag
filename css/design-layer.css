@@ -475,6 +475,10 @@ ul.links-list {
     margin-bottom: 20px;	
   }
 
+.links-list li a:hover {
+    background: none;
+}
+
 .links-list li a:hover:after {
   color: black;
   padding-left: 15px;
@@ -518,6 +522,7 @@ ul.links-list li a {
 
 .main-content ul.links-list li {
    border: none;
+   margin-bottom: 10px;
 }
 
 .main-content ul.links-list:has(li:nth-of-type(6)) {
@@ -772,19 +777,6 @@ p.pub-flag.tu-magazine img {
 
 .secondary-content .icon i {
   font-size: 1.25rem;
-}
-
-/* Zig-zag should be merged with broader rules currently on newsroom.css */
-
-.secondary-content .full-bleed-section.zig-zag-top-bottom {
-  mask: none;
-  mask: conic-gradient(from 45deg at left, #0000, #000 1deg 89deg, #0000 90deg) 0% / 100% 16.00px;
-}
-
-@media screen and (max-width: 720px) {
-.secondary-content .full-bleed-section.zig-zag-top-bottom {
-    mask: conic-gradient(from 135deg at top, #0000, #000 1deg 89deg, #0000 90deg) 50% / 16.00px 100%;  }
-	}
 }
 
 /* === INFOGRAPHIC  === */
@@ -1072,6 +1064,40 @@ p.pub-flag.tu-magazine img {
     }
 }
 
+/* Zigzag Effect */
+
+.zig-zag-top-bottom {
+  --mask:
+    conic-gradient(from 135deg at top,#0000,#000 1deg 89deg,#0000 90deg) top/16.00px 51% repeat-x,
+    conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/16.00px 51% repeat-x;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+}
+
+.zig-zag-top {
+  --mask: conic-gradient(from 135deg at top,#0000,#000 1deg 89deg,#0000 90deg) 50%/16.00px 100%;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+}
+
+.zig-zag-left {
+  --mask: conic-gradient(from 45deg at left,#0000,#000 1deg 89deg,#0000 90deg) 0%/100% 16.00px;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+}
+
+.zig-zag-right {
+  --mask: conic-gradient(from -135deg at right,#0000,#000 1deg 89deg,#0000 90deg) 0%/100% 16.00px;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+}
+
+.zig-zag-bottom {
+  --mask: conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/16.00px 100%;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+}
+
 /* === FULL-BLEED BACKGROUND OVERRIDES FOR TWO-COLUMN LAYOUTS === */
 
 .two-col .main-content .full-bleed-section {
@@ -1092,7 +1118,38 @@ p.pub-flag.tu-magazine img {
     left: -100%;
     z-index: -100;
 }
-	
+
+.two-col .main-content .full-bleed-section.zig-zag-top-bottom,
+.two-col .main-content .full-bleed-section.zig-zag-top,
+.two-col .main-content .full-bleed-section.zig-zag-left,
+.two-col .main-content .full-bleed-section.zig-zag-right,
+.two-col .main-content .full-bleed-section.zig-zag-bottom {
+  background-color: transparent;
+  mask: none;
+  -webkit-mask: none;
+}
+
+.two-col .main-content .full-bleed-section.zig-zag-top-bottom:before,
+.two-col .main-content .full-bleed-section.zig-zag-top:before,
+.two-col .main-content .full-bleed-section.zig-zag-left:before,
+.two-col .main-content .full-bleed-section.zig-zag-right:before,
+.two-col .main-content .full-bleed-section.zig-zag-bottom:before {
+  background: var(--full-bleed-section-bg);
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+}
+
+.secondary-content .full-bleed-section.zig-zag-top-bottom {
+  mask: none;
+  mask: conic-gradient(from 45deg at left, #0000, #000 1deg 89deg, #0000 90deg) 0% / 100% 16.00px;
+}
+
+@media screen and (max-width: 720px) {
+  .secondary-content .full-bleed-section.zig-zag-top-bottom {
+    mask: conic-gradient(from 135deg at top, #0000, #000 1deg 89deg, #0000 90deg) 50% / 16.00px 100%;
+  }
+}
+
 /* === STYLE GUIDE LAYOUT CLASSES === */
 
 .sg-section {
@@ -1123,5 +1180,4 @@ p.pub-flag.tu-magazine img {
   top: -2px;
   left: -3px;
   position: relative;
-} 
-
+}
