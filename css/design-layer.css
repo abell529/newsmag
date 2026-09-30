@@ -843,7 +843,6 @@ p.pub-flag.tu-magazine img {
 
 /* end color variants */
 
-
 .infographic-item p:not(:first-of-type) {
 		margin: 10px 0;
 		font-weight: 300;
@@ -851,20 +850,20 @@ p.pub-flag.tu-magazine img {
 }
 
 @media screen and (max-width: 720px) {
-  .infographic {
-    grid-template-columns: 1fr;
+	.infographic {
+		grid-template-columns: 1fr;
 }
 
-  .infographic-item {
-    padding: 5px;
+	.infographic-item {
+		padding: 5px;
 }
 
-.infographic-item:nth-child(n+2):before {
-    content:'';
-    width: 40px;
-    border-top: 1px solid var(--gold-solid);
-    padding-top: 30px;
-    }
+	.infographic-item:nth-child(n+2):before {
+		content:'';
+	    width: 40px;
+	    border-top: 1px solid var(--gold-solid);
+	    padding-top: 30px;
+	    }
 }
 
 /* Horizontal Line with Icon */
@@ -1042,7 +1041,7 @@ p.pub-flag.tu-magazine img {
 .date p {
     padding: 8px;
     font-family: PoynterOSDisp;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 700;
     background: var(--gold-solid);
     display: inline-block;
@@ -1056,8 +1055,8 @@ p.pub-flag.tu-magazine img {
     }
     .timeline {
         grid-template-columns: 80px auto;
-	grid-column-gap: 30px;
-	margin-left: 10px;
+		grid-column-gap: 30px;
+		margin-left: 10px;
     }
     .timeline:before {
         left: 95px;
@@ -1067,34 +1066,34 @@ p.pub-flag.tu-magazine img {
 /* Zigzag Effect */
 
 .zig-zag-top-bottom {
-  --mask:
-    conic-gradient(from 135deg at top,#0000,#000 1deg 89deg,#0000 90deg) top/16.00px 51% repeat-x,
-    conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/16.00px 51% repeat-x;
-  -webkit-mask: var(--mask);
-          mask: var(--mask);
+	--mask:
+	conic-gradient(from 135deg at top,#0000,#000 1deg 89deg,#0000 90deg) top/16.00px 51% repeat-x,
+	conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/16.00px 51% repeat-x;
+	-webkit-mask: var(--mask);
+	mask: var(--mask);
 }
 
 .zig-zag-top {
-  --mask: conic-gradient(from 135deg at top,#0000,#000 1deg 89deg,#0000 90deg) 50%/16.00px 100%;
-  -webkit-mask: var(--mask);
+	--mask: conic-gradient(from 135deg at top,#0000,#000 1deg 89deg,#0000 90deg) 50%/16.00px 100%;
+	-webkit-mask: var(--mask);
           mask: var(--mask);
 }
 
 .zig-zag-left {
-  --mask: conic-gradient(from 45deg at left,#0000,#000 1deg 89deg,#0000 90deg) 0%/100% 16.00px;
-  -webkit-mask: var(--mask);
+	--mask: conic-gradient(from 45deg at left,#0000,#000 1deg 89deg,#0000 90deg) 0%/100% 16.00px;
+	-webkit-mask: var(--mask);
           mask: var(--mask);
 }
 
 .zig-zag-right {
-  --mask: conic-gradient(from -135deg at right,#0000,#000 1deg 89deg,#0000 90deg) 0%/100% 16.00px;
-  -webkit-mask: var(--mask);
+	--mask: conic-gradient(from -135deg at right,#0000,#000 1deg 89deg,#0000 90deg) 0%/100% 16.00px;
+	-webkit-mask: var(--mask);
           mask: var(--mask);
 }
 
 .zig-zag-bottom {
-  --mask: conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/16.00px 100%;
-  -webkit-mask: var(--mask);
+ 	--mask: conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/16.00px 100%;
+ 	-webkit-mask: var(--mask);
           mask: var(--mask);
 }
 
@@ -1124,9 +1123,9 @@ p.pub-flag.tu-magazine img {
 .two-col .main-content .full-bleed-section.zig-zag-left,
 .two-col .main-content .full-bleed-section.zig-zag-right,
 .two-col .main-content .full-bleed-section.zig-zag-bottom {
-  background-color: transparent;
-  mask: none;
-  -webkit-mask: none;
+	  background-color: transparent;
+	  mask: none;
+	  -webkit-mask: none;
 }
 
 .two-col .main-content .full-bleed-section.zig-zag-top-bottom:before,
@@ -1134,14 +1133,18 @@ p.pub-flag.tu-magazine img {
 .two-col .main-content .full-bleed-section.zig-zag-left:before,
 .two-col .main-content .full-bleed-section.zig-zag-right:before,
 .two-col .main-content .full-bleed-section.zig-zag-bottom:before {
-  background: var(--full-bleed-section-bg);
-  -webkit-mask: var(--mask);
+	  background: var(--full-bleed-section-bg);
+	  -webkit-mask: var(--mask);
           mask: var(--mask);
 }
 
 .secondary-content .full-bleed-section.zig-zag-top-bottom {
-  mask: none;
-  mask: conic-gradient(from 45deg at left, #0000, #000 1deg 89deg, #0000 90deg) 0% / 100% 16.00px;
+	  mask: none;
+	  mask: conic-gradient(from 45deg at left, #0000, #000 1deg 89deg, #0000 90deg) 0% / 100% 16.00px;
+}
+
+.secondary-content .full-bleed-section.zig-zag-top-bottom > .content-constrain {
+    padding-left: 10px;
 }
 
 @media screen and (max-width: 720px) {
