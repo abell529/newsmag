@@ -1051,12 +1051,11 @@ p.pub-flag.tu-magazine img {
 /* Container query for containers smaller than 500px wide */
 @container (max-width: 500px) {
     .date p {
-        font-size: 1.8125rem;
+        font-size: 1.625rem;
     }
     .timeline {
         grid-template-columns: 80px auto;
 		grid-column-gap: 30px;
-		margin-left: 10px;
     }
     .timeline:before {
         left: 95px;
