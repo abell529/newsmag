@@ -779,6 +779,87 @@ p.pub-flag.tu-magazine img {
   font-size: 1.25rem;
 }
 
+/* === ACCORDION === */
+
+.accordion-trigger,
+.accordion-toggle-all {
+	font: inherit;
+	color: inherit;
+	background: inherit;
+	border: 0;
+	padding: 0;
+	text-align: inherit;
+	cursor: pointer;
+	}
+
+.accordion-controls {
+	text-align: right;
+	}
+ 
+.accordion-trigger {
+	display: flex;
+	align-items: center;
+	gap: 0.5em;
+	width: 100%;
+	}
+
+.accordion-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+	box-sizing: border-box;
+	margin-left: auto;
+	font-size: 0.6em;
+	width: 2em;
+	height: 2em;
+	line-height: 1;
+	color: #000;
+	border: 1px solid #000;
+	border-radius: 50%;
+	}
+	  
+.accordion-trigger:hover .accordion-icon {
+	background-color: var(--gold-solid);
+	}
+	 
+.accordion-trigger[aria-expanded="true"] > .accordion-icon {
+	transform: rotate(45deg);
+	}
+ 
+.accordion-panel {
+	border-bottom: 1px solid currentColor;
+	}
+
+.accordion:not(:has(> .accordion-panel ~ .accordion-panel)) {
+	border: 1px solid currentColor;
+	padding: 0 1em;
+	}
+ 
+.accordion:not(:has(> .accordion-panel ~ .accordion-panel)) > .accordion-panel {
+	border-bottom: 0;
+	}
+
+.accordion > .accordion-panel[data-accordion-bound] {
+	display: grid;
+	grid-template-rows: 1fr;
+	}
+ 
+.accordion > .accordion-panel[data-accordion-bound]:not(.is-open) {
+	grid-template-rows: 0fr;
+	}
+
+.accordion > .accordion-panel[data-accordion-bound] > .accordion-panel-inner {
+	min-height: 0;
+	overflow: hidden;
+	padding-inline: 4px;
+	margin-inline: -4px;
+	}
+ 
+.accordion > .accordion-panel[data-accordion-bound]:not(.is-open) > .accordion-panel-inner {
+	visibility: hidden;
+	}
+
 /* === INFOGRAPHIC  === */
 
 .infographic {
@@ -842,7 +923,6 @@ p.pub-flag.tu-magazine img {
 }
 
 /* end color variants */
-
 
 .infographic-item p:not(:first-of-type) {
 		margin: 10px 0;
