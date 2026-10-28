@@ -314,6 +314,21 @@
   border-right: none;
 }
 
+/* Default 3-up grid, multi-row: edge treatment follows row position, not
+   document position. Halves and two-one handle their own columns. */
+.infographic .item.number-grid:not(.halves):not(.two-one) .stat:nth-of-type(3n+1) {
+  padding-left: 0;
+}
+.infographic .item.number-grid:not(.halves):not(.two-one) .stat:nth-of-type(3n) {
+  padding-right: 0;
+  border-right: none;
+}
+/* Space between stat rows 2+ (margin, not row-gap, so eyebrow and
+   .stat-full siblings are unaffected) */
+.infographic .item.number-grid:not(.halves):not(.two-one) .stat:nth-of-type(n+4) {
+  margin-top: 30px;
+}
+
 /* Two-up grid with full-width spanning last stat */
 .infographic .item.number-grid.two-one {
   grid-template-columns: repeat(2, 1fr);
@@ -404,7 +419,7 @@
    -------------------------------------------------------------------------- */
 .infographic .stat.wide {
   display: grid;
-  grid-template-columns: max-content 1fr;
+  grid-template-columns: fit-content(50%) 1fr;
   gap: 18px;
   align-items: center;
   container-type: inline-size;
@@ -465,6 +480,34 @@
 }
 .infographic .item.number-grid.dark.stroke .num span {
   color: inherit;
+}
+
+/* Smaller label text — add to .item.number-grid */
+.infographic .item.number-grid.small-label .stat p:last-of-type:not(.num) {
+  font-size: 1.25rem;
+}
+
+/* Center number and label — add to .item.number-grid */
+.infographic .item.number-grid.centered .stat {
+  align-items: center;
+  text-align: center;
+}
+
+/* Hide dividers — add to .item.number-grid */
+.infographic .item.number-grid.no-divider .stat {
+  border-right: none;
+  border-bottom: none;
+}
+
+/* Centered: even horizontal padding on every stat so content centers on the
+   true cell center (desktop only; the stacked layout already uses 1rem 0).
+   Second selector matches the specificity of the multi-row edge rules. */
+@media (min-width: 501px) {
+  .infographic .item.number-grid.centered .stat,
+  .infographic .item.number-grid.centered:not(.halves):not(.two-one) .stat:nth-of-type(n) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -535,8 +578,17 @@
     grid-template-columns: 1fr;
   }
 
-  .infographic .item.number-grid.halves {
+  .infographic .item.number-grid:not(.halves):not(.two-one) .stat:nth-of-type(n+4) {
+    margin-top: 0;
+  }
+
+  .infographic .item.number-grid.halves,
+  .infographic .item.number-grid.two-one {
     grid-template-columns: 1fr;
+  }
+
+  .infographic .item.number-grid.two-one .stat:last-child {
+    border-top: none;
   }
 
   .infographic .stat {
