@@ -319,6 +319,12 @@ blockquote.pull-quote.quote-marks p:not(.attrib):after {
     height: 100%;
 }
 
+/* Adds padding to the top and bottom of the full bleed section when a repeating list is present,
+since the repeating list doesn't include its own margin. */
+.full-bleed-section	.content-constrain:has(> .repeating-list:first-child) {
+	padding: 40px 0 20px;
+}
+
 /* Zero out top margin on the first element in both columns of the two-col template
    to ensure visual alignment at the top of each column. Targets the first child
    directly, and one level deep, to account for cases where margin lives on a
@@ -329,6 +335,8 @@ blockquote.pull-quote.quote-marks p:not(.attrib):after {
 .body-container.two-col .secondary-content > :first-child > *:first-child {
     margin-top: 0;
 }
+
+
 
 /* === CARD LAYOUT HOVER STATES === */
 /* Overrides hover states for news items and adds specificity for cards. */
