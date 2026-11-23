@@ -321,7 +321,7 @@ blockquote.pull-quote.quote-marks p:not(.attrib):after {
 
 /* Adds padding to the top and bottom of the full bleed section when a repeating list is present,
 since the repeating list doesn't include its own margin. */
-.full-bleed-section	.content-constrain:has(.repeating-list) {
+.full-bleed-section	.content-constrain:has(> .repeating-list:first-child) {
 	padding: 40px 0 20px;
 }
 
